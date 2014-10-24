@@ -1,6 +1,7 @@
 ---
 layout: home
 avatar: yes
+title: About
 ---
 
 I am a software engineer, an athlete and a big fan of Chinese famous star [Andy Lau](http://www.awc618.com/?r=54447d0f8af75).
