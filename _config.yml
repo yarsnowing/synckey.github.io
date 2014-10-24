@@ -1,2 +1,11 @@
-markdown: rdiscount 
+markdown: rdiscount
+markdown: rdiscount
+permalink: /:year/:month/:title/
+url: http://synckey.github.io/
+author: Andy Wang
+pygments: true
+collections:
+    en:
+        output: true
+        permalink: /en/:year/:month/:title/
 
