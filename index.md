@@ -14,14 +14,14 @@ You can find me on [facebook](https://www.facebook.com/synckey) or Twitter [@syn
 于是游泳成为唯一的运动方式。我很想叫自己运动员，也自信自己可以靠杀猪谋生。
 
 >###古意答客问
->--戴望舒
+>####——戴望舒
 >孤心逐浮云之炫烨的卷舒，
 >
 >惯看青空的眼喜侵阈的青芜。 
 >
 >你问我的欢乐何在？ 
 >
->--窗头明月枕边书。
+>——窗头明月枕边书。
 >
 >
 >侵晨看岗踯躅于山巅， 
@@ -30,7 +30,7 @@ You can find me on [facebook](https://www.facebook.com/synckey) or Twitter [@syn
 >
 >你问我的灵魂安息于何处？ 
 >
->--看那袅绕地，袅绕地升上去的炊烟。 
+>——看那袅绕地，袅绕地升上去的炊烟。 
 >
 >
 >渴饮露，饥餐英； 
@@ -39,4 +39,4 @@ You can find me on [facebook](https://www.facebook.com/synckey) or Twitter [@syn
 >
 >你问我可有人间世的挂虑？
 >
->--听那消沉下去的百代之过客的跫音。
+>——听那消沉下去的百代之过客的跫音。
