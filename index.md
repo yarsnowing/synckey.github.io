@@ -1,7 +1,6 @@
 ---
 layout: home
 avatar: yes
-title: About
 ---
 
 This is my personal blog.I am a software engineer, an athlete and a big fan of Chinese famous star
@@ -14,7 +13,7 @@ You can find me on [facebook](https://www.facebook.com/synckey) or Twitter [@syn
 于是游泳成为唯一的运动方式。我很想叫自己运动员，也自信自己可以靠杀猪谋生。
 
 >###古意答客问
->####——戴望舒
+>——戴望舒
 >孤心逐浮云之炫烨的卷舒，
 >
 >惯看青空的眼喜侵阈的青芜。 
