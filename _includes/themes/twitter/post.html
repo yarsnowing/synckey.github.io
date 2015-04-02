@@ -19,7 +19,6 @@
             <date>{{ page.date | date:"%Y-%m-%d" }}</date>
         </div>
         <!--
-
         {% unless page.categories == empty %}
         <ul class="tag_box inline">
             <li><i class="icon-folder-open"></i></li>
@@ -61,13 +60,13 @@
             <ul>
                 {% if page.previous %}
                 <li class="previous"><a href="{{ BASE_PATH }}{{ page.previous.url }}"
-                                        title="{{ page.previous.title }}">&larr; Previous</a></li>
+                                        title="{{ page.previous.title }}">&larr; Previous:{{ page.previous.title }}</a></li>
                 {% else %}
                 <li class="previous disabled"><a>&larr; Previous</a></li>
                 {% endif %}
                 {% if page.next %}
                 <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}"
-                                    title="{{ page.next.title }}">Next &rarr;</a></li>
+                                    title="{{ page.next.title }}">{{ page.next.title }}</a></li>
                 {% else %}
                 <li class="next disabled"><a>Next &rarr;</a>
                     {% endif %}
