@@ -3,7 +3,9 @@
         {% if page.tagline %}
         <small>{{page.tagline}}</small>
         {% endif %}
+        <!--
         <small>{{ page.date | date:"%Y-%m-%d" }}</small>
+        -->
     </h1>
     <!--<div class="date">
     <small>{{ page.date | date:"%Y-%m-%d" }}</small>
@@ -17,7 +19,9 @@
         </div>
         <div>
             <h1>
-                <date>{{ page.date | date:"%Y-%m-%d" }}</date>
+                <small>
+                    <date>{{ page.date | date:"%Y-%m-%d" }}</date>
+                </small>
             </h1>
         </div>
         <!--
