@@ -1,5 +1,7 @@
 ---
 layout: page
+title: Andy Wang
+tagline: introduction
 avatar: yes
 ---
 
