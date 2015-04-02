@@ -2,7 +2,6 @@
 layout: page
 title: Andy Wang
 tagline: introduction
-avatar: yes
 ---
 
 This is my personal blog.I am a software engineer, an athlete and a big fan of Chinese famous star
