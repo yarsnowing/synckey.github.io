@@ -16,7 +16,9 @@
             {{ content }}
         </div>
         <div>
-            <date>{{ page.date | date:"%Y-%m-%d" }}</date>
+            <h1>
+                <date>{{ page.date | date:"%Y-%m-%d" }}</date>
+            </h1>
         </div>
         <!--
         {% unless page.categories == empty %}
@@ -59,7 +61,7 @@
             <ul>
                 {% if page.previous %}
                 <li class="previous"><a href="{{ BASE_PATH }}{{ page.previous.url }}"
-                                    title="{{ page.previous.title }}">&larr; Previous</a></li>
+                                        title="{{ page.previous.title }}">&larr; Previous</a></li>
                 {% else %}
                 <li class="previous disabled"><a>&larr; Previous</a></li>
                 {% endif %}
