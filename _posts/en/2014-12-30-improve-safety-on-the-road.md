@@ -21,7 +21,7 @@ For instance,we can teach both the drivers and pedestrians about what an acciden
 lose their breadwinners and will face financial problems.This means that their families will encounter disability or even
 death if they do not follow the laws.Keeping this in mind,they will think twice before  breaking the law.
 
-On the hand,deterrent from punishing still remains to be a significant way to gain road safety. For example, if an offender
+On the other hand,deterrent from punishing still remains to be a significant way to gain road safety. For example, if an offender
 is punished strictly, he and his friends will be deterred and are less possible to offend again.In some countries,if a person
 seriously break a certain law,such as drunk driving,he may lose the right to drive again. So, severe punishment surely contributes to
 the improvement of road safety.

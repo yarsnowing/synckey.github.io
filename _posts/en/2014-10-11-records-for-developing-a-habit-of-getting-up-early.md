@@ -42,8 +42,6 @@ tags: [personal]
 |2014.11.11|    &radic;     | &radic; | &radic;|&radic;  |&radic;|
 
 
-
-
 <script type="text/javascript">
     $(document).ready(function(){
         $("table").addClass("table table-bordered");
