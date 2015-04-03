@@ -42,5 +42,7 @@ tags: [personal]
 |2014.11.11|    &radic;     | &radic; | &radic;|&radic;  |&radic;|
 
 <script type="text/javascript">
-    alert("fuck");
+$(document).ready(function(){
+    $("#table").attr('class', 'table table-bordered');
+}
 </script>
