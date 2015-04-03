@@ -5,6 +5,9 @@ categories: [personal]
 tags: [personal]
 ---
 
+<style>
+.table{class:"table table-bordered"}
+</style>
 
 | Date     | Get up on time | Squats  | Situps | PushUps | Diary |  
 |:--------:|:--------------:|:-------:|:------:|:-------:|:-----:|
