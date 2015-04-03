@@ -41,9 +41,9 @@ tags: [personal]
 |2014.11.10|    &radic;     | &radic; | &radic;|&radic;  |&radic;|
 |2014.11.11|    &radic;     | &radic; | &radic;|&radic;  |&radic;|
 
-<script type="text/javascript">
-$(document).ready(function(){
-    alert("fuck");
-    $("table").addClass("table table-bordered");
-}
-</script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            alert("fuck");
+            $("table").addClass("table table-bordered");
+        });
+    </script>
