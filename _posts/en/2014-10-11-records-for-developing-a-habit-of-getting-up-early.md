@@ -44,5 +44,6 @@ tags: [personal]
 <script type="text/javascript">
 $(document).ready(function(){
     $("table").addClass("table table-bordered");
+    alert("fuck");
 }
 </script>
