@@ -4710,6 +4710,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   text-align: center;
   list-style: none;
 }
+.pager ul{margin-left:0;margin-bottom:0;}
 .pager li {
   display: inline;
 }
