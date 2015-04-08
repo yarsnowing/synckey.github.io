@@ -16,3 +16,10 @@ work interesting and challenging. I know She can make it and grow up to a good b
 
 It is not good recently,but I really appreciate the time talking with Wen and the Big Sacrosaurus she brought for me .
 ![Big Sarcosaurus]({{site.url}}/static/images/bigsarcosaurus.jpg)
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("img").addClass("carousel-inner img-responsive img-rounded");
+    });
+</script>
+
