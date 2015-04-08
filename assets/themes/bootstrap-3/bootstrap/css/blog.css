@@ -134,9 +134,8 @@ h6, .h6 {
     border-radius: 30px;
 }
 
-.pager ul {
-    margin-left: 0;
-    margin-bottom: 0;
+.pager:before {
+    padding-left: 0px;
 }
 
 /*
