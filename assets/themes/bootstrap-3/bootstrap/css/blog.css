@@ -89,7 +89,6 @@ h6, .h6 {
     font-size: 30px;
     font-weight: normal;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
 }
 
 .blog-description {
@@ -152,9 +151,7 @@ h6, .h6 {
 .blog-post-title {
     margin-bottom: 2px;
     font-size: 30px;
-    /*
     border-bottom: 1px solid #eeeeee;
-    */
     padding-bottom: 10px;
 }
 
