@@ -15,6 +15,7 @@ I really enjoy the lunch in Pizza hut,during which we talked about her work,and 
 work interesting and challenging. I know She can make it and grow up to a good banker.
 
 It is not good recently,but I really appreciate the time talking with Wen and the Big Sacrosaurus she brought for me .
+<img src="/static/images/bigsarcosaurus.jpg" alt="Big Sarcosaurus" class="carousel-inner img-responsive img-rounded"/>
 ![Big Sarcosaurus]({{site.url}}/static/images/bigsarcosaurus.jpg)
 
 <script type="text/javascript">
