@@ -4,6 +4,7 @@ title: Recordes For Developing A Habit of Getting Up Early
 categories: [personal]
 tags: [personal]
 ---
+<div class="table-responsive">
 
 | Date     | Get up on time | Squats  | Situps | PushUps | Diary |
 |:--------:|:--------------:|:-------:|:------:|:-------:|:-----:|
@@ -40,10 +41,10 @@ tags: [personal]
 |2014.11.09|    &#10004;     | &#10004; | &#10004;|&#10004;  |&#10004;|
 |2014.11.10|    &#10004;     | &#10004; | &#10004;|&#10004;  |&#10004;|
 |2014.11.11|    &#10004;     | &#10004; | &#10004;|&#10004;  |&#10004;|
-
+</div>
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $("table").addClass("table table-hover table-responsive");
+        $("table").addClass("table table-hover table-striped");
     });
 </script>
