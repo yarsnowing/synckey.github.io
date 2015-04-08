@@ -103,13 +103,20 @@
 </div>
 <!--</div>-->
 <footer class="blog-footer">
-    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+        with help from <a href="http://jekyllbootstrap.com" target="_blank"
+                          title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+        and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+    </p>
+    <!--
+    <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
+    <!--
     <p>
         <a href="#">Back to top</a>
-    </p>
+    </p>-->
 </footer>
 
-
+<!--
 <div id="footer">
     <div class="container">
         <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
@@ -119,7 +126,7 @@
         </p>
     </div>
 </div>
-
+-->
 {% include JB/analytics %}
 
 
