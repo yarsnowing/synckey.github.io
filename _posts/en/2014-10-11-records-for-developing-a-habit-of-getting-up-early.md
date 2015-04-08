@@ -6,8 +6,6 @@ tags: [personal]
 ---
 
 
-<div class="table-responsive">
-
 
 | Date     | Get up on time | Squats  | Situps | PushUps | Diary |
 |:--------:|:--------------:|:-------:|:------:|:-------:|:-----:|
@@ -47,7 +45,6 @@ tags: [personal]
 
 
 
-</div>
 <script type="text/javascript">
     $(document).ready(function(){
         $("table").addClass("table table-hover table-striped");
