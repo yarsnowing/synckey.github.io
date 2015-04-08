@@ -41,9 +41,9 @@ tags: [personal]
 |2014.11.10|    &#10004;     | &#10004; | &#10004;|&#10004;  |&#10004;|
 |2014.11.11|    &#10004;     | &#10004; | &#10004;|&#10004;  |&#10004;|
 
-          <div class="table-responsive">
 
-               <table >
+<div class="table-responsive">
+<table>
   <thead>
     <tr>
       <th style="text-align: center">Date</th>
