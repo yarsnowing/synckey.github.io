@@ -10,8 +10,10 @@ When I was a student at [Shandong University](http://www.sdu.edu.cn/),my major w
 But I am not good at it ,especially Algorithm, math seems to be a nightmare for me all the time. 
 You can find me on [facebook](https://www.facebook.com/synckey) or Twitter [@synckey1990](https://twitter.com/synckey1990).
 
+<!--
 这是我的个人主页，事实上是一个无证程序员。我是一个偏执狂，也是刘德华的脑残粉。我喜欢运动，但是在帝都的雾霾下，跑步似乎很奢侈，
 于是游泳成为唯一的运动方式。我很想叫自己运动员，也自信自己可以靠杀猪谋生。
+-->
 
 >###古意答客问
 >——戴望舒
