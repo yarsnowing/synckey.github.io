@@ -102,17 +102,16 @@
     {{ content }}
 </div>
 
-<nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-        <footer class="blog-footer">
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-                with help from <a href="http://jekyllbootstrap.com" target="_blank"
-                                  title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-                and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-            </p>
-        </footer>
-    </div>
-</nav>
+
+<div class="container">
+    <footer class="blog-footer">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
+            with help from <a href="http://jekyllbootstrap.com" target="_blank"
+                              title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+            and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+    </footer>
+</div>
 <!--
 <div id="footer">
     <div class="container">
