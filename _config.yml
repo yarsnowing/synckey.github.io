@@ -13,9 +13,10 @@ tagline: Site Tagline
 author :
   name : Andy Wang
   email : synckey@gmail.com
-  github : username
-  twitter : username
+  github : synckey@gmail.com
+  twitter : synckey
   feedburner : feedname
+
 highlighter: pygments
 
 # The production_url is only used when full-domain names are needed
@@ -97,7 +98,10 @@ JB :
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
-  #        
+  # If you use baidu,you should change the tracking_id for your own.
+  # The document of baidu tongji could be found http://sitecenter.baidu.com/
+
+
   analytics :
     provider : baidu
     baidu :
