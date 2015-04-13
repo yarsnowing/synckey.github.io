@@ -47,6 +47,6 @@ tags: [personal]
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $("table").addClass("table table-hover table-striped");
+        $("table").addClass("table table-hover table-striped table-condensed");
     });
 </script>
