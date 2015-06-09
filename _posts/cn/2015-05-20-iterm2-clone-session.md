@@ -1,7 +1,7 @@
 ---
 layout: post
 title: iterm2 clone session功能
-categories: [notes]
+categories: [tools]
 tags: [iterm2,mac,sesssion]
 ---
 
