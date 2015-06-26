@@ -24,8 +24,8 @@ h3{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-siz
 h4{font-family:"Cuprum","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:1em;color:#333;}
 pre,code{font-family:Menlo,"Andale Mono",Consolas,"Courier New",Monaco,monospace;font-size:13px;}
 */
-body{font-family:Monaco,"Heiti SC","Microsoft YaHei",Verdana,sans-serif;color:#000000;background-color:#ffffff;}
-pre,code{font-size:13px;font-family:Monaco}
+body,h1,h2,h3,h4,h5{font-family:Monaco,"Heiti SC","Microsoft YaHei",Verdana,sans-serif;color:#000000;background-color:#ffffff;}
+pre,code{font-family:Monaco,"Heiti SC","Microsoft YaHei"}
 
 /* Jekyll Bootstrap Colors */
 h1, h2, h3, h4 {
