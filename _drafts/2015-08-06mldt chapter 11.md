@@ -60,29 +60,53 @@ Scala支持以下7种数值类的数据类型。它们都是类。与Java不同�
 - Float
 - Double
 - Boolean
+由于它们都是类，所以你可以像在Java中调用方法一样操作这些类型：
+{% highlight scala %}
+scala> 1000.toString
+res10: String = 1000
+scala> 1000.toDouble
+res11: Double = 1000.0
+scala> 1000.toInt
+res13: Int = 1000
+{% endhighlight  %}
+Scala中使用`val`或`var`声明常量和变量，两个里面使用任意一个即可。
 
+## 类
+跟Java一样，一个Scala的源文件中可以包含任意多个类（`译者注：但是只能有一个是public的`）:
+{% highlight scala %}
+class MyClass {
+    var myval = 0
+}
+{% endhighlight  %}
+跟老的Java风格一样，可以创建一个public变量并提供getter和setter方法。可以像例子(例子中的myval变量)中那样访问变量:
+{% highlight scala %}
+val newclass = new Myclass
+newclass.myval = 42
+println(newclass.myval)
+{% endhighlight  %}
+Scala的默认构造函数是public的，所有的变量都必须初始化，这是强制的。
 
+在Scala的类中，你可以像在Java中那样定义方法，所以一个基本的void方法可以这样定义：
+{% highlight scala %}
+def myMethod() {
+}
+{% endhighlight  %}
+当然，跟在Java中一样，你也可以返回带类型的变量，假设你需要返回一个int类型的变量，你可以这样写：
+{% highlight scala %}
+def myMethod(): Int = {
+    Return 42
+}
+{% endhighlight  %}
 
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+最后一个例子展示怎么向Scala的方法传递参数,把两个数相加并返回结果:
+{% highlight scala %}
+def addNums(a: Int, b: Int) : Int = {
+    return a + b
+}
+{% endhighlight  %}
+## 调用函数
+Scala中的函数调用跟Java中很像，在调用对象后面加上点号和函数名，就可以调用这个对象的方法。如果没有参数传递（如 .addNumber(1,2)）,
+则括号是可选的。跟Java不同，Scala中没有`static`方法。
 
 
 
