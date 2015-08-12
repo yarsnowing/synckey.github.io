@@ -60,6 +60,7 @@ Scala支持以下7种数值类的数据类型。它们都是类。与Java不同�
 - Float
 - Double
 - Boolean
+
 由于它们都是类，所以你可以像在Java中调用方法一样操作这些类型：
 {% highlight scala %}
 scala> 1000.toString
@@ -107,6 +108,20 @@ def addNums(a: Int, b: Int) : Int = {
 ## 调用函数
 Scala中的函数调用跟Java中很像，在调用对象后面加上点号和函数名，就可以调用这个对象的方法。如果没有参数传递（如 .addNumber(1,2)）,
 则括号是可选的。跟Java不同，Scala中没有`static`方法。
+## 操作符
+Scala中的操作符跟Java的操作符基本一致。
+## 控制流
+Scala支持传统的`if`,`while`和`for`控制语句。
+### for循环
+`for` 循环可以作用在任何集合上，如：
+{% highlight scala %}
+val filesInDir = (new java.io.File("/home/user/").listFiles
+    for(thisFile <- filesInDir)
+        println(thisFile)
+{% endhighlight  %}
+
+你也可以任意尝试
+
 
 
 
