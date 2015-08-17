@@ -120,7 +120,162 @@ val filesInDir = (new java.io.File("/home/user/").listFiles
         println(thisFile)
 {% endhighlight  %}
 
-你也可以任意尝试
+当你想要循环指定次数的时候，在Scala中比Java中简单很多:
+{% highlight scala %}
+for(i <- 1 until 10)
+      println(i)
+  for(i <- 1 to 10)
+      println(i)
+{% endhighlight  %}
+你也可以在`for`循环中过滤，下面是个列出我home目录中文件列表的例子（Scala命令用粗体显示）：
+{% highlight scala %}
+scala> val fileshere = (new java.io.File("/home/jason/").listFiles)
+fileshere: Array[java.io.File] = Array(/home/jason/twitterstream.jar, /home/jason/.ssh, /home/jason/.profile, /home/jason/spring-shell.log, /home/jason/testyarn.jar, /home/jason/twitterstreamtransformer.xml, /home/jason/.bashrc, /home/jason/worldbrain.txt, /home/jason/.bash_ logout, /home/jason/.spark_history, /home/jason/.bash_history)
+scala> for(file <- fileshere if file.getName.endsWith(".xml")) print(file)*
+/home/jason/twitterstreamtransformer.xml
+{% endhighlight  %}
+
+### While循环
+
+Scala中的while循环与Java中的一样：
+{% highlight scala %}
+while(value != 100) {
+      value += 1
+}
+{% endhighlight  %}
+### if 语句
+
+正如你的预期Scala中的if语句也和Java中类似，Scala也支持三元操作符：
+{% highlight scala %}
+Java:
+boolean debug = server.equals("localhost") ? true : false;
+Scala:
+var debug = if (server.equals("localhost")) true else false;
+{% endhighlight  %}
+
+## 下载安装Spark
+
+有很多种方式可以试用Spark，最简单的方式就是从Spark的官方网站上下载已经编译好的二进制包。在下载前，先确定你（或者你所在的团队）使用的Hadoop
+版本， 根据你们的Hadoop版本，选择对应的Spark程序包。在编写本书时，Spark支持一下版本的Hadoop:
+
+- Hadoop 1—(Hortonworks HDP1 and Cloudera CDH3)
+- Hadoop 2—(Hortonworks HDP2 and Cloudera CDH5)
+- Cloudera CDH4
+
+Spark也不仅仅只是支持Hortonworks 或者 Cloudera的发行版，Spark与Apache官方网站提供的Hadoop也能一起工作的很好。
+
+在你下载好你所用的Hadoop发行版对应的Spark以后，你可以把它移动到你想安装它的目录。你可以用如下命令解压下载下来的.tgz文件:
+{% highlight bash %}
+tar xvzf spark-1.0.0-bin-hadoop2.tgz
+{% endhighlight  %}
+压缩文件中国年的内容，解压后就可以直接使用了。
+
+### Spark概览
+
+进入你安装Spark的目录，输入以下命令启动Spark shell:
+{% highlight bash %}
+./bin/spark-shell
+{% endhighlight  %}
+
+Spark启动时，你可以看到如下输出：
+{% highlight bash %}
+jason@cloudatics:/usr/local/spark$ bin/spark-shell
+  Spark assembly has been built with Hive, including Datanucleus jars on
+  classpath
+  14/07/05 09:28:44 INFO SecurityManager: Using Spark's default log4j
+  profile: org/apache/spark/log4j-defaults.properties
+  14/07/05 09:28:44 INFO SecurityManager: Changing view acls to: jason
+  14/07/05 09:28:44 INFO SecurityManager: SecurityManager: authentication
+  disabled; ui acls disabled; users with view permissions: Set(jason)
+  14/07/05 09:28:44 INFO HttpServer: Starting HTTP Server
+  Welcome to
+   ____              __
+  / __/__  ___ _____/ /__
+ _\ \/ _ \/ _ `/ __/  '_/
+/___/ .__/\_,_/_/ /_/\_\
+   /_/
+version 1.0.0
+Using Scala version 2.10.4 (OpenJDK 64-Bit Server VM, Java 1.6.0_31)
+Type in expressions to have them evaluated.
+Type :help for more information.
+14/07/05 09:28:51 INFO SecurityManager: Changing view acls to: jason
+14/07/05 09:28:51 INFO SecurityManager: SecurityManager: authentication
+disabled; ui acls disabled; users with view permissions: Set(jason)
+14/07/05 09:28:52 INFO Slf4jLogger: Slf4jLogger started
+14/07/05 09:28:52 INFO Remoting: Starting remoting
+14/07/05 09:28:52 INFO Remoting: Remoting started; listening on
+addresses :[akka.tcp://spark@cloudatics.com:38921]
+14/07/05 09:28:52 INFO Remoting: Remoting now listens on addresses:
+[akka.tcp://spark@cloudatics.com:38921]
+14/07/05 09:28:52 INFO SparkEnv: Registering MapOutputTracker
+14/07/05 09:28:52 INFO SparkEnv: Registering BlockManagerMaster
+14/07/05 09:28:52 INFO DiskBlockManager: Created local directory at /
+tmp/spark-local-20140705092852-2f00
+14/07/05 09:28:52 INFO MemoryStore: MemoryStore started with capacity
+297.0 MB.
+14/07/05 09:28:53 INFO ConnectionManager: Bound socket to port 48513
+with id = ConnectionManagerId(cloudatics.com,48513)
+14/07/05 09:28:53 INFO BlockManagerMaster: Trying to register
+BlockManager
+14/07/05 09:28:53 INFO BlockManagerInfo: Registering block manager
+  cloudatics.com:48513 with 297.0 MB RAM
+  14/07/05 09:28:53 INFO BlockManagerMaster: Registered BlockManager
+  14/07/05 09:28:53 INFO HttpServer: Starting HTTP Server
+  14/07/05 09:28:53 INFO HttpBroadcast: Broadcast server started at
+  http://176.67.170.176:41692
+  14/07/05 09:28:53 INFO HttpFileServer: HTTP File server directory is /
+  tmp/spark-c6a5efed-113d-4dd9-9cd0-7618d901f389
+  14/07/05 09:28:53 INFO HttpServer: Starting HTTP Server
+  14/07/05 09:28:53 INFO SparkUI: Started SparkUI at http://cloudatics.
+  com:4040
+  14/07/05 09:28:54 WARN NativeCodeLoader: Unable to load native-hadoop
+  library for your platform... using builtin-java classes where applicable
+  14/07/05 09:28:54 INFO Executor: Using REPL class URI:
+  http://176.67.170.176:39192
+  14/07/05 09:28:54 INFO SparkILoop: Created spark context..
+  Spark context available as sc.
+scala>
+{% endhighlight  %}
+
+我给出了所有输出，因为有一些重要的东西下面要解释。现在你的终端底部出现了`scala>`的提示符，说明的你Scala已经安装好了。
+
+### 数据源
+
+Spark支持Hadoop的输入数据文件系统，只要你的数据源支持Hadoop的`InputFormat`接口，就可以轻松的把它读入Spark。
+
+最简单的就是本地文件系统，亚马逊 S3 buckets，Hbash,Cassandra，已经已经保存在HDFS上的文件。在下一节，你会使用
+sc.textFile方法加载文件。这个方法并不只是在指定的文件可用，你可以用这个方法对文件，压缩文件，甚至是目录进行通配符处理。
+
+### 测试Spark
+
+找一个文本文件，按照本章后面的步奏来测试Spark，我用了一个本地文件系统的文件来运行测试例子。
+
+#### 加载文本文件
+
+首先，加载文本文件，从scala的命令行，输入：
+{% highlight scala %}
+ scala> var textF = sc.textFile("/home/jason/worldbrain.txt")
+{% endhighlight  %}
+
+一般情况下，将文件内容赋值给一个变量`textF`,Spark的输出如下：
+{% highlight scala %}
+14/07/05 09:40:08 INFO MemoryStore: ensureFreeSpace(146579) called with
+  curMem=0, maxMem=311387750
+  14/07/05 09:40:08 INFO MemoryStore: Block broadcast_0 stored as values
+  to memory (estimated size 143.1 KB, free 296.8 MB)
+  textF: org.apache.spark.rdd.RDD[String] = MappedRDD[1] at textFile at
+  <console>:12
+scala>
+
+{% endhighlight  %}
+Spark 使用弹性分布式数据集(Resilient Distributed Datasets,RDD),所以在输出中可以看到你有了一个String 的MappredRDD， 
+用加载好的文件你可以对它进行分析获取一些结论。
+
+#### 快速分析
+
+
+
+
 
 
 
