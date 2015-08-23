@@ -381,7 +381,6 @@ public static void main(String[] args) throws IOException {
 
 一些开发者抱怨使用Java编写完整的Mapreudce作业代码量太大了. 我从来没有遇到过这种问题(因为我使用模板)。但是当我告诉你同样的功能在Spark中怎么运行
 ，你就知道他们为什么要抱怨了。
-
 在Spark中，你可以用一个Mapreduce最常见的作业word count 作业来展示Spark作业又多简单。使用刚才用过的文本文件，你可以用spark-shell运行Mapreduce作业。
 首先，加载文件:
 {% highlight scala %}
@@ -426,8 +425,6 @@ scala> mapred.saveAsTextFile("/home/jason/testoutput")
 {% endhighlight  %}
 
 这些文件的内容就是基本的Word count:
-
-
 {% highlight scala %}
 (lags—throughout,1)
   (however,9)
@@ -453,8 +450,8 @@ scala> mapred.saveAsTextFile("/home/jason/testoutput")
 前面的对Spark的简短减少显示了Spark的速度，并且可以很轻松的解决一些问题。尽管Spark shell可以用来很轻松的分析数据并且获取到一些基本信息：
 如count,出现次数等，但是有时候我们需要编写完整的Spark作业。前面介绍过，由于Spark提供了Scala,Java,Python的api，Spark程序可以用
 这些语言中的任何一种编写。本节主要介绍怎么用Scala和Java编写Spark作业。
-{% highlight %}
-Note: Scala程序需要Scala库和编译器的支持，本章的前面已经介绍过如何安装它们。
+{% highlight scala %}
+注意：Scala程序需要Scala库和编译器的支持，本章的前面已经介绍过如何安装它们。
 {% endhighlight  %}
 #### 用Scala编写Spark作业
 
@@ -470,7 +467,7 @@ Scala应用和Java应用在代码上很相似，使用Scala Build Tool(sbt),你�
 创建一个叫`ScalaMRExample`的项目，然后在这个目录下创建`src`和`main`目录。
 
 
-{% highlight %}
+{% highlight scala %}
 mkdir –p ScalaMRExample/src/main
 {% endhighlight  %}
 
@@ -505,17 +502,17 @@ mkdir –p ScalaMRExample/src/main
 
 Scala的构建工具SBT与Java的构建工具Ant和Maven类似，你需要在`ScalaMRExample`目录下放一个构建文件来告诉
 Scala项目信息，依赖，和依赖下载地址
-```
+{% highlight scala %}
   name := "ScalaMRExample"
   version := "0.1"
   scalaVersion := "2.10.4"
   libraryDependencies += "org.apache.spark" %% "spark-core" % "1.0.0"
   resolvers += "Akka Repository" at "http://repo.akka.io/releases/"
-```
+{% endhighlight  %}
 
 讲这个文件保存为`scalamrexample.sbt`，然后就可以用sbt对项目进行打包了。检查目录结构以确保一切都准备好了。在Linux/MacOS X系统中，
 你可以用find命令来检查:
-```
+{% highlight bash %}
  Jason-Bells-MacBook-Pro:ScalaMRExample Jason$ find . -print
   .
   ./scalamrexample.sbt
@@ -523,16 +520,16 @@ Scala项目信息，依赖，和依赖下载地址
   ./src/main
   ./src/main/scala
   ./src/main/scala/ScalaMRExample.scala
-
-```
+{% endhighlight  %}
 
 当你看到文件列表已经准备好了（应该与前面的类似），你就可以用sbt工具对项目进行打包了。确保你在`ScalaMRExample`目录下，然后运行
 
-```
+{% highlight bash %}
 sbt package
-```
+{% endhighlight  %}
+
 第一次运行这个命令需要花费一些时间，因为`sbt`可能需要下载外部依赖库，命令执行完成后，代码就编译完成了，包也打好了：
-```
+{% highlight bash %}
 Jason-Bells-MacBook-Pro:ScalaMRExample Jason$ sbt package[info] Set
   current project to ScalaMRExample (in build file:/Users/Jason/work/
   scala/ScalaMRExample/)
@@ -542,11 +539,10 @@ Jason-Bells-MacBook-Pro:ScalaMRExample Jason$ sbt package[info] Set
   2.10/scalamrexample_2.10-1.0.jar ...
   [info] Done packaging.
   [success] Total time: 8 s, completed 09-Jul-2014 17:25:49
-
-```
+{% endhighlight  %}
 
 新编译好的包在`target/scala-2.10`中:
-```
+{% highlight bash %}
  Jason-Bells-MacBook-Pro:ScalaMRExample Jason$ cd target/scala-2.10/
   Jason-Bells-MacBook-Pro:scala-2.10 Jason$ ls -l
   total 16
@@ -554,23 +550,29 @@ Jason-Bells-MacBook-Pro:ScalaMRExample Jason$ sbt package[info] Set
   -rw-r--r--  1 Jason  staff  4495  9 Jul 17:25 scalamrexample_2.10-
   1.0.jar
   Jason-Bells-MacBook-Pro:scala-2.10 Jason$
+{% endhighlight  %}
 
-```
+
+
+
+
+
+
 
 #### 运行Spark项目
 
 你只要用编译好的jar文件就可以了。假设你就在jar文件所处的目录中，你可以使用spark-submit命令提交作业：
-```
+{% highlight bash %}
 
   /usr/local/spark/bin/spark-submit --class "ScalaMRExample" \
   --master local[4] scalamrexample_2.10-1.0.jar
 
-```
+{% endhighlight  %}
 
 `--master local[4]`选项告诉Spark当程序启动时，创建4个本地节点。如果一切进展顺利，你就能看到spark开始
 工作了:
 
-```
+{% highlight bash %}
   14/07/09 19:32:42 INFO TaskSetManager: Finished TID 5 in 922 ms on
   localhost (progress: 2/2)
   14/07/09 19:32:42 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose
@@ -581,7 +583,7 @@ Jason-Bells-MacBook-Pro:ScalaMRExample Jason$ sbt package[info] Set
   14/07/09 19:32:42 INFO SparkContext: Job finished: saveAsTextFile at
   ScalaMRExample.scala:15, took 1.014446651 s
 
-```
+{% endhighlight  %}
 
 由于你将结果保存到了`wboutput`目录，你可以在你的目录结构中看到这个目录。与使用Hadoop相比，使用Scala编写
 MapReduce作业变得非常简单。这病不是说哪个更好，只是完成任务又多了一种选择。下面看看用Java怎么编写Spark项目。
@@ -592,7 +594,7 @@ MapReduce作业变得非常简单。这病不是说哪个更好，只是完成�
 
 Spark的Java api比scala的稍微难理解一点，你不能只用4行代码就能写好一个Mapreduce作业了。
 
-```
+{% highlight scala %}
 import scala.Tuple2;
   import org.apache.spark.SparkConf;
   import org.apache.spark.api.java.JavaPairRDD;
@@ -641,7 +643,7 @@ import scala.Tuple2;
     }
   }
 
-```
+{% endhighlight  %}
 
 与Scala版本的MapReduce代码相比，Java版的需要写更多的代码，使用Java Spark API需要更关注更多:
 * 切分单词
@@ -656,7 +658,7 @@ import scala.Tuple2;
 
 对每个项目而言，你需要一个Maven构建文件，叫做pmo.xml.
 
-```
+{% highlight xml %}
   <project>
     <groupId>com.mlbook</groupId>
     <artifactId>javamrexample</artifactId>
@@ -678,21 +680,20 @@ import scala.Tuple2;
       </dependency>
     </dependencies>
 </project>
-```
+{% endhighlight  %}
 
 从这个文件可以看到项目的基本结构，并且配置了从哪个仓库下载依赖。对Spark项目而言，你需要在dependencies中指名Spark API的依赖。
 
 #### 用Maven打包
 
 你可以从命令行中执行Maven打包命令：
-```
+{% highlight bash %}
 mvn package
-```
+{% endhighlight  %}
 
 Maven构建工具会下载依赖，创建类文件，然后将依赖的类打包进jar文件。构建好后，一个`target`目录会被自动创建，里面包含了打好包的jar文件:
 
-```
-
+{% highlight bash %}
   Jason-Bells-MacBook-Pro:JavaMRExample Jason$ cd target/
   Jason-Bells-MacBook-Pro:target Jason$ ls -l
   total 24
@@ -700,18 +701,18 @@ Maven构建工具会下载依赖，创建类文件，然后将依赖的类打包
   -rw-r--r--   1 Jason  staff  8679  9 Jul 18:19 javamrexample-1.0.jar
   drwxr-xr-x   3 Jason  staff   102  9 Jul 18:04 maven-archiver
   Jason-Bells-MacBook-Pro:target Jason$
-```
+{% endhighlight  %}
 
 与Scala的例子类似，你需要使用`spark-submit`提交Spark作业：
-```
+{% highlight bash %}
 jason@cloudatics:~$ /usr/local/spark/bin/spark-submit --class
   "JavaMRExample" \
   --master local[4] javamrexample-1.0.jar
-```
+{% endhighlight  %}
 
 Spark会执行jar文件，你可以在终端中看到MapReduce的输出：
 
-```
+{% highlight bash %}
  14/07/09 20:37:08 INFO DAGScheduler: Stage 0 (collect at JavaMRExample.
   java:44) finished in 0.784 s
   14/07/09 20:37:08 INFO SparkContext: Job finished: collect at
@@ -732,7 +733,7 @@ Spark会执行jar文件，你可以在终端中看到MapReduce的输出：
   everyone.: 1
   gowns: 2
   well-informed: 1
-```
+{% endhighlight  %}
 
 ### Spark编程总结
 
@@ -741,15 +742,96 @@ Spark会执行jar文件，你可以在终端中看到MapReduce的输出：
 
 有了Spark的基本信息和构建Spark作业的方法，你可以继续学习一些Spark上可以用的库了。
 
-##Spark SQL
+## Spark SQL
+
+Hadoop社区中最常被问到的一个问题就是"我可以运行SQL-like查询么?"。有些人在处理数据时，非常希望使用SQL,原因很简单，
+SQL语言简洁优雅容易懂。Hadoop生态中的Pig脚本就以非常接近英文的方式表达Mapreudce作业了，纯SQL的诱惑实在太大，
+所以他们常常问是否存在这样的SQL。
+
+SparkSQL就是这样的工具--Spark框架下的SQL-like查询工具。它就是纯的SQL工具，所以你可以用它在Spark上进行scala查询，甚至是HiveSQL查询。
+数据可以是像Apahce Hive这样的外部数据库或者讲数据加载到内存作为RDD进行查询。
+
+{% highlight bash %}
+NOTE:
+SparkSQL的SQL解析器对大多数人来说都非常有用，但是并没有像期待的那样，像一个数据库系统那样高级。如果你需要像数据库系统那样的灵活性，
+建议使用HiveSQL。在本节的后面，将主要介绍SparkSQL的解析器。
+{% endhighlight  %}
+
+### 基本概念
+
+创建好了SparkContext后，你可以很轻松的创建SparkSQL实例，并将它关联到当前上下文。这个操作可以在Scala shell或者单独的java，scala，python 
+写的Spark作业中完成。如果你还记得之前编写Spark作业的方式，编程将会很简单。
+
+一个包含SparkSQL库的基本代码如下：
 
 
+{% highlight scala %}
+ import org.apache.spark.SparkContext
+  import org.apache.spark.SparkContext._
+   import org.apache.spark.SparkConf
+    object SparkSQLExample {
+      def main(args: Array[String]) {
+        val configuration = new SparkConf().setAppName("SparkSQL Example")
+        val sc = new SparkContext(configuration)
+        val sql = new org.apache.spark.sql.SQLContext(sc)
+        // program continues.
+  } }
+{% endhighlight  %}
+你需要在你的`sbt`构建文件中加入SparkSQL的依赖，我已经为上面的代码创建好了一个新的构建文件:
+{% highlight bash %}
+name := "SparkSQLExample"
 
+  version := "1.0"
+  
+  scalaVersion := "2.10.4"
+  
+  libraryDependencies += "org.apache.spark" %% "spark-core" % "1.0.0"
+  
+  libraryDependencies += "org.apache.spark" %% "spark-sql" % "1.0.0"
+  
+  resolvers += "Akka Repository" at http://repo.akka.io/releases/
 
+{% endhighlight  %}
 
+别忘了每行文本之间要加入额外的空行,否则构建工具在构建时会报错。
 
+#### 在RDD上使用SparkSQL
 
+下面将会在RDD上使用SparkSQL构建一个真实的例子，将数据放在内存中将会大大加快查询的速度。同时，你将会看到一个
+包含多个`.scala`文件的应用。
 
+##### 生成数据
 
+例子中使用了一个包含如下信息的`.csv`文件：
+* 唯一的id
+* 名字
+* 姓
+* 英国邮政编码
+* 生日（格式为: 月/日/年）
+* 纬度
+* 经度
 
+这些数据可以可以展现用户管理数据库中的某些特征了。你也可以自己产生数据或者使用`fakenamegenerator.com`服务为你
+生成测试数据。如果你使用了`fakenamegenerator.com`的服务，请确保第一行没有列名，如果有，就删除掉他们。
 
+一个数据的样本如下:
+{% highlight bash %}
+
+  72215385-fad0-45fd-b932-a3d4fa07fb6d,William,Winter,DG3
+  7AL,1/4/1969,55.282416,-3.831666
+  71efb06f-63a7-4312-abe2-1fc4c8bd52e5,Billy,Noble,DD6
+  7FU,9/11/1969,55.597429,-3.170968
+  eac7b8f6-2d71-49a7-8e4d-a780826ce893,Kayleigh,Atkins,DG8
+  9ES,1/20/1932,54.73341,-4.407141
+  337d498d-9bed-4663-b688-6ec2651bcd9d,Emma,Perry,IM3
+  2GE,4/16/1935,54.173625,-4.480233
+  c3b0cc54-1f2f-416f-9b91-17a0700a4dc1,Liam,Carr,EX32
+  8AA,1/3/1991,50.682015,-3.119895
+  ea6acc38-1b69-424f-b885-09b078f6eaf2,Alex,Dodd,PH2
+  0QJ,6/24/1993,55.982172,-3.592573
+  
+{% endhighlight  %}
+
+数据准备好了之后，就可以开始编码了。
+
+#### Scala应用
