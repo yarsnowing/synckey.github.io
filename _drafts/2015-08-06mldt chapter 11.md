@@ -273,14 +273,475 @@ Spark 使用弹性分布式数据集(Resilient Distributed Datasets,RDD),所以�
 
 #### 快速分析
 
+使用加载的数据，可以运行一些快速的分析，首先看一下RDD中有多少个元素:
+{% highlight scala %}
+scala> textF.count()
+{% endhighlight  %}
+输出如下:
+{% highlight scala %}
+14/07/05 09:58:01 INFO SparkContext: Job finished: count at
+<console>:15, took 0.036546484 s
+res4: Long = 469
+scala>
+{% endhighlight  %}
+count的结果表名RDD中元素的个数而不是文件的行数，你可以查看RDD的第一个元素:
+{% highlight scala %}
+scala> textF.first()
+And the output appears:
+14/07/05 10:00:20 INFO SparkContext: Job finished: first at <console>:15, took 0.007266678 s
+res5: String = THE papers and addresses I have collected in this little book are submitted as contributions,......
+scala>
+{% endhighlight  %}
+可以看出，输出非常快，因为RDD是基于内存的。
+
+#### 从RDD中过滤文本
+
+使用`.filter`函数可以对文本文件进行过滤分析，假设你想要知道 "statistical"这个单词在文件中出现的次数，你可以运行如下代码：
+{% highlight scala %}
+scala> textF.filter(line => line.contains("statistical")).count()
+{% endhighlight  %}
+对Spark的RDD进行迭代并过滤，只要Scala的一行代码就能完成任务，因为你在最后调用了count函数，你可以得到如下输出:
+{% highlight scala %}
+14/07/05 10:16:55 INFO SparkContext: Job finished: count at
+<console>:15, took 0.042640019 s
+res7: Long = 2
+{% endhighlight  %}
+
+在这个文件中"statistical"一共出现了2次，整个查询在0.04s完成，如果需要，你可以将这个输出保存到另外一个Scala数组：
+{% highlight scala %}
+scala> var filtered = textF.filter(line => line.contains("statistical"))
+  filtered: org.apache.spark.rdd.RDD[String] = FilteredRDD[4] at filter at
+  <console>:14
+  scala> filtered.count
+  14/07/08 09:20:16 INFO SparkContext: Job finished: count at
+  <console>:17, took 0.067395793 s
+  res4: Long = 2
+{% endhighlight  %}
+
+利用Scala简明的语法，以及Spark强大的分布式内存数据集（RDD）处理，你拥有了快速处理海量数据的灵巧工具。
+
+#### Spark web 页面
 
 
+之前提到过，当你启动Spark时，一系列的后台进城就启动了。其中一个就是基于web的ui。你在浏览器里面输入`http://<yourdomain>:4040`,假设Spark还在运行，你应该能
+得到`Figure 11-1`所示的网页。
+
+到目前为止，你运行的每条命令都是Spark的一个作业，Spark会自动记录它的运行时间和输出。web ui上也能看到存储系统和运行环境的相关信息。
+
+你可以点击每个Stage来查看job的详细信息和运行输出。如果你的作业遇到问题，在这里可以很方便的看到作业的概要信息。
 
 
+### Spark和Hadoop对比
+
+第十章提到了要用Java编写一个Mapreduce作业提交到Hadoop运行还是很麻烦的。
+
+基本的Java代码模板通常都是在map和reduce阶段的分析:
+
+{% highlight scala %}
+  public static class Map extends MapReduceBase implements
+              Mapper<LongWritable, Text, Text, IntWritable> {
+          private final static IntWritable one = new IntWritable(1);
+          private Text word = new Text();
+          public void map(LongWritable key, Text value,
+                  OutputCollector<Text, IntWritable> output, Reporter
+reporter)
+                  throws IOException {
+              // ususally emit something to the reducer here....
+} }
+      public static class Reduce extends MapReduceBase implements
+              Reducer<Text, IntWritable, Text, IntWritable> {
+ public void reduce(Text key, Iterator<IntWritable> values,
+                  OutputCollector<Text, IntWritable> output, Reporter
+reporter)
+                  throws IOException {
+              // reducer would add the value +1 for example
+} }
+
+{% endhighlight  %}
 
 
+接着定义一个Hadoop作业，就可以提交到Hadoop平台运行了：
+
+{% highlight scala %}
+public static void main(String[] args) throws IOException {
+          JobConf conf = new JobConf(BlankHadoopJob.class);
+          conf.setJobName("BlankHadoopJob");
+          conf.setOutputKeyClass(Text.class);
+          conf.setOutputValueClass(IntWritable.class);
+          conf.setMapperClass(Map.class);
+          conf.setCombinerClass(Reduce.class);
+          conf.setReducerClass(Reduce.class);
+          conf.setInputFormat(TextInputFormat.class);
+          conf.setOutputFormat(TextOutputFormat.class);
+          FileInputFormat.setInputPaths(conf, new Path(args[0]));
+          FileOutputFormat.setOutputPath(conf, new Path(args[1]));
+          JobClient.runJob(conf);
+      }
+{% endhighlight  %}
+
+一些开发者抱怨使用Java编写完整的Mapreudce作业代码量太大了. 我从来没有遇到过这种问题(因为我使用模板)。但是当我告诉你同样的功能在Spark中怎么运行
+，你就知道他们为什么要抱怨了。
+
+在Spark中，你可以用一个Mapreduce最常见的作业word count 作业来展示Spark作业又多简单。使用刚才用过的文本文件，你可以用spark-shell运行Mapreduce作业。
+首先，加载文件:
+{% highlight scala %}
+scala> var textF  = sc.textFile("/home/jason/worldbrain.txt")
+{% endhighlight  %}
+然后创建一个保存Mapreduce结果的变量:
+{% highlight scala %}
+scala> var mapred = textF.flatMap(line => line.split(" ")).map(word =>
+  (word, 1)).reduceByKey((a,b) => a+b)
+{% endhighlight  %}
+
+输出结果:
+
+{% highlight scala %}
+scala> mapred.collect
+{% endhighlight  %}
+
+你会看到一些列的输出:
+{% highlight scala %}
+14/07/08 09:28:29 INFO SparkContext: Job finished: collect at
+  <console>:17, took 0.78279487 s
+  res7: Array[(String, Int)] = Array((professors,,1), (mattered,1),
+  (intimately,1), (better.,3), (someone,3), (House,1), (manifestly,1),
+  (order,13), (socialism.,1), (apprehension,4), (conclusively,1),
+  (gowns,2), (behind,3), (Out",,1), (merge,1), (wasn't,1), (been,125),
+  (Judea;,1), (gap,5), (underrate,1), (aspects;,1), (knows,8),
+  (informative,15), (divorced,1), (are,259), (records,4), (2.,1),
+  (Western,3), (politician,,1), (room—and,1), (newspapers,,3),
+  (picture.,1), (interchange—from,1), (prete
+{% endhighlight  %}
+
+可以用RDD的`.saveAsTextFile`将结果保存为文本:
+{% highlight scala %}
+scala> mapred.saveAsTextFile("/home/jason/testoutput")
+{% endhighlight  %}
+
+与Hadoop一样，Spark将结果保存在一个目录中，我把这个目录称为`testoutput` ,在这个目录中，你可以看到reduce输出的part文件:
+{% highlight scala %}
+ -rw-r--r-- 1 1234 1234 52961 Jul  8 13:47 part-00000
+   -rw-r--r-- 1 1234 1234 52861 Jul  8 13:47 part-00001
+   -rw-r--r-- 1 1234 1234     0 Jul  8 13:47 _SUCCESS
+{% endhighlight  %}
+
+这些文件的内容就是基本的Word count:
 
 
+{% highlight scala %}
+(lags—throughout,1)
+  (however,9)
+  (cry.,1)
+  (eminent,2)
+  (dangerous,5)
+  (varieties,1)
+  (History.,1)
+  (behind,,1)
+  (late,3)
+  (nineteenth,6)
+  (helpless,1)
+  (throwing,2)
+  (aesthetic,4)
+  (leapt,2)
+{% endhighlight  %}
+
+只用三行代码就完成了对原始文本文件的一个Mapreduce分析作业，注意我并没有过滤掉特殊的字符并将文本转为小写字母，但是依然是一个完整的word count
+程序。
+
+### 编写可以提交的Spark作业
+
+前面的对Spark的简短减少显示了Spark的速度，并且可以很轻松的解决一些问题。尽管Spark shell可以用来很轻松的分析数据并且获取到一些基本信息：
+如count,出现次数等，但是有时候我们需要编写完整的Spark作业。前面介绍过，由于Spark提供了Scala,Java,Python的api，Spark程序可以用
+这些语言中的任何一种编写。本节主要介绍怎么用Scala和Java编写Spark作业。
+{% highlight %}
+Note: Scala程序需要Scala库和编译器的支持，本章的前面已经介绍过如何安装它们。
+{% endhighlight  %}
+#### 用Scala编写Spark作业
+
+Scala应用和Java应用在代码上很相似，使用Scala Build Tool(sbt),你可以在一个地方管理构建的所有信息。
+
+##### 安装SBT
+
+由于Scala主要的类库并不提供Scala Build Tool，所以需要单独下载安装sbt。你可以从 [www.scala-sbt.org/download.html](www.scala-sbt.org/download.html)下载
+与你的系统适配的版本并且解压它。确保安装文件的可执行目录在你的系统PATH环境变量中，这样就你可以直接在命令行中输入`sbt`来运行sbt了。
+
+#### Scala程序代码
+
+创建一个叫`ScalaMRExample`的项目，然后在这个目录下创建`src`和`main`目录。
+
+
+{% highlight %}
+mkdir –p ScalaMRExample/src/main
+{% endhighlight  %}
+
+
+与MapReduce的例子类似，在文件`ScalaMRExample.scala`中的Scala版本的Spark应用代码如下：
+
+{% highlight scala %}
+ import org.apache.spark.SparkContext
+  import org.apache.spark.SparkContext._
+  import org.apache.spark.SparkConf
+  object ScalaMRExample {
+    def main(args: Array[String]) {
+      val configuration = new SparkConf().setAppName("Scala MapReduce
+  Example")
+      val sc = new SparkContext(conf)
+      val textFile = "/home/jason/worldbrain.txt"
+      val textSc = sc.textFile(textFile)
+      val mapred = textFile.flatMap(line => line.split(" ")).map(word =>
+  (word, 1)).reduceByKey((a,b) => a+b)
+      mapred.collect
+      mapred.saveAsTextFile("wboutput")
+} }
+{% endhighlight  %}
+
+你需要根据你的开发环境改变文件名和路径，这个程序引入了需要的Spark库，设置了Spark应用的名字和运行的`main`
+方法。这些都跟Java版的代码很像。
+
+为了加载系统变量和classpath,你创建了一个`SparkConf`对象，传入你的应用名（在例子里面是`ScalaMapReduce Example`），程序中剩余的部分
+跟前面的Java版本一样:加载文本文件，运行简单的MapReduce，输出结果，并将结果报错到某一个地方。
+
+#### sbt工具
+
+Scala的构建工具SBT与Java的构建工具Ant和Maven类似，你需要在`ScalaMRExample`目录下放一个构建文件来告诉
+Scala项目信息，依赖，和依赖下载地址
+```
+  name := "ScalaMRExample"
+  version := "0.1"
+  scalaVersion := "2.10.4"
+  libraryDependencies += "org.apache.spark" %% "spark-core" % "1.0.0"
+  resolvers += "Akka Repository" at "http://repo.akka.io/releases/"
+```
+
+讲这个文件保存为`scalamrexample.sbt`，然后就可以用sbt对项目进行打包了。检查目录结构以确保一切都准备好了。在Linux/MacOS X系统中，
+你可以用find命令来检查:
+```
+ Jason-Bells-MacBook-Pro:ScalaMRExample Jason$ find . -print
+  .
+  ./scalamrexample.sbt
+  ./src
+  ./src/main
+  ./src/main/scala
+  ./src/main/scala/ScalaMRExample.scala
+
+```
+
+当你看到文件列表已经准备好了（应该与前面的类似），你就可以用sbt工具对项目进行打包了。确保你在`ScalaMRExample`目录下，然后运行
+
+```
+sbt package
+```
+第一次运行这个命令需要花费一些时间，因为`sbt`可能需要下载外部依赖库，命令执行完成后，代码就编译完成了，包也打好了：
+```
+Jason-Bells-MacBook-Pro:ScalaMRExample Jason$ sbt package[info] Set
+  current project to ScalaMRExample (in build file:/Users/Jason/work/
+  scala/ScalaMRExample/)
+  [info] Compiling 1 Scala source to /Users/Jason/work/scala/
+  ScalaMRExample/target/scala-2.10/classes...
+  [info] Packaging /Users/Jason/work/scala/ScalaMRExample/target/scala-
+  2.10/scalamrexample_2.10-1.0.jar ...
+  [info] Done packaging.
+  [success] Total time: 8 s, completed 09-Jul-2014 17:25:49
+
+```
+
+新编译好的包在`target/scala-2.10`中:
+```
+ Jason-Bells-MacBook-Pro:ScalaMRExample Jason$ cd target/scala-2.10/
+  Jason-Bells-MacBook-Pro:scala-2.10 Jason$ ls -l
+  total 16
+  drwxr-xr-x  7 Jason  staff   238  9 Jul 17:25 classes
+  -rw-r--r--  1 Jason  staff  4495  9 Jul 17:25 scalamrexample_2.10-
+  1.0.jar
+  Jason-Bells-MacBook-Pro:scala-2.10 Jason$
+
+```
+
+#### 运行Spark项目
+
+你只要用编译好的jar文件就可以了。假设你就在jar文件所处的目录中，你可以使用spark-submit命令提交作业：
+```
+
+  /usr/local/spark/bin/spark-submit --class "ScalaMRExample" \
+  --master local[4] scalamrexample_2.10-1.0.jar
+
+```
+
+`--master local[4]`选项告诉Spark当程序启动时，创建4个本地节点。如果一切进展顺利，你就能看到spark开始
+工作了:
+
+```
+  14/07/09 19:32:42 INFO TaskSetManager: Finished TID 5 in 922 ms on
+  localhost (progress: 2/2)
+  14/07/09 19:32:42 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose
+  tasks have all completed, from pool
+  14/07/09 19:32:42 INFO DAGScheduler: Completed ResultTask(2, 1)
+  14/07/09 19:32:42 INFO DAGScheduler: Stage 2 (saveAsTextFile at
+  ScalaMRExample.scala:15) finished in 0.924 s
+  14/07/09 19:32:42 INFO SparkContext: Job finished: saveAsTextFile at
+  ScalaMRExample.scala:15, took 1.014446651 s
+
+```
+
+由于你将结果保存到了`wboutput`目录，你可以在你的目录结构中看到这个目录。与使用Hadoop相比，使用Scala编写
+MapReduce作业变得非常简单。这病不是说哪个更好，只是完成任务又多了一种选择。下面看看用Java怎么编写Spark项目。
+
+### 用Java编写Spark作业
+
+用Java编写Spark作业与刚才介绍的用Scala的方法基本类似，主要的不同就是语言和构建工具。
+
+Spark的Java api比scala的稍微难理解一点，你不能只用4行代码就能写好一个Mapreduce作业了。
+
+```
+import scala.Tuple2;
+  import org.apache.spark.SparkConf;
+  import org.apache.spark.api.java.JavaPairRDD;
+  import org.apache.spark.api.java.JavaRDD;
+  import org.apache.spark.api.java.JavaSparkContext;
+  import org.apache.spark.api.java.function.FlatMapFunction;
+  import org.apache.spark.api.java.function.Function2;
+  import org.apache.spark.api.java.function.PairFunction;
+  import java.util.Arrays;
+  import java.util.List;
+  import java.util.regex.Pattern;
+  public final class JavaMRExample {
+    private static final Pattern spacePattern = Pattern.compile(" ");
+    public static void main(String[] args) throws Exception {
+      SparkConf configuration = new SparkConf().
+  setAppName("JavaMRExample");
+      JavaSparkContext ctx = new JavaSparkContext(configuration);
+      JavaRDD<String> linesOfText = ctx.textFile("/home/jason/worldbrain.
+  txt", 1);
+      JavaRDD<String> findWords = linesOfText.flatMap(new
+  FlatMapFunction<String, String>() {
+        @Override
+        public Iterable<String> call(String thisString) {
+          return Arrays.asList(spacePattern.split(thisString));
+        }
+  });
+      JavaPairRDD<String, Integer> getTheOnes = findWords.mapToPair(new
+  PairFunction<String, String, Integer>() {
+        @Override
+        public Tuple2<String, Integer> call(String thisString) {
+          return new Tuple2<String, Integer>(thisString, 1);
+        }
+  });
+      JavaPairRDD<String, Integer> finalCounts = getTheOnes.
+  reduceByKey(new Function2<Integer, Integer, Integer>() {
+        @Override
+        public Integer call(Integer i1, Integer i2) {
+          return i1 + i2;
+        }
+  });
+      List<Tuple2<String, Integer>> thisOutput = finalCounts.collect();
+      for (Tuple2<?,?> tuple : thisOutput) {
+        System.out.println(tuple._1() + ": " + tuple._2());
+      }
+      ctx.stop();
+    }
+  }
+
+```
+
+与Scala版本的MapReduce代码相比，Java版的需要写更多的代码，使用Java Spark API需要更关注更多:
+* 切分单词
+* 给每个单词count技术赋值1
+* 给每个独立的单词计算出现次数
+* 输出结果
+
+#### 使用maven构建项目
+
+在整本书中我都是用Eclipse创建和构建工程，Maven是一个构建工具（我认为`sbt`也从Maven中活去了很多灵感）。Maven和Ant是Java的主要构建工具，
+如果你没有安装Maven，你可以从[http:// maven.apache.org](http:// maven.apache.org)下载。
+
+对每个项目而言，你需要一个Maven构建文件，叫做pmo.xml.
+
+```
+  <project>
+    <groupId>com.mlbook</groupId>
+    <artifactId>javamrexample</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <name>Java MR Example</name>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+    <repositories>
+      <repository>
+        <id>Akka repository</id>
+        <url>http://repo.akka.io/releases</url>
+      </repository>
+    </repositories>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.spark</groupId>
+        <artifactId>spark-core_2.10</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+    </dependencies>
+</project>
+```
+
+从这个文件可以看到项目的基本结构，并且配置了从哪个仓库下载依赖。对Spark项目而言，你需要在dependencies中指名Spark API的依赖。
+
+#### 用Maven打包
+
+你可以从命令行中执行Maven打包命令：
+```
+mvn package
+```
+
+Maven构建工具会下载依赖，创建类文件，然后将依赖的类打包进jar文件。构建好后，一个`target`目录会被自动创建，里面包含了打好包的jar文件:
+
+```
+
+  Jason-Bells-MacBook-Pro:JavaMRExample Jason$ cd target/
+  Jason-Bells-MacBook-Pro:target Jason$ ls -l
+  total 24
+  drwxr-xr-x  10 Jason  staff   340  9 Jul 18:19 classes
+  -rw-r--r--   1 Jason  staff  8679  9 Jul 18:19 javamrexample-1.0.jar
+  drwxr-xr-x   3 Jason  staff   102  9 Jul 18:04 maven-archiver
+  Jason-Bells-MacBook-Pro:target Jason$
+```
+
+与Scala的例子类似，你需要使用`spark-submit`提交Spark作业：
+```
+jason@cloudatics:~$ /usr/local/spark/bin/spark-submit --class
+  "JavaMRExample" \
+  --master local[4] javamrexample-1.0.jar
+```
+
+Spark会执行jar文件，你可以在终端中看到MapReduce的输出：
+
+```
+ 14/07/09 20:37:08 INFO DAGScheduler: Stage 0 (collect at JavaMRExample.
+  java:44) finished in 0.784 s
+  14/07/09 20:37:08 INFO SparkContext: Job finished: collect at
+  JavaMRExample.java:44, took 2.47317507 s
+  young: 29
+  mattered: 1
+  intimately: 1
+  journeys.: 1
+  Let: 7
+  House: 1
+  (Socialism),: 1
+  instance,: 1
+  superannuated.: 1
+  proportions,: 1
+  Contributed: 1
+  secure: 4
+  incoherent.: 1
+  everyone.: 1
+  gowns: 2
+  well-informed: 1
+```
+
+### Spark编程总结
+
+至此，你已经学会了2种快速构建Spark作业的方法，如前所述，使用Java还是Scala取决于你的喜好。在生产环境中，你肯定不想用一个你不是100%
+熟悉的语言编写的代码。
+
+有了Spark的基本信息和构建Spark作业的方法，你可以继续学习一些Spark上可以用的库了。
+
+##Spark SQL
 
 
 
