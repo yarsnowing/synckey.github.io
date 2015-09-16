@@ -91,25 +91,25 @@ body {
 }
 
 h1 {
-    font-family: 'LTCircular', "Microsoft YaHei", sans-serif;
+    font-family: 'LTCircular', 'Heiti SC Light', "Microsoft YaHei", sans-serif;
     font-size: 1.6em;
     color: #000;
 }
 
 h2 {
-    font-family: 'LTCircular',"Microsoft YaHei", sans-serif;
+    font-family: 'LTCircular','Heiti SC Light',"Microsoft YaHei", sans-serif;
     font-size: 1.4em;
     color: #111;
 }
 
 h3 {
-    font-family: 'LTCircular', "Microsoft YaHei", sans-serif;
+    font-family: 'LTCircular', 'Heiti SC Light',"Microsoft YaHei", sans-serif;
     font-size: 1.2em;
     color: #222;
 }
 
 h4 {
-    font-family: 'LTCircular', "Microsoft YaHei", sans-serif;
+    font-family: 'LTCircular', 'Heiti SC Light',"Microsoft YaHei", sans-serif;
     font-size: 1em;
     color: #333;
 }
