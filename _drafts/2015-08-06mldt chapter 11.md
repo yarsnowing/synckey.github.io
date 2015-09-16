@@ -835,3 +835,358 @@ name := "SparkSQLExample"
 数据准备好了之后，就可以开始编码了。
 
 #### Scala应用
+
+我将会用更符合逻辑的方式拆分这个应用：一个Scala对象来运行main方法加载Spark配置，另外一个进行查询操作，主程序中也会打印
+一些日志，以便程序在运行时，我们能知道发生了什么。首先看一下配置是怎么拆出来的:
+
+{% highlight scala %}
+import java.io._
+  import org.apache.spark.SparkContext
+  import org.apache.spark.SparkContext._
+  import org.apache.spark.SparkConf
+  import org.apache.spark.sql.SQLContext
+  object SparkSQLExample {
+    def main(args: Array[String]) {
+     val conf = new SparkConf().setAppName("SparkSQLExample").
+      setMaster("local")
+          conf.set("spark.eventLog.enabled", "true")
+          conf.set("spark.eventLog.dir", "file:///home/jason/sparksqltest/
+      myeventlog/eventlog.out")
+          val logger = new PrintWriter(new File("logging/sparksql.out"))
+          val sc = new SparkContext(conf)
+          val sql = SparkQueries.importDataToRDD(sc)
+          logger.write("Sending Query " + System.currentTimeMillis() + "\n")
+          SparkQueries.getUserLocations(sql, sc)
+          System.exit(0)
+    } }
+{% endhighlight  %}
+
+跟之前的例子一样，你创建了一个`SparkConfiguration`对象，并设置了应用名称。同时，你也设置了部署的master节点(例子中
+是`local`，因为它在本地运行 )。
+
+你也打开了Spark的运行日志，并配置了日志输出目录和日志文件名。你也可以扩展配置，使得Spark的调度器可以对某些卒业进行优先调度，但是
+目前你并不需要关注这个。`SparkQueries`对象被用来加载数据到RDD,`getUserLocations`方法运行实际的SQL查询。
+
+##### 构建查询项目
+
+我建议创建一个单独的对象进行查询操作，以保持代码的整洁。一个对象用来提交作业，另外一个用来做实际的工作，这点跟Hadoop的作业很像。
+
+在本节开头提过，我们将会用RDD来保存数据。例子中使用创建了一个case类来定义schema对象，如果你熟悉POJO，它们定义非常类似：
+{% highlight scala %}
+case class Customer(guid: String, firstname: String, lastname: String,
+postcode: String, dob: String, latitude: Double, longitude: Double)
+{% endhighlight  %}
+
+
+
+
+你现在需要把数据从`.csv`文件导入到Customer对象。本章的前面你使用了`sc.testFile()`方法将数据保存到RDD中的数组类型。有了
+Customer对象，你可以将`.csv`文件的每行映射到Customer对象里。
+
+{% highlight scala %}
+ def importDataToRDD(sc: SparkContext) : SQLContext = {
+      val sqlContext = new SQLContext(sc)
+      val customers = sc.textFile("customers.csv").map(_.split(",")).
+  map(c=> Customer(c(0), c(1), c(2), c(3), c(4), c(5), c(6).toDouble,
+  c(7).toDouble))
+      customers.registerAsTable("customers")
+      cacheTable("customers")
+      sqlContext
+}
+
+{% endhighlight  %}
+
+
+所有的用户信息现在都加载到内存里了，所以你可以构建一个查询来查找数据。SparkSQL跟标准的ANSI SQL很相似，在这个例子里，我
+为我的每个query创建了一个方法，主要是为了代码清爽可读。我将Spark contex和SQL 内容当参数传递进去:
+
+{% highlight scala %}
+def getUserLocations(sqlContext: SQLContext, sc: SparkContext) {
+      val query = "SELECT lastname, firstname, latitude, longitude FROM
+  customers"
+      sc.setJobDescription(query)
+      val result = sqlContext.sql(cmd).collect.foreach(println)
+}
+{% endhighlight  %}
+
+整个类的代码如下:
+
+{% highlight scala %}
+import org.apache.spark.SparkContext
+  import org.apache.spark.SparkContext._
+  import org.apache.spark.SparkConf
+  import org.apache.spark.sql.SQLContext
+  case class Customer(guid: String,
+      firstname: String,
+      lastname: String,
+      postcode: String,
+      dob: String,
+      latitude: Double,
+      longitude: Double)
+  //This code just copied from shark context testing
+  object SparkQueries {
+    def importDataToRDD(sc: SparkContext) : SQLContext = {
+      val sqlContext = new SQLContext(sc)
+      import sqlContext._
+      val customers = sc.textFile("customers.csv").map(_.split(",")).
+  map(c=> Customer(c(0), c(1), c(2), c(3), c(4), c(5).toDouble, c(6).
+  toDouble))
+      customers.registerAsTable("customers")
+      cacheTable("customers")
+      sqlContext
+    }
+    def getUserLocations(sqlContext: SQLContext, sc: SparkContext) {
+    val query = "SELECT lastname, firstname, latitude, longitude FROM
+      customers"
+          sc.setJobDescription(query)
+          val result = sqlContext.sql(query).collect.foreach(println)
+        }
+    }
+
+{% endhighlight  %}
+
+完成了两个类文件，就可以构建工程了:
+
+{% highlight bash %}
+Jason-Bells-MacBook-Pro:SparkSQLExample$ sbt package
+  [info] Set current project to SparkSQLExample (in build file:/Users/
+  Jason/work/scala/SparkSQLExample/)
+  [info] Compiling 2 Scala sources to /Users/Jason/work/scala/
+  SparkSQLExample/target/scala-2.10/classes...
+  [info] Packaging /Users/Jason/work/scala/SparkSQLExample/target/scala-
+  2.10/sparksqlexample_2.10-1.0.jar ...
+  [info] Done packaging.
+  [success] Total time: 9 s, completed 12-Jul-2014 14:25:05
+{% endhighlight  %}
+
+
+
+
+##### 运行工程
+将`jar`文件和`.csv`数据放入一个`sparksqldemo`的目录：
+{% highlight bash %}
+ jason@cloudatics:~/sparksqldemo$ ls -l
+  total 292
+  -rw------- 1 jason jason 269781 Jul 12 16:51 customers.csv
+  drwxr-xr-x 2 jason jason   4096 Jul 12 16:47 logging
+  drwxr-xr-x 3 jason jason   4096 Jul 12 16:47 myeventlog
+  -rw-r--r-- 1 jason jason  12673 Jul 12 16:50 sparksqlexample_2.10-
+  1.0.jar
+  jason@cloudatics:~/sparksqldemo$
+{% endhighlight  %}
+使用`spark-submit`来提交Spark作业:
+{% highlight bash %}
+/usr/local/spark/bin/spark-submit --class "SparkSQLExample" --master
+  local[4] sparksqlexample_2.10-1.0.jar
+{% endhighlight  %}
+
+当Spark运行工程师，终端会有很多输出，但是有一些有意义的需要关注。首先，可以看到Spark将数据加载到内存：
+{% highlight bash %}
+
+
+14/07/12 17:00:44 INFO StringColumnBuilder: Compressor for [guid]: org.
+  apache.spark.sql.columnar.compression.PassThrough$Encoder@2ce10a23,
+  ratio: 1.0
+  14/07/12 17:00:44 INFO StringColumnBuilder: Compressor for [firstname]:
+  org.apache.spark.sql.columnar.compression.PassThrough$Encoder@6a6096d9,
+    ratio: 1.0
+    14/07/12 17:00:44 INFO StringColumnBuilder: Compressor for [lastname]:
+    org.apache.spark.sql.columnar.compression.PassThrough$Encoder@6b4fb71e,
+    ratio: 1.0
+    14/07/12 17:00:44 INFO StringColumnBuilder: Compressor for [postcode]:
+    org.apache.spark.sql.columnar.compression.PassThrough$Encoder@3e7f499c,
+    ratio: 1.0
+    14/07/12 17:00:44 INFO StringColumnBuilder: Compressor for [dob]: org.
+    apache.spark.sql.columnar.compression.PassThrough$Encoder@16b9c0d2,
+    ratio: 1.0
+    14/07/12 17:00:44 INFO FloatColumnBuilder: Compressor for [latitude]:
+    org.apache.spark.sql.columnar.compression.PassThrough$Encoder@7d2226a5,
+    ratio: 1.0
+    14/07/12 17:00:44 INFO FloatColumnBuilder: Compressor for [longitude]:
+    org.apache.spark.sql.columnar.compression.PassThrough$Encoder@4d175ad1,
+    ratio: 1.0
+{% endhighlight  %}
+
+Query计划展示了运行的query。第一行告诉你哪些字段被返回（本例中: lastname, firstname, latitude, and longitude）。
+
+{% highlight bash %}
+== Query Plan ==
+  Project [lastname#2:2,firstname#1:1,latitude#5:5,longitude#6:6]
+   InMemoryColumnarTableScan
+  [guid#0,firstname#1,lastname#2,postcode#3,dob#4,latitude#5,longitude#6],
+  (ExistingRdd
+  [guid#0,firstname#1,lastname#2,postcode#3,dob#4,latitude#5,longitude#6],
+  MapPartitionsRDD[4] at mapPartitions at basicOperators.scala:174),
+  false)
+  14/07/12 17:00:44 INFO TaskSchedulerImpl: Adding task set 1.0 with 1
+  tasks
+  14/07/12 17:00:44 INFO TaskSetManager: Starting task 1.0:0 as TID 1 on
+  executor localhost: localhost (PROCESS_LOCAL)
+  14/07/12 17:00:44 INFO TaskSetManager: Serialized task 1.0:0 as 2883
+  bytes in 0 ms
+  14/07/12 17:00:44 INFO Executor: Running task ID 1
+  14/07/12 17:00:44 INFO BlockManager: Found block broadcast_0 locally
+  14/07/12 17:00:44 INFO BlockManager: Found block rdd_7_0 locally
+  14/07/12 17:00:44 INFO Executor: Serialized size of result for 1 is
+  162709
+  14/07/12 17:00:44 INFO Executor: Sending result for 1 directly to driver
+  14/07/12 17:00:44 INFO Executor: Finished task ID 1
+  14/07/12 17:00:44 INFO TaskSetManager: Finished TID 1 in 543 ms on
+  localhost (progress: 1/1)
+  14/07/12 17:00:44 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose
+  tasks have all completed, from pool
+  14/07/12 17:00:44 INFO DAGScheduler: Completed ResultTask(1, 0)
+  14/07/12 17:00:44 INFO DAGScheduler: Stage 1 (collect at SparkQueries.
+  scala:30) finished in 0.808 s
+   14/07/12 17:00:44 INFO SparkContext: Job finished: collect at
+    SparkQueries.scala:30, took 0.849306003 s
+    [Thorpe,Maya,52.541897,1.624524]
+    [Cox,Ethan,52.67349,-2.078559]
+    [Glover,Imogen,52.47305,-0.963058]
+    [Smith,Sarah,50.54306,-3.720899]
+    [Reid,Christopher,50.855225,-0.599943]
+    [Iqbal,Oliver,50.808296,-2.644681]
+    [Little,Evie,52.01529,-1.95964]
+    [Flynn,Finley,51.381012,-3.258463]
+{% endhighlight  %}
+
+#### 使用基于对象的查询
+
+Spark不仅仅提供了`SQL-based`的查询，如果你习惯使用object 映射，你可能对`object-based`的查询更感兴趣。
+假设你将customer的对象放在了叫Customers 的 RDD中，我可以用下面的语句很轻松的查询到所有`firstname`以`George`开头的
+数据:
+{% highlight bash %}
+  val georges = customers.where('firstname="George").select('lastname')
+{% endhighlight  %}
+
+
+#### Java SparkSQL例子
+
+可以想象，Java版本的代码和Scala版本的很相似。为`customer`类使用一个POJO,你可以这样将数据导入RDD:
+{% highlight java %}
+import java.io.Serializable;
+  import java.util.List;
+  import org.apache.spark.SparkConf;
+  import org.apache.spark.api.java.JavaRDD;
+  import org.apache.spark.api.java.JavaSparkContext;
+  import org.apache.spark.api.java.function.Function;
+  import org.apache.spark.sql.api.java.JavaSQLContext;
+  import org.apache.spark.sql.api.java.JavaSchemaRDD;
+  import org.apache.spark.sql.api.java.Row;
+  public class JavaSQLExample {
+      public static class Customer implements Serializable {
+          private String guid;
+          private String firstname;
+          private String lastname;
+          private String postcode;
+          private String dob;
+          private Float latitude;
+          private Float longitude;
+          public String getGuid() {
+              return guid;
+          }
+          public void setGuid(String guid) {
+              this.guid = guid;
+          }
+          public String getFirstname() {
+              return firstname;
+          }
+          public void setFirstname(String firstname) {
+              this.firstname = firstname;
+          }
+          public String getLastname() {
+              return lastname;
+          }
+          public void setLastname(String lastname) {
+              this.lastname = lastname;
+          }
+          public String getPostcode() {
+              return postcode;
+          }
+          public void setPostcode(String postcode) {
+              this.postcode = postcode;
+          }
+          public String getDob() {
+              return dob;
+          }
+          public void setDob(String dob) {
+              this.dob = dob;
+          }
+          public Float getLatitude() {
+              return latitude;
+          }
+          public void setLatitude(Float latitude) {
+              this.latitude = latitude;
+          }
+          public Float getLongitude() {
+              return longitude;
+              }
+                      public void setLongitude(Float longitude) {
+                          this.longitude = longitude;
+              } }
+                  public static void main(String[] args) throws Exception {
+                      SparkConf sparkConf = new SparkConf().
+              setAppName("JavaSQLExample");
+                      JavaSparkContext ctx = new JavaSparkContext(sparkConf);
+                      JavaSQLContext sqlCtx = new JavaSQLContext(ctx);
+                      System.out.println("Load csv file into RDD");
+                      JavaRDD<Customer> customers = ctx.textFile("customers.csv").map(
+                        new Function<String, Customer>() {
+                          public Customer call(String line) throws Exception {
+                            String[] split = line.split(",");
+                            Customer customer = new Customer();
+                              customer.setGuid(split[0]);
+                              customer.setFirstname(split[1]);
+                              customer.setLastname(split[2]);
+                              customer.setPostcode(split[3]);
+                              customer.setDob(split[4]);
+                              customer.setLatitude(Float.parseFloat(split[5]));
+                              customer.setLongitude(Float.parseFloat(split[6]));
+                            return customer;
+                          }
+              });
+                      JavaSchemaRDD customerSchema = sqlCtx.applySchema(customers,
+              Customer.class);
+                      customerSchema.registerAsTable("customers");
+                      JavaSchemaRDD georges = sqlCtx.sql("SELECT lastname FROM
+              customers WHERE firstname='George'");
+                      List<String> georgeList = georges.map(new Function<Row,
+              String>() {
+                        public String call(Row row) {
+                          return "Lastname: " + row.getString(0);
+                        }
+                      }).collect();
+                      for (String lastname: georgeList) {
+                                System.out.println(lastname);
+                                }
+                      } }
+
+                      
+{% endhighlight  %}
+使用Maven将工程打包为`jar`文件，就可以用那个`spark-submit`工具运行例子了。
+{% highlight bash %}
+$ /usr/local/spark/bin/spark-submit --class "JavaSQLExample" --master
+  local[4] javasqlexample-1.0.jar
+{% endhighlight  %}
+Spark在启动和导入`.csv`文件到内存时，会产生大量输出，最终query会被执行，你可以看到结果被输出到终端了:
+
+{% highlight bash %}
+
+  14/08/25 23:03:19 INFO SparkContext: Job finished: collect at
+  JavaSQLExample.java:110, took 1.664090864 s
+  Lastname: Dawson
+  Lastname: Power
+  Lastname: Stewart
+  Lastname: Stewart
+  Lastname: Young
+  Lastname: Cartwright
+  Lastname: Carr
+  Lastname: Chandler
+  Lastname: Begum
+
+{% endhighlight  %}
+
+### 封装 SparkSQL
+
+如果你，或者你团队中的任何一个人对SQL比较了解，那么看看SparkSQL一定会有帮助，尤其是在你想从RDD中导出数据时。尽管SparkSQL
+还有一些语言上的限制，它满足了大部分的类似SELECT和JOIN这样的需求。
