@@ -1,6 +1,6 @@
 ---
-layout: post
-title: 麦田里的守望者
+layout:post
+title:麦田里的守望者
 categories: [notes]
 tags: [小说,笔记,青春]
 ---
