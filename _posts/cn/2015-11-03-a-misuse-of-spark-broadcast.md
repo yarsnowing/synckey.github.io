@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Spark Broadcast的误用
+title:Spark Broadcast的误用
 categories: [spark]
-tags: [Spark]
+tags: [spark]
 ---
 
 在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization
