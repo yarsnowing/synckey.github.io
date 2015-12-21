@@ -2,7 +2,7 @@
 layout: post
 title: Run Vowpal Wabbit on Hadoop
 categories: [hadoop]
-tags: [hadoop,vw,vowpal wabbit]
+tags: [hadoop,vw]
 ---
 
 ###Prerequisites
