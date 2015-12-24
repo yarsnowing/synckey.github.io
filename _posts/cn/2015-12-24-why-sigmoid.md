@@ -27,8 +27,8 @@ $$
 p(y;\eta)=h(x)exp\{\eta^{T}T(x)-a(\eta)\}
 $$
 
-选定了$T,a,b$就定义了一个参数为$\eta$的分布族，我们改变$\eta$，就可以在该分布族内得到不同的分布。很多常见的分布$Bernoulli,Gaussian,
-Bimomial,Poisson$等，均属于指数族分布。
+选定了$T,a,b$就定义了一个参数为$\eta$的分布族，我们改变$\eta$，就可以在该分布族内得到不同的分布。很多常见的分布 $Bernoulli,$ $Gaussian,$
+$Bimomial,$ $Poisson$ 等，均属于指数族分布。
 
 假设 $y\sim Bernoulli(p),y\in\lbrace {0,1}\rbrace$,则有 $ p(y=1) = p,p(y=0)=1-p $,$Bernoulli$的概率密度函数可以改写为:
 
@@ -47,7 +47,7 @@ $$
     p=\frac{1}{1+e^{-\eta}}
 $$
 
-这就是我们的*$sigmoid$*函数!同时 $p(y)=exp\lbrace \eta y - log(1+e^{\eta}) \rbrace$ ,我们有:
+这就是我们的*$sigmoid$*函数!同时 $p(y)=exp\lbrace \eta^{T}y - log(1+e^{\eta}) \rbrace$ ,我们有:
 
 $$
 \begin{eqnarray*}
@@ -60,7 +60,7 @@ $$
 符合指数族分布的定义。
 
 ###广义线性模型(Generalized Linear Models)
-假设
+假设我们要预测
 
 ###References
 [Andrew Ng Machine Learning ](http://open.163.com/special/opencourse/machinelearning.html)
