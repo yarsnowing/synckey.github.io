@@ -1,5 +1,5 @@
 ---
-title: plot sigmoid in matlab
+title: Plot Sigmoid in Matlab
 layout: post
 categories: "ml"
 tags: ["machine learning","technology","logistic regression"]
