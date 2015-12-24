@@ -19,9 +19,9 @@ $$
 \end{eqnarray*}
 $$
 
-###2.指数族分布($The\ exponential\ family\ distribution$)
+###2.指数族分布($The$ $exponential$ $family$ $distribution$)
 
-我们称如果一个分布可以被写成如下形式，就称其服从指数族分布(The exponential family distribution):
+我们称如果一个分布可以被写成如下形式，就称其服从指数族分布($The$ $exponential$ $family$ $distribution$):
 
 $$
 p(y;\eta)=h(x)exp\{\eta^{T}T(x)-a(\eta)\}
