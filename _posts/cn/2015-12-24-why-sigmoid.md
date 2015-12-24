@@ -4,11 +4,13 @@ layout: post
 categories: "ml"
 tags: ["machine learning","technology","logistic regression"]
 ---
-逻辑回归是机器学习中用的最广泛的算法之一，其中一个重要的函数是 $sigmoid$ 函数，$sigmoid$ 函数的输出形状如下:
+>主要根据Andrew Ng的教学讲义整理
+
+逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
 <p align="center">
 <img src="/static/images/sigmoid.svg" alt="sigmoid"  width="50%" />
 </p>
-它的输出可以认为是预测的概率。但是，为什么是$sigmoid$,为什么在二分类中使用它？
+书里面都说它的输出可以认为是预测的概率，但是，为什么是$sigmoid$，它是从哪来的呢？为什么可以它做二分类?书里面好像都没有说呢。
 
 ###1.逻辑回归的建模
 首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然就想到使用 $Bernoulli$ 分布对 $y$ 的条件分布进行建模。$Bernoulli$
