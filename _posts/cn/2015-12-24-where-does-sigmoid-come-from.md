@@ -1,5 +1,5 @@
 ---
-title: sigmoid的前世今生
+title: Sigmoid的前世今生
 layout: post
 categories: "ml"
 tags: ["machine learning","technology","logistic regression"]
