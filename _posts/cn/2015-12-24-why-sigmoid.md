@@ -4,7 +4,7 @@ layout: post
 categories: "ml"
 tags: ["machine learning","technology","logistic regression"]
 ---
->主要根据Andrew Ng的教学讲义整理.
+>主要根据Andrew Ng的教学讲义整理。
 
 逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
 <p align="center">
