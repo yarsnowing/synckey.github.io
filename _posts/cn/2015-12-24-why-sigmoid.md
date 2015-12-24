@@ -50,7 +50,7 @@ $$
     p=\frac{1}{1+e^{-\eta}}
 $$
 
-这就是我们的*$sigmoid$*函数!同时 $p(y)=exp\lbrace \eta^{T}y - log(1+e^{\eta}) \rbrace$ ,我们有:
+这就是我们的*$sigmoid$*函数!同时 $p(y)=exp\lbrace \eta y - log(1+e^{\eta}) \rbrace$ ,我们有:
 
 $$
 \begin{eqnarray*}
@@ -87,7 +87,7 @@ h_{\theta}(x)        &=& E[y|x;\theta] \\
 $$
 
 这就是为什么对 $y$  的预测使用 $ h_{\theta}(x)=\frac{1}{1+e^{-\theta x}} $方程。如果你对 $logistic$ $function:$ 
-$ \frac{1}{1+e^{-\theta z}}$ 的来历有疑问，那么这个推导也给了你答案:一旦你假设 $y\|x;\theta  \sim  Bernoulli(p)$, 由GLM和指数族
+$ \frac{1}{1+e^{-\theta x}}$ 的来历有疑问，那么这个推导也给了你答案:一旦你假设 $y\|x;\theta  \sim  Bernoulli(p)$, 由GLM和指数族
 分布的定义，就自然而然的给出了逻辑回归函数。
 
 
