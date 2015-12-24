@@ -4,7 +4,7 @@ layout: post
 categories: "ml"
 tags: ["machine learning","technology","logistic regression"]
 ---
->主要根据Andrew Ng的教学讲义整理
+>主要根据Andrew Ng的教学讲义整理.
 
 逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
 <p align="center">
@@ -13,9 +13,9 @@ tags: ["machine learning","technology","logistic regression"]
 书里面都说它的输出可以认为是预测的概率，但是，为什么是$sigmoid$，它是从哪来的呢？为什么可以它做二分类?书里面好像都没有说呢。
 
 ###1.逻辑回归的建模
-首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然就想到使用 $Bernoulli$ 分布对 $y$ 的条件分布进行建模。$Bernoulli$
-分布可以认为是二项分布的特殊情况(二项分布的$n=1$情况)，其结果只能取$0$或1(可以设想单次抛硬币的结果)。假设实验成功的概率为$p$,则$Bernoulli$的
-概率密度函数和数学期望为:
+首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然
+就想到使用 $Bernoulli$ 对 $y$ 的条件分布进行建模。$Bernoulli$
+分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli$的概率密度函数和数学期望为:
 
 $$
 \begin{eqnarray*}
@@ -26,13 +26,13 @@ $$
 
 ###2.指数族分布($The$ $exponential$ $family$ $distribution$)
 
-我们称如果一个分布可以被写成如下形式，就称其服从指数族分布($The$ $exponential$ $family$ $distribution$):
+如果一个分布可以被写成如下形式，就称其服从指数族分布($The$ $exponential$ $family$ $distribution$):
 
 $$
 p(y;\eta)=b(x)exp\{\eta^{T}T(x)-a(\eta)\}
 $$
 
-选定了$T,a,b$就定义了一个参数为$\eta$的分布族，我们改变$\eta$，就可以在该分布族内得到不同的分布。很多常见的分布 $Bernoulli,$ $Gaussian,$
+选定了 $T,a,b$ 就定义了一个参数为 $\eta$ 的分布族，我们改变 $\eta$ ，就可以在该分布族内得到不同的分布。很多常见的分布 $Bernoulli,$ $Gaussian,$
 $Bimomial,$ $Poisson$ 等，均属于指数族分布。
 
 假设 $y\sim Bernoulli(p),y\in\lbrace {0,1}\rbrace$,则有 $ p(y=1) = p,p(y=0)=1-p $,$Bernoulli$的概率密度函数可以改写为:
