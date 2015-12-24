@@ -89,8 +89,7 @@ h_{\theta}(x)        &=& E[y|x;\theta] \\
 \end{eqnarray*}
 $$
 
-这就是为什么对 $y$  的预测使用 $ h_{\theta}(x)=\frac{1}{1+e^{-\theta x}} $方程。如果你对 $logistic$ $function:$ 
-$ \frac{1}{1+e^{-\theta x}}$ 的来历有疑问，那么这个推导也给了你答案:一旦你假设 $y\|x;\theta  \sim  Bernoulli(p)$, 由GLM和指数族
+这就是为什么对 $y$  的预测使用 $ h_{\theta}(x)=\frac{1}{1+e^{-\theta x}} $方程。事实上，一旦你假设 $y\|x;\theta  \sim  Bernoulli(p)$, 由GLM和指数族
 分布的定义，就自然而然的给出了逻辑回归函数。
 
 
