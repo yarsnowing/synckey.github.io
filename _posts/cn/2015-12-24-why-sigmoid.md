@@ -24,7 +24,7 @@ $$
 我们称如果一个分布可以被写成如下形式，就称其服从指数族分布($The$ $exponential$ $family$ $distribution$):
 
 $$
-p(y;\eta)=h(x)exp\{\eta^{T}T(x)-a(\eta)\}
+p(y;\eta)=b(x)exp\{\eta^{T}T(x)-a(\eta)\}
 $$
 
 选定了$T,a,b$就定义了一个参数为$\eta$的分布族，我们改变$\eta$，就可以在该分布族内得到不同的分布。很多常见的分布 $Bernoulli,$ $Gaussian,$
@@ -59,8 +59,33 @@ $$
 
 符合指数族分布的定义。
 
-###广义线性模型(Generalized Linear Models)
-假设我们要预测
+###3.广义线性模型($Generalized$ $Linear$ $Models$)
+假设我们有一个回归问题($regression$ $problem$)或者分类问题($classification$ $problem$)，我们要预测某些关于 $x$ 的随机变量 $y$ 的值，
+要为这个问题推导一个$GML$($Generalized$ $Linear$ $Model$),我们对 $y$ 关于 $x$ 的条件分布做以下三个假设:
+
+1. $y\|x;\theta  \sim  ExponentialFamily(\eta)$。
+2. 在给定 $x$ 的情况下，我们的目标是预测 $T(y)$ 的期望。一般情况下，我们有 $ T(y)=y $,这意味着，我们希望我们的假设 $h$输出的结果 $h(x)$
+满足 $h(x)=E[y\|x]$.
+3. $\eta(natural parameter)$ 与输入 $x$ 之间线性相关,即: $\eta=\theta^{T}x$。
+
+其中第三个与其说是假设，倒不如说是我们的`设计选择`。有了三个假设，我们就可以推导出来非常优雅($sexy$)的学习算法，称为`GML`。
+
+####逻辑回归($Logistic$ $Regression$)
+在逻辑回归中，我们考虑的是二分类问题，所以有 $y \in \lbrace 0,1\rbrace $，很自然的我们假设 $y$ 是关于 $x$的$Bernoulli$分布，
+即:$Bernoulli(p),y\in\lbrace {0,1}\rbrace$。因为$y\|x;\theta  \sim  Bernoulli(p)$,则$E[y\|x;\theta]=p$,所以我们有：
+
+$$
+\begin{eqnarray*}
+h_{\theta}(x)        &=& E[y|x;\theta] \\
+                     &=& p             \\
+                     &=& \frac{1}{1+e^{-\eta}} \\
+                     &=& \frac{1}{1+e^{-\theta x}}
+\end{eqnarray*}
+$$
+这就是为什么对 $y$  的预测使用 $ h_{\theta}(x)=\frac{1}{1+e^{-\theta x}} $的形式，如果你对 $logistic$ $function$ 
+$ \frac{1}{1+e^{-\theta z}}$ 的来历有疑问，那么这个推导也给了你答案:一旦你假设 $y\|x;\theta  \sim  Bernoulli(p)$, 由GLM和指数族
+分布的定义，就自然而然的给出了逻辑回归函数。
+
 
 ###References
 [Andrew Ng Machine Learning ](http://open.163.com/special/opencourse/machinelearning.html)
