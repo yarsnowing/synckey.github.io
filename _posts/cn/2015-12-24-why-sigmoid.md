@@ -5,10 +5,10 @@ categories: "ml"
 tags: ["machine learning","technology","logistic regression"]
 ---
 逻辑回归是机器学习中用的最广泛的算法之一，其中一个重要的函数是 $sigmoid$ 函数，$sigmoid$ 函数的输出可以认为是预测的概率。但是，为什么是
-$sigmoid$ ,为什么在二分类中使用它？
+$sigmoid$,为什么在二分类中使用它？
 
 ###1.逻辑回归的建模
-在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然就想到使用 $Bernoulli$ 分布对 $y$ 的条件分布进行建模。$Bernoulli$
+首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然就想到使用 $Bernoulli$ 分布对 $y$ 的条件分布进行建模。$Bernoulli$
 分布可以认为是二项分布的特殊情况(二项分布的$n=1$情况)，其结果只能取$0$或1(可以设想单次抛硬币的结果)。假设实验成功的概率为$p$,则$Bernoulli$的
 概率密度函数和数学期望为:
 
