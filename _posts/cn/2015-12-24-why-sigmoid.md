@@ -5,7 +5,9 @@ categories: "ml"
 tags: ["machine learning","technology","logistic regression"]
 ---
 逻辑回归是机器学习中用的最广泛的算法之一，其中一个重要的函数是 $sigmoid$ 函数，$sigmoid$ 函数的输出形状如下:
-<img src="/static/images/sigmoid.svg" alt="sigmoid"  width="10%" class="carousel-inner img-responsive img-rounded" />
+<p align="center">
+<img src="/static/images/sigmoid.svg" alt="sigmoid"  width="50%" />
+</p>
 它的输出可以认为是预测的概率。但是，为什么是$sigmoid$,为什么在二分类中使用它？
 
 ###1.逻辑回归的建模
