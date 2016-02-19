@@ -29,7 +29,7 @@ production_url : http://synckey.github.io
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
-#JB :
+JB :
 #  version : 0.3.0
 
   # All links will be namespaced by BASE_PATH if defined.
@@ -54,7 +54,7 @@ production_url : http://synckey.github.io
   #   - Only the following values are falsy: ["", null, false]
   #   - When setting BASE_PATH it must be a valid url.
   #     This means always setting the protocol (http|https) or prefixing with "/"
-#  BASE_PATH : false
+  BASE_PATH : false
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
@@ -64,7 +64,7 @@ production_url : http://synckey.github.io
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  #ASSET_PATH :  /assets
+  ASSET_PATH :  false
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
