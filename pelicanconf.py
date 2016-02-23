@@ -37,3 +37,4 @@ DISQUS_SITENAME = u"synckey"
 THEME = "pelican-bootstrap3"
 HIDE_SIDEBAR = True
 #BOOTSTRAP_FLUID =  True
+PDF_PROCESSOR = True

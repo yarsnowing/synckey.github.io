@@ -53,6 +53,24 @@
     {# Twitter Cards tags #}
     {% include 'includes/twitter_cards.html' %}
 
+
+    <!-- highcharts -->
+    <!--
+    <script src="{{ ASSET_PATH }}/js/exporting.js"></script>
+    -->
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/highcharts.js"></script>
+    <!-- mathtex -->
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            tex2jax: {inlineMath: [['$', '$']]},
+            processEscapes: true,
+        });
+
+    </script>
+
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css" type="text/css"/>
