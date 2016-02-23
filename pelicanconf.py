@@ -35,3 +35,5 @@ DEFAULT_PAGINATION = 10
 #RELATIVE_URLS = True
 DISQUS_SITENAME = u"synckey"
 THEME = "pelican-bootstrap3"
+HIDE_SIDEBAR = True
+#BOOTSTRAP_FLUID =  True
