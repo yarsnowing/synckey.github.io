@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Andy Wang'
 SITENAME = u"Andy's Blog"
-SITEURL = 'synckey.github.io'
+SITEURL = ''
 
 PATH = 'content'
 
