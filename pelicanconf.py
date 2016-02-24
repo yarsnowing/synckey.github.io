@@ -49,3 +49,8 @@ EXTRA_PATH_METADATA = {
 
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_SAVE_AS = ARTICLE_URL
+
+DISPLAY_CATEGORIES_ON_MENU = False
+
+PLUGIN_PATHS = ["plugins", "plugins"]
+PLUGINS = [ "neighbors"]

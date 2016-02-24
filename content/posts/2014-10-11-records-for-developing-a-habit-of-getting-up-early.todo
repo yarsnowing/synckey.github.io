@@ -1,8 +1,20 @@
-Title: Recordes For Developing A Habit of Getting Up Early
-Date: 2014-10-11
-Category: Posts
-Slug: records-for-developing-a-habit-of-getting-up-early
-Tag: personal
+Recordes For Developing A Habit of Getting Up Early
+#####################################################
+
+:tags: personal
+:date: 2014-10-11
+:slug: records-for-developing-a-habit-of-getting-up-early
+:category: posts
+::
+
+
++------------------------+------------+----------+
+| Header row, column 1   | Header 2   | Header 3 |
++========================+============+==========+
+| body row 1, column 1   | column 2   | column 3 |
++------------------------+------------+----------+
+| body row 2             | Cells may span        |
++------------------------+-----------------------+
 
 | Date     | Get up on time | Squats  | Situps | PushUps | Diary |
 |:--------:|:--------------:|:-------:|:------:|:-------:|:-----:|
@@ -40,10 +52,8 @@ Tag: personal
 |2014.11.10|    &#10004;     | &#10004; | &#10004;|&#10004;  |&#10004;|
 |2014.11.11|    &#10004;     | &#10004; | &#10004;|&#10004;  |&#10004;|
 
-
-
 <script type="text/javascript">
-    $(document).ready(function(){
-        $("table").addClass("table table-hover table-striped table-condensed");
-    });
+$(document).ready(function(){
+    $("table").addClass("table table-hover table-striped table-condensed");
+});
 </script>

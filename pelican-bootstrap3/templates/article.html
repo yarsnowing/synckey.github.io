@@ -94,6 +94,8 @@
         <div>
             <time datetime="{{ article.date.isoformat() }}">{{ article.date|strftime('%Y-%m-%d') }}</time>
         </div>
+
+        {% include 'includes/neighbors.html' %}
         {% include 'includes/related-posts.html' %}
         {% include 'includes/series.html' %}
         {% include 'includes/addthis.html' %}
