@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Run Vowpal Wabbit on Hadoop - Andy's Blog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="/posts/2015/06/09/run-vw-on-hadoop.html">
+
+<meta name="author" content="Andy Wang"/>
+<meta name="description" content="Prerequisites hadoop 2.2.0 Centos 6.4 Install boost wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz tar xzf boost_1_58_0.tar.gz cd boost_1_58_0 sudo ./bootstrap.sh sudo ./bjam --layout=tagged install cd /etc/yum.repos.d wget http://people.centos.org ..."/>
+
+<meta property="og:site_name" content="Andy's Blog"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Run Vowpal Wabbit on Hadoop"/>
+<meta property="og:url" content="/posts/2015/06/09/run-vw-on-hadoop.html"/>
+<meta property="og:description" content="Prerequisites hadoop 2.2.0 Centos 6.4 Install boost wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz tar xzf boost_1_58_0.tar.gz cd boost_1_58_0 sudo ./bootstrap.sh sudo ./bjam --layout=tagged install cd /etc/yum.repos.d wget http://people.centos.org ..."/>
+<meta property="article:published_time" content=" 2015-06-09" />
+<meta property="article:section" content="posts"/>
+<meta property="article:author" content="Andy Wang"/>
+
+
+
+    <script src="/theme/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="/theme/js/respond.min.js"></script>
+    <!-- highcharts -->
+    <script src="/theme/js/highcharts.js"></script>
+    <script src="/theme/js/exporting.js"></script>
+    <!-- mathtex -->
+    <!--
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            -->
+    <script type="text/javascript"
+            src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            tex2jax: {inlineMath: [['$', '$']]},
+            processEscapes: true,
+        });
+
+    </script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/github.css"
+          rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+          title="Andy's Blog ATOM Feed"/>
+
+
+
+    <link href="/feeds/posts.atom.xml" type="application/atom+xml"
+          rel="alternate"
+          title="Andy's Blog posts ATOM Feed"/>
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top"
+     role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+Andy's Blog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active" >
+                    <a href="/category/posts.html">Posts</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/archives.html"><i
+                        class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+            <div class="col-lg-8 col-md-offset-2">
+<section id="content">
+    <article>
+        <header class="page-header">
+            <h1>
+                <a href="/posts/2015/06/09/run-vw-on-hadoop.html"
+                   rel="bookmark"
+                   title="Permalink to Run Vowpal Wabbit on Hadoop">
+                    Run Vowpal Wabbit on Hadoop
+                </a>
+            </h1>
+        </header>
+        <div class="entry-content">
+            <!--
+        <div class="panel">
+            <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-06-09T00:00:00+08:00"> 2015-06-09</time>
+    </span>
+
+
+
+
+        <span class="label label-default">
+            <a href="/pdf/run-vw-on-hadoop.pdf">PDF</a>
+        </span>
+
+    
+</footer>            </div>
+            </div>
+            -->
+            <h3>Prerequisites</h3>
+<ul>
+<li>hadoop 2.2.0</li>
+<li>Centos 6.4</li>
+</ul>
+<h3>Install boost</h3>
+<div class="vim"><pre>wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
+tar xzf boost_1_58_0.tar.gz
+<span class="nb">cd </span>boost_1_58_0
+sudo ./bootstrap.sh
+sudo ./bjam --layout<span class="o">=</span>tagged install 
+<span class="nb">cd</span> /etc/yum.repos.d
+wget http://people.centos.org/tru/devtools/devtools.repo
+sudo vim /etc/yum.repos.d/DevToolset.repo
+
+<span class="c">#add the following contents:</span>
+<span class="o">[</span>DevToolset-2<span class="o">]</span>
+<span class="nv">name</span><span class="o">=</span>RedHat DevToolset v2 <span class="nv">$releasever</span> - <span class="nv">$basearch</span>
+<span class="nv">baseurl</span><span class="o">=</span>http://puias.princeton.edu/data/puias/DevToolset/<span class="nv">$releasever</span>/<span class="nv">$basearch</span>/
+<span class="nv">enabled</span><span class="o">=</span>1
+<span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span> 
+sudo yum install devtoolset-2-gcc-4.8.1 devtoolset-2-gcc-c++-4.8.1
+
+vim ~/.bashrc
+<span class="c">#add the following line to the bottom of the file</span>
+<span class="nv">PATH</span><span class="o">=</span>/usr/local/bin:/opt/rh/devtoolset-2/root/usr/bin/:<span class="nv">$PATH</span>
+<span class="c">#then run bash to activate the modification</span>
+bash
+
+sudo yum install devtoolset-2-binutils-devel.x86_64 devtoolset-2-binutils.x86_64 -y
+</pre></div>
+
+
+<h3>Install vw</h3>
+<div class="vim"><pre>wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
+tar xzf vowpal_wabbit.tar.gz
+<span class="nb">cd </span>vowpal_wabbit-7.10
+sudo ./autogen.sh
+sudo ./configure
+sudo make
+sudo make install
+<span class="c">#add the path of .so files to /etc/ld.so.conf</span>
+sudo vim /etc/ld.so.conf
+<span class="c">#add this dir /usr/local/lib</span>
+sudo /sbin/ldconfig
+<span class="nb">cd </span>vowpal_wabbit-7.10/cluster 
+cp /usr/local/bin/vw . 
+mkdir ./libs 
+cp  ../vowpalwabbit/.libs/* ./libs/ 
+cp /usr/local/lib/libboost_program_options-mt.so.1.58.0 ./libs/ 
+<span class="c">#modify the content of runvw-yarn.sh,add the following two lines to the top to make the libs available for the mappers</span>
+<span class="nb">pwd</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="k">$(</span>dirname <span class="nv">$0</span><span class="k">)</span><span class="p">;</span> <span class="nb">pwd</span><span class="k">)</span>
+<span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LD_LIBRARY_PATH</span>:<span class="si">${</span><span class="nv">pwd</span><span class="si">}</span>/libs/
+and mapscript-yarn.sh 
+<span class="c">#modify the mapscript-yarn.sh accord to your own environment.Mainly the path of the streaming jar,and file the libs dir</span>
+-Dmapred.job.queue.name<span class="o">=</span>xxxx
+-file ./libs
+</pre></div>
+
+
+<h3>Run test job</h3>
+<div class="vim"><pre>hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
+sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.com:54310/user/xxx/test_data/
+</pre></div>
+
+
+<p>Refrences:</p>
+<p><a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/">vowpal wabbit on hadoop</a></p>
+<p><a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial">Vowpal Tutorial</a></p>
+        </div>
+        <!-- /.entry-content -->
+        <div>
+            <time datetime="2015-06-09T00:00:00+08:00">2015-06-09</time>
+        </div>
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'synckey'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'run-vw-on-hadoop';
+                var disqus_url = '/posts/2015/06/09/run-vw-on-hadoop.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+
+    </article>
+</section>
+
+            </div>
+        </div>
+    </div>
+<footer>
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-8 col-md-offset-2">
+                <hr>
+            </div>
+            <div class="col-lg-8 col-md-offset-2">
+                <center>
+                    &copy; 2015 Andy Wang
+                    &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+                    <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+                    <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--
+                    <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+                    -->
+                </center>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'synckey'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>

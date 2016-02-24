@@ -1,38 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-02-18T00:00:00+08:00</updated><entry><title>test2</title><link href="/test2.html" rel="alternate"></link><updated>2016-02-18T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-02-18:test2.html</id><summary type="html">&lt;h3&gt;head 1&lt;/h3&gt;
-&lt;p&gt;这里是内容&lt;/p&gt;</summary></entry><entry><title>Where does sigmod come from</title><link href="/where-does-sigmod-come-from.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:where-does-sigmod-come-from.html</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2015-12-24T00:00:00+08:00</updated><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="vim"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)];&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;grid&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;p align="center"&gt;
+&lt;img src="/static/images/sigmoid.svg" alt="sigmoid"  width="50%" /&gt;
+&lt;/p&gt;&lt;/p&gt;</summary></entry><entry><title>Where does sigmod come from</title><link href="/posts/2015/12/24/where-does-sigmod-come-from.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/where-does-sigmod-come-from.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;主要根据Andrew Ng的教学讲义整理。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
 &lt;p align="center"&gt;
-&lt;img src="/theme/images/sigmoid.svg" alt="sigmoid"  width="60%" /&gt;
+&lt;img src="/static/images/sigmoid.svg" alt="sigmoid"  width="60%" /&gt;
 &lt;/p&gt;
 书里面都说它的输出可以认为是预测的概率，但是，为什么是$sigmoid$，它是从哪来的呢？为什么可以它做二分类?书里面好像都没有说呢。&lt;/p&gt;
 &lt;h3&gt;1.逻辑回归的建模&lt;/h3&gt;
 &lt;p&gt;首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然
 就想到使用 $Bernoulli$ 对 $y$ 的条件分布进行建模。$Bernoulli$
-分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli$的概率密度函数和数学期望为:
-$$
-\begin{eqnarray&lt;em&gt;}
-    f(x) &amp;amp;=&amp;amp; p^x(1-p)^{1-x}\
+分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli$的概率密度函数和数学期望为:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{eqnarray*}
+    f(x) &amp;amp;=&amp;amp; p^x(1-p)^{1-x}\\
     E(y) &amp;amp;=&amp;amp; p
-\end{eqnarray&lt;/em&gt;}
+\end{eqnarray*}
 $$&lt;/p&gt;
 &lt;h3&gt;2.指数族分布($The$ $exponential$ $family$ $distribution$)&lt;/h3&gt;
 &lt;p&gt;如果一个分布可以被写成如下形式，就称其服从指数族分布($The$ $exponential$ $family$ $distribution$):&lt;/p&gt;
 &lt;p&gt;$$
-p(y;\eta)=b(x)exp{\eta^{T}T(x)-a(\eta)}
+p(y;\eta)=b(x)exp\{\eta^{T}T(x)-a(\eta)\}
 $$&lt;/p&gt;
 &lt;p&gt;选定了 $T,a,b$ 就定义了一个参数为 $\eta$ 的分布族，我们改变 $\eta$ ，就可以在该分布族内得到不同的分布。很多常见的分布 $Bernoulli,$ $Gaussian,$
 $Bimomial,$ $Poisson$ 等，均属于指数族分布。下面的推导过程可以证明 $Bernoulli$ 是属于$The$ $exponential$ $family$ $distribution$ 的。&lt;/p&gt;
 &lt;p&gt;假设 $y\sim Bernoulli(p),y\in\lbrace {0,1}\rbrace$,则有 $ p(y=1) = p,p(y=0)=1-p $,$Bernoulli$的概率密度函数可以改写为:&lt;/p&gt;
 &lt;p&gt;$$
-\begin{eqnarray&lt;em&gt;}
-p(y) &amp;amp;=&amp;amp; p^y(1-p)^{1-y} \
-     &amp;amp;=&amp;amp; exp{log[p^y(1-p)^{1-y}] } \
-     &amp;amp;=&amp;amp; exp{ ylog(p) + (1-y)log(1-p) } \
-     &amp;amp;=&amp;amp; exp{[log(\frac{p}{1-p})]y + log(1-p)}
-\end{eqnarray&lt;/em&gt;}
+\begin{eqnarray*}
+p(y) &amp;amp;=&amp;amp; p^y(1-p)^{1-y} \\
+     &amp;amp;=&amp;amp; exp\{log[p^y(1-p)^{1-y}] \} \\
+     &amp;amp;=&amp;amp; exp\{ ylog(p) + (1-y)log(1-p) \} \\
+     &amp;amp;=&amp;amp; exp\{[log(\frac{p}{1-p})]y + log(1-p)\}
+\end{eqnarray*}
 $$&lt;/p&gt;
 &lt;p&gt;令 $\eta=log(\frac{p}{1-p})$, 则我们得到 $p,\eta $之间的关系，即:&lt;/p&gt;
 &lt;p&gt;$$
@@ -40,63 +49,403 @@ $$&lt;/p&gt;
 $$&lt;/p&gt;
 &lt;p&gt;看！这就是我们的&lt;em&gt;$sigmoid$&lt;/em&gt;函数!同时 $p(y)=exp\lbrace \eta y - log(1+e^{\eta}) \rbrace$ ,我们有:&lt;/p&gt;
 &lt;p&gt;$$
-\begin{eqnarray&lt;em&gt;}
-T(y)        &amp;amp;=&amp;amp; y \
-a(\eta)     &amp;amp;=&amp;amp; log(1+e^{\eta}) \
+\begin{eqnarray*}
+T(y)        &amp;amp;=&amp;amp; y \\
+a(\eta)     &amp;amp;=&amp;amp; log(1+e^{\eta}) \\
 b(y)        &amp;amp;=&amp;amp; 1
-\end{eqnarray&lt;/em&gt;}
+\end{eqnarray*}
 $$&lt;/p&gt;
 &lt;p&gt;符合指数族分布的定义。&lt;/p&gt;
 &lt;h3&gt;3.广义线性模型($Generalized$ $Linear$ $Models$)&lt;/h3&gt;
 &lt;p&gt;假设我们有一个回归问题($regression$ $problem$)或者分类问题($classification$ $problem$)，我们要预测某些关于 $x$ 的随机变量 $y$ 的值。
 要为这个问题推导一个$GLM$($Generalized$ $Linear$ $Model$),我们对 $y$ 关于 $x$ 的条件分布做以下三个假设:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;$y\|x;\theta  \sim$  $ExponentialFamily(\eta)$。&lt;/li&gt;
+&lt;li&gt;$y|x;\theta  \sim$  $ExponentialFamily(\eta)$。&lt;/li&gt;
 &lt;li&gt;在给定 $x$ 的情况下，我们的目标是预测 $T(y)$ 的期望。一般情况下，我们有 $ T(y)=y $,这意味着，我们希望我们的假设 $h$ 输出的结果 $h(x)$
-满足 $h(x)=E[y\|x]$ 。&lt;/li&gt;
+满足 $h(x)=E[y|x]$ 。&lt;/li&gt;
 &lt;li&gt;$\eta(natural parameter)$ 与输入 $x$ 之间线性相关,即: $\eta=\theta^{T}x$。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;其中第三个与其说是假设，倒不如说是我们的&lt;code&gt;设计选择&lt;/code&gt;。有了三个假设，我们就可以推导出来非常优雅的学习算法，称为&lt;code&gt;GLM&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;$$
-\begin{eqnarray&lt;em&gt;}
-T(y)        &amp;amp;=&amp;amp; y \
-a(\eta)     &amp;amp;=&amp;amp; log(1+e^{\eta}) \
+\begin{eqnarray*}
+T(y)        &amp;amp;=&amp;amp; y \\
+a(\eta)     &amp;amp;=&amp;amp; log(1+e^{\eta}) \\
 b(y)        &amp;amp;=&amp;amp; 1
-\end{eqnarray&lt;/em&gt;}
+\end{eqnarray*}
 $$&lt;/p&gt;
 &lt;h4&gt;逻辑回归($Logistic$ $Regression$)&lt;/h4&gt;
 &lt;p&gt;在逻辑回归中，我们考虑的是二分类问题，所以有 $y \in \lbrace 0,1\rbrace $，很自然的我们假设 $y$ 是关于 $x$的$Bernoulli$分布，
-即:$Bernoulli(p),y\in\lbrace {0,1}\rbrace$。因为$y\|x;\theta  \sim  Bernoulli(p)$,则$E[y\|x;\theta]=p$,所以我们有:
+即:$Bernoulli(p),y\in\lbrace {0,1}\rbrace$。因为$y|x;\theta  \sim  Bernoulli(p)$,则$E[y|x;\theta]=p$,所以我们有:
 $$
-\begin{eqnarray&lt;em&gt;}
-h_{\theta}(x)        &amp;amp;=&amp;amp; E[y|x;\theta] \
-                     &amp;amp;=&amp;amp; p             \
-                     &amp;amp;=&amp;amp; \frac{1}{1+e^{-\eta}} \
+\begin{eqnarray*}
+h_{\theta}(x)        &amp;amp;=&amp;amp; E[y|x;\theta] \\
+                     &amp;amp;=&amp;amp; p             \\
+                     &amp;amp;=&amp;amp; \frac{1}{1+e^{-\eta}} \\
                      &amp;amp;=&amp;amp; \frac{1}{1+e^{-\theta x}}
-\end{eqnarray&lt;/em&gt;}
+\end{eqnarray*}
 $$&lt;/p&gt;
 &lt;p&gt;$$
-\begin{eqnarray&lt;em&gt;}
-T(y)        &amp;amp;=&amp;amp; y \
-a(\eta)     &amp;amp;=&amp;amp; log(1+e^{\eta}) \
+\begin{eqnarray*}
+T(y)        &amp;amp;=&amp;amp; y \\
+a(\eta)     &amp;amp;=&amp;amp; log(1+e^{\eta}) \\
 b(y)        &amp;amp;=&amp;amp; 1
-\end{eqnarray&lt;/em&gt;}
+\end{eqnarray*}
 $$&lt;/p&gt;
-&lt;p&gt;这就是为什么对 $y$  的预测使用 $ h_{\theta}(x)=\frac{1}{1+e^{-\theta x}} $方程。事实上，一旦你假设 $y\|x;\theta  \sim  Bernoulli(p)$, 由GLM和指数族
+&lt;p&gt;这就是为什么对 $y$  的预测使用 $ h_{\theta}(x)=\frac{1}{1+e^{-\theta x}} $方程。事实上，一旦你假设 $y|x;\theta  \sim  Bernoulli(p)$, 由GLM和指数族
 分布的定义，就自然而然的给出了逻辑回归函数。&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://open.163.com/special/opencourse/machinelearning.html"&gt;Andrew Ng Machine Learning &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.cs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf"&gt;Michael I. Jordan The exponential family: Basics&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>iterm2 clone session</title><link href="/iterm2-clone-session.html" rel="alternate"></link><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-05-20:iterm2-clone-session.html</id><summary type="html">&lt;p&gt;vim ~/.ssh/config
-贴入如下内容:
-{% highlight bash %}
-host *
+&lt;p&gt;&lt;a href="http://www.cs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf"&gt;Michael I. Jordan The exponential family: Basics&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>A Misuse of Spark Broadcast</title><link href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html" rel="alternate"></link><updated>2015-11-03T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-11-03:posts/2015/11/03/a-misuse-of-spark-broadcast.html</id><summary type="html">&lt;p&gt;在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：&lt;/p&gt;
+&lt;div class="vim"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HashMap&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;();&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;Test&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Broadcast&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
+        &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt; &lt;span class="nf"&gt;call&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;throws&lt;/span&gt; &lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;containsKey&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;)){&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;结果发现task的序列化时间还是很长。事实上，这个类实在Driver上被实例化的，Test的成员变量&lt;code&gt;lookupTable&lt;/code&gt;是要被序列化并奋发到worker的。改成如下
+的代码，才能正确的使用spark的broadcast广播数据。&lt;/p&gt;
+&lt;div class="vim"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Broadcast&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;bLookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;Test&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Broadcast&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
+        &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;bLookupTable&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt; &lt;span class="nf"&gt;call&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;throws&lt;/span&gt; &lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;bLookupTable&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;containsKey&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;)){&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Run Vowpal Wabbit on Hadoop</title><link href="/posts/2015/06/09/run-vw-on-hadoop.html" rel="alternate"></link><updated>2015-06-09T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-06-09:posts/2015/06/09/run-vw-on-hadoop.html</id><summary type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;hadoop 2.2.0&lt;/li&gt;
+&lt;li&gt;Centos 6.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Install boost&lt;/h3&gt;
+&lt;div class="vim"&gt;&lt;pre&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
+tar xzf boost_1_58_0.tar.gz
+&lt;span class="nb"&gt;cd &lt;/span&gt;boost_1_58_0
+sudo ./bootstrap.sh
+sudo ./bjam --layout&lt;span class="o"&gt;=&lt;/span&gt;tagged install 
+&lt;span class="nb"&gt;cd&lt;/span&gt; /etc/yum.repos.d
+wget http://people.centos.org/tru/devtools/devtools.repo
+sudo vim /etc/yum.repos.d/DevToolset.repo
+
+&lt;span class="c"&gt;#add the following contents:&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;DevToolset-2&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;RedHat DevToolset v2 &lt;span class="nv"&gt;$releasever&lt;/span&gt; - &lt;span class="nv"&gt;$basearch&lt;/span&gt;
+&lt;span class="nv"&gt;baseurl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://puias.princeton.edu/data/puias/DevToolset/&lt;span class="nv"&gt;$releasever&lt;/span&gt;/&lt;span class="nv"&gt;$basearch&lt;/span&gt;/
+&lt;span class="nv"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
+&lt;span class="nv"&gt;gpgcheck&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; 
+sudo yum install devtoolset-2-gcc-4.8.1 devtoolset-2-gcc-c++-4.8.1
+
+vim ~/.bashrc
+&lt;span class="c"&gt;#add the following line to the bottom of the file&lt;/span&gt;
+&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin:/opt/rh/devtoolset-2/root/usr/bin/:&lt;span class="nv"&gt;$PATH&lt;/span&gt;
+&lt;span class="c"&gt;#then run bash to activate the modification&lt;/span&gt;
+bash
+
+sudo yum install devtoolset-2-binutils-devel.x86_64 devtoolset-2-binutils.x86_64 -y
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Install vw&lt;/h3&gt;
+&lt;div class="vim"&gt;&lt;pre&gt;wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
+tar xzf vowpal_wabbit.tar.gz
+&lt;span class="nb"&gt;cd &lt;/span&gt;vowpal_wabbit-7.10
+sudo ./autogen.sh
+sudo ./configure
+sudo make
+sudo make install
+&lt;span class="c"&gt;#add the path of .so files to /etc/ld.so.conf&lt;/span&gt;
+sudo vim /etc/ld.so.conf
+&lt;span class="c"&gt;#add this dir /usr/local/lib&lt;/span&gt;
+sudo /sbin/ldconfig
+&lt;span class="nb"&gt;cd &lt;/span&gt;vowpal_wabbit-7.10/cluster 
+cp /usr/local/bin/vw . 
+mkdir ./libs 
+cp  ../vowpalwabbit/.libs/* ./libs/ 
+cp /usr/local/lib/libboost_program_options-mt.so.1.58.0 ./libs/ 
+&lt;span class="c"&gt;#modify the content of runvw-yarn.sh,add the following two lines to the top to make the libs available for the mappers&lt;/span&gt;
+&lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;dirname &lt;span class="nv"&gt;$0&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$LD_LIBRARY_PATH&lt;/span&gt;:&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;pwd&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;/libs/
+and mapscript-yarn.sh 
+&lt;span class="c"&gt;#modify the mapscript-yarn.sh accord to your own environment.Mainly the path of the streaming jar,and file the libs dir&lt;/span&gt;
+-Dmapred.job.queue.name&lt;span class="o"&gt;=&lt;/span&gt;xxxx
+-file ./libs
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Run test job&lt;/h3&gt;
+&lt;div class="vim"&gt;&lt;pre&gt;hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
+sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.com:54310/user/xxx/test_data/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Refrences:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/"&gt;vowpal wabbit on hadoop&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-05-20:posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="vim"&gt;&lt;pre&gt;vim ~/.ssh/config
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;贴入如下内容:&lt;/p&gt;
+&lt;div class="vim"&gt;&lt;pre&gt;host *
 ControlMaster auto
 ControlPath ~/.ssh/master-%r@%h:%p
-{% endhighlight %}
-退出iterm2，重新登录即可。&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;退出iterm2，重新登录即可。&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://www.dbathink.com/2012/10/iterm2-auto-automatic-login-log-on-script/"&gt;Iterm2 auto login 自动登录脚本&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://laughingchs.iteye.com/blog/1317703"&gt;linux clone session&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>The Catcher in the Rye</title><link href="/the-catcher-in-the-rye.html" rel="alternate"></link><updated>2014-10-31T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-31:the-catcher-in-the-rye.html</id><summary type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://laughingchs.iteye.com/blog/1317703"&gt;linux clone session&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>我的减肥经验</title><link href="/posts/2015/04/13/my-experience-of-losing-weight.html" rel="alternate"></link><updated>2015-04-13T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-04-13:posts/2015/04/13/my-experience-of-losing-weight.html</id><summary type="html">&lt;div id="weight_container" style=" margin: 0 auto"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+$(function () {
+    $('#weight_container').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Weight'
+        },
+
+        //subtitle: {
+        //   text: 'Source: WorldClimate.com'
+        //},
+        xAxis: {
+            categories: ["2014-11-02", "2014-11-03", "2014-11-04", "2014-11-08", "2014-11-09", "2014-11-10", "2014-11-11", "2014-11-12", "2014-11-13", "2014-11-14", "2014-11-15", "2014-11-16", "2014-11-17", "2014-11-18", "2014-11-19", "2014-11-20", "2014-11-21", "2014-11-22", "2014-11-23", "2014-11-24", "2014-11-25", "2014-11-26", "2014-11-27", "2014-11-28", "2014-11-29", "2014-12-01", "2014-12-02", "2014-12-03", "2014-12-04", "2014-12-08", "2014-12-09", "2014-12-10", "2014-12-11", "2014-12-12", "2014-12-13", "2014-12-14", "2014-12-15", "2014-12-16", "2014-12-17", "2014-12-18", "2014-12-19", "2014-12-20", "2014-12-21", "2014-12-22", "2014-12-23", "2014-12-24", "2014-12-25", "2014-12-26", "2014-12-27", "2014-12-28", "2014-12-29", "2014-12-30", "2014-12-31", "2015-01-01", "2015-01-02", "2015-01-03", "2015-01-04", "2015-01-05", "2015-01-06", "2015-01-07", "2015-01-08", "2015-01-09", "2015-01-10", "2015-01-11", "2015-01-12", "2015-01-13", "2015-01-14", "2015-01-15", "2015-01-16", "2015-01-17", "2015-01-18", "2015-01-22", "2015-01-23", "2015-01-24", "2015-02-03", "2015-02-04", "2015-02-05", "2015-02-06", "2015-02-12", "2015-02-13", "2015-02-14", "2015-03-04", "2015-03-05", "2015-03-06", "2015-03-07", "2015-03-08", "2015-03-11", "2015-03-12", "2015-03-13", "2015-03-14", "2015-03-15", "2015-03-16", "2015-03-18", "2015-03-19", "2015-03-20", "2015-03-21", "2015-03-23", "2015-03-24", "2015-03-25", "2015-03-26", "2015-03-27", "2015-04-01", "2015-04-02", "2015-04-03", "2015-04-04", "2015-04-07", "2015-04-08", "2015-04-09", "2015-04-11", "2015-04-12", "2015-04-13","2015-04-14"]
+        },
+        yAxis: {
+            title: {
+                text: 'Weight(kg)'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: true
+            }
+        },
+        series: [{
+            name: 'Weight',
+            data: [84.0, 84.0, 84.0, 83.5, 83.7, 83.2, 83.0, 83.0, 82.6, 82.2, 82.6, 82.6, 82.6, 82.2, 81.8, 82.2, 82.0, 82.0, 82.3, 82.3, 81.6, 81.0, 81.5, 81.5, 81.5, 81.2, 81.0, 81.0, 81.0, 81.6, 80.5, 80.5, 80.5, 80.1, 80.5, 80.1, 80.1, 79.1, 78.4, 77.9, 77.8, 77.7, 77.0, 76.3, 76.3, 76.3, 77.3, 77.3, 77.3, 75.6, 75.7, 75.7, 75.3, 75.3, 75.3, 75.0, 74.5, 74.7, 74.1, 74.5, 73.9, 74.3, 73.8, 73.8, 73.8, 73.7, 73.3, 73.3, 73.1, 73.1, 73.1, 73.0, 73.0, 73.0, 72.5, 71.7, 71.7, 71.7, 71.4, 71.4, 71.4, 73.3, 73.3, 72.4, 72.4, 72.4, 71.9, 71.0, 70.6, 71.1, 71.1, 71.1, 70.6, 70.3, 70.3, 70.3, 69.8, 69.8, 70.2, 70.2, 70.2, 69.9, 69.4, 69.4, 69.4, 69.3, 69.3, 69.3, 69.4, 68.4, 68.4,68.1]
+        }]
+    });
+});
+&lt;/script&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;声明:本文是个人减肥经验,不适合每一个人,请勿盲目采取本文的方法,作者不对任何不良后果负责(当然如果减肥成功,请把功劳分我一份).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;心理准备&lt;/h2&gt;
+&lt;h3&gt;1.动机---为什么要减肥?&lt;/h3&gt;
+&lt;p&gt;想要减肥的理由有很多,为了更漂亮,身材更好,更健康blabla.就我个人而言,一方面是因为当时实在太胖(2014.10.01有将近90kg),导致行动缓慢,
+看起来做任何动作都慢半拍；另一方面,也是最重要的,是看了李笑来老师的一本书 &lt;a href="http://www.amazon.cn/%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E4%BD%9C%E6%9C%8B%E5%8F%8B-%E6%9D%8E%E7%AC%91%E6%9D%A5/dp/B00FU3CRZI/ref=sr_1_1?ie=UTF8&amp;amp;qid=1428981468&amp;amp;sr=8-1&amp;amp;keywords=%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E6%9C%8B%E5%8F%8B"&gt;《把时间当朋友》&lt;/a&gt;，书里面的话，让我下定了要跑步的决心。
+ 那段话的大意是&lt;code&gt;如果一个男人在24岁的时候不管通过什么途径知道，如果每周坚持3-4次的长跑，那他在50多岁在别人已经不行了的时候，还能享受性生活&lt;/code&gt;。
+ 嗯，就为这个，要跑步，要减肥。ps:这本书强烈推荐，后面说到的制定计划也可以参考这本书。&lt;/p&gt;
+&lt;h3&gt;2.目标和计划&lt;/h3&gt;
+&lt;p&gt;有了动机以后就可以制定目标了，很多人一开始就把目标定在减20斤减30斤，这个目标是很具体的，看起来也是可达成的，但是很难坚持下去，
+因为可能折腾了一个月，体重还是没有任何变化，就丧失信心，中途放弃了。对我个人而言，我的目标其实就是完成计划，不是减多少斤，而是坚持了多久，做了多少天运动。
+制定减肥计划最重要的两条就是：a.不能对我的日常生活产生干扰，b.可持续。 所以我每天的运动时间限制在1个小时以内（一开始可以更短），这样，不需要
+匀出其他时间，就可以实施计划。可持续其实包含两层含义：a.计划不需要太吃力就能完成（&lt;strong&gt;extremely important&lt;/strong&gt;）,如果计划目标定的太高，比如每天跑10公里，
+肯定没人坚持的下去。b.就是时间上的保障，对我而言，晨间的时间最可控，因为晚上要工作，社交神马的，一堆不可控因素。而这些因素往往给自己不做运动很好的借口，
+一旦给了自己坚持不下去的理由，肯定就坚持不下去了。&lt;/p&gt;
+&lt;p&gt;计划的实施其实也是一个习惯的养成，养成习惯后，做起来就没那么痛苦了。因为我定在了早上运动，所以我每天都要早起，既然要早起就要早睡，不知不觉，给自己又养成了一个早睡早起的习惯有木有。
+对我而言，我一开始的计划大概就是：a.每天6点起, b.做一份深蹲c.做一份pushup,d.做一份situp. 可以把这些计划列一个表格（参考我列的计划（&lt;a href="http://synckey.github.io/personal/2014/10/11/records-for-developing-a-habit-of-getting-up-early/"&gt;Recordes For Developing A Habit of Getting Up Early
+&lt;/a&gt;）），每天的任务完成了就在旁边
+打个勾。强烈建议把2个月的计划以前打印出来，在纸质上打勾，成就感远远比exexl或者evernote上打个勾强烈的多。不信，你试！&lt;/p&gt;
+&lt;p&gt;每天的一个小时运动时间，其实已经很多了。我是一天有氧，一天无氧。无氧主要是squat,situp,pushup等，具体每天做多少，可以用软件管理（后续会介绍）。
+有氧的时间主要是跑步，跑步的计划我是按照&lt;a href="http://www.amazon.cn/%E7%88%B1%E4%B8%8A%E8%B7%91%E6%AD%A5%E7%9A%8413%E5%91%A8-%E4%BC%8A%E6%81%A9%C2%B7%E9%BA%A6%E5%85%8B%E5%B0%BC%E5%B0%94/dp/B00K0F7ZU8/ref=sr_1_1?ie=UTF8&amp;amp;qid=1428986015&amp;amp;sr=8-1&amp;amp;keywords=%E7%88%B1%E4%B8%8A%E8%B7%91%E6%AD%A5%E5%8D%81%E4%B8%89%E5%91%A8"&gt;《爱上跑步的十三周》&lt;/a&gt;这本书里面
+介绍着来的。其实不管是有氧还是无氧，我都没有严格按照他们规定的时间来。比如按照它里面，一周要跑三次，但是因为帝都雾霾太严重，有时候一周也跑不了一次
+，不过没关系，接着上次的继续跑就行了。需要注意的是，不管是无氧还是有氧，运动量都要按照软件或者书里面的一步一步的来，太心急容易受伤，就坚持不下去了。&lt;/p&gt;
+&lt;p&gt;最后要强调的是，所有的运动都需要记录下来，包括体重，腰围变化，让自己的努力可视化，给自己满满的成就感和坚持下去的动力。&lt;/p&gt;
+&lt;h2&gt;前期准备&lt;/h2&gt;
+&lt;h3&gt;硬件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;跑步鞋一双，便宜的就行，不解释&lt;/li&gt;
+&lt;li&gt;手套，帽子（冬天有用）&lt;/li&gt;
+&lt;li&gt;手机&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.amazon.cn/%E7%88%B1%E4%B8%8A%E8%B7%91%E6%AD%A5%E7%9A%8413%E5%91%A8-%E4%BC%8A%E6%81%A9%C2%B7%E9%BA%A6%E5%85%8B%E5%B0%BC%E5%B0%94/dp/B00K0F7ZU8/ref=sr_1_1?ie=UTF8&amp;amp;qid=1428986015&amp;amp;sr=8-1&amp;amp;keywords=%E7%88%B1%E4%B8%8A%E8%B7%91%E6%AD%A5%E5%8D%81%E4%B8%89%E5%91%A8"&gt;《爱上跑步的十三周》&lt;/a&gt; 这本书里面详细介绍了跑步的好处，注意事项和训练计划。&lt;/li&gt;
+&lt;li&gt;电子秤 每天记录体重变化，看到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;软件&lt;/h3&gt;
+&lt;p&gt;强烈推荐runtastic系列，可以先用免费版，如果觉得好，可以买pro版。
+&lt;center&gt;
+&lt;div class="container"&gt;
+  &lt;div class="col-sm-2"&gt;
+    &lt;img src="/static/images/runtastics.PNG" alt="Runtastics" class="carousel-inner  img-rounded"/&gt;
+  &lt;/div&gt;
+  &lt;div class="col-sm-2"&gt;
+    &lt;img src="/static/images/runtastic.PNG" alt="runtasktic" class="carousel-inner  img-rounded"/&gt;
+  &lt;/div&gt;
+  &lt;div class="col-sm-2"&gt;
+    &lt;img src="/static/images/myfitnesspal.PNG" alt="runtasktic" class="carousel-inner  img-rounded"/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/center&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;runtastic 主要用来记录跑步距离和速度，建议用着好可以买一个pro版。这个软件的iPhone版可以后台运行，软件启动后把屏幕关了也能记录跑步。&lt;/li&gt;
+&lt;li&gt;Squats  深蹲，里面有三个level，每个level都有详细的计划，可以不按计划严格执行，每次做一份就好。免费版只能用level1。&lt;/li&gt;
+&lt;li&gt;Pushups 俯卧撑&lt;/li&gt;
+&lt;li&gt;SitUps 仰卧起坐&lt;/li&gt;
+&lt;li&gt;Butt Trainer  美丽翘臀 ^_^&lt;/li&gt;
+&lt;li&gt;Six Packs 六块腹肌&lt;/li&gt;
+&lt;li&gt;MyfitnessPal 记录运动量和饮食卡路里的软件，我主要用它记录体重。Runtastic系列的软件都可以连接到MyfitnessPal,把运动信息同步过来。&lt;/li&gt;
+&lt;li&gt;凤凰fm 运动的时候很无聊，找点好玩的东西听，我主要挺逻辑思维，听的有点想吐了。其他同类产品有蜻蜓fm，podcast。另外podcast上的《real deal English》
+和《潘吉Jenny告诉你》实在太赞，一边运动一边练口语。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;进行中&lt;/h2&gt;
+&lt;h3&gt;睡眠&lt;/h3&gt;
+&lt;p&gt;好的睡眠肯定是很重要的啦，我自己是每天23：00左右睡，每天6：00起床。一开始6：00起不来，没关系，闹钟响了什么都不要想，
+先站起来再说（忘了那本书里面说的了）。减肥本来就是很辛苦的啦，所以一定要休息好。&lt;/p&gt;
+&lt;h3&gt;饮食&lt;/h3&gt;
+&lt;p&gt;都说减肥要&lt;code&gt;管住嘴，迈开腿&lt;/code&gt;，饮食其实在减肥里面是最重要的，不过一定要保证均衡的营养摄入，吃大量的蔬菜，水果，膳食纤维，蛋白质。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;早餐，早餐一定要吃的非常丰盛。我都是运动完了吃早餐。早餐内容如下：&lt;/li&gt;
+&lt;li&gt;一个水煮鸡蛋。&lt;/li&gt;
+&lt;li&gt;一杯脱脂牛奶（运动以后需要补充大量蛋白质），强烈推荐&lt;a href="http://www.amazon.cn/Devondale%E5%BE%B7%E8%BF%90%E7%BA%AF%E7%89%9B%E5%A5%B61L/dp/B0057UJ47I/ref=sr_1_1?ie=UTF8&amp;amp;qid=1428989585&amp;amp;sr=8-1&amp;amp;keywords=deyun"&gt;德运&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;两个核桃。&lt;/li&gt;
+&lt;li&gt;一把水煮蔬菜（超市买的那种，一把一把的，随便什么都可以，西兰花，娃娃菜，蒿子秆，青菜，whatever），做法也很简单，就是用开水煮熟，不放油，也不放盐，要是觉得不好吃，可以放一点生姜和香菇。西兰花上面也可以放一些橄榄油，红酒醋加黑胡椒。&lt;/li&gt;
+&lt;li&gt;一根香蕉。&lt;/li&gt;
+&lt;li&gt;一个西红柿（or 一个苹果）。&lt;/li&gt;
+&lt;li&gt;一小碗麦片，麦片推荐&lt;a href="http://www.amazon.cn/Jason%E6%8D%B7%E6%A3%AE%E6%97%A9%E9%A4%90%E9%BA%A6%E7%89%871KG/dp/B003NNUO34/ref=sr_1_3?ie=UTF8&amp;amp;qid=1428989957&amp;amp;sr=8-3&amp;amp;keywords=%E6%8D%B7%E6%A3%AE"&gt;捷森&lt;/a&gt;，优点是有各种葡萄干，水果干之类的，好吃不单调，开水泡，煮，都可以。 麦片也可以换成麦片干，强烈推荐&lt;a href="http://www.amazon.cn/gp/product/B00JTO33RK?psc=1&amp;amp;ref_=oh_aui_detailpage_o07_s00"&gt;Sanitarium&lt;/a&gt;,超级好吃（不过只是我觉得而已，我跟我外甥都喜欢吃，我姐就不喜欢吃，慎入）。&lt;/li&gt;
+&lt;li&gt;早餐不吃麦片，喝一碗燕麦粥神马的，也是可以的。&lt;/li&gt;
+&lt;li&gt;午餐，因为早餐补充了很多水果蔬菜，午餐就可以随意一点啦，主要是不要吃太多，不要吃高热量的，一定要吃肉，主食可以适量减少。pizza，kfc什么的，前两个月最好不要吃（吃了体重一直不降，影响信心），后面可以稍微吃一点，原味鸡神马的，怎么可以不爱。午餐吃完了最好站立或者步行30min再坐下来。&lt;/li&gt;
+&lt;li&gt;晚餐， 晚餐一定要控制。而且晚餐跟早餐的间隔最好在12h-14h（这也是有科学依据的，找不到出处了），可以帮助减肥。我因为早餐在7点左右吃，所以晚餐
+一般都是17点吃。晚餐一定不要吃高热的，我一开始的两个月晚餐都是吃一杯麦片，吃完了以后晚上一定不要再吃东西，饿了就喝水（白开水红茶等，空腹最好
+不要喝咖啡）。后来偶然接触到&lt;code&gt;过午不食&lt;/code&gt;，尝试了下，感觉还行，就坚持下来了，晚餐不吃东西了（这个只是我自己急功近利的一种表现，&lt;strong&gt;过午不食可能对健康不好，不要尝试&lt;/strong&gt;）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果想减肥，一定不要吃零食，薯片，可乐之类的，就不要想了，实在不行可以吃点水果，网上也有很多菠萝干，香蕉干等等，可以尝试下。平时也不要喝奶茶，摩卡什么的，可以喝一些美式，红茶。另外老不吃美食，实在艰难，每个月也可以让自己放纵一次，吃个全家桶什么的。&lt;/p&gt;
+&lt;h3&gt;运动&lt;/h3&gt;
+&lt;p&gt;其实运动是最简单的，就是按照上面推荐的软件和书（其实也可以加一些平板支撑和健腹轮，游泳之类的），按照里面的计划一天天的练就可以了。我自己是每天早上都运动，空气好就跑步，不好就室内，运动完了吃早餐。&lt;/p&gt;
+&lt;p&gt;运动前一定要喝水，喝大量的水。另外运动前后一定要拉伸，如果有不适就停止运动，受伤就不好了。&lt;/p&gt;
+&lt;p&gt;运动的过程其实也是不断战胜自己的过程，冬天早上跑完帽子上结的都是冰，或者你快要放弃了，又坚持下去了，减肥的路上不就是充满了泪水和汗水么（谁让你是个死胖子）？&lt;/p&gt;
+&lt;h2&gt;其他&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;晚起总比不起好，跑的少总比不跑好。&lt;/li&gt;
+&lt;li&gt;10km的路程，跑完前3km就下来一大半了。&lt;/li&gt;
+&lt;li&gt;怕小腿长肌肉？想多了。&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Improve Safety On The Road</title><link href="/posts/2014/12/30/improve-safety-on-the-road.html" rel="alternate"></link><updated>2014-12-30T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-12-30:posts/2014/12/30/improve-safety-on-the-road.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;The only way to improve safety on the road is to severely punish driving offenders. To what extent do you agree or disagree?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
+&lt;p&gt;The number of traffic accidents is increasingly large recently which leads to a various of social problems.Some people
+think that the best and only way to improve traffic  safety is by imposing severe punishments on those who have violated the traffic
+laws.Personally, I totally disagree with this view. It can be improved by educating people about the serious results that accidents
+may bring to the drivers and their families as well as punishing the violators.&lt;/p&gt;
+&lt;p&gt;Informing people of the consequences of an accident seems to be a better approach  to reduce the accidents on the road.
+For instance,we can teach both the drivers and pedestrians about what an accident would bring to their family members,they will
+lose their breadwinners and will face financial problems.This means that their families will encounter disability or even
+death if they do not follow the laws.Keeping this in mind,they will think twice before  breaking the law.&lt;/p&gt;
+&lt;p&gt;On the other hand,deterrent from punishing still remains to be a significant way to gain road safety. For example, if an offender
+is punished strictly, he and his friends will be deterred and are less possible to offend again.In some countries,if a person
+seriously break a certain law,such as drunk driving,he may lose the right to drive again. So, severe punishment surely contributes to
+the improvement of road safety.&lt;/p&gt;
+&lt;p&gt;In conclusion,we can help people to improve the traffic safety by teaching them the importance of safe driving.Although punishment
+is also a good way to do so,but it is not the best way and only way.Pedestrians and drivers should all  obey traffic regulations and
+laws to keep safe.&lt;/p&gt;</summary></entry><entry><title>Use Animals For Humans</title><link href="/posts/2014/12/22/use-animals-for-humans.html" rel="alternate"></link><updated>2014-12-22T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-12-22:posts/2014/12/22/use-animals-for-humans.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Some people think that it is acceptable to use animals for the benefit of humans. Others, however, think that it is wrong to exploit animals for human purposes. Discuss both these views and give your own opinion.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
+&lt;p&gt;It is undoubtedly the case that the number of animals used for human being's benefit  is increasingly large.Some people think
+this is unethical and unfair to benefit from animals ,but others hold the opposite view. Personally, my opinion is that we should
+use animals correctly and ethically.&lt;/p&gt;
+&lt;p&gt;Firstly,we are at the top of the food chain, it is completely  natural to kill animals for food.There are thousands of animal farms all over the world which provide chicken,beef and so on,
+Without them,many people will encounter starving,because meat is main food that provide protein and nutrition for human beings.In order to live on, we have to raise and kill animals for food.&lt;/p&gt;
+&lt;p&gt;Meanwhile,animals play a significant role in scientific research.They have been used in many fields,ranging from medical tests to space exploring.For instance,
+in medical industry, before a new drug is put into production,animal testing is a necessary to see if the drug is safe or have some unpredictable side effects.
+We have to depend on animals in those areas,because we do not have alternatives,scientists can not do experiments on a human being instead of a rat.&lt;/p&gt;
+&lt;p&gt;However, other people argue that we do not have the right to take the animals' lives for our own benefits,lives should be
+respected. What is more ,the benefits of researches can not justify the suffering caused. But,this is unrealistic .
+We should focus on how to minimize the sufferings that animals experienced when used by people.&lt;/p&gt;
+&lt;p&gt;In sum,animal is an extremely important source of food for human beings which can contribute to the science as well.We can surely use
+animals to live on,but we should use them scientifically and ethically.&lt;/p&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Forcing the Employers to Hire the Same Number of Men and Women</title><link href="/posts/2014/12/16/gender-balance.html" rel="alternate"></link><updated>2014-12-16T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-12-16:posts/2014/12/16/gender-balance.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Some people think that employers should be required to employ equal numbers of men and women. To what extent do you agree or disagree?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
+&lt;p&gt;It is undoubtedly that men and women are playing different roles in our society. There are opinions that suggest companies
+to employ the same number of females and males. Personally,I don't think this is a good suggestion.&lt;/p&gt;
+&lt;p&gt;Generally,women have their advantages in many areas.They are tender and have better communication skills so that they
+have the ability to make people feel comfortable. This means they are suitable for  many positions,for instance,
+consultants,teachers,nursers,in which they can easily reach higher achievements than men.&lt;/p&gt;
+&lt;p&gt;However,males are usually physically stronger and more sensible than females.Industries that are labor-intensive may surely
+employ  more men than women. Meanwhile, men are better at emotion control which helps them to improve their leadership and
+make calm decisions.That is why we can see that there are more male presidents than females, despite the fact that women are
+play increasingly significant roles in our society.&lt;/p&gt;
+&lt;p&gt;So,it is obvious that man and woman both have their own advantages in different professions.Asking the employers to employ the same
+number of females and males is unfair and unrealistic.But a company can surely benifit from a balanced number of males and females,
+as it can help to promote the productivity.If the productivity of  a company is not bounded to the gender,employing equal
+number of men and women seems to be the best choice for them.&lt;/p&gt;
+&lt;p&gt;In conclusion, making the most of the gender advantages is benificial for both companies and society.That is why I don't
+agree with the view that forcing the employers to hire the same number of men and women.&lt;/p&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Distance Learning vs School Learing</title><link href="/posts/2014/11/24/distance-learning-vs-school-learning.html" rel="alternate"></link><updated>2014-11-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-11-24:posts/2014/11/24/distance-learning-vs-school-learning.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;many people use distance-learning programmes(study material post, TV, Internet, etc.) to study at home,
+but some people think that it cannot bring the same benefits of attending college or university.
+To what extent do you agree or disagree.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
+&lt;p&gt;Distance learning is a relatively recent phenomenon and if it is as  good as traditional classroom-based learning still
+remains to be controversial.Many people believe that the online courses are better than those provided at school,but
+others hold the totally opposite view.Personally,I think that we can benefit from both approaches,they can make up for
+each other.&lt;/p&gt;
+&lt;p&gt;In terms of distance learning,it is convenient for adults,especially people who are busy with their works.Studying at
+home enables them to receive further education, which is significantly important for us in a tech-driven society.Meanwhile,
+the courses on the Internet or TV are usually well prepared and given by renowned experts,which helps to ensure the quality.&lt;/p&gt;
+&lt;p&gt;But school education is surely one of the most import sources of information and knowledge.They can provide structured courses
+as well as better schedules.The teachers in the school can not only help us to learn,but also provide specific guidances
+and life experience.And discussing with classmates from the school contributes to better understanding of what we are
+learning.&lt;/p&gt;
+&lt;p&gt;So,we can make the most of both distance learning and classroom-based learning. If a student did not catch waht he had learned
+on the class,he can download some courses from Internet to make up for it.An adult can also turn to classes for help
+when he encounter some problems which he can not tackle all by himself.&lt;/p&gt;
+&lt;p&gt;So, while we are taking advantage of technology,we should not neglect the importance of traditional learning.We should
+chose our learning methods according to our circumstances.&lt;/p&gt;</summary></entry><entry><title>What Should Be the Main Function Of A University</title><link href="/posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html" rel="alternate"></link><updated>2014-11-12T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-11-12:posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. 
+Others think that the true function of a university should be to give access to knowledge for its own sake,
+regardless of whether the course is useful to an employer.&lt;/p&gt;
+&lt;p&gt;What, in your opinion, should be the main function of a university?&lt;/p&gt;
+&lt;p&gt;Give reasons for your answer and include any relevant examples from your own knowledge or experience.
+Write at least 250 words.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
+&lt;p&gt;Recently,what kind of knowledge should a university provide its graduates with has been increasingly popular.Some of us
+hold the view that universities should teach their students job-related skills.But others do not agree,they
+think that universities should mainly focus on theoretical knowledge.Personally,I agree with the later view.&lt;/p&gt;
+&lt;p&gt;The basic knowledge,many of which have developed for hundred of years and have been refined by countless of experts,is 
+significantly important to a university student.Without it, they can not form their systematic knowledge of their 
+professions which will lead to serious results,for instance,they may be unable to do further or complex jobs.That is why 
+many people think that the universities should put more attention on teaching basic knowledge.&lt;/p&gt;
+&lt;p&gt;What is more,companies concern about the ability of solving problems and the ability to learn fast more than job skills.
+Many renowned companies,such as google and facebook,ask a lot of basic questions in their job interviews.They believe 
+that,if you are able to learn the basic lessons well at school, you can soon become a skilled employee after professional
+trainings.So, if a university teaches basic knowledge better,it can anticipate more competitive graduates.&lt;/p&gt;
+&lt;p&gt;As to the job-related skills, the technology used in industry is developing extraordinarily fast that the universities can 
+not keep pace with it.It is hard for them to decide what is the best skill for their students.However,they should not totally
+ignore the requirements of the job market,alternatively,they can invite some companies to their campus to introduce what 
+kind of skill they want.&lt;/p&gt;
+&lt;p&gt;In summary,although the main goal of going to universities of many students is finding a ideal job after graduating,universities
+should help their students to build a good knowledge system and help them to be quick learners and problem solvers instead of
+just teaching them job-related skills.&lt;/p&gt;</summary></entry><entry><title>The Catcher in the Rye</title><link href="/posts/2014/10/31/the-catcher-in-the-rye.html" rel="alternate"></link><updated>2014-10-31T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-31:posts/2014/10/31/the-catcher-in-the-rye.html</id><summary type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
 &lt;p&gt;在离开学校之前他与他的室友打了一家，因为室友和他最喜欢的女生约会，他心里非常不舒服。一个十六岁的男孩，面对自己的梦中小情人，
 宁愿远远的看着她，也不希望她跟别的男孩子约会。更何况她的约会对象在Holden看来根本配不上她。Holden心里当然不高兴。打完架他决定早点离开学校了。&lt;/p&gt;
 &lt;p&gt;对于一个青春期的孩子来说，也许最大的恐惧就是不合群，希望和同龄人做一样的事情，上课，考试，放假。可是Hoden却不得不提前开始寒假，又不能回家，
@@ -119,21 +468,52 @@ cliff. What I have to do, I have to catch everybody if they start to go over the
 &lt;p&gt;他等来了妹妹，妹妹却拖着行李箱要和他一起走，他慌了，不希望妹妹和她一起走，因为她是他最爱的人，没有人想要最爱的人跟自己一起做愚蠢的事情。他们一起走到了游乐场，
 他看着妹妹开心的坐着旋转木马，填空下着大雨，他看着妹妹不停的旋转，心理开心极了，于是决定不走了。&lt;/p&gt;
 &lt;p&gt;也许每个人的内心都和Holden一样，看别人都觉得虚伪做作，总觉得自己才是最对的，最好的。即使这样也有值得牵挂的和珍爱的人，如果幸运，自己珍爱的人也能珍爱你。心中
-保有的那奔跑在绿色麦田和跳跃在蓝天白云上的小小幻想,跟他们在一起才会想像吧.&lt;/p&gt;</summary></entry><entry><title>Andy's Home Page</title><link href="/andys-home-page.html" rel="alternate"></link><updated>2013-04-18T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2013-04-18:andys-home-page.html</id><summary type="html">&lt;h3&gt;head 1&lt;/h3&gt;
-&lt;p&gt;这里是内容&lt;/p&gt;</summary></entry><entry><title>test1</title><link href="/test1.html" rel="alternate"></link><updated>2013-04-18T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2013-04-18:test1.html</id><summary type="html">&lt;h3&gt;head 1&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;h3&gt;古意答客问&lt;/h3&gt;
-&lt;p&gt;——戴望舒&lt;/p&gt;
-&lt;p&gt;孤心逐浮云之炫烨的卷舒，&lt;/p&gt;
-&lt;p&gt;惯看青空的眼喜侵阈的青芜。 &lt;/p&gt;
-&lt;p&gt;你问我的欢乐何在？ &lt;/p&gt;
-&lt;p&gt;——窗头明月枕边书。&lt;/p&gt;
-&lt;p&gt;侵晨看岗踯躅于山巅， &lt;/p&gt;
-&lt;p&gt;入夜听风琐语于花间。 &lt;/p&gt;
-&lt;p&gt;你问我的灵魂安息于何处？ &lt;/p&gt;
-&lt;p&gt;——看那袅绕地，袅绕地升上去的炊烟。 &lt;/p&gt;
-&lt;p&gt;渴饮露，饥餐英； &lt;/p&gt;
-&lt;p&gt;鹿守我的梦，鸟祝我的醒. &lt;/p&gt;
-&lt;p&gt;你问我可有人间世的挂虑？&lt;/p&gt;
-&lt;p&gt;——听那消沉下去的百代之过客的跫音。&lt;/p&gt;
-&lt;/blockquote&gt;</summary></entry></feed>
+保有的那奔跑在绿色麦田和跳跃在蓝天白云上的小小幻想,跟他们在一起才会想像吧.&lt;/p&gt;</summary></entry><entry><title>Big Sarcosaurus</title><link href="/posts/2014/10/22/big-sarcosaurus.html" rel="alternate"></link><updated>2014-10-22T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-22:posts/2014/10/22/big-sarcosaurus.html</id><summary type="html">&lt;p&gt;Wen asked me how I was those days  in the morning via wechat ,which was kind of a surprise for me.She said that she 
+would take an exam today and she would have some time after then. I invited her to come to see me and have lunch 
+together. She said that she had bought some Big Sarcosaurus(&lt;code&gt;大懒龙&lt;/code&gt; in Chinese).I  don't know what
+it is and incorrectly, I thought it was a restaurant.I searched it on the baidu map,and the website told me  that it
+was 1h away from me. I might do not have enough time to go there and I told her to cancel the lunch.However,
+I was wrong,Big Sacrosaurus can be taken away. It was significantly nice for Wen to come back(&lt;code&gt;angrily&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;I really enjoy the lunch in Pizza hut,during which we talked about her work,and mine.Joy combined with upset makes her
+work interesting and challenging. I know She can make it and grow up to a good banker.&lt;/p&gt;
+&lt;p&gt;It is not good recently,but I really appreciate the time talking with Wen and the Big Sacrosaurus she brought for me .
+&lt;img src="/static/images/bigsarcosaurus.jpg" alt="Big Sarcosaurus" class="carousel-inner img-responsive img-rounded"/&gt;&lt;/p&gt;</summary></entry><entry><title>Recordes For Developing A Habit of Getting Up Early</title><link href="/posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html" rel="alternate"></link><updated>2014-10-11T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-11:posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html</id><summary type="html">&lt;p&gt;| Date     | Get up on time | Squats  | Situps | PushUps | Diary |
+|:--------:|:--------------:|:-------:|:------:|:-------:|:-----:|
+|2014.10.11|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.12|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.13|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.14|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.15|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.16|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.17|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.18|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.19|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.20|    &amp;#10004;     | &amp;#10004; | &amp;#10004;| &amp;#10004; |&amp;#10004;|
+|2014.10.21|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.22|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.23|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.24|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.25|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.26|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.27|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.28|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.29|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.30|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.10.31|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.01|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.02|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.03|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.04|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.05|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.06|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.07|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.08|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.08|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.09|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.10|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|
+|2014.11.11|    &amp;#10004;     | &amp;#10004; | &amp;#10004;|&amp;#10004;  |&amp;#10004;|&lt;/p&gt;
+&lt;script type="text/javascript"&gt;
+    $(document).ready(function(){
+        $("table").addClass("table table-hover table-striped table-condensed");
+    });
+&lt;/script&gt;</summary></entry></feed>
