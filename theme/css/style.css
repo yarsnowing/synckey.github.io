@@ -2,13 +2,10 @@ body {
     padding-top: 70px;
 }
 
-.pager ul:before{
-      padding-left: 0 ;
-}
-
 #sidebar .list-group, #sidebar .list-group-item {
     background-color: transparent;
 }
+
 /* for list-groups nested within a list-group-item, reset the bottom margin */
 .list-group-item > .list-group {
     margin-bottom: 0px;
@@ -224,4 +221,3 @@ figure.floatcenter, .align-center {
         font-size: 16px;
     }
 }
-
