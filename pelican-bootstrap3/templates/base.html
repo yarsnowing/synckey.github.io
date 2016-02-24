@@ -84,7 +84,6 @@
 
 
     </script>
-
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css"
@@ -105,7 +104,7 @@
     {% if TYPOGRIFY %}
     <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/typogrify.css" rel="stylesheet">
     {% endif %}
-    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" type="text/css"/>
+
     {% if CUSTOM_CSS %}
     <link href="{{ SITEURL }}/{{ CUSTOM_CSS }}" rel="stylesheet">
     {% endif %}
@@ -133,6 +132,7 @@
           rel="alternate"
           title="{{ SITENAME }} {{ category }} ATOM Feed"/>
     {% endif %}
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" />
 
 </head>
 <body>
