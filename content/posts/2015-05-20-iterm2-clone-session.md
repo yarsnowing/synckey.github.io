@@ -1,18 +1,19 @@
 Title: iterm2 clone session
 Date: 2015-05-20
 Category: posts
+Slug: iterm2-clone-session
 Tag: iterm2,mac,sesssion
 
-
-{% highlight bash %}
-vim ~/.ssh/config
-{% endhighlight %}
+    :::bash
+    vim ~/.ssh/config
+    
 贴入如下内容:
-{% highlight bash %}
-host *
-ControlMaster auto
-ControlPath ~/.ssh/master-%r@%h:%p
-{% endhighlight %}
+
+    :::bash
+    host *
+    ControlMaster auto
+    ControlPath ~/.ssh/master-%r@%h:%p
+    
 退出iterm2，重新登录即可。
 
 
