@@ -53,14 +53,13 @@
 
 
     </script>
-
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/github.css"
           rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
 
     <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
           title="Andy's Blog ATOM Feed"/>
@@ -70,6 +69,7 @@
     <link href="/feeds/posts.atom.xml" type="application/atom+xml"
           rel="alternate"
           title="Andy's Blog posts ATOM Feed"/>
+    <link rel="stylesheet" href="/theme/css/style.css" />
 
 </head>
 <body>
@@ -174,8 +174,6 @@ bash
 
 sudo yum install devtoolset-2-binutils-devel.x86_64 devtoolset-2-binutils.x86_64 -y
 </pre></div>
-
-
 <h3>Install vw</h3>
 <div class="vim"><pre>wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
 tar xzf vowpal_wabbit.tar.gz
@@ -201,14 +199,10 @@ and mapscript-yarn.sh
 -Dmapred.job.queue.name<span class="o">=</span>xxxx
 -file ./libs
 </pre></div>
-
-
 <h3>Run test job</h3>
 <div class="vim"><pre>hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
 sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.com:54310/user/xxx/test_data/
 </pre></div>
-
-
 <p>Refrences:</p>
 <p><a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/">vowpal wabbit on hadoop</a></p>
 <p><a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial">Vowpal Tutorial</a></p>
@@ -219,7 +213,7 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
         </div>
 
 <div class="pager">
-    <ul>
+    <ul style="padding-left: 0px;">
         <li class="previous"><a href="/posts/2015/05/20/iterm2-clone-session.html" data-toggle="tooltip"
                                 title="iterm2 clone session">&larr; Previous</a></li>
         <li class="next"><a href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html"

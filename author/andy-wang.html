@@ -49,20 +49,20 @@
 
 
     </script>
-
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/github.css"
           rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
 
     <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
           title="Andy's Blog ATOM Feed"/>
 
 
 
+    <link rel="stylesheet" href="/theme/css/style.css" />
 
 </head>
 <body>
@@ -109,13 +109,11 @@ Andy's Blog            </a>
                 <div class="summary"><div class="vim"><pre><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
 <span class="n">x</span><span class="p">=</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
 <span class="n">y</span><span class="p">=</span><span class="mf">1.</span><span class="o">/</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">.*</span><span class="n">x</span><span class="p">)];</span>
-<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">);</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s">'b'</span><span class="p">);</span>
 <span class="n">grid</span> <span class="n">on</span><span class="p">;</span>
 </pre></div>
-
-
 <p><p align="center">
-<img src="/static/images/sigmoid.svg" alt="sigmoid"  width="50%" />
+<img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="50%"/>
 </p></p>
                     <a class="btn btn-default btn-xs" href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">more ...</a>
                 </div>
@@ -128,7 +126,7 @@ Andy's Blog            </a>
 </blockquote>
 <p>逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
 <p align="center">
-<img src="/static/images/sigmoid.svg" alt="sigmoid"  width="60%" />
+<img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="60%"/>
 </p>
 书里面都说它的输出可以认为是预测的概率，但是，为什么是$sigmoid$，它是从哪来的呢？为什么可以它做二分类?书里面好像都没有说呢。</p>
 <h3>1.逻辑回归的建模</h3>
@@ -178,15 +176,11 @@ wget http://people.centos.org ...</pre></div>
                 <h2><a href="/posts/2015/05/20/iterm2-clone-session.html">iterm2 clone session</a></h2>
                 <div class="summary"><div class="vim"><pre>vim ~/.ssh/config
 </pre></div>
-
-
 <p>贴入如下内容:</p>
 <div class="vim"><pre>host *
 ControlMaster auto
 ControlPath ~/.ssh/master-%r@%h:%p
 </pre></div>
-
-
 <p>退出iterm2，重新登录即可。</p>
 <h3>References</h3>
 <p><a href="http://www.dbathink.com/2012/10/iterm2-auto-automatic-login-log-on-script/">Iterm2 auto login 自动登录脚本</a></p>
@@ -198,7 +192,6 @@ ControlPath ~/.ssh/master-%r@%h:%p
             <article>
                 <h2><a href="/posts/2015/04/13/my-experience-of-losing-weight.html">我的减肥经验</a></h2>
                 <div class="summary"><div id="weight_container" style=" margin: 0 auto"></div>
-
 <script>
 $(function () {
     $('#weight_container').highcharts({

@@ -53,14 +53,13 @@
 
 
     </script>
-
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/github.css"
           rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
 
     <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
           title="Andy's Blog ATOM Feed"/>
@@ -70,6 +69,7 @@
     <link href="/feeds/posts.atom.xml" type="application/atom+xml"
           rel="alternate"
           title="Andy's Blog posts ATOM Feed"/>
+    <link rel="stylesheet" href="/theme/css/style.css" />
 
 </head>
 <body>
@@ -148,7 +148,7 @@ Andy's Blog            </a>
 </blockquote>
 <p>逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
 <p align="center">
-<img src="/static/images/sigmoid.svg" alt="sigmoid"  width="60%" />
+<img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="60%"/>
 </p>
 书里面都说它的输出可以认为是预测的概率，但是，为什么是$sigmoid$，它是从哪来的呢？为什么可以它做二分类?书里面好像都没有说呢。</p>
 <h3>1.逻辑回归的建模</h3>
@@ -237,7 +237,7 @@ $$</p>
         </div>
 
 <div class="pager">
-    <ul>
+    <ul style="padding-left: 0px;">
         <li class="previous"><a href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html" data-toggle="tooltip"
                                 title="A Misuse of Spark Broadcast">&larr; Previous</a></li>
         <li class="next"><a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html"

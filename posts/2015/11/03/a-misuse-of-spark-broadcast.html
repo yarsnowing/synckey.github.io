@@ -53,14 +53,13 @@
 
 
     </script>
-
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/github.css"
           rel="stylesheet">
-    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
 
     <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
           title="Andy's Blog ATOM Feed"/>
@@ -70,6 +69,7 @@
     <link href="/feeds/posts.atom.xml" type="application/atom+xml"
           rel="alternate"
           title="Andy's Blog posts ATOM Feed"/>
+    <link rel="stylesheet" href="/theme/css/style.css" />
 
 </head>
 <body>
@@ -159,8 +159,6 @@ Andy's Blog            </a>
     <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
-
-
 <p>结果发现task的序列化时间还是很长。事实上，这个类实在Driver上被实例化的，Test的成员变量<code>lookupTable</code>是要被序列化并奋发到worker的。改成如下
 的代码，才能正确的使用spark的broadcast广播数据。</p>
 <div class="vim"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="kd">implements</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;</span> <span class="o">{</span>
@@ -186,7 +184,7 @@ Andy's Blog            </a>
         </div>
 
 <div class="pager">
-    <ul>
+    <ul style="padding-left: 0px;">
         <li class="previous"><a href="/posts/2015/06/09/run-vw-on-hadoop.html" data-toggle="tooltip"
                                 title="Run Vowpal Wabbit on Hadoop">&larr; Previous</a></li>
         <li class="next"><a href="/posts/2015/12/24/where-does-sigmod-come-from.html"
