@@ -53,4 +53,4 @@ ARTICLE_SAVE_AS = ARTICLE_URL
 DISPLAY_CATEGORIES_ON_MENU = False
 
 PLUGIN_PATHS = ["plugins", "plugins"]
-PLUGINS = [ "neighbors"]
+PLUGINS = [ "neighbors","bootstrapify"]

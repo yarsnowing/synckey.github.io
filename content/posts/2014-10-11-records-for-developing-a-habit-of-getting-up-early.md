@@ -1,20 +1,19 @@
-Recordes For Developing A Habit of Getting Up Early
-#####################################################
+Title: Recordes For Developing A Habit of Getting Up Early
+Date: 2014-10-11
+Category: Posts
+Slug: records-for-developing-a-habit-of-getting-up-early
+Tag: notes
 
-:tags: personal
-:date: 2014-10-11
-:slug: records-for-developing-a-habit-of-getting-up-early
-:category: posts
-::
+  | Protocol       | Contact Information
+  |:-------------- |:-----------------------------------------------------|
+  | jabber/xmpp    | [winlu@jabber.at](winlu@jabber.at)                   |
+  | email          | [derwinlu@gmail.com](mailto:derwinlu@gmail.com)      |
+  | IRC - freenode | winlu                                                |
 
-
-+------------------------+------------+----------+
-| Header row, column 1   | Header 2   | Header 3 |
-+========================+============+==========+
-| body row 1, column 1   | column 2   | column 3 |
-+------------------------+------------+----------+
-| body row 2             | Cells may span        |
-+------------------------+-----------------------+
+| Function name | Description                    |
+| ------------- | ------------------------------ |
+| `help()`      | Display the help window.       |
+| `destroy()`   | **Destroy your computer!**     |
 
 | Date     | Get up on time | Squats  | Situps | PushUps | Diary |
 |:--------:|:--------------:|:-------:|:------:|:-------:|:-----:|
