@@ -1,5 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-02-18T00:00:00+01:00</updated><entry><title>test2</title><link href="/test2.html" rel="alternate"></link><updated>2016-02-18T00:00:00+01:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-02-18:test2.html</id><summary type="html">&lt;h3&gt;head 1&lt;/h3&gt;
-&lt;p&gt;这里是内容&lt;/p&gt;</summary></entry><entry><title>Andy's Home Page</title><link href="/andys-home-page.html" rel="alternate"></link><updated>2013-04-18T00:00:00+02:00</updated><author><name>Andy Wang</name></author><id>tag:,2013-04-18:andys-home-page.html</id><summary type="html">&lt;h3&gt;head 1&lt;/h3&gt;
-&lt;p&gt;这里是内容&lt;/p&gt;</summary></entry><entry><title>test1</title><link href="/test1.html" rel="alternate"></link><updated>2013-04-18T00:00:00+02:00</updated><author><name>Andy Wang</name></author><id>tag:,2013-04-18:test1.html</id><summary type="html">&lt;h3&gt;head 1&lt;/h3&gt;
-&lt;p&gt;这里是内容&lt;/p&gt;</summary></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-02-18T00:00:00+08:00</updated><entry><title>test2</title><link href="/test2.html" rel="alternate"></link><updated>2016-02-18T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-02-18:test2.html</id><summary type="html">&lt;h3&gt;head 1&lt;/h3&gt;
+&lt;p&gt;这里是内容&lt;/p&gt;</summary></entry><entry><title>Where does sigmod come from</title><link href="/where-does-sigmod-come-from.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:where-does-sigmod-come-from.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;主要根据Andrew Ng的教学讲义整理。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
+&lt;p align="center"&gt;
+&lt;img src="/theme/images/sigmoid.svg" alt="sigmoid"  width="60%" /&gt;
+&lt;/p&gt;
+书里面都说它的输出可以认为是预测的概率，但是，为什么是$sigmoid$，它是从哪来的呢？为什么可以它做二分类?书里面好像都没有说呢。&lt;/p&gt;
+&lt;h3&gt;1.逻辑回归的建模&lt;/h3&gt;
+&lt;p&gt;首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然
+就想到使用 $Bernoulli$ 对 $y$ 的条件分布进行建模。$Bernoulli$
+分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli$的概率密度函数和数学期望为:
+$$
+\begin{eqnarray&lt;em&gt;}
+    f(x) &amp;amp;=&amp;amp; p^x(1-p)^{1-x}\
+    E(y) &amp;amp;=&amp;amp; p
+\end{eqnarray&lt;/em&gt;}
+$$&lt;/p&gt;
+&lt;h3&gt;2.指数族分布($The$ $exponential$ $family$ $distribution$)&lt;/h3&gt;
+&lt;p&gt;如果一个分布可以被写成如下形式，就称其服从指数族分布($The$ $exponential$ $family$ $distribution$):&lt;/p&gt;
+&lt;p&gt;$$
+p(y;\eta)=b(x)exp{\eta^{T}T(x)-a(\eta)}
+$$&lt;/p&gt;
+&lt;p&gt;选定了 $T,a,b$ 就定义了一个参数为 $\eta$ 的分布族，我们改变 $\eta$ ，就可以在该分布族内得到不同的分布。很多常见的分布 $Bernoulli,$ $Gaussian,$
+$Bimomial,$ $Poisson$ 等，均属于指数族分布。下面的推导过程可以证明 $Bernoulli$ 是属于$The$ $exponential$ $family$ $distribution$ 的。&lt;/p&gt;
+&lt;p&gt;假设 $y\sim Bernoulli(p),y\in\lbrace {0,1}\rbrace$,则有 $ p(y=1) = p,p(y=0)=1-p $,$Bernoulli$的概率密度函数可以改写为:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{eqnarray&lt;em&gt;}
+p(y) &amp;amp;=&amp;amp; p^y(1-p)^{1-y} \
+     &amp;amp;=&amp;amp; exp{log[p^y(1-p)^{1-y}] } \
+     &amp;amp;=&amp;amp; exp{ ylog(p) + (1-y)log(1-p) } \
+     &amp;amp;=&amp;amp; exp{[log(\frac{p}{1-p})]y + log(1-p)}
+\end{eqnarray&lt;/em&gt;}
+$$&lt;/p&gt;
+&lt;p&gt;令 $\eta=log(\frac{p}{1-p})$, 则我们得到 $p,\eta $之间的关系，即:&lt;/p&gt;
+&lt;p&gt;$$
+    p=\frac{1}{1+e^{-\eta}}
+$$&lt;/p&gt;
+&lt;p&gt;看！这就是我们的&lt;em&gt;$sigmoid$&lt;/em&gt;函数!同时 $p(y)=exp\lbrace \eta y - log(1+e^{\eta}) \rbrace$ ,我们有:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{eqnarray&lt;em&gt;}
+T(y)        &amp;amp;=&amp;amp; y \
+a(\eta)     &amp;amp;=&amp;amp; log(1+e^{\eta}) \
+b(y)        &amp;amp;=&amp;amp; 1
+\end{eqnarray&lt;/em&gt;}
+$$&lt;/p&gt;
+&lt;p&gt;符合指数族分布的定义。&lt;/p&gt;
+&lt;h3&gt;3.广义线性模型($Generalized$ $Linear$ $Models$)&lt;/h3&gt;
+&lt;p&gt;假设我们有一个回归问题($regression$ $problem$)或者分类问题($classification$ $problem$)，我们要预测某些关于 $x$ 的随机变量 $y$ 的值。
+要为这个问题推导一个$GLM$($Generalized$ $Linear$ $Model$),我们对 $y$ 关于 $x$ 的条件分布做以下三个假设:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$y\|x;\theta  \sim$  $ExponentialFamily(\eta)$。&lt;/li&gt;
+&lt;li&gt;在给定 $x$ 的情况下，我们的目标是预测 $T(y)$ 的期望。一般情况下，我们有 $ T(y)=y $,这意味着，我们希望我们的假设 $h$ 输出的结果 $h(x)$
+满足 $h(x)=E[y\|x]$ 。&lt;/li&gt;
+&lt;li&gt;$\eta(natural parameter)$ 与输入 $x$ 之间线性相关,即: $\eta=\theta^{T}x$。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其中第三个与其说是假设，倒不如说是我们的&lt;code&gt;设计选择&lt;/code&gt;。有了三个假设，我们就可以推导出来非常优雅的学习算法，称为&lt;code&gt;GLM&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;$$
+\begin{eqnarray&lt;em&gt;}
+T(y)        &amp;amp;=&amp;amp; y \
+a(\eta)     &amp;amp;=&amp;amp; log(1+e^{\eta}) \
+b(y)        &amp;amp;=&amp;amp; 1
+\end{eqnarray&lt;/em&gt;}
+$$&lt;/p&gt;
+&lt;h4&gt;逻辑回归($Logistic$ $Regression$)&lt;/h4&gt;
+&lt;p&gt;在逻辑回归中，我们考虑的是二分类问题，所以有 $y \in \lbrace 0,1\rbrace $，很自然的我们假设 $y$ 是关于 $x$的$Bernoulli$分布，
+即:$Bernoulli(p),y\in\lbrace {0,1}\rbrace$。因为$y\|x;\theta  \sim  Bernoulli(p)$,则$E[y\|x;\theta]=p$,所以我们有:
+$$
+\begin{eqnarray&lt;em&gt;}
+h_{\theta}(x)        &amp;amp;=&amp;amp; E[y|x;\theta] \
+                     &amp;amp;=&amp;amp; p             \
+                     &amp;amp;=&amp;amp; \frac{1}{1+e^{-\eta}} \
+                     &amp;amp;=&amp;amp; \frac{1}{1+e^{-\theta x}}
+\end{eqnarray&lt;/em&gt;}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+\begin{eqnarray&lt;em&gt;}
+T(y)        &amp;amp;=&amp;amp; y \
+a(\eta)     &amp;amp;=&amp;amp; log(1+e^{\eta}) \
+b(y)        &amp;amp;=&amp;amp; 1
+\end{eqnarray&lt;/em&gt;}
+$$&lt;/p&gt;
+&lt;p&gt;这就是为什么对 $y$  的预测使用 $ h_{\theta}(x)=\frac{1}{1+e^{-\theta x}} $方程。事实上，一旦你假设 $y\|x;\theta  \sim  Bernoulli(p)$, 由GLM和指数族
+分布的定义，就自然而然的给出了逻辑回归函数。&lt;/p&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://open.163.com/special/opencourse/machinelearning.html"&gt;Andrew Ng Machine Learning &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.cs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf"&gt;Michael I. Jordan The exponential family: Basics&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>iterm2 clone session</title><link href="/iterm2-clone-session.html" rel="alternate"></link><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-05-20:iterm2-clone-session.html</id><summary type="html">&lt;p&gt;vim ~/.ssh/config
+贴入如下内容:
+{% highlight bash %}
+host *
+ControlMaster auto
+ControlPath ~/.ssh/master-%r@%h:%p
+{% endhighlight %}
+退出iterm2，重新登录即可。&lt;/p&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://www.dbathink.com/2012/10/iterm2-auto-automatic-login-log-on-script/"&gt;Iterm2 auto login 自动登录脚本&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://laughingchs.iteye.com/blog/1317703"&gt;linux clone session&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>The Catcher in the Rye</title><link href="/the-catcher-in-the-rye.html" rel="alternate"></link><updated>2014-10-31T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-31:the-catcher-in-the-rye.html</id><summary type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
+&lt;p&gt;在离开学校之前他与他的室友打了一家，因为室友和他最喜欢的女生约会，他心里非常不舒服。一个十六岁的男孩，面对自己的梦中小情人，
+宁愿远远的看着她，也不希望她跟别的男孩子约会。更何况她的约会对象在Holden看来根本配不上她。Holden心里当然不高兴。打完架他决定早点离开学校了。&lt;/p&gt;
+&lt;p&gt;对于一个青春期的孩子来说，也许最大的恐惧就是不合群，希望和同龄人做一样的事情，上课，考试，放假。可是Hoden却不得不提前开始寒假，又不能回家，
+因为他告诉他妈妈他周三到家，他只能去住酒店。孤身一人落寞的站在房间里，此时此刻只有香烟陪伴他，而他根本睡不着，百无聊赖。只能去酒吧。他回来时与
+开电梯的小伙说好叫一个妓女，妓女来了，还很漂亮，可是他却开始退缩了，尽管他还是处男，他不想就这样跟这个妓女做爱。只希望她陪他说话，此刻对他
+来说，精神上才是最寂寞的。&lt;/p&gt;
+&lt;p&gt;在这个世界上，他最爱的人就是他的妹妹，Phoebe。他去街上买了她一直想要的唱片，给她一个惊喜，人在脆弱的时候总是想到自己最爱的人，就算他并不安慰你，
+你也希望看到她，让他在那里陪着你就已经足够。&lt;/p&gt;
+&lt;p&gt;他想去他妹妹经常滑冰的广场给他，可是她没有出现，他只好失望的走了。他偷偷地溜进了自己的家，叫醒了正在睡觉的妹妹，把自己的苦恼说给他听。&lt;/p&gt;
+&lt;p&gt;Phoebe虽然还小但是很懂事，她说出了Holden最大的问题，他到底想要什么？Holden说出了他想做的:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Anyway, I keep picturing all these little kids playing some game in this big field of rye and all. 
+Thousands of little kids, and nobody's around--nobody big, I mean--except me. And I'm standing on the edge of some crazy 
+cliff. What I have to do, I have to catch everybody if they start to go over the cliff--I mean if they're running and they don't look where they're going I have to come out from somewhere and catch them. That's all I'd do all day. I'd just be the catcher in the rye and all. I know it's crazy, but that's the only thing I'd really like to be.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;想起了一幅画面，一群无忧无忧虑的孩子在绿油油的麦田里奔跑，天上有各种形状的白云，他们一遍奔跑一边幻想自己能够在云间跳跃，从一朵白云跳到另外一朵，永远不会有忧愁。&lt;/p&gt;
+&lt;p&gt;走的时候，他跟他妹妹借钱，因为他没钱了。Phoebe把她圣诞节的所有的钱都给了他，他其实也不想全部都要，但是她坚持要给他。他花的非常节省，因为这是他妹妹的钱。&lt;/p&gt;
+&lt;p&gt;他打电话给他的以前的一个老师去他家借宿，夜里醒来发现老师在抚摸他的脸，他吓坏了，怀疑老师是gay,于是他连夜逃了出来，他产生了一个念头，离家出走，决定去西部，装作一个
+又聋又哑的人。走前还想跟Phoebe道别，于是给妹妹留了纸条，中午在博物馆门口等她。在学校和博物馆里，他都看到有人在墙上写着&lt;code&gt;Fuck you&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;他等来了妹妹，妹妹却拖着行李箱要和他一起走，他慌了，不希望妹妹和她一起走，因为她是他最爱的人，没有人想要最爱的人跟自己一起做愚蠢的事情。他们一起走到了游乐场，
+他看着妹妹开心的坐着旋转木马，填空下着大雨，他看着妹妹不停的旋转，心理开心极了，于是决定不走了。&lt;/p&gt;
+&lt;p&gt;也许每个人的内心都和Holden一样，看别人都觉得虚伪做作，总觉得自己才是最对的，最好的。即使这样也有值得牵挂的和珍爱的人，如果幸运，自己珍爱的人也能珍爱你。心中
+保有的那奔跑在绿色麦田和跳跃在蓝天白云上的小小幻想,跟他们在一起才会想像吧.&lt;/p&gt;</summary></entry><entry><title>Andy's Home Page</title><link href="/andys-home-page.html" rel="alternate"></link><updated>2013-04-18T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2013-04-18:andys-home-page.html</id><summary type="html">&lt;h3&gt;head 1&lt;/h3&gt;
+&lt;p&gt;这里是内容&lt;/p&gt;</summary></entry><entry><title>test1</title><link href="/test1.html" rel="alternate"></link><updated>2013-04-18T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2013-04-18:test1.html</id><summary type="html">&lt;h3&gt;head 1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;h3&gt;古意答客问&lt;/h3&gt;
+&lt;p&gt;——戴望舒&lt;/p&gt;
+&lt;p&gt;孤心逐浮云之炫烨的卷舒，&lt;/p&gt;
+&lt;p&gt;惯看青空的眼喜侵阈的青芜。 &lt;/p&gt;
+&lt;p&gt;你问我的欢乐何在？ &lt;/p&gt;
+&lt;p&gt;——窗头明月枕边书。&lt;/p&gt;
+&lt;p&gt;侵晨看岗踯躅于山巅， &lt;/p&gt;
+&lt;p&gt;入夜听风琐语于花间。 &lt;/p&gt;
+&lt;p&gt;你问我的灵魂安息于何处？ &lt;/p&gt;
+&lt;p&gt;——看那袅绕地，袅绕地升上去的炊烟。 &lt;/p&gt;
+&lt;p&gt;渴饮露，饥餐英； &lt;/p&gt;
+&lt;p&gt;鹿守我的梦，鸟祝我的醒. &lt;/p&gt;
+&lt;p&gt;你问我可有人间世的挂虑？&lt;/p&gt;
+&lt;p&gt;——听那消沉下去的百代之过客的跫音。&lt;/p&gt;
+&lt;/blockquote&gt;</summary></entry></feed>

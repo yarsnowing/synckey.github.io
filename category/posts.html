@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<html lang="en"       prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml" >
 <head>
     <title>Posts - Andy's Blog</title>
     <!-- Using the latest rendering mode for IE -->
@@ -14,33 +14,59 @@
     <meta name="keywords" content="Posts" />
 
     <!-- Open Graph tags -->
-        <meta property="og:site_name" content="Andy's Blog" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Andy's Blog"/>
-        <meta property="og:url" content=""/>
-        <meta property="og:description" content="Andy's Blog"/>
+    <meta property="og:site_name" content="Andy's Blog"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Andy's Blog"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:description" content="Andy's Blog"/>
 
+
+
+    <!-- highcharts -->
+    <!--
+    <script src="/js/exporting.js"></script>
+    -->
+    <script src="/theme/js/highcharts.js"></script>
+    <!-- mathtex -->
+    <!--
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            -->
+    <script type="text/javascript"
+            src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            tex2jax: {inlineMath: [['$', '$']]},
+            processEscapes: true,
+        });
+
+    </script>
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="/theme/css/pygments/native.css"
+          rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Andy's Blog ATOM Feed"/>
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+          title="Andy's Blog ATOM Feed"/>
 
 
 
-        <link href="/feeds/posts.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Andy's Blog Posts ATOM Feed"/>
+    <link href="/feeds/posts.atom.xml" type="application/atom+xml"
+          rel="alternate"
+          title="Andy's Blog Posts ATOM Feed"/>
 
 </head>
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
+<div class="navbar navbar-default navbar-fixed-top"
+     role="navigation">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -53,12 +79,13 @@ Andy's Blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="/category/posts.html">Posts</a>
-                        </li>
+                <li class="active" >
+                    <a href="/category/posts.html">Posts</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+                <li><a href="/archives.html"><i
+                        class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -68,12 +95,62 @@ Andy's Blog            </a>
 <!-- End Banner -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-md-offset-2">
+            <div class="col-lg-8 col-md-offset-2">
             <article>
                 <h2><a href="/test2.html">test2</a></h2>
                 <div class="summary"><h3>head 1</h3>
 <p>这里是内容</p>
                     <a class="btn btn-default btn-xs" href="/test2.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/where-does-sigmod-come-from.html">Where does sigmod come from</a></h2>
+                <div class="summary"><blockquote>
+<p>主要根据Andrew Ng的教学讲义整理。</p>
+</blockquote>
+<p>逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
+<p align="center">
+<img src="/theme/images/sigmoid.svg" alt="sigmoid"  width="60%" />
+</p>
+书里面都说它的输出可以认为是预测的概率，但是，为什么是$sigmoid$，它是从哪来的呢？为什么可以它做二分类?书里面好像都没有说呢。</p>
+<h3>1.逻辑回归的建模</h3>
+<p>首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然
+就想到使用 $Bernoulli$ 对 $y$ 的条件分布进行建模。$Bernoulli$
+分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli ...</p>
+                    <a class="btn btn-default btn-xs" href="/where-does-sigmod-come-from.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/iterm2-clone-session.html">iterm2 clone session</a></h2>
+                <div class="summary"><p>vim ~/.ssh/config
+贴入如下内容:
+{% highlight bash %}
+host *
+ControlMaster auto
+ControlPath ~/.ssh/master-%r@%h:%p
+{% endhighlight %}
+退出iterm2，重新登录即可。</p>
+<h3>References</h3>
+<p><a href="http://www.dbathink.com/2012/10/iterm2-auto-automatic-login-log-on-script/">Iterm2 auto login 自动登录脚本</a></p>
+<p><a href="http://laughingchs.iteye.com/blog/1317703">linux clone session</a></p>
+                    <a class="btn btn-default btn-xs" href="/iterm2-clone-session.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/the-catcher-in-the-rye.html">The Catcher in the Rye</a></h2>
+                <div class="summary"><p>Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。</p>
+<p>在离开学校之前他与他的室友打了一家，因为室友和他最喜欢的女生约会，他心里非常不舒服。一个十六岁的男孩，面对自己的梦中小情人，
+宁愿远远的看着她，也不希望她跟别的男孩子约会。更何况她的约会对象在Holden看来根本配不上她。Holden心里当然不高兴。打完架他决定早点离开学校了。</p>
+<p>对于一个青春期的孩子来说，也许最大的恐惧就是不合群，希望和同龄人做一样的事情，上课，考试，放假。可是Hoden却不得不提前开始寒假，又不能回家，
+因为他告诉他妈妈他周三到家，他只能去住酒店。孤身一人落寞的站在房间里，此时此刻只有香烟陪伴他，而他根本睡不着，百无聊赖。只能去酒吧。他回来时与
+开电梯的小伙说好叫一个妓女，妓女来了，还很漂亮，可是他却开始退缩了，尽管他还是处男，他不想就这样跟这个妓女做爱。只希望她陪他说话，此刻对他
+来说，精神上才是最寂寞的。</p>
+<p>在这个世界上，他最爱的人就是他的妹妹，Phoebe。他去街上买了她一直想要的唱片，给她一个惊喜，人在脆弱的时候总是想到自己最爱的人，就算他并不安慰你，
+你也希望看到她 ...</p>
+                    <a class="btn btn-default btn-xs" href="/the-catcher-in-the-rye.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -88,15 +165,30 @@ Andy's Blog            </a>
             <article>
                 <h2><a href="/test1.html">test1</a></h2>
                 <div class="summary"><h3>head 1</h3>
-<p>这里是内容</p>
+<blockquote>
+<h3>古意答客问</h3>
+<p>——戴望舒</p>
+<p>孤心逐浮云之炫烨的卷舒，</p>
+<p>惯看青空的眼喜侵阈的青芜。 </p>
+<p>你问我的欢乐何在？ </p>
+<p>——窗头明月枕边书。</p>
+<p>侵晨看岗踯躅于山巅， </p>
+<p>入夜听风琐语于花间。 </p>
+<p>你问我的灵魂安息于何处？ </p>
+<p>——看那袅绕地，袅绕地升上去的炊烟。 </p>
+<p>渴饮露，饥餐英； </p>
+<p>鹿守我的梦，鸟祝我的醒. </p>
+<p>你问我可有人间世的挂虑？</p>
+<p>——听那消沉下去的百代之过客的跫音。</p>
+</blockquote>
                     <a class="btn btn-default btn-xs" href="/test1.html">more ...</a>
                 </div>
             </article>
             <hr/>
 
+            </div>
         </div>
     </div>
-</div>
 <footer>
     <div class="container ">
         <div class="row">
@@ -116,13 +208,13 @@ Andy's Blog            </a>
         </div>
     </div>
 </footer>
-<script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.min.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/theme/js/bootstrap.min.js"></script>
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="/theme/js/respond.min.js"></script>
 
     <!-- Disqus -->
     <script type="text/javascript">

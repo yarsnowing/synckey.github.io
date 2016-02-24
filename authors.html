@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<html lang="en"       prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml" >
 <head>
     <title>Authors - Andy's Blog</title>
     <!-- Using the latest rendering mode for IE -->
@@ -10,25 +10,49 @@
 
 
 
-        <meta name="author" content="Andy Wang" />
+    <meta name="author" content="Andy Wang"/>
 
     <!-- Open Graph tags -->
-        <meta property="og:site_name" content="Andy's Blog" />
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Andy's Blog"/>
-        <meta property="og:url" content=""/>
-        <meta property="og:description" content="Andy's Blog"/>
+    <meta property="og:site_name" content="Andy's Blog"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Andy's Blog"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:description" content="Andy's Blog"/>
 
+
+
+    <!-- highcharts -->
+    <!--
+    <script src="/js/exporting.js"></script>
+    -->
+    <script src="/theme/js/highcharts.js"></script>
+    <!-- mathtex -->
+    <!--
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            -->
+    <script type="text/javascript"
+            src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            tex2jax: {inlineMath: [['$', '$']]},
+            processEscapes: true,
+        });
+
+    </script>
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link href="/theme/css/pygments/native.css"
+          rel="stylesheet">
     <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="Andy's Blog ATOM Feed"/>
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+          title="Andy's Blog ATOM Feed"/>
 
 
 
@@ -36,8 +60,9 @@
 </head>
 <body>
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-	<div class="container">
+<div class="navbar navbar-default navbar-fixed-top"
+     role="navigation">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -50,12 +75,13 @@ Andy's Blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                        <li >
-                            <a href="/category/posts.html">Posts</a>
-                        </li>
+                <li >
+                    <a href="/category/posts.html">Posts</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+                <li><a href="/archives.html"><i
+                        class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -65,12 +91,12 @@ Andy's Blog            </a>
 <!-- End Banner -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-md-offset-2">
+            <div class="col-lg-8 col-md-offset-2">
     <h1>Authors on Andy's Blog</h1>
-        <li><a href="/author/andy-wang.html">Andy Wang</a> (3)</li>
+        <li><a href="/author/andy-wang.html">Andy Wang</a> (6)</li>
+            </div>
         </div>
     </div>
-</div>
 <footer>
     <div class="container ">
         <div class="row">
@@ -90,13 +116,13 @@ Andy's Blog            </a>
         </div>
     </div>
 </footer>
-<script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.min.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/theme/js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/theme/js/bootstrap.min.js"></script>
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="/theme/js/respond.min.js"></script>
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="/theme/js/respond.min.js"></script>
 
     <!-- Disqus -->
     <script type="text/javascript">
