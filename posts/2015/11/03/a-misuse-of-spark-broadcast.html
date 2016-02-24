@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
+<!--
 <link rel="canonical" href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html">
-
+-->
 <meta name="author" content="Andy Wang"/>
 <meta name="description" content="在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表： public class Test implements Function&lt;String, Boolean&gt; { private Map&lt;String,String&gt; lookupTable=new HashMap&lt;String, String&gt;(); public Test(Broadcast&lt;Map&lt;String,String&gt;&gt; broadcast){ this.lookupTable=broadcast.value(); } public Boolean call(String line) throws Exception { if (this.lookupTable.containsKey ..."/>
 
@@ -184,14 +184,6 @@ Andy's Blog            </a>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'synckey'; // required: replace example with your forum shortname
-
-                    var disqus_identifier = 'a-misuse-of-spark-broadcast';
-                var disqus_url = '/posts/2015/11/03/a-misuse-of-spark-broadcast.html';
-
-            var disqus_config = function () {
-                this.language = "en";
-            };
-
             /* * * DON'T EDIT BELOW THIS LINE * * */
             (function () {
                 var dsq = document.createElement('script');
@@ -236,8 +228,10 @@ Andy's Blog            </a>
 
 
 
-    <!-- Disqus -->
-    <script type="text/javascript">
+    <!--
+<div id="disqus_thread"></div>
+<!-- Disqus -->
+<script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'synckey'; // required: replace example with your forum shortname
 
@@ -249,8 +243,30 @@ Andy's Blog            </a>
             s.src = '//' + disqus_shortname + '.disqus.com/count.js';
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<!-- End Disqus Code -->
+</div>
+    -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-55913313-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
     </script>
-    <!-- End Disqus Code -->
+    <!-- End Google Analytics Code -->
 
 </body>
 </html>

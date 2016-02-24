@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
+<!--
 <link rel="canonical" href="/posts/2015/12/24/where-does-sigmod-come-from.html">
-
+-->
 <meta name="author" content="Andy Wang"/>
 <meta name="description" content="主要根据Andrew Ng的教学讲义整理。 逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下: 书里面都说它的输出可以认为是预测的概率，但是，为什么是$sigmoid$，它是从哪来的呢？为什么可以它做二分类?书里面好像都没有说呢。 1.逻辑回归的建模 首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然 就想到使用 $Bernoulli$ 对 $y$ 的条件分布进行建模。$Bernoulli$ 分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli ..."/>
 
@@ -235,14 +235,6 @@ $$</p>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
             var disqus_shortname = 'synckey'; // required: replace example with your forum shortname
-
-                    var disqus_identifier = 'where-does-sigmod-come-from';
-                var disqus_url = '/posts/2015/12/24/where-does-sigmod-come-from.html';
-
-            var disqus_config = function () {
-                this.language = "en";
-            };
-
             /* * * DON'T EDIT BELOW THIS LINE * * */
             (function () {
                 var dsq = document.createElement('script');
@@ -287,8 +279,10 @@ $$</p>
 
 
 
-    <!-- Disqus -->
-    <script type="text/javascript">
+    <!--
+<div id="disqus_thread"></div>
+<!-- Disqus -->
+<script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'synckey'; // required: replace example with your forum shortname
 
@@ -300,8 +294,30 @@ $$</p>
             s.src = '//' + disqus_shortname + '.disqus.com/count.js';
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
         }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<!-- End Disqus Code -->
+</div>
+    -->
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-55913313-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
     </script>
-    <!-- End Disqus Code -->
+    <!-- End Google Analytics Code -->
 
 </body>
 </html>
