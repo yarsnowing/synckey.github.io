@@ -19,7 +19,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-MD_EXTENSIONS = (['codehilite(css_class=vim)'])
+MD_EXTENSIONS = (['codehilite(css_class=github)'])
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
