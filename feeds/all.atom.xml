@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2015-12-24T00:00:00+08:00</updated><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="vim"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2015-12-24T00:00:00+08:00</updated><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)];&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -94,7 +94,7 @@ $$&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://open.163.com/special/opencourse/machinelearning.html"&gt;Andrew Ng Machine Learning &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.cs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf"&gt;Michael I. Jordan The exponential family: Basics&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>A Misuse of Spark Broadcast</title><link href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html" rel="alternate"></link><updated>2015-11-03T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-11-03:posts/2015/11/03/a-misuse-of-spark-broadcast.html</id><summary type="html">&lt;p&gt;在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：&lt;/p&gt;
-&lt;div class="vim"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="github"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HashMap&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;();&lt;/span&gt;
 
@@ -111,7 +111,7 @@ $$&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;结果发现task的序列化时间还是很长。事实上，这个类实在Driver上被实例化的，Test的成员变量&lt;code&gt;lookupTable&lt;/code&gt;是要被序列化并奋发到worker的。改成如下
 的代码，才能正确的使用spark的broadcast广播数据。&lt;/p&gt;
-&lt;div class="vim"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="github"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Broadcast&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;bLookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;Test&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Broadcast&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
         &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;bLookupTable&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -132,7 +132,7 @@ $$&lt;/p&gt;
 &lt;li&gt;Centos 6.4&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Install boost&lt;/h3&gt;
-&lt;div class="vim"&gt;&lt;pre&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
+&lt;div class="github"&gt;&lt;pre&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
 tar xzf boost_1_58_0.tar.gz
 &lt;span class="nb"&gt;cd &lt;/span&gt;boost_1_58_0
 sudo ./bootstrap.sh
@@ -158,7 +158,7 @@ bash
 sudo yum install devtoolset-2-binutils-devel.x86_64 devtoolset-2-binutils.x86_64 -y
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Install vw&lt;/h3&gt;
-&lt;div class="vim"&gt;&lt;pre&gt;wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
+&lt;div class="github"&gt;&lt;pre&gt;wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
 tar xzf vowpal_wabbit.tar.gz
 &lt;span class="nb"&gt;cd &lt;/span&gt;vowpal_wabbit-7.10
 sudo ./autogen.sh
@@ -183,15 +183,15 @@ and mapscript-yarn.sh
 -file ./libs
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Run test job&lt;/h3&gt;
-&lt;div class="vim"&gt;&lt;pre&gt;hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
+&lt;div class="github"&gt;&lt;pre&gt;hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
 sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.com:54310/user/xxx/test_data/
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Refrences:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/"&gt;vowpal wabbit on hadoop&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-05-20:posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="vim"&gt;&lt;pre&gt;vim ~/.ssh/config
+&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-05-20:posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;vim ~/.ssh/config
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;贴入如下内容:&lt;/p&gt;
-&lt;div class="vim"&gt;&lt;pre&gt;host *
+&lt;div class="github"&gt;&lt;pre&gt;host *
 ControlMaster auto
 ControlPath ~/.ssh/master-%r@%h:%p
 &lt;/pre&gt;&lt;/div&gt;
