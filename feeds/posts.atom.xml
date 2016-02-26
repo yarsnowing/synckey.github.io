@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2015-12-24T00:00:00+08:00</updated><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2016-02-26T00:00:00+08:00</updated><entry><title>HHKB shortcut kyes for mac os</title><link href="/posts/2016/02/26/hhkb-shortcut-keys.html" rel="alternate"></link><updated>2016-02-26T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-02-26:posts/2016/02/26/hhkb-shortcut-keys.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;Ctrl+p shell中上一个命令,或者 文本中移动到上一行&lt;/li&gt;
+&lt;li&gt;Ctrl+n shell中下一个命令,或者 文本中移动到下一行&lt;/li&gt;
+&lt;li&gt;Ctrl+r 往后搜索历史命令&lt;/li&gt;
+&lt;li&gt;Ctrl+s 往前搜索历史命令&lt;/li&gt;
+&lt;li&gt;Ctrl+f 光标前移&lt;/li&gt;
+&lt;li&gt;Ctrl+b 光标后退&lt;/li&gt;
+&lt;li&gt;Ctrl+a 到行首&lt;/li&gt;
+&lt;li&gt;Ctrl+e 到行尾&lt;/li&gt;
+&lt;li&gt;Ctrl+d 删除一个字符,删除一个字符,相当于通常的Delete键&lt;/li&gt;
+&lt;li&gt;Ctrl+h 退格删除一个字符,相当于通常的Backspace键&lt;/li&gt;
+&lt;li&gt;Ctrl+u 删除到行首&lt;/li&gt;
+&lt;li&gt;Ctrl+k 删除到行尾&lt;/li&gt;
+&lt;li&gt;Ctrl+l 类似 clear 命令效果&lt;/li&gt;
+&lt;li&gt;Ctrl+y 粘贴&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)];&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
