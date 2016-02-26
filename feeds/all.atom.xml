@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-02-26T00:00:00+08:00</updated><entry><title>HHKB shortcut kyes for mac os</title><link href="/posts/2016/02/26/hhkb-shortcut-keys.html" rel="alternate"></link><updated>2016-02-26T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-02-26:posts/2016/02/26/hhkb-shortcut-keys.html</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;Ctrl+p shell中上一个命令,或者 文本中移动到上一行&lt;/li&gt;
+&lt;li&gt;Ctrl+p shell中上一个命令,或者文本中移动到上一行&lt;/li&gt;
 &lt;li&gt;Ctrl+n shell中下一个命令,或者 文本中移动到下一行&lt;/li&gt;
 &lt;li&gt;Ctrl+r 往后搜索历史命令&lt;/li&gt;
 &lt;li&gt;Ctrl+s 往前搜索历史命令&lt;/li&gt;
@@ -14,7 +14,9 @@
 &lt;li&gt;Ctrl+k 删除到行尾&lt;/li&gt;
 &lt;li&gt;Ctrl+l 类似 clear 命令效果&lt;/li&gt;
 &lt;li&gt;Ctrl+y 粘贴&lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/ul&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;&lt;a href="http://www.xiaozhou.net/got_hhkb_pro_2-2013-06-03.html"&gt;码农神器HHKB Pro2入手与开箱&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)];&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -476,8 +478,7 @@ I was wrong,Big Sacrosaurus can be taken away. It was significantly nice for Wen
 &lt;p&gt;I really enjoy the lunch in Pizza hut,during which we talked about her work,and mine.Joy combined with upset makes her
 work interesting and challenging. I know She can make it and grow up to a good banker.&lt;/p&gt;
 &lt;p&gt;It is not good recently,but I really appreciate the time talking with Wen and the Big Sacrosaurus she brought for me .
-&lt;img alt="Big Sarcosaurus" class="img-responsive carousel-inner img-rounded" src="/static/images/bigsarcosaurus.jpg"/&gt;&lt;/p&gt;</summary></entry><entry><title>Page Not Found</title><link href="/posts/2014/10/11/404.html" rel="alternate"></link><updated>2014-10-11T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-11:posts/2014/10/11/404.html</id><summary type="html">&lt;p&gt;The requested item could not be located. Perhaps you might want to check
-the &lt;a href="/category/posts.html"&gt;Posts&lt;/a&gt;?&lt;/p&gt;</summary></entry><entry><title>Recordes For Developing A Habit of Getting Up Early</title><link href="/posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html" rel="alternate"></link><updated>2014-10-11T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-11:posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html</id><summary type="html">&lt;p&gt;| Protocol       | Contact Information
+&lt;img alt="Big Sarcosaurus" class="img-responsive carousel-inner img-rounded" src="/static/images/bigsarcosaurus.jpg"/&gt;&lt;/p&gt;</summary></entry><entry><title>Recordes For Developing A Habit of Getting Up Early</title><link href="/posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html" rel="alternate"></link><updated>2014-10-11T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-11:posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html</id><summary type="html">&lt;p&gt;| Protocol       | Contact Information
   |:-------------- |:-----------------------------------------------------|
   | jabber/xmpp    | &lt;a href="winlu@jabber.at"&gt;winlu@jabber.at&lt;/a&gt;                   |
   | email          | &lt;a href="mailto:derwinlu@gmail.com"&gt;derwinlu@gmail.com&lt;/a&gt;      |
