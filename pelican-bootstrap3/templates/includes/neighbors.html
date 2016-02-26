@@ -1,4 +1,4 @@
-{% if not article.title.equalto("Page Not Found")  %}
+{% if  article.title is not equalto "Page Not Found"  %}
 <div class="pager">
     <ul style="padding-left: 0px;">
         {% if article.prev_article %}
@@ -7,11 +7,11 @@
         {% else %}
         <li class="previous disabled"><a>&larr; Previous</a></li>
         {% endif %}
-        {% if  article.next_article %}
+        {% if article.next_article %}
         <li class="next"><a href="{{ SITEURL }}/{{ article.next_article.url}}"
                             data-toggle="tooltip" title="{{ article.next_article.title }}">Next &rarr;</a></li>
         {% else %}
-        <li class="next disabled"><a>Next &rarr;</a>
+        <li class="next disabled"><a>Next &rarr;</a></li>
             {% endif %}
     </ul>
 </div>
