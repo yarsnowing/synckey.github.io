@@ -39,7 +39,7 @@ DISQUS_SITENAME = u"synckey"
 THEME = "pelican-bootstrap3"
 HIDE_SIDEBAR = True
 # BOOTSTRAP_FLUID =  True
-PDF_PROCESSOR = True
+#PDF_PROCESSOR = True
 PYGMENTS_STYLE = "github"
 
 STATIC_PATHS = ['static', 'static/images/favicon.ico']
