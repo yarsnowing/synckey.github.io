@@ -8,10 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <!-- Thumbnail for wechat, when share links in wechat,it will use this piture for thumbnail.This can be specific for
+         every sigle page. -->
+
+    <div id='wx_pic' style='margin:0 auto;display:none;'><img src='/static/images/wechat_log_300x300_sigmoid.png'/></div>
+
     <!--
 <link rel="canonical" href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">
     -->
 <meta name="author" content="Andy Wang"/>
+<meta name="keywords" content="machine learning,technology,logistic regression"/>
 <meta name="description" content="a=2; x=-10:0.1:10; y=1./[1+exp(-a.*x)]; plot(x,y,&#39;b&#39;); grid on;"/>
 
 <meta property="og:site_name" content="Andy's Blog"/>
@@ -21,6 +27,9 @@
 <meta property="og:description" content="a=2; x=-10:0.1:10; y=1./[1+exp(-a.*x)]; plot(x,y,&#39;b&#39;); grid on;"/>
 <meta property="article:published_time" content=" 2015-12-24" />
 <meta property="article:section" content="posts"/>
+<meta property="article:tag" content="machine learning"/>
+<meta property="article:tag" content="technology"/>
+<meta property="article:tag" content="logistic regression"/>
 <meta property="article:author" content="Andy Wang"/>
 
 
@@ -48,10 +57,11 @@
             tex2jax: {inlineMath: [['$', '$']]},
             processEscapes: true,
         });
+
     </script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="/theme/css/style.css" />
+    <link rel="stylesheet" href="/theme/css/style.css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/github.css"
@@ -118,10 +128,9 @@ Andy's Blog            </a>
                 </a>
             </h2>
         </header>
-        <div class="entry-content">
-            <!--
-        <div class="panel">
-            <div class="panel-body">
+        <div class="entry-content"><!--
+            <div class="panel">
+                <div class="panel-body">
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
@@ -132,8 +141,14 @@ Andy's Blog            </a>
 
 
 
+<span class="label label-default">Tags</span>
+	<a href="/tag/machine-learning.html">machine learning</a>
+        /
+	<a href="/tag/technology.html">technology</a>
+        /
+	<a href="/tag/logistic-regression.html">logistic regression</a>
     
-</footer>            </div>
+</footer>                </div>
             </div>
             -->
             <div class="github"><pre><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
@@ -150,7 +165,6 @@ Andy's Blog            </a>
         <div>
             <time datetime="2015-12-24T00:00:00+08:00">2015-12-24</time>
         </div>
-
 <div class="pager">
     <ul style="padding-left: 0px;">
         <li class="previous"><a href="/posts/2016/02/26/hhkb-shortcut-keys.html" data-toggle="tooltip"
@@ -158,8 +172,7 @@ Andy's Blog            </a>
         <li class="next"><a href="/posts/2015/12/24/where-does-sigmoid-come-from.html"
                             data-toggle="tooltip" title="Where does sigmoid come from">Next &rarr;</a></li>
     </ul>
-</div>
-    <hr/>
+</div>    <hr/>
     <section class="comments" id="comments">
         <h2>Comments</h2>
         <div id="disqus_thread"></div>
@@ -180,7 +193,6 @@ Andy's Blog            </a>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
-
     </article>
 </section>
 

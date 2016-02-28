@@ -8,6 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <!-- Thumbnail for wechat, when share links in wechat,it will use this piture for thumbnail.This can be specific for
+         every sigle page. -->
+
+    <div id='wx_pic' style='margin:0 auto;display:none;'><img src='/static/images/wechat_logo_300x300.jpg'/></div>
+
     <!--
     -->
     <meta name="author" content="Andy Wang"/>
@@ -44,10 +49,11 @@
             tex2jax: {inlineMath: [['$', '$']]},
             processEscapes: true,
         });
+
     </script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="/theme/css/style.css" />
+    <link rel="stylesheet" href="/theme/css/style.css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/github.css"
@@ -102,7 +108,43 @@ Andy's Blog            </a>
             <div class="col-lg-8 col-md-offset-2">
     <section id="tags">
         <h1>Tags for Andy's Blog</h1>
-        <div class="panel-group" id="accordion">        </div>
+        <div class="panel-group" id="accordion">            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-logistic-regression">logistic regression <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-logistic-regression" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2015-12-24T00:00:00+08:00">2015-12-24</time></span> <a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">Plot Sigmoid in Matlab</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-machine-learning">machine learning <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-machine-learning" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2015-12-24T00:00:00+08:00">2015-12-24</time></span> <a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">Plot Sigmoid in Matlab</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-technology">technology <span class="badge pull-right">1</span></a>
+                    </h4>
+                </div>
+                <div id="collapse-technology" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p><span class="categories-timestamp"><time datetime="2015-12-24T00:00:00+08:00">2015-12-24</time></span> <a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">Plot Sigmoid in Matlab</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </section>
             </div>

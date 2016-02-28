@@ -8,6 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <!-- Thumbnail for wechat, when share links in wechat,it will use this piture for thumbnail.This can be specific for
+         every sigle page. -->
+
+    <div id='wx_pic' style='margin:0 auto;display:none;'><img src='/static/images/wechat_logo_300x300.jpg'/></div>
+
     <!--
 <link rel="canonical" href="/posts/2015/05/20/iterm2-clone-session.html">
     -->
@@ -48,10 +53,11 @@
             tex2jax: {inlineMath: [['$', '$']]},
             processEscapes: true,
         });
+
     </script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="/theme/css/style.css" />
+    <link rel="stylesheet" href="/theme/css/style.css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/github.css"
@@ -118,10 +124,9 @@ Andy's Blog            </a>
                 </a>
             </h2>
         </header>
-        <div class="entry-content">
-            <!--
-        <div class="panel">
-            <div class="panel-body">
+        <div class="entry-content"><!--
+            <div class="panel">
+                <div class="panel-body">
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
@@ -133,7 +138,7 @@ Andy's Blog            </a>
 
 
     
-</footer>            </div>
+</footer>                </div>
             </div>
             -->
             <div class="github"><pre>vim ~/.ssh/config
@@ -152,7 +157,6 @@ ControlPath ~/.ssh/master-%r@%h:%p
         <div>
             <time datetime="2015-05-20T00:00:00+08:00">2015-05-20</time>
         </div>
-
 <div class="pager">
     <ul style="padding-left: 0px;">
         <li class="previous"><a href="/posts/2015/06/09/run-vw-on-hadoop.html" data-toggle="tooltip"
@@ -160,8 +164,7 @@ ControlPath ~/.ssh/master-%r@%h:%p
         <li class="next"><a href="/posts/2015/04/13/my-experience-of-losing-weight.html"
                             data-toggle="tooltip" title="我的减肥经验">Next &rarr;</a></li>
     </ul>
-</div>
-    <hr/>
+</div>    <hr/>
     <section class="comments" id="comments">
         <h2>Comments</h2>
         <div id="disqus_thread"></div>
@@ -182,7 +185,6 @@ ControlPath ~/.ssh/master-%r@%h:%p
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
     </section>
-
     </article>
 </section>
 

@@ -8,6 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <!-- Thumbnail for wechat, when share links in wechat,it will use this piture for thumbnail.This can be specific for
+         every sigle page. -->
+
+    <div id='wx_pic' style='margin:0 auto;display:none;'><img src='/static/images/wechat_logo_300x300.jpg'/></div>
+
     <!--
 <link rel="canonical" href="/pages/404.html">
     -->
@@ -45,10 +50,11 @@
             tex2jax: {inlineMath: [['$', '$']]},
             processEscapes: true,
         });
+
     </script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="/theme/css/style.css" />
+    <link rel="stylesheet" href="/theme/css/style.css"/>
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="/theme/css/pygments/github.css"
