@@ -80,12 +80,11 @@
                 </a>
             </h2>
         </header>
-        <div class="entry-content">
-            <!--
-        <div class="panel">
-            <div class="panel-body">
-                {% include "includes/article_info.html" %}
-            </div>
+        <div class="entry-content"><!--
+            <div class="panel">
+                <div class="panel-body">
+                    {% include "includes/article_info.html" %}
+                </div>
             </div>
             -->
             {{ article.content }}
@@ -94,14 +93,12 @@
         <div>
             <time datetime="{{ article.date.isoformat() }}">{{ article.date|strftime('%Y-%m-%d') }}</time>
         </div>
-
         {% include 'includes/neighbors.html' %}
         {% include 'includes/related-posts.html' %}
         {% include 'includes/series.html' %}
         {% include 'includes/addthis.html' %}
         {% include 'includes/shariff.html' %}
         {% include 'includes/comments.html' %}
-
     </article>
 </section>
 
@@ -118,4 +115,10 @@
 <!-- add shariff support -->
 <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/shariff.min.js"></script>
 {% endif %}
+{% endblock %}
+
+{% block wechat_pic %}
+{% if  article.wechat_logo %}
+{{article.wechat_logo}}{% else %}
+{{DEFAULT_WECHAT_PIC}}{% endif %}
 {% endblock %}

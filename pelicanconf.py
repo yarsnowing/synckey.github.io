@@ -39,7 +39,7 @@ DISQUS_SITENAME = u"synckey"
 THEME = "pelican-bootstrap3"
 HIDE_SIDEBAR = True
 # BOOTSTRAP_FLUID =  True
-#PDF_PROCESSOR = True
+# PDF_PROCESSOR = True
 PYGMENTS_STYLE = "github"
 
 STATIC_PATHS = ['static', 'static/images/favicon.ico']
@@ -53,4 +53,6 @@ ARTICLE_SAVE_AS = ARTICLE_URL
 DISPLAY_CATEGORIES_ON_MENU = False
 
 PLUGIN_PATHS = ["plugins", "plugins"]
-PLUGINS = [ "neighbors","bootstrapify"]
+PLUGINS = ["neighbors", "bootstrapify"]
+
+DEFAULT_WECHAT_PIC = "wechat_logo_300x300.jpg"

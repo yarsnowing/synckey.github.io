@@ -26,6 +26,11 @@
     {% if TOUCHICON %}
     <link rel="apple-touch-icon" href="{{ SITEURL }}/{{ TOUCHICON }}">
     {% endif %}
+    <!-- Thumbnail for wechat, when share links in wechat,it will use this piture for thumbnail.This can be specific for
+         every sigle page. -->
+
+    <div id='wx_pic' style='margin:0 auto;display:none;'><img src='/static/images/{% block wechat_pic %}{{DEFAULT_WECHAT_PIC}}{% endblock %}'/></div>
+
     <!--
         {% block canonical_rel %}{% endblock %}
     -->
@@ -70,7 +75,7 @@
     <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
             -->
-    <script type="text/javascript" async
+    <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
     <script type="text/x-mathjax-config">
@@ -79,6 +84,7 @@
             tex2jax: {inlineMath: [['$', '$']]},
             processEscapes: true,
         });
+
     </script>
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
@@ -86,7 +92,7 @@
           type="text/css"/>
     {% else %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css"/>
     {% endif %}
     <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome.min.css" rel="stylesheet">
 
