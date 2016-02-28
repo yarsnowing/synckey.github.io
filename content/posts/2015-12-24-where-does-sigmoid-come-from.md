@@ -1,4 +1,4 @@
-Title: Where does sigmod come from 
+Title: Where does sigmoid come from 
 Date: 2015-12-24
 Category: posts
 Tag: machine learning,technology,logistic regression

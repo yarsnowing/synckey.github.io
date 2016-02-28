@@ -89,8 +89,8 @@ $(function () {
 ###软件
 
 强烈推荐runtastic系列，可以先用免费版，如果觉得好，可以买pro版。
-<center>
 <div class="container">
+<center>
   <div class="col-sm-2">
     <img src="/static/images/runtastics.PNG" alt="Runtastics" class="carousel-inner  img-rounded"/>
   </div>
@@ -100,8 +100,8 @@ $(function () {
   <div class="col-sm-2">
     <img src="/static/images/myfitnesspal.PNG" alt="runtasktic" class="carousel-inner  img-rounded"/>
   </div>
-</div>
 </center>
+</div>
 
 
 - runtastic 主要用来记录跑步距离和速度，建议用着好可以买一个pro版。这个软件的iPhone版可以后台运行，软件启动后把屏幕关了也能记录跑步。
