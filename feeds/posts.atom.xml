@@ -24,7 +24,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;p align="center"&gt;
 &lt;img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="50%"/&gt;
-&lt;/p&gt;&lt;/p&gt;</summary></entry><entry><title>Where does sigmoid come from</title><link href="/posts/2015/12/24/where-does-sigmod-come-from.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/where-does-sigmod-come-from.html</id><summary type="html">&lt;blockquote&gt;
+&lt;/p&gt;&lt;/p&gt;</summary></entry><entry><title>Where does sigmoid come from</title><link href="/posts/2015/12/24/where-does-sigmoid-come-from.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/where-does-sigmoid-come-from.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;主要根据Andrew Ng的教学讲义整理。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
