@@ -24,7 +24,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;p align="center"&gt;
 &lt;img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="50%"/&gt;
-&lt;/p&gt;&lt;/p&gt;</summary></entry><entry><title>Where does sigmod come from</title><link href="/posts/2015/12/24/where-does-sigmod-come-from.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/where-does-sigmod-come-from.html</id><summary type="html">&lt;blockquote&gt;
+&lt;/p&gt;&lt;/p&gt;</summary></entry><entry><title>Where does sigmoid come from</title><link href="/posts/2015/12/24/where-does-sigmod-come-from.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/where-does-sigmod-come-from.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;主要根据Andrew Ng的教学讲义整理。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
@@ -288,8 +288,8 @@ $(function () {
 &lt;/ul&gt;
 &lt;h3&gt;软件&lt;/h3&gt;
 &lt;p&gt;强烈推荐runtastic系列，可以先用免费版，如果觉得好，可以买pro版。
-&lt;center&gt;
 &lt;div class="container"&gt;
+&lt;center&gt;
 &lt;div class="col-sm-2"&gt;
 &lt;img alt="Runtastics" class="img-responsive carousel-inner img-rounded" src="/static/images/runtastics.PNG"/&gt;
 &lt;/div&gt;
@@ -299,8 +299,8 @@ $(function () {
 &lt;div class="col-sm-2"&gt;
 &lt;img alt="runtasktic" class="img-responsive carousel-inner img-rounded" src="/static/images/myfitnesspal.PNG"/&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/center&gt;&lt;/p&gt;
+&lt;/center&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;runtastic 主要用来记录跑步距离和速度，建议用着好可以买一个pro版。这个软件的iPhone版可以后台运行，软件启动后把屏幕关了也能记录跑步。&lt;/li&gt;
 &lt;li&gt;Squats  深蹲，里面有三个level，每个level都有详细的计划，可以不按计划严格执行，每次做一份就好。免费版只能用level1。&lt;/li&gt;
