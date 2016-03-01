@@ -1,7 +1,7 @@
 Title: Run Vowpal Wabbit on Hadoop
 Date: 2015-06-09
 Category: posts
-Tag: hadoop,machine learning
+Tags: hadoop,machine learning
 Slug: run-vw-on-hadoop
 
 

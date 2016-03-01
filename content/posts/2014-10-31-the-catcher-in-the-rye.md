@@ -2,7 +2,7 @@ Title: The Catcher in the Rye
 Date: 2014-10-31
 Category: Posts
 Slug: the-catcher-in-the-rye
-Tag: notes
+Tags: notes
 
 Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。
 

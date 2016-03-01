@@ -2,7 +2,7 @@ Title: Recordes For Developing A Habit of Getting Up Early
 Date: 2014-10-11
 Category: Posts
 Slug: records-for-developing-a-habit-of-getting-up-early
-Tag: notes
+Tags: notes
 
   | Protocol       | Contact Information
   |:-------------- |:-----------------------------------------------------|

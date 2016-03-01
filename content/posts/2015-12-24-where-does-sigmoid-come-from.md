@@ -1,7 +1,7 @@
 Title: Where does sigmoid come from 
 Date: 2015-12-24
 Category: posts
-Tag: machine learning,technology,logistic regression
+Tags: machine learning,technology,logistic regression
 Slug: where-does-sigmoid-come-from
 
 >主要根据Andrew Ng的教学讲义整理。

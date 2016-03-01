@@ -1,7 +1,7 @@
 Title: Big Sarcosaurus 
 Date: 2014-10-22
 Category: posts
-Tag: personal
+Tags: personal
 Slug: big-sarcosaurus
 
 Wen asked me how I was those days  in the morning via wechat ,which was kind of a surprise for me.She said that she 

@@ -1,7 +1,7 @@
 Title: HHKB shortcut kyes for mac os 
 Date: 2016-02-26
 Category: posts
-Tag: hhkb,keyboad
+Tags: hhkb,keyboad
 Slug: hhkb-shortcut-keys
 
   - Ctrl+p shell中上一个命令,或者文本中移动到上一行

@@ -1,7 +1,7 @@
 Title: 我的减肥经验
 Date: 2015-04-13
 Category: posts
-Tag: ielts,writing
+Tags: ielts,writing
 Slug: my-experience-of-losing-weight
 
 <div id="weight_container" style=" margin: 0 auto"></div>

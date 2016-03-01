@@ -1,7 +1,7 @@
 Title: Distance Learning vs School Learing
 Date: 2014-11-24
 Category: posts
-Tag: ielts,writing
+Tags: ielts,writing
 Slug: distance-learning-vs-school-learning
 
 >many people use distance-learning programmes(study material post, TV, Internet, etc.) to study at home,

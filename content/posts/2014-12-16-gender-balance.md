@@ -1,7 +1,7 @@
 Title: Forcing the Employers to Hire the Same Number of Men and Women
 Date: 2014-12-16
 Category: posts
-Tag: ielts,writing
+Tags: ielts,writing
 Slug: gender-balance
 
 >Some people think that employers should be required to employ equal numbers of men and women. To what extent do you agree or disagree?

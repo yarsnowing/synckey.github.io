@@ -2,7 +2,7 @@ Title: iterm2 clone session
 Date: 2015-05-20
 Category: posts
 Slug: iterm2-clone-session
-Tag: iterm2,mac,sesssion
+Tags: iterm2,mac,sesssion
 
     :::bash
     vim ~/.ssh/config
