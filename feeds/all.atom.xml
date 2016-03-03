@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-02-26T00:00:00+08:00</updated><entry><title>HHKB shortcut kyes for mac os</title><link href="/posts/2016/02/26/hhkb-shortcut-keys.html" rel="alternate"></link><updated>2016-02-26T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-02-26:posts/2016/02/26/hhkb-shortcut-keys.html</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-02-26T00:00:00+08:00</updated><entry><title>HHKB shortcut keys for mac os</title><link href="/posts/2016/02/26/hhkb-shortcut-keys.html" rel="alternate"></link><updated>2016-02-26T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-02-26:posts/2016/02/26/hhkb-shortcut-keys.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;Ctrl+p shell中上一个命令,或者文本中移动到上一行&lt;/li&gt;
 &lt;li&gt;Ctrl+n shell中下一个命令,或者 文本中移动到下一行&lt;/li&gt;
 &lt;li&gt;Ctrl+r 往后搜索历史命令&lt;/li&gt;
@@ -16,7 +16,7 @@
 &lt;li&gt;Ctrl+y 粘贴&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://www.xiaozhou.net/got_hhkb_pro_2-2013-06-03.html"&gt;码农神器HHKB Pro2入手与开箱&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;p&gt;&lt;a href="http://www.xiaozhou.net/got_hhkb_pro_2-2013-06-03.html"&gt;码农神器HHKB Pro2入手与开箱&lt;/a&gt;&lt;/p&gt;</summary><category term="hhkb"></category><category term="keyboad"></category></entry><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)];&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -110,7 +110,7 @@ $$&lt;/p&gt;
 分布的定义，就自然而然的给出了逻辑回归函数。&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://open.163.com/special/opencourse/machinelearning.html"&gt;Andrew Ng Machine Learning &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.cs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf"&gt;Michael I. Jordan The exponential family: Basics&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>A Misuse of Spark Broadcast</title><link href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html" rel="alternate"></link><updated>2015-11-03T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-11-03:posts/2015/11/03/a-misuse-of-spark-broadcast.html</id><summary type="html">&lt;p&gt;在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.cs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf"&gt;Michael I. Jordan The exponential family: Basics&lt;/a&gt;&lt;/p&gt;</summary><category term="machine learning"></category><category term="technology"></category><category term="logistic regression"></category></entry><entry><title>A Misuse of Spark Broadcast</title><link href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html" rel="alternate"></link><updated>2015-11-03T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-11-03:posts/2015/11/03/a-misuse-of-spark-broadcast.html</id><summary type="html">&lt;p&gt;在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：&lt;/p&gt;
 &lt;div class="github"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HashMap&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;();&lt;/span&gt;
@@ -143,7 +143,7 @@ $$&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Run Vowpal Wabbit on Hadoop</title><link href="/posts/2015/06/09/run-vw-on-hadoop.html" rel="alternate"></link><updated>2015-06-09T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-06-09:posts/2015/06/09/run-vw-on-hadoop.html</id><summary type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="spark"></category></entry><entry><title>Run Vowpal Wabbit on Hadoop</title><link href="/posts/2015/06/09/run-vw-on-hadoop.html" rel="alternate"></link><updated>2015-06-09T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-06-09:posts/2015/06/09/run-vw-on-hadoop.html</id><summary type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;hadoop 2.2.0&lt;/li&gt;
 &lt;li&gt;Centos 6.4&lt;/li&gt;
@@ -205,7 +205,7 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Refrences:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/"&gt;vowpal wabbit on hadoop&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-05-20:posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;vim ~/.ssh/config
+&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</summary><category term="hadoop"></category><category term="machine learning"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-05-20:posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;vim ~/.ssh/config
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;贴入如下内容:&lt;/p&gt;
 &lt;div class="github"&gt;&lt;pre&gt;host *
@@ -215,7 +215,7 @@ ControlPath ~/.ssh/master-%r@%h:%p
 &lt;p&gt;退出iterm2，重新登录即可。&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://www.dbathink.com/2012/10/iterm2-auto-automatic-login-log-on-script/"&gt;Iterm2 auto login 自动登录脚本&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://laughingchs.iteye.com/blog/1317703"&gt;linux clone session&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>我的减肥经验</title><link href="/posts/2015/04/13/my-experience-of-losing-weight.html" rel="alternate"></link><updated>2015-04-13T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-04-13:posts/2015/04/13/my-experience-of-losing-weight.html</id><summary type="html">&lt;div id="weight_container" style=" margin: 0 auto"&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href="http://laughingchs.iteye.com/blog/1317703"&gt;linux clone session&lt;/a&gt;&lt;/p&gt;</summary><category term="iterm2"></category><category term="mac"></category><category term="sesssion"></category></entry><entry><title>我的减肥经验</title><link href="/posts/2015/04/13/my-experience-of-losing-weight.html" rel="alternate"></link><updated>2015-04-13T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2015-04-13:posts/2015/04/13/my-experience-of-losing-weight.html</id><summary type="html">&lt;div id="weight_container" style=" margin: 0 auto"&gt;&lt;/div&gt;
 &lt;script&gt;
 $(function () {
     $('#weight_container').highcharts({
@@ -343,7 +343,7 @@ $(function () {
 &lt;li&gt;晚起总比不起好，跑的少总比不跑好。&lt;/li&gt;
 &lt;li&gt;10km的路程，跑完前3km就下来一大半了。&lt;/li&gt;
 &lt;li&gt;怕小腿长肌肉？想多了。&lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>Improve Safety On The Road</title><link href="/posts/2014/12/30/improve-safety-on-the-road.html" rel="alternate"></link><updated>2014-12-30T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-12-30:posts/2014/12/30/improve-safety-on-the-road.html</id><summary type="html">&lt;blockquote&gt;
+&lt;/ul&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Improve Safety On The Road</title><link href="/posts/2014/12/30/improve-safety-on-the-road.html" rel="alternate"></link><updated>2014-12-30T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-12-30:posts/2014/12/30/improve-safety-on-the-road.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;The only way to improve safety on the road is to severely punish driving offenders. To what extent do you agree or disagree?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
@@ -361,7 +361,7 @@ seriously break a certain law,such as drunk driving,he may lose the right to dri
 the improvement of road safety.&lt;/p&gt;
 &lt;p&gt;In conclusion,we can help people to improve the traffic safety by teaching them the importance of safe driving.Although punishment
 is also a good way to do so,but it is not the best way and only way.Pedestrians and drivers should all  obey traffic regulations and
-laws to keep safe.&lt;/p&gt;</summary></entry><entry><title>Use Animals For Humans</title><link href="/posts/2014/12/22/use-animals-for-humans.html" rel="alternate"></link><updated>2014-12-22T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-12-22:posts/2014/12/22/use-animals-for-humans.html</id><summary type="html">&lt;blockquote&gt;
+laws to keep safe.&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Use Animals For Humans</title><link href="/posts/2014/12/22/use-animals-for-humans.html" rel="alternate"></link><updated>2014-12-22T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-12-22:posts/2014/12/22/use-animals-for-humans.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Some people think that it is acceptable to use animals for the benefit of humans. Others, however, think that it is wrong to exploit animals for human purposes. Discuss both these views and give your own opinion.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
@@ -379,7 +379,7 @@ We should focus on how to minimize the sufferings that animals experienced when 
 &lt;p&gt;In sum,animal is an extremely important source of food for human beings which can contribute to the science as well.We can surely use
 animals to live on,but we should use them scientifically and ethically.&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Forcing the Employers to Hire the Same Number of Men and Women</title><link href="/posts/2014/12/16/gender-balance.html" rel="alternate"></link><updated>2014-12-16T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-12-16:posts/2014/12/16/gender-balance.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Forcing the Employers to Hire the Same Number of Men and Women</title><link href="/posts/2014/12/16/gender-balance.html" rel="alternate"></link><updated>2014-12-16T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-12-16:posts/2014/12/16/gender-balance.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Some people think that employers should be required to employ equal numbers of men and women. To what extent do you agree or disagree?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
@@ -399,7 +399,7 @@ number of men and women seems to be the best choice for them.&lt;/p&gt;
 &lt;p&gt;In conclusion, making the most of the gender advantages is benificial for both companies and society.That is why I don't
 agree with the view that forcing the employers to hire the same number of men and women.&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</summary></entry><entry><title>Distance Learning vs School Learing</title><link href="/posts/2014/11/24/distance-learning-vs-school-learning.html" rel="alternate"></link><updated>2014-11-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-11-24:posts/2014/11/24/distance-learning-vs-school-learning.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Distance Learning vs School Learing</title><link href="/posts/2014/11/24/distance-learning-vs-school-learning.html" rel="alternate"></link><updated>2014-11-24T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-11-24:posts/2014/11/24/distance-learning-vs-school-learning.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;many people use distance-learning programmes(study material post, TV, Internet, etc.) to study at home,
 but some people think that it cannot bring the same benefits of attending college or university.
 To what extent do you agree or disagree.&lt;/p&gt;
@@ -420,7 +420,7 @@ learning.&lt;/p&gt;
 on the class,he can download some courses from Internet to make up for it.An adult can also turn to classes for help
 when he encounter some problems which he can not tackle all by himself.&lt;/p&gt;
 &lt;p&gt;So, while we are taking advantage of technology,we should not neglect the importance of traditional learning.We should
-chose our learning methods according to our circumstances.&lt;/p&gt;</summary></entry><entry><title>What Should Be the Main Function Of A University</title><link href="/posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html" rel="alternate"></link><updated>2014-11-12T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-11-12:posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html</id><summary type="html">&lt;blockquote&gt;
+chose our learning methods according to our circumstances.&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>What Should Be the Main Function Of A University</title><link href="/posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html" rel="alternate"></link><updated>2014-11-12T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-11-12:posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. 
 Others think that the true function of a university should be to give access to knowledge for its own sake,
 regardless of whether the course is useful to an employer.&lt;/p&gt;
@@ -446,7 +446,7 @@ ignore the requirements of the job market,alternatively,they can invite some com
 kind of skill they want.&lt;/p&gt;
 &lt;p&gt;In summary,although the main goal of going to universities of many students is finding a ideal job after graduating,universities
 should help their students to build a good knowledge system and help them to be quick learners and problem solvers instead of
-just teaching them job-related skills.&lt;/p&gt;</summary></entry><entry><title>The Catcher in the Rye</title><link href="/posts/2014/10/31/the-catcher-in-the-rye.html" rel="alternate"></link><updated>2014-10-31T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-31:posts/2014/10/31/the-catcher-in-the-rye.html</id><summary type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
+just teaching them job-related skills.&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>The Catcher in the Rye</title><link href="/posts/2014/10/31/the-catcher-in-the-rye.html" rel="alternate"></link><updated>2014-10-31T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-31:posts/2014/10/31/the-catcher-in-the-rye.html</id><summary type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
 &lt;p&gt;在离开学校之前他与他的室友打了一家，因为室友和他最喜欢的女生约会，他心里非常不舒服。一个十六岁的男孩，面对自己的梦中小情人，
 宁愿远远的看着她，也不希望她跟别的男孩子约会。更何况她的约会对象在Holden看来根本配不上她。Holden心里当然不高兴。打完架他决定早点离开学校了。&lt;/p&gt;
 &lt;p&gt;对于一个青春期的孩子来说，也许最大的恐惧就是不合群，希望和同龄人做一样的事情，上课，考试，放假。可是Hoden却不得不提前开始寒假，又不能回家，
@@ -469,7 +469,7 @@ cliff. What I have to do, I have to catch everybody if they start to go over the
 &lt;p&gt;他等来了妹妹，妹妹却拖着行李箱要和他一起走，他慌了，不希望妹妹和她一起走，因为她是他最爱的人，没有人想要最爱的人跟自己一起做愚蠢的事情。他们一起走到了游乐场，
 他看着妹妹开心的坐着旋转木马，填空下着大雨，他看着妹妹不停的旋转，心理开心极了，于是决定不走了。&lt;/p&gt;
 &lt;p&gt;也许每个人的内心都和Holden一样，看别人都觉得虚伪做作，总觉得自己才是最对的，最好的。即使这样也有值得牵挂的和珍爱的人，如果幸运，自己珍爱的人也能珍爱你。心中
-保有的那奔跑在绿色麦田和跳跃在蓝天白云上的小小幻想,跟他们在一起才会想像吧.&lt;/p&gt;</summary></entry><entry><title>Big Sarcosaurus</title><link href="/posts/2014/10/22/big-sarcosaurus.html" rel="alternate"></link><updated>2014-10-22T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-22:posts/2014/10/22/big-sarcosaurus.html</id><summary type="html">&lt;p&gt;Wen asked me how I was those days  in the morning via wechat ,which was kind of a surprise for me.She said that she 
+保有的那奔跑在绿色麦田和跳跃在蓝天白云上的小小幻想,跟他们在一起才会想像吧.&lt;/p&gt;</summary><category term="notes"></category></entry><entry><title>Big Sarcosaurus</title><link href="/posts/2014/10/22/big-sarcosaurus.html" rel="alternate"></link><updated>2014-10-22T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-22:posts/2014/10/22/big-sarcosaurus.html</id><summary type="html">&lt;p&gt;Wen asked me how I was those days  in the morning via wechat ,which was kind of a surprise for me.She said that she 
 would take an exam today and she would have some time after then. I invited her to come to see me and have lunch 
 together. She said that she had bought some Big Sarcosaurus(&lt;code&gt;大懒龙&lt;/code&gt; in Chinese).I  don't know what
 it is and incorrectly, I thought it was a restaurant.I searched it on the baidu map,and the website told me  that it
@@ -478,7 +478,7 @@ I was wrong,Big Sacrosaurus can be taken away. It was significantly nice for Wen
 &lt;p&gt;I really enjoy the lunch in Pizza hut,during which we talked about her work,and mine.Joy combined with upset makes her
 work interesting and challenging. I know She can make it and grow up to a good banker.&lt;/p&gt;
 &lt;p&gt;It is not good recently,but I really appreciate the time talking with Wen and the Big Sacrosaurus she brought for me .
-&lt;img alt="Big Sarcosaurus" class="img-responsive carousel-inner img-rounded" src="/static/images/bigsarcosaurus.jpg"/&gt;&lt;/p&gt;</summary></entry><entry><title>Recordes For Developing A Habit of Getting Up Early</title><link href="/posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html" rel="alternate"></link><updated>2014-10-11T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-11:posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html</id><summary type="html">&lt;p&gt;| Protocol       | Contact Information
+&lt;img alt="Big Sarcosaurus" class="img-responsive carousel-inner img-rounded" src="/static/images/bigsarcosaurus.jpg"/&gt;&lt;/p&gt;</summary><category term="personal"></category></entry><entry><title>Recordes For Developing A Habit of Getting Up Early</title><link href="/posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html" rel="alternate"></link><updated>2014-10-11T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-11:posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html</id><summary type="html">&lt;p&gt;| Protocol       | Contact Information
   |:-------------- |:-----------------------------------------------------|
   | jabber/xmpp    | &lt;a href="winlu@jabber.at"&gt;winlu@jabber.at&lt;/a&gt;                   |
   | email          | &lt;a href="mailto:derwinlu@gmail.com"&gt;derwinlu@gmail.com&lt;/a&gt;      |
@@ -526,4 +526,4 @@ work interesting and challenging. I know She can make it and grow up to a good b
 $(document).ready(function(){
     $("table").addClass("table table-hover table-striped table-condensed");
 });
-&lt;/script&gt;</summary></entry></feed>
+&lt;/script&gt;</summary><category term="notes"></category></entry></feed>
