@@ -181,7 +181,7 @@ $$
 
 * 比较容易过拟合,参数难调.
 * 训练速度比较慢,在层次比较少的情况下,并不比其他方法更优.
-* 随着网络的深度增加,反向传播的梯度（从输出层到网络的最初几层）的幅度会急剧的见笑.这样,当使用梯度下降发的时候,最初的基层的权重变化非常缓慢,以至于他们不能够从样本中有效的学习,这种问题通常被称为`梯度的弥散(gradient diffusion)`.
+* 随着网络的深度增加,反向传播的梯度（从输出层到网络的最初几层）的幅度会急剧的减小.这样,当使用梯度下降发的时候,最初的基层的权重变化非常缓慢,以至于他们不能够从样本中有效的学习,这种问题通常被称为`梯度的弥散(gradient diffusion)`.
 
 ## Deep Learning
 ###深度学习的基本思想
@@ -205,13 +205,16 @@ $$
 
 #### 逐层训练方法
 与神经网络使用反向训练的方法不同,神经网络使用逐层贪婪训练方法训练模型.主要思路是每次只训练网络中的一层，即我们首先训练一个只含一个隐藏层的网络，仅当这层网络训练结束之后才开始训练一个有两个隐藏层的网络，以此类推。在每一步中，把已经训练好的前$k-1$ 层固定，然后增加第$k$层（也就是将已经训练好的前$k-1$ 的输出作为输入）。每一层的训练可以是有监督的（例如，将每一步的分类误差作为目标函数），但更通常使用无监督方法(例如自动编码器).
-                       
-
-
 
 <p align="center">
-<img src="/static/images/deeplearningfeatures.png" alt="DeepLearningFeautures"  width="50%" />
+<img src="/static/images/deeplearningfeatures.png" alt="DeepLearningFeautures"  width="60%" />
 </p>
+
+###深度学习的应用
+* 图像识别
+* 语音识别
+* nlp
+* 其他
 
 ###参考
 [Deep Learning（深度学习）学习笔记整理系列](http://blog.csdn.net/zouxy09/article/details/8775518)
@@ -220,5 +223,5 @@ $$
 
 [Deep Learning Tutorial](http://ufldl.stanford.edu/tutorial/)
 
-[http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B](http://ufldl.stanford.edu/tutorial/)
+[http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B](http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B)
 

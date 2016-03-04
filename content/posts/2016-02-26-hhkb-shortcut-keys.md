@@ -1,4 +1,4 @@
-Title: HHKB shortcut kyes for mac os 
+Title: HHKB shortcut keys for mac os 
 Date: 2016-02-26
 Category: posts
 Tags: hhkb,keyboad
