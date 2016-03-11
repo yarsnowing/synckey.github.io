@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>iterm2 - Andy's Blog</title>
+    <title>linux - Andy's Blog</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
     <!--
     -->
     <meta name="author" content="Andy Wang" />
-    <meta name="keywords" content="iterm2" />
+    <meta name="keywords" content="linux" />
 
     <!-- Open Graph tags -->
     <meta property="og:site_name" content="Andy's Blog"/>
@@ -108,19 +108,16 @@ Andy's Blog            </a>
     <div class="row">
             <div class="col-lg-8 col-md-offset-2">
             <article>
-                <h2><a href="/posts/2015/05/20/iterm2-clone-session.html">iterm2 clone session</a></h2>
-                <div class="summary"><div class="github"><pre>vim ~/.ssh/config
+                <h2><a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">让VIM记录文件上次编辑的位置</a></h2>
+                <div class="summary"><p>在<code>~/.vimrc</code>中加入如下配置:</p>
+<div class="github"><pre>autocmd BufReadPost *
+<span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span><span class="nv">$"</span><span class="s2">) |</span>
+<span class="s2">\ exe "</span>normal g<span class="err">'</span><span class="se">\"</span><span class="s2">" |</span>
+<span class="s2">\ endif</span>
 </pre></div>
-<p>贴入如下内容:</p>
-<div class="github"><pre>host *
-ControlMaster auto
-ControlPath ~/.ssh/master-%r@%h:%p
-</pre></div>
-<p>退出iterm2，重新登录即可。</p>
-<h3>References</h3>
-<p><a href="http://www.dbathink.com/2012/10/iterm2-auto-automatic-login-log-on-script/">Iterm2 auto login 自动登录脚本</a></p>
-<p><a href="http://laughingchs.iteye.com/blog/1317703">linux clone session</a></p>
-                    <a class="btn btn-default btn-xs" href="/posts/2015/05/20/iterm2-clone-session.html">more ...</a>
+<h3>参考</h3>
+<p><a href="http://www.2cto.com/os/201311/255061.html">让VIM记录文件上次编辑的位置</a></p>
+                    <a class="btn btn-default btn-xs" href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -136,7 +133,7 @@ ControlPath ~/.ssh/master-%r@%h:%p
             </div>
             <div class="col-lg-8 col-md-offset-2">
                 <center>
-                    &copy; 2015 Andy Wang
+                    &copy; 2016 Andy Wang
                     &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
                     <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
                     <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--

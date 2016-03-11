@@ -107,6 +107,20 @@ Andy's Blog            </a>
     <div class="row">
             <div class="col-lg-8 col-md-offset-2">
             <article>
+                <h2><a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">让VIM记录文件上次编辑的位置</a></h2>
+                <div class="summary"><p>在<code>~/.vimrc</code>中加入如下配置:</p>
+<div class="github"><pre>autocmd BufReadPost *
+<span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span><span class="nv">$"</span><span class="s2">) |</span>
+<span class="s2">\ exe "</span>normal g<span class="err">'</span><span class="se">\"</span><span class="s2">" |</span>
+<span class="s2">\ endif</span>
+</pre></div>
+<h3>参考</h3>
+<p><a href="http://www.2cto.com/os/201311/255061.html">让VIM记录文件上次编辑的位置</a></p>
+                    <a class="btn btn-default btn-xs" href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/posts/2016/02/26/hhkb-shortcut-keys.html">HHKB shortcut keys for mac os</a></h2>
                 <div class="summary"><ul>
 <li>Ctrl+p shell中上一个命令,或者文本中移动到上一行</li>
@@ -358,7 +372,6 @@ together ...</p>
         </div>
     </div>
 </footer>
-
 
     <!-- Google Analytics -->
     <script type="text/javascript">
