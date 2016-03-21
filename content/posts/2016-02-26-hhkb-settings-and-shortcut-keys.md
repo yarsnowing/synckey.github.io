@@ -9,7 +9,7 @@ Slug: hhkb-settings-and-shortcut-keys
 我用hhkb的开关是`011001`,主要是使用macintosh的键盘布局并且将delete键设置为'BS'.另外,也安装了[Karabiner](https://pqrs.org/osx/karabiner/index.html.en)这款神器,它一方面可以设置系统自动识别是否插入了外接键盘,如果插入了外接键盘,可以将mac的键盘disable掉,另一方面它具有强大的改键功能.硬件方面,买了一个miniusb右弯的接头,这样把hhkb放在mac键盘上的时候,线就不会弯曲到挡着屏幕了.
 
 <p align="center">
-<img src="/static/images/miniusb.jpg" alt="miniusb"  width="50%" class="img-responsive img-rounded" />
+<img src="/static/images/miniusb.jpg" alt="miniusb"  width="50%" class="img-responsive img-rounded"  title="An awesome picture caption!" />
 </p>
 
 
