@@ -70,6 +70,16 @@ Slug: notes-of-grammar-in-use
     * 'I am going to do ' = I've decided to do it(but perhaps not arranged to do it);
         * 'The windows are dirty.' 'Yes, I know.I'am going to clean them later.'(=I've decided to clean them but I haven't arranged to clean them).
 * was going to (do something)= I intended to do it but didn't do it.
+* Do not use will to talk about what you have already decided or arranged to do.We often use will in those situations:
+    1. Offering to do sth.
+        * That bag looks very heavy.I will help with it.
+    2. Agreeing to dong something.
+        * A:You know that book I lent you.Can I have it back if you've finished with it? B:Of course.I'll give it to you this after noon.
+    3. Promising to do sth.
+        * I won't tell anyone what happend.I promise.
+    4. Asking somebody to do sth.(Will you ...?)
+        * Will you please be quiet?I'm trying to concentrate.
+            
    
     
 
