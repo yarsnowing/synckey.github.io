@@ -1,4 +1,4 @@
-Title:JVM Monitor 
+Title:JVM Monitor--jvisualvm
 Date: 2016-07-26
 Category: java,posts,jvm,profile,trouble shooting
 Tags: life
