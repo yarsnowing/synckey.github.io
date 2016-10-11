@@ -11,8 +11,8 @@
  printf "%x\n" 3626
  e18
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;最后用 jstack 查看线程的运行 stack:
-    :::bash
-    jstack 2633 |grep e18 -A 30&lt;/p&gt;
+&lt;p&gt;最后用 jstack 查看线程的运行 stack:&lt;/p&gt;
+&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jstack &lt;span class="m"&gt;2633&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;grep e18 -A 30
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://blog.chinaunix.net/uid-10449864-id-3463151.html"&gt;生产环境下JAVA进程高CPU占用故障排查&lt;/a&gt;&lt;/p&gt;</summary><category term="java"></category><category term="posts"></category><category term="jvm"></category><category term="profile"></category><category term="trouble shooting"></category></entry></feed>
