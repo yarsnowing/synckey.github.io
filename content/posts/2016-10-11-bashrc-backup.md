@@ -4,24 +4,19 @@ Category: config
 Tags: tools,vim,linux,config,macos
 Slug: my-bashrc-backup
 
-## 通过 jvisualvm 查看 jvm 内部详细信息
-    :::bash
-    jvisualvm -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.ssl=false \
-     -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=10.86.46.252
-     
-## 查看哪个线程使用 cpu 最多
-    :::bash
-    ps -mp 2633 -o THREAD,tid,time | sort -rn
-    
-找到占用 cpu 时间最多的线程。然后将线程 id 转换成16进制格式:
+:::bash
+    # .bashrc
 
-     :::bash
-     printf "%x\n" 3626
-     e18
+    # Source global definitions
+    if [ -f /etc/bashrc ]; then
+    	. /etc/bashrc
+    fi
+    # User specific aliases and functions
 
-最后用 jstack 查看线程的运行 stack:
-    :::bash
-    jstack 2633 |grep e18 -A 30
-    
-###References
-[生产环境下JAVA进程高CPU占用故障排查](http://blog.chinaunix.net/uid-10449864-id-3463151.html)
+    export LS_OPTIONS='--color=auto' # 如果没有指定，则自动选择颜色
+    export CLICOLOR='Yes' #是否输出颜色
+    export LSCOLORS='Exfxcxdxbxegedabagacad' #指定颜色
+    alias ll='ls -l'
+    export PS1="\[\e[0;31m\][\u@\H \w]\\$ \[\e[m\]"
+    # vim:ts=4:sw=4
+    export PATH=$PATH:/usr/local/bin/
