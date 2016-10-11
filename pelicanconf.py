@@ -42,6 +42,7 @@ HIDE_SIDEBAR = True
 PYGMENTS_STYLE = "github"
 
 STATIC_PATHS = ['static', 'static/images/favicon.ico']
+#ARTICLE_PATHS = ['posts']
 EXTRA_PATH_METADATA = {
     "static/images/favicon.ico": {"path": "favicon.ico"},
  #   "static/baidu_verify_eO5agZyv5R.html": {"path": "baidu_verify_eO5agZyv5R.html"},
