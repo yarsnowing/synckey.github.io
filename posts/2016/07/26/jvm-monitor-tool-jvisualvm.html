@@ -159,20 +159,20 @@ Andy's Blog            </a>
             </div>
             -->
             <h2>通过 jvisualvm 查看 jvm 内部详细信息</h2>
-<div class="github"><pre>jvisualvm -Dcom.sun.management.jmxremote.port<span class="o">=</span><span class="m">8999</span> -Dcom.sun.management.jmxremote.ssl<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+<div class="github"><pre><span></span>jvisualvm -Dcom.sun.management.jmxremote.port<span class="o">=</span><span class="m">8999</span> -Dcom.sun.management.jmxremote.ssl<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
  -Dcom.sun.management.jmxremote.authenticate<span class="o">=</span><span class="nb">false</span> -Djava.rmi.server.hostname<span class="o">=</span>10.86.46.252
 </pre></div>
 <h2>查看哪个线程使用 cpu 最多</h2>
-<div class="github"><pre>ps -mp <span class="m">2633</span> -o THREAD,tid,time <span class="p">|</span> sort -rn
+<div class="github"><pre><span></span>ps -mp <span class="m">2633</span> -o THREAD,tid,time <span class="p">|</span> sort -rn
 </pre></div>
 <p>找到占用 cpu 时间最多的线程。然后将线程 id 转换成16进制格式:</p>
-<div class="github"><pre> :::bash
+<div class="github"><pre><span></span> :::bash
  printf "%x\n" 3626
  e18
 </pre></div>
-<p>最后用 jstack 查看线程的运行 stack:</p>
-<div class="github"><pre>jstack <span class="m">2633</span> <span class="p">|</span>grep e18 -A 30
-</pre></div>
+<p>最后用 jstack 查看线程的运行 stack:
+    :::bash
+    jstack 2633 |grep e18 -A 30</p>
 <h3>References</h3>
 <p><a href="http://blog.chinaunix.net/uid-10449864-id-3463151.html">生产环境下JAVA进程高CPU占用故障排查</a></p>
         </div>
@@ -182,7 +182,8 @@ Andy's Blog            </a>
         </div>
 <div class="pager">
     <ul style="padding-left: 0px;">
-        <li class="previous disabled"><a>&larr; Previous</a></li>
+        <li class="previous"><a href="/posts/2016/10/11/my-bashrc-backup.html" data-toggle="tooltip"
+                                title="Bashrc Backup">&larr; Previous</a></li>
         <li class="next"><a href="/posts/2016/04/20/shang-pin-jiao-zi.html"
                             data-toggle="tooltip" title="上品饺子">Next &rarr;</a></li>
     </ul>

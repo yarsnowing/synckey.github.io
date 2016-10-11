@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/vim.atom.xml" rel="self"></link><id>/</id><updated>2016-03-11T00:00:00+08:00</updated><entry><title>让VIM记录文件上次编辑的位置</title><link href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html" rel="alternate"></link><updated>2016-03-11T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-03-11:posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html</id><summary type="html">&lt;p&gt;在&lt;code&gt;~/.vimrc&lt;/code&gt;中加入如下配置:&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;autocmd BufReadPost *
-&lt;span class="se"&gt;\ &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;gt;0&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;lt;&lt;span class="o"&gt;=&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="nv"&gt;$"&lt;/span&gt;&lt;span class="s2"&gt;) |&lt;/span&gt;
-&lt;span class="s2"&gt;\ exe "&lt;/span&gt;normal g&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt;" |&lt;/span&gt;
-&lt;span class="s2"&gt;\ endif&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;参考&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://www.2cto.com/os/201311/255061.html"&gt;让VIM记录文件上次编辑的位置&lt;/a&gt;&lt;/p&gt;</summary><category term="tools"></category><category term="vim"></category><category term="linux"></category></entry></feed>

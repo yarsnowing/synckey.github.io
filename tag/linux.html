@@ -109,12 +109,37 @@ Andy's Blog            </a>
     <div class="row">
             <div class="col-lg-8 col-md-offset-2">
             <article>
+                <h2><a href="/posts/2016/10/11/my-bashrc-backup.html">Bashrc Backup</a></h2>
+                <div class="summary"><div class="github"><pre><span></span><span class="c1"># .bashrc</span>
+<span class="c1"># Source global definitions</span>
+<span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    . /etc/bashrc
+<span class="k">fi</span>
+<span class="c1"># User specific aliases and functions</span>
+
+<span class="nb">export</span> <span class="nv">LS_OPTIONS</span><span class="o">=</span><span class="s1">'--color=auto'</span> <span class="c1"># 如果没有指定，则自动选择颜色</span>
+<span class="nb">export</span> <span class="nv">CLICOLOR</span><span class="o">=</span><span class="s1">'Yes'</span> <span class="c1">#是否输出颜色</span>
+<span class="nb">export</span> <span class="nv">LSCOLORS</span><span class="o">=</span><span class="s1">'Exfxcxdxbxegedabagacad'</span> <span class="c1">#指定颜色</span>
+<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">'ls -l'</span>
+<span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">"\[\e[0;31m\][\u@\H \w]\\</span>$<span class="s2"> \[\e[m\]"</span>
+<span class="c1"># vim:ts=4:sw=4 ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="/posts/2016/10/11/my-bashrc-backup.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">让VIM记录文件上次编辑的位置</a></h2>
                 <div class="summary"><p>在<code>~/.vimrc</code>中加入如下配置:</p>
-<div class="github"><pre>autocmd BufReadPost *
-<span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span><span class="nv">$"</span><span class="s2">) |</span>
-<span class="s2">\ exe "</span>normal g<span class="err">'</span><span class="se">\"</span><span class="s2">" |</span>
-<span class="s2">\ endif</span>
+<div class="github"><pre><span></span>autocmd BufReadPost *
+<span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
+<span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
+<span class="se">\ </span>endif
+autocmd BufReadPost *
+<span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
+<span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
+<span class="se">\ </span>endif
+syntax <span class="nb">enable</span>
+<span class="nb">set</span> nu
 </pre></div>
 <h3>参考</h3>
 <p><a href="http://www.2cto.com/os/201311/255061.html">让VIM记录文件上次编辑的位置</a></p>
