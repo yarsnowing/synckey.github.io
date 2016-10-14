@@ -27,4 +27,4 @@ Slug: chang-ting-song-bie
 午夜梦回，窗前的树叶沙沙，旋律响起，却有送不完的余情往事。
 
 
-<img src="/static/images/warcraft_movie_20160626.jpg" width="5%" alt="cinema" class="carousel-inner img-responsive img-rounded"  />
+<img src="/static/images/warcraft_movie_20160626.jpg" width="5px" alt="cinema" class="carousel-inner img-responsive img-rounded"  />
