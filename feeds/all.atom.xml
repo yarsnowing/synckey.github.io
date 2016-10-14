@@ -13,7 +13,17 @@
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PS1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"\[\e[0;31m\][\u@\H \w]\\&lt;/span&gt;$&lt;span class="s2"&gt; \[\e[m\]"&lt;/span&gt;
 &lt;span class="c1"&gt;# vim:ts=4:sw=4&lt;/span&gt;
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;:/usr/local/bin/
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="tools"></category><category term="vim"></category><category term="linux"></category><category term="config"></category><category term="macos"></category></entry><entry><title>JVM Monitor Tool---jvisualvm</title><link href="/posts/2016/07/26/jvm-monitor-tool-jvisualvm.html" rel="alternate"></link><published>2016-07-26T00:00:00+08:00</published><updated>2016-07-26T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-07-26:posts/2016/07/26/jvm-monitor-tool-jvisualvm.html</id><summary type="html">&lt;h2&gt;通过 jvisualvm 查看 jvm 内部详细信息&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="tools"></category><category term="vim"></category><category term="linux"></category><category term="config"></category><category term="macos"></category></entry><entry><title>长亭送别</title><link href="/posts/2016/07/26/chang-ting-song-bie.html" rel="alternate"></link><published>2016-07-26T00:00:00+08:00</published><updated>2016-07-26T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-07-26:posts/2016/07/26/chang-ting-song-bie.html</id><summary type="html">&lt;p&gt;2015年8月28日，是我们一次见面，在朝阳大悦城，在星巴克和 MUJI 门口看到你。&lt;/p&gt;
+&lt;p&gt;你先带我去买了一杯奶茶，奶茶很好喝。一开始你说想吃烤鱼，我当时不知道为什么脑子抽，说我不能吃辣。听说我不能吃辣以后，你就不要再吃烤鱼，非要吃一个普通的番茄味的鱼火锅。那一天你一定吃的不开心，可是我真的发现自己好喜欢。&lt;/p&gt;
+&lt;p&gt;在那次见面以后脑子里就常常会浮现你的样子——你吃东西头仰起来的调皮的样子，怕烫用手在嘴巴旁边扇风的样子。小组去青岛旅游也会傻傻的想到给你带鱼干。鱼干在家里放了很久，后来才终于约了你出来，一起吃了一个晚饭，看了一场电影（碟中谍5），把鱼干给你。这是我们第二次见面，当时是9月份，你刚上大四，后来你就回到苏州实习，我们中间有微信联系过，有聊过心事，有嘘寒问暖，却再也没有见过。&lt;/p&gt;
+&lt;p&gt;大概是4月份的时候，你回学校，说要请我去你们学校吃饭，我很开心的去了。中午你，姝涵和我一起在你们学校的一个餐厅吃了一个午饭，你说那里的水煮鱼很好吃。下午我们在你们学校的咖啡厅坐了两个多小时，看到了你的另外一个室友，肖兰。在你们校园走的时候，你会很开心的给我介绍这里那里，如数家珍。&lt;/p&gt;
+&lt;p&gt;毕业前，你说你们学院毕业典礼有走红毯，要我跟你一起走(好吧，当时是有点觉得你喜欢我)。我也是受宠若惊，也很忐忑。忐忑的是，作为一枚屌丝，从来没有参加过这种场合，不知道会不会给你搞砸了。忐忑了很久，期待了很久，终于等到你毕业的那天。在你走红毯的前一天晚上，你还是没有跟我说明天的事，有点不安。睡觉前发微信问你，你说你的一个童年小闺蜜跟你一起来了，她要陪你一起走。当时，如释重负，又非常失落。&lt;/p&gt;
+&lt;p&gt;在你离开北京回苏州的前两天晚上，那是一个周六，你发微信过来说要周日一起吃个晚饭，因为周一早上就走了。那次我们去蓝色港湾吃了站点 pizza，想带你吃站点 pizza 已经很久。然而那次带你吃的 pizza，并不好吃。吃 pizza 的时候，你说了一些实习的工作环境的事。反复提到了一个南大的男孩子，也许你是无意，我听着笑着，心里满是醋意，我想不到我居然会吃醋。才知道自己那么喜欢你，然而这次分别，也许再也不能相见。虽然你说有空去苏州找你，你一定会带我玩。&lt;/p&gt;
+&lt;p&gt;吃完晚饭，你说要陪我看电影，要看《魔兽》，可能因为我跟你说过我想看，虽然也许你对魔兽一点兴趣也没有。电影开场之前，你拿出手机，要跟我合影，那是我们第一个合影。当时我们的脸第一次靠的那么近，我的心跳，突然加快了，就在那一刻，我确定我是爱上了身边的这位小女生。&lt;/p&gt;
+&lt;p&gt;看电影的时候，你会受到惊吓(你受惊的样子让人忍不住要抱)，也会问我一些剧情的问题，虽然我对魔兽也不是很了解(百度了吴彦祖演的古尔丹是谁)。整个电影，放的太快，我一直把手放在座椅的扶手上，摇来摇去，想牵你的手，又不敢，怕吓跑你，又怕破坏了我们的友情。就只能转过头，看着你，睁大眼睛的样子。&lt;/p&gt;
+&lt;p&gt;看完电影，送你回学校，很想拥抱你，又不知道怎么开口。就那么默默的看你走，走回了女生宿舍。回头的路上《送别》的旋律一直在脑海里，给你留了一条微信，"其实我挺遗憾走的时候没有抱你一下"，你回，"那下次吧"。当时我也不知道还有没有下一次。&lt;/p&gt;
+&lt;p&gt;回来一整夜都没有睡着，听着《送别》，心中泪奔，那个旋律，在脑海里来来回回响了两天两夜。&lt;/p&gt;
+&lt;p&gt;午夜梦回，窗前的树叶沙沙，旋律响起，却有送不完的余情往事。&lt;/p&gt;</summary><category term="life"></category><category term="mm"></category></entry><entry><title>JVM Monitor Tool---jvisualvm</title><link href="/posts/2016/07/26/jvm-monitor-tool-jvisualvm.html" rel="alternate"></link><published>2016-07-26T00:00:00+08:00</published><updated>2016-07-26T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2016-07-26:posts/2016/07/26/jvm-monitor-tool-jvisualvm.html</id><summary type="html">&lt;h2&gt;通过 jvisualvm 查看 jvm 内部详细信息&lt;/h2&gt;
 &lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jvisualvm -Dcom.sun.management.jmxremote.port&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8999&lt;/span&gt; -Dcom.sun.management.jmxremote.ssl&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
  -Dcom.sun.management.jmxremote.authenticate&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; -Djava.rmi.server.hostname&lt;span class="o"&gt;=&lt;/span&gt;10.86.46.252
 &lt;/pre&gt;&lt;/div&gt;
@@ -672,52 +682,4 @@ I was wrong,Big Sacrosaurus can be taken away. It was significantly nice for Wen
 &lt;p&gt;I really enjoy the lunch in Pizza hut,during which we talked about her work,and mine.Joy combined with upset makes her
 work interesting and challenging. I know She can make it and grow up to a good banker.&lt;/p&gt;
 &lt;p&gt;It is not good recently,but I really appreciate the time talking with Wen and the Big Sacrosaurus she brought for me .
-&lt;img alt="Big Sarcosaurus" class="img-responsive carousel-inner img-rounded" src="/static/images/bigsarcosaurus.jpg"/&gt;&lt;/p&gt;</summary><category term="personal"></category></entry><entry><title>Recordes For Developing A Habit of Getting Up Early</title><link href="/posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html" rel="alternate"></link><published>2014-10-11T00:00:00+08:00</published><updated>2014-10-11T00:00:00+08:00</updated><author><name>Andy Wang</name></author><id>tag:,2014-10-11:posts/2014/10/11/records-for-developing-a-habit-of-getting-up-early.html</id><summary type="html">&lt;p&gt;| Protocol       | Contact Information
-  |:-------------- |:-----------------------------------------------------|
-  | jabber/xmpp    | &lt;a href="winlu@jabber.at"&gt;winlu@jabber.at&lt;/a&gt;                   |
-  | email          | &lt;a href="mailto:derwinlu@gmail.com"&gt;derwinlu@gmail.com&lt;/a&gt;      |
-  | IRC - freenode | winlu                                                |&lt;/p&gt;
-&lt;p&gt;| Function name | Description                    |
-| ------------- | ------------------------------ |
-| &lt;code&gt;help()&lt;/code&gt;      | Display the help window.       |
-| &lt;code&gt;destroy()&lt;/code&gt;   | &lt;strong&gt;Destroy your computer!&lt;/strong&gt;     |&lt;/p&gt;
-&lt;p&gt;| Date     | Get up on time | Squats  | Situps | PushUps | Diary |
-|:--------:|:--------------:|:-------:|:------:|:-------:|:-----:|
-|2014.10.11|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.12|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.13|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.14|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.15|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.16|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.17|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.18|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.19|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.20|    ✔     | ✔ | ✔| ✔ |✔|
-|2014.10.21|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.22|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.23|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.24|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.25|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.26|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.27|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.28|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.29|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.30|    ✔     | ✔ | ✔|✔  |✔|
-|2014.10.31|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.01|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.02|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.03|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.04|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.05|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.06|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.07|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.08|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.08|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.09|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.10|    ✔     | ✔ | ✔|✔  |✔|
-|2014.11.11|    ✔     | ✔ | ✔|✔  |✔|&lt;/p&gt;
-&lt;script type="text/javascript"&gt;
-$(document).ready(function(){
-    $("table").addClass("table table-hover table-striped table-condensed");
-});
-&lt;/script&gt;</summary><category term="notes"></category></entry></feed>
+&lt;img alt="Big Sarcosaurus" class="img-responsive carousel-inner img-rounded" src="/static/images/bigsarcosaurus.jpg"/&gt;&lt;/p&gt;</summary><category term="personal"></category></entry></feed>
