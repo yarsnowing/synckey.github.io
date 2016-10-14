@@ -25,4 +25,6 @@ Slug: chang-ting-song-bie
 回来一整夜都没有睡着，听着《送别》，心中泪奔，那个旋律，在脑海里来来回回响了两天两夜。
 
 午夜梦回，窗前的树叶沙沙，旋律响起，却有送不完的余情往事。
+
+
 <img src="/static/images/warcraft_movie_20160626.jpg" width="5%" alt="cinema" class="carousel-inner img-responsive img-rounded"  />
