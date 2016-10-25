@@ -19,6 +19,10 @@ h6, .h6 {
     color: #333;
 }
 
+img {
+    class: "carousel-inner img-responsive img-rounded";
+}
+
 #sidebar .list-group, #sidebar .list-group-item {
     background-color: transparent;
 }
