@@ -34,7 +34,8 @@ DEFAULT_PAGINATION = 30
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
-DISQUS_SITENAME = u"synckey"
+#DISQUS_SITENAME = u"synckey"
+DUOSHUO_SITENAME = u"synckey"
 THEME = "pelican-bootstrap3"
 HIDE_SIDEBAR = True
 # BOOTSTRAP_FLUID =  True
