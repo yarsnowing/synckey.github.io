@@ -22,20 +22,20 @@
     <meta property="og:site_name" content="Andy's Blog"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="Andy's Blog"/>
-    <meta property="og:url" content="http://synckey.github.io"/>
+    <meta property="og:url" content=""/>
     <meta property="og:description" content="Andy's Blog"/>
 
 
 
-    <script src="http://synckey.github.io/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="http://synckey.github.io/theme/js/bootstrap.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js"></script>
 
     <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-    <script src="http://synckey.github.io/theme/js/respond.min.js"></script>
+    <script src="/theme/js/respond.min.js"></script>
     <!-- highcharts -->
-    <script src="http://synckey.github.io/theme/js/highcharts.js"></script>
-    <script src="http://synckey.github.io/theme/js/exporting.js"></script>
+    <script src="/theme/js/highcharts.js"></script>
+    <script src="/theme/js/exporting.js"></script>
     <!-- mathtex -->
     <!--
     <script type="text/javascript"
@@ -57,15 +57,15 @@
 
     </script>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="http://synckey.github.io/theme/css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="http://synckey.github.io/theme/css/style.css"/>
-    <link href="http://synckey.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/style.css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://synckey.github.io/theme/css/pygments/github.css"
+    <link href="/theme/css/pygments/github.css"
           rel="stylesheet">
 
 
-    <link href="http://synckey.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
           title="Andy's Blog ATOM Feed"/>
 
 
@@ -88,17 +88,17 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a href="http://synckey.github.io/" class="navbar-brand">
+            <a href="/" class="navbar-brand">
 Andy's Blog            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="http://synckey.github.io/archives.html"><i
+                <li><a href="/archives.html"><i
                         class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <!--
-                <li><a href="http://synckey.github.io/archives.html"><i
+                <li><a href="/archives.html"><i
                         class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
                         -->
             </ul>
@@ -112,7 +112,7 @@ Andy's Blog            </a>
     <div class="row">
             <div class="col-lg-8 col-md-offset-2">
             <article>
-                <h2><a href="http://synckey.github.io/posts/2016/10/11/my-bashrc-backup.html">My Bashrc Backup</a></h2>
+                <h2><a href="/posts/2016/10/11/my-bashrc-backup.html">My Bashrc Backup</a></h2>
                 <div class="summary"><div class="github"><pre><span></span><span class="c1"># .bashrc</span>
 <span class="c1"># Source global definitions</span>
 <span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
@@ -126,12 +126,12 @@ Andy's Blog            </a>
 <span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">'ls -l'</span>
 <span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">"\[\e[0;31m\][\u@\H \w]\\</span>$<span class="s2"> \[\e[m\]"</span>
 <span class="c1"># vim:ts=4:sw=4 ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="http://synckey.github.io/posts/2016/10/11/my-bashrc-backup.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="/posts/2016/10/11/my-bashrc-backup.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="http://synckey.github.io/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">让VIM记录文件上次编辑的位置</a></h2>
+                <h2><a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">让VIM记录文件上次编辑的位置</a></h2>
                 <div class="summary"><p>在<code>~/.vimrc</code>中加入如下配置:</p>
 <div class="github"><pre><span></span>autocmd BufReadPost *
 <span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
@@ -146,7 +146,7 @@ syntax <span class="nb">enable</span>
 </pre></div>
 <h3>参考</h3>
 <p><a href="http://www.2cto.com/os/201311/255061.html">让VIM记录文件上次编辑的位置</a></p>
-                    <a class="btn btn-default btn-xs" href="http://synckey.github.io/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">more ...</a>
                 </div>
             </article>
             <hr/>
