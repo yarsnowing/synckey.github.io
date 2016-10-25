@@ -51,7 +51,7 @@ Slug: notes-of-grammar-in-use
 * I am doing sth.可以用于表示未来已经安排好的事情.
     * Alex is getting married next month.(不要用 will get)
 * Present simple(I do) with a future meaning:we use the present simple when we talk about timetables,programmes etc.(for example,for public transport,cinemas etc):
-    * The traing `leaves` Plymouth at 11.30 and `arrives` in London at 14.45.
+    * The train `leaves` Plymouth at 11.30 and `arrives` in London at 14.45.
     * What time does the film begin?
 
 如果一个人的计划订的像时间表,也可以用一般现在时:
