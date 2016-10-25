@@ -14,7 +14,7 @@ Slug: notes-of-grammar-in-use
 * present perfect continuous(I have been doing),强调从过去到现在的一个过程.
 * present perfect simple 
 * past perfect(I had done)
-* past perfect continuous(I had been doning)
+* past perfect continuous(I had been doing)
 
 * `anybody` 要用单数形式修饰:Is anybody listening to the radio or can I turn it off?
     * Is anybody sitting here?
