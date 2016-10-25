@@ -6,7 +6,7 @@ Slug: notes-of-grammar-in-use
 
 ###主要的时态
 * past(I did)
-* present continuous(I am dong)
+* present continuous(I am doing)
 * present simple(I do)
 * past simple(I did)
 * past continuous(I was doing)
@@ -38,7 +38,7 @@ Slug: notes-of-grammar-in-use
     2. Have you got the time?
 * have 和 have got 都可以用来表示有,但是在过去式中,用had(不用had got).
 * used to
-    1. "Something used to happen" = somethin happend regularly in the past but no longer happens.
+    1. "Something used to happen" = something happened regularly in the past but no longer happens.
         * I used to play tennis a lot but I don't play often now.
         * Diane used to travel a lot.These days she doesn't go away so often.
     2. We also use **used to ...** for somethins was true .
