@@ -1,6 +1,6 @@
 Title: 长亭送别
 Date: 2016-07-26
-Category: life,posts,mm
+Category: mm
 Tags: life,mm
 Slug: chang-ting-song-bie
 
@@ -25,5 +25,6 @@ Slug: chang-ting-song-bie
 回来一整夜都没有睡着，听着《送别》，心中泪奔，那个旋律，在脑海里来来回回响了两天两夜。
 
 午夜梦回，窗前的树叶沙沙，旋律响起，却有送不完的余情往事。
-
-<img src="/static/images/warcraft_movie_20160626.jpg"  alt="cinema" class="carousel-inner img-responsive img-rounded"  />
+<div align="center">
+<img src="/static/images/warcraft_movie_20160626.jpg"  alt="cinema" class="carousel-inner img-responsive img-rounded" style="width:40%;height:40%;"  />
+</div>

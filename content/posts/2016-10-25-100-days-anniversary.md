@@ -1,6 +1,6 @@
 Title: 100天
 Date: 2016-10-25
-Category: life,posts,mm
+Category: mm
 Tags: life,posts,mm
 Slug: 100-days-anniversay
 Status: draft

@@ -1,6 +1,6 @@
 Title: My Bashrc Backup
 Date: 2016-10-11
-Category: config
+Category: posts
 Tags: tools,vim,linux,config,macos
 Slug: my-bashrc-backup
 

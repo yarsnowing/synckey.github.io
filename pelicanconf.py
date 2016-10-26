@@ -54,7 +54,7 @@ ARTICLE_SAVE_AS = ARTICLE_URL
 
 DISPLAY_CATEGORIES_ON_MENU = False
 
-PLUGIN_PATHS = ["plugins", "plugins"]
+PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["neighbors", "bootstrapify"]
 
 DEFAULT_WECHAT_PIC = "wechat_logo_300x300.jpg"

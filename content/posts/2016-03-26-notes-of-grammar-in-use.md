@@ -1,6 +1,6 @@
 Title: Grammar in Use 笔记
 Date: 2016-03-26
-Category: 学习,英语
+Category: posts
 Tags: 英语,语法
 Slug: notes-of-grammar-in-use
 

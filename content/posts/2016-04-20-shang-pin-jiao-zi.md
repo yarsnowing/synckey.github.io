@@ -1,6 +1,6 @@
 Title: 上品饺子
 Date: 2016-04-20
-Category: life
+Category: posts
 Tags: life
 Slug: shang-pin-jiao-zi
 
