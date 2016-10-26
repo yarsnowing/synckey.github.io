@@ -3,6 +3,7 @@ Date: 2015-04-13
 Category: posts
 Tags: ielts,writing
 Slug: my-experience-of-losing-weight
+Author: Andy
 
 <div id="weight_container" style=" margin: 0 auto"></div>
 

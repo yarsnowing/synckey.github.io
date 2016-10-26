@@ -3,6 +3,7 @@ Date: 2015-12-24
 Category: posts
 Tags: machine learning,technology,logistic regression
 Slug: plot-sigmoid-in-matlab
+Author: Andy
 Wechat_logo: wechat_log_300x300_sigmoid.png
 
     :::matlab

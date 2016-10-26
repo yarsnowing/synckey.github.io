@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Andy Wang'
+AUTHOR = u'andy'
 SITENAME = u"Andy's Blog"
 SITEURL = ''
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'

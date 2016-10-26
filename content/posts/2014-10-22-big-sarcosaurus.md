@@ -3,6 +3,7 @@ Date: 2014-10-22
 Category: posts
 Tags: personal
 Slug: big-sarcosaurus
+Author: Andy
 
 Wen asked me how I was those days  in the morning via wechat ,which was kind of a surprise for me.She said that she 
 would take an exam today and she would have some time after then. I invited her to come to see me and have lunch 

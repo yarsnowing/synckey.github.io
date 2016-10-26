@@ -3,6 +3,7 @@ Date: 2014-11-24
 Category: posts
 Tags: ielts,writing
 Slug: distance-learning-vs-school-learning
+Author: Andy
 
 >many people use distance-learning programmes(study material post, TV, Internet, etc.) to study at home,
 but some people think that it cannot bring the same benefits of attending college or university.

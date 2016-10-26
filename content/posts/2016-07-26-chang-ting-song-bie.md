@@ -3,6 +3,7 @@ Date: 2016-07-26
 Category: mm
 Tags: life,mm
 Slug: chang-ting-song-bie
+Author: Andy
 
 2015年8月28日，是我们一次见面，在朝阳大悦城，在星巴克和 MUJI 门口看到你。
 

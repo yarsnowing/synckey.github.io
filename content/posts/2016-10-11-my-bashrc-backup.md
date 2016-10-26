@@ -3,6 +3,7 @@ Date: 2016-10-11
 Category: posts
 Tags: tools,vim,linux,config,macos
 Slug: my-bashrc-backup
+Author: Andy
 
     :::bash
     # .bashrc

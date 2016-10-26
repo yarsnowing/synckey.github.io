@@ -3,6 +3,7 @@ Date: 2015-05-20
 Category: posts
 Slug: iterm2-clone-session
 Tags: iterm2,mac,sesssion
+Author: Andy
 
     :::bash
     vim ~/.ssh/config

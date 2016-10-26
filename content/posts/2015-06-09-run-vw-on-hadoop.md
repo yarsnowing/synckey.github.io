@@ -3,6 +3,7 @@ Date: 2015-06-09
 Category: posts
 Tags: hadoop,machine learning
 Slug: run-vw-on-hadoop
+Author: Andy
 
 
 ###Prerequisites

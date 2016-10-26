@@ -4,7 +4,7 @@ Category: mm
 Tags: life,posts,mm
 Slug: 100-days-anniversay
 Status: draft
-
+Author: Andy
 
 <img data-src="holder.js/900x500 "   alt="First slide image" src="/static/images/warcraft_movie_20160626.jpg"  alt="cinema" class="carousel-inner img-responsive img-rounded">
           

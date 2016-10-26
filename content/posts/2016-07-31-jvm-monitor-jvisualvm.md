@@ -3,6 +3,7 @@ Date: 2016-07-26
 Category: posts
 Tags: java,posts,jvm,profile,trouble shooting
 Slug: jvm-monitor-tool-jvisualvm
+Author: Andy
 
 ## 通过 jvisualvm 查看 jvm 内部详细信息
     :::bash
