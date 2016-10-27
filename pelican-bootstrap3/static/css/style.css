@@ -1,11 +1,13 @@
 body {
-    padding-top: 70px;
+    padding-top: 50px;
     text-align: justify;
-    font-size: 15px;
-    color: #555;
-    font-family: "-apple-system","Open Sans","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    color: #111;
+    font-family: "Helvetica Neue", " Helvetica", "-apple-system", "Microsoft YaHei UI", "Microsoft YaHei", "Arial", "sans-serif";
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    font-weight: 300;
 }
-
 
 h1, .h1,
 h2, .h2,
@@ -14,7 +16,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     margin-top: 0;
-    font-family: 'LTCircular','Heiti SC Light', "Microsoft YaHei", sans-serif;
+    font-family: 'LTCircular', 'Heiti SC Light', "Microsoft YaHei", sans-serif;
     font-weight: normal;
     color: #333;
 }
@@ -124,7 +126,6 @@ a, a:hover {
     height: auto;
 }
 
-
 .floatright, .align-right {
     float: right;
 }
@@ -196,7 +197,7 @@ figure.floatcenter, .align-center {
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: scroll;
-    background-size: cover; 
+    background-size: cover;
     background-color: #C4C4C4;
     margin: 0 0 20px;
     padding: 70px 0; /*controls padding around inner text*/
@@ -215,7 +216,7 @@ figure.floatcenter, .align-center {
 
 #banner h1 {
     color: #fff;
-    font-family: "HelveticaNeue-CondensedBold","Helvetica Neue CE 600 Condensed","Helvetica Neue LT Condensed","Helvetica Neue 600 Condensed","HelveticaNeue-BoldCondensed","Helvetica Neue BoldCondensed","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue CE 600 Condensed", "Helvetica Neue LT Condensed", "Helvetica Neue 600 Condensed", "HelveticaNeue-BoldCondensed", "Helvetica Neue BoldCondensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 60px;
     font-stretch: condensed;
     font-weight: 700;
@@ -223,22 +224,25 @@ figure.floatcenter, .align-center {
     margin: 0;
     text-transform: uppercase;
 }
+
 #banner .intro {
     color: #fff;
     font-size: 21px;
     line-height: 1.33;
     opacity: 0.75;
 }
+
 #banner .btn, #banner .intro {
     margin-left: 4px;
 }
 
 /* Solutions for mobile and small screens  */
 @media (max-width: 650px) {
-    #banner h1{
-       font-size: 30px; /* !important;*/
+    #banner h1 {
+        font-size: 30px; /* !important;*/
     }
-    #banner .intro{
+
+    #banner .intro {
         font-size: 16px;
     }
 }
