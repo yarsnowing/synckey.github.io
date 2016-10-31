@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u'andy'
 SITENAME = u"Andy's Blog"
 SITEURL = ''
-DEFAULT_DATE_FORMAT = '%Y-%m-%d'
+DEFAULT_DATE_FORMAT = '%Y.%m.%d'
 PATH = 'content'
 
 TIMEZONE = 'Asia/Shanghai'
