@@ -44,9 +44,9 @@ $$
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions"&gt;Solution to Convert a Number to Hexadecimal&lt;/a&gt;
-&lt;a href="https://leetcode.com/problems/rotate-function/"&gt;Rotate Function&lt;/a&gt;
-&lt;a href="https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8"&gt;Java Solution O(n) with non mathametical explaination&lt;/a&gt;&lt;/p&gt;</summary><category term="algorithm"></category></entry><entry><title>My Bashrc Backup</title><link href="/posts/2016/10/11/my-bashrc-backup.html" rel="alternate"></link><published>2016-10-11T00:00:00+08:00</published><updated>2016-10-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-10-11:posts/2016/10/11/my-bashrc-backup.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .bashrc&lt;/span&gt;
+&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions"&gt;Solution to Convert a Number to Hexadecimal&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://leetcode.com/problems/rotate-function/"&gt;Rotate Function&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8"&gt;Java Solution O(n) with non mathametical explaination&lt;/a&gt;&lt;/p&gt;</summary><category term="algorithm"></category></entry><entry><title>My Bashrc Backup</title><link href="/posts/2016/10/11/my-bashrc-backup.html" rel="alternate"></link><published>2016-10-11T00:00:00+08:00</published><updated>2016-10-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-10-11:posts/2016/10/11/my-bashrc-backup.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .bashrc&lt;/span&gt;
 &lt;span class="c1"&gt;# Source global definitions&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f /etc/bashrc &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
     . /etc/bashrc
