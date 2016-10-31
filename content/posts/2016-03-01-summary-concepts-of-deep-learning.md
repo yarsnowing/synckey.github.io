@@ -3,7 +3,6 @@ Date: 2016-03-01
 Category: posts
 Tags: machine learning, deep learning
 Slug: summary-concepts-of-deep-learning
-Status: draft
 Author: Andy
 
 ##机器学习

@@ -1,4 +1,4 @@
-Title:Notes for Leetcode
+Title: Notes for Leetcode
 Date: 2016-10-20
 Category: posts
 Tags: algorithm
