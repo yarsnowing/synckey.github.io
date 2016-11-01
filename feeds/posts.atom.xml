@@ -4,6 +4,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;2.Rotate Function&lt;/h2&gt;
 &lt;h3&gt;Original Question&lt;/h3&gt;
+&lt;p&gt;原始问题链接：&lt;a href="https://leetcode.com/problems/rotate-function/"&gt;Rotate Function&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Given an array of integers $A$ and let $n$ to be its length.&lt;/p&gt;
 &lt;p&gt;Assume $B_k$ to be an array obtained by rotating the array $A$ $k$ positions clock-wise, we define a "rotation function" $F$ on $A$ as follow:
 $$
@@ -42,6 +43,38 @@ $$
     &lt;span class="o"&gt;}&lt;/span&gt;
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;max&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;3. Pascal's Triangle(杨辉三角)&lt;/h2&gt;
+&lt;h3&gt;问题&lt;/h3&gt;
+&lt;p&gt;原始问题连接:&lt;a href="https://leetcode.com/problems/pascals-triangle-ii/"&gt;Pascal's Triangle II&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Given an index $k(k=1,2,3,\cdots)$ , return the $k^{th}$ row of the Pascal's triangle.&lt;/p&gt;
+&lt;p&gt;For example, given k = 3,&lt;/p&gt;
+&lt;p&gt;Return &lt;code&gt;[1,3,3,1]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;问题很简单，就是打印杨辉三角的指定列。&lt;/p&gt;
+&lt;h3&gt;杨辉三角的性质&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;第$n$行有$n$项。&lt;/li&gt;
+&lt;li&gt;第$n$行数字和为$2^n-1$。 &lt;/li&gt;
+&lt;li&gt;第$n$行的第$m$的数字为$C_{n}^{m-1}$(二项式系数)。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;组合计算&lt;/h3&gt;
+&lt;p&gt;$C_{n}^{m}=\frac{A_{n}^{m}}{n!}=\frac{n(n-1)(n-2)\cdots(n-m+1)}{m!}$&lt;/p&gt;
+&lt;p&gt;上述公式在计算的时候已经避免直接计算$n!$,防止溢出，最终得到的解如下(参考&lt;a href="https://discuss.leetcode.com/topic/62617/java-combination-number"&gt;JAVA combination number&lt;/a&gt;)：&lt;/p&gt;
+&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;combine&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kt"&gt;long&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nf"&gt;getRow&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;rowIndex&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rowIndex&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;rowIndex&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;add&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;combine&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rowIndex&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;));&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="o"&gt;}}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions"&gt;Solution to Convert a Number to Hexadecimal&lt;/a&gt;&lt;/p&gt;
