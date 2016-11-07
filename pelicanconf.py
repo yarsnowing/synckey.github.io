@@ -18,7 +18,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-MD_EXTENSIONS = (['codehilite(css_class=github)'])
+MD_EXTENSIONS = (['codehilite(css_class=github)','markdown.extensions.tables'])
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -55,6 +55,6 @@ ARTICLE_SAVE_AS = ARTICLE_URL
 DISPLAY_CATEGORIES_ON_MENU = False
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["neighbors", "bootstrapify"]
+PLUGINS = ["neighbors", "bootstrapify","better_tables"]
 
 DEFAULT_WECHAT_PIC = "wechat_logo_300x300.jpg"

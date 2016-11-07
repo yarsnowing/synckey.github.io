@@ -11,6 +11,8 @@ Author: Andy
     
 ## 2.Rotate Function
 ### Original Question
+原始问题链接：[Rotate Function](https://leetcode.com/problems/rotate-function/).
+
 Given an array of integers $A$ and let $n$ to be its length.
 
 Assume $B_k$ to be an array obtained by rotating the array $A$ $k$ positions clock-wise, we define a "rotation function" $F$ on $A$ as follow:
@@ -54,8 +56,52 @@ $$
         }
         return max;
     } 
+    
+## 3. Pascal's Triangle(杨辉三角)
+### 问题
 
+原始问题连接:[Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/).
 
+Given an index $k(k=1,2,3,\cdots)$ , return the $k^{th}$ row of the Pascal's triangle.
+
+For example, given k = 3,
+
+Return `[1,3,3,1]`.
+
+问题很简单，就是打印杨辉三角的指定列。
+### 杨辉三角的性质
+1. 第$n$行有$n$项。
+1. 第$n$行数字和为$2^n-1$。 
+1. 第$n$行的第$m$的数字为$C_{n}^{m-1}$(二项式系数)。
+
+### 组合计算
+$C_{n}^{m}=\frac{A_{n}^{m}}{n!}=\frac{n(n-1)(n-2)\cdots(n-m+1)}{m!}$
+
+上述公式在计算的时候已经避免直接计算$n!$,防止溢出，最终得到的解如下(参考[JAVA combination number](https://discuss.leetcode.com/topic/62617/java-combination-number))：
+
+    :::java
+    public int combine(int m, int n) {
+        long res = 1;
+        for (int i = 1; i <= n; i++) {
+            res = res * (m - i + 1) / i;
+        }
+        return (int) res;
+    }
+
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> result = new ArrayList(rowIndex);
+        for (int i = 0; i <= rowIndex; i++) {
+            result.add(combine(rowIndex, i));
+        }
+        return result;
+    }}
+    
+    
+##Convert Char to Numeric
+
+    :::java
+    Character.getNumericValue('5');
+     int number = '5' - '0';
 
 ###References
 [Solution to Convert a Number to Hexadecimal](https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions)
