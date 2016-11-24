@@ -3,6 +3,7 @@ Date: 2015-11-03
 Category: posts
 Tags: spark
 Author: Andy
+Place: Beijing
 
 在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：
 

@@ -4,6 +4,7 @@ Category: posts
 Tags: algorithm
 Slug: notes-for-leetcode.md
 Author: Andy
+Place: Beijing
 
 ## 1.Binary Number Representation 
     :::java

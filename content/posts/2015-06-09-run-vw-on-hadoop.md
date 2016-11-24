@@ -4,6 +4,7 @@ Category: posts
 Tags: hadoop,machine learning
 Slug: run-vw-on-hadoop
 Author: Andy
+Place: Beijing
 
 
 ###Prerequisites

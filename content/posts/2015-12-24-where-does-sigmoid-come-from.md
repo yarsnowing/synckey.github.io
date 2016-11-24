@@ -4,6 +4,7 @@ Category: posts
 Tags: machine learning,technology,logistic regression
 Slug: where-does-sigmoid-come-from
 Author: Andy
+Place: Beijing
 
 >主要根据Andrew Ng的教学讲义整理。
 

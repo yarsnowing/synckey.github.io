@@ -4,6 +4,7 @@ Category: posts
 Tags: ielts,writing
 Slug: improve-safety-on-the-road
 Author: Andy
+Place: Beijing
 
 >The only way to improve safety on the road is to severely punish driving offenders. To what extent do you agree or disagree?
 

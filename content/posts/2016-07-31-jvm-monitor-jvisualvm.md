@@ -4,6 +4,7 @@ Category: posts
 Tags: java,posts,jvm,profile,trouble shooting
 Slug: jvm-monitor-tool-jvisualvm
 Author: Andy
+Place: Beijing
 
 ## 通过 jvisualvm 查看 jvm 内部详细信息
     :::bash

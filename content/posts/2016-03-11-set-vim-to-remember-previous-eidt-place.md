@@ -4,6 +4,7 @@ Category: posts
 Tags: tools,vim,linux,config
 Slug: set-vim-to-remember-previous-eidt-place
 Author: Andy
+Place: Beijing
 
 在`~/.vimrc`中加入如下配置:
 

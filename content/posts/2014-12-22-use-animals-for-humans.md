@@ -4,6 +4,7 @@ Category: posts
 Tags: ielts,writing
 Slug: use-animals-for-humans
 Author: Andy
+Place: Beijing
 
 >Some people think that it is acceptable to use animals for the benefit of humans. Others, however, think that it is wrong to exploit animals for human purposes. Discuss both these views and give your own opinion.
 

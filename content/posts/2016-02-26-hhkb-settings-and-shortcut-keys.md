@@ -4,6 +4,7 @@ Category: posts
 Tags: hhkb,keyboad
 Slug: hhkb-settings-and-shortcut-keys
 Author: Andy
+Place: Beijing
 
 入了hhkb的坑,买了一个hhkb types pro2,折腾了一阵子.个人感觉hhkb的手感并不比cherry青轴手感好,但是有一点比青轴好太多,就是按键很灵敏.以前我的cherry不知道是我自己人品不好买到瑕疵品了还是怎么回事,F1按的太多以后就总是有点不灵,而且Cherry的按键总是给人一种按下去粘粘的弹不起来的感觉(按键感觉,不是键帽材质)不是很清爽.比Cherry好的第二优点是使用寿命,机械键盘的开关说是有2000w次的寿命,理论上可以用5-8年,而hhkb属于静电电容键盘,按键的触发是根据电容的变化来判断的,每次敲击是没有物理接触的,所以经典电容理的开关理论上是不会坏的,可以作为程序猿传家宝传给儿子.虽然hhkb的手感并没有让人很惊艳,但是用一阵子之后再换回mac book自带的键盘就感觉差太多了,再加上熟悉了hhkb键盘布局以后用回mac的键盘老是误按,所以现在算是离不开hhkb了.
 

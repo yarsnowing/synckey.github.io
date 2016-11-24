@@ -5,6 +5,7 @@ Tags: machine learning,technology,logistic regression
 Slug: plot-sigmoid-in-matlab
 Author: Andy
 Wechat_logo: wechat_log_300x300_sigmoid.png
+Place: Beijing
 
     :::matlab
     a=2;

@@ -4,6 +4,7 @@ Category: posts
 Tags: ielts,writing
 Slug: gender-balance
 Author: Andy
+Place: Beijing
 
 >Some people think that employers should be required to employ equal numbers of men and women. To what extent do you agree or disagree?
 

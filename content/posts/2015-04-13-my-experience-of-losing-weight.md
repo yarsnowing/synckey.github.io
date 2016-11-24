@@ -4,6 +4,7 @@ Category: posts
 Tags: ielts,writing
 Slug: my-experience-of-losing-weight
 Author: Andy
+Place: Beijing
 
 <div id="weight_container" style=" margin: 0 auto"></div>
 

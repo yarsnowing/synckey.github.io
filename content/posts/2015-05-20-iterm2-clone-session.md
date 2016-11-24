@@ -4,6 +4,7 @@ Category: posts
 Slug: iterm2-clone-session
 Tags: iterm2,mac,sesssion
 Author: Andy
+Place: Beijing
 
     :::bash
     vim ~/.ssh/config

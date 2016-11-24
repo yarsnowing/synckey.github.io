@@ -5,6 +5,8 @@ Tags: mm,life,sfv
 Slug: sfv-documents
 Author: Andy
 Wechat_logo: fern_300x300.jpg
+Place: Beijing
+
 ##需要准备的材料列表
 
 1. 护照（原件）

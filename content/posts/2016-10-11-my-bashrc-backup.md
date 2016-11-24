@@ -4,6 +4,7 @@ Category: posts
 Tags: tools,vim,linux,config,macos
 Slug: my-bashrc-backup
 Author: Andy
+Place: Beijing
 
     :::bash
     # .bashrc

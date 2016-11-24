@@ -4,6 +4,7 @@ Category: posts
 Tags: machine learning, deep learning
 Slug: summary-concepts-of-deep-learning
 Author: Andy
+Place: Beijing
 
 ##机器学习
 input->feature representation->learning algorithm

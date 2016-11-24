@@ -4,6 +4,7 @@ Category: posts
 Tags: ielts,writing
 Slug: what-shuld-be-the-main-function-of-a-university
 Author: Andy
+Place: Beijing
 
 >Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. 
 >Others think that the true function of a university should be to give access to knowledge for its own sake,
