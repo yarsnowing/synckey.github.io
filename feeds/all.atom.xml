@@ -859,9 +859,11 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
 &lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</summary><category term="hadoop"></category><category term="machine learning"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><published>2015-05-20T00:00:00+08:00</published><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-05-20:posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;贴入如下内容:&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;host *
-ControlMaster auto
-ControlPath ~/.ssh/master-%r@%h:%p
+&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Host *
+    ServerAliveInterval 30
+    ControlMaster auto
+    ControlPath ~/.ssh/master-%r@%h:%p
+    ControlPersist yes
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;退出iterm2，重新登录即可。&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;

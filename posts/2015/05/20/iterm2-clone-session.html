@@ -11,20 +11,21 @@
     <!-- Thumbnail for wechat, when share links in wechat,it will use this piture for thumbnail.This can be specific for
          every sigle page. -->
 
-    <div id='wx_pic' style='margin:0 auto;display:none;'><img src='/static/images/wechat_logo_300x300.jpg'/></div>
+    <div id='wx_pic' style='margin:0 auto;display:none;'><img
+            src='/static/images/wechat_logo_300x300.jpg'/></div>
 
     <!--
 <link rel="canonical" href="/posts/2015/05/20/iterm2-clone-session.html">
     -->
 <meta name="author" content="Andy"/>
 <meta name="keywords" content="iterm2,mac,sesssion"/>
-<meta name="description" content="vim ~/.ssh/config 贴入如下内容: host * ControlMaster auto ControlPath ~/.ssh/master-%r@%h:%p 退出iterm2，重新登录即可。 References Iterm2 auto login 自动登录脚本 linux clone session"/>
+<meta name="description" content="vim ~/.ssh/config 贴入如下内容: Host * ServerAliveInterval 30 ControlMaster auto ControlPath ~/.ssh/master-%r@%h:%p ControlPersist yes 退出iterm2，重新登录即可。 References Iterm2 auto login 自动登录脚本 linux clone session"/>
 
 <meta property="og:site_name" content="Andy's Blog"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="iterm2 clone session"/>
 <meta property="og:url" content="/posts/2015/05/20/iterm2-clone-session.html"/>
-<meta property="og:description" content="vim ~/.ssh/config 贴入如下内容: host * ControlMaster auto ControlPath ~/.ssh/master-%r@%h:%p 退出iterm2，重新登录即可。 References Iterm2 auto login 自动登录脚本 linux clone session"/>
+<meta property="og:description" content="vim ~/.ssh/config 贴入如下内容: Host * ServerAliveInterval 30 ControlMaster auto ControlPath ~/.ssh/master-%r@%h:%p ControlPersist yes 退出iterm2，重新登录即可。 References Iterm2 auto login 自动登录脚本 linux clone session"/>
 <meta property="article:published_time" content=" 2015-05-20" />
 <meta property="article:section" content="posts"/>
 <meta property="article:tag" content="iterm2"/>
@@ -48,27 +49,54 @@
     <!--
     <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-            -->
 
-    <!--
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-            -->
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+
+
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            tex2jax: {inlineMath: [['$', '$']]},
+            tex2jax: {inlineMath: [['$', '$']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']},
             processEscapes: true,
         });
+       MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += 'has-jax';
+        }
+      });
 
     </script>
+            -->
+    <!--
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    -->
+    <script type="text/javascript"
+            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script>
+        MathJax.Hub.Config({
+            tex2jax: {
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                inlineMath: [['$', '$'], ["\\(", "\\)"]],
+                processEscapes: true
+            },
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            "HTML-CSS": {availableFonts: ["TeX"]}
+
+        });
+    </script>
+
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/theme/css/style.css"/>
+    <!--
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
-
+    -->
     <link href="/theme/css/pygments/github.css"
           rel="stylesheet">
 
@@ -147,11 +175,11 @@ Andy's Blog            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="/tag/iterm2.html">iterm2</a>
-        /
-	<a href="/tag/mac.html">mac</a>
-        /
-	<a href="/tag/sesssion.html">sesssion</a>
+<a href="/tag/iterm2.html">iterm2</a>
+/
+<a href="/tag/mac.html">mac</a>
+/
+<a href="/tag/sesssion.html">sesssion</a>
     
 </footer>                </div>
             </div>
@@ -159,9 +187,11 @@ Andy's Blog            </a>
             <div class="github"><pre><span></span>vim ~/.ssh/config
 </pre></div>
 <p>贴入如下内容:</p>
-<div class="github"><pre><span></span>host *
-ControlMaster auto
-ControlPath ~/.ssh/master-%r@%h:%p
+<div class="github"><pre><span></span>Host *
+    ServerAliveInterval 30
+    ControlMaster auto
+    ControlPath ~/.ssh/master-%r@%h:%p
+    ControlPersist yes
 </pre></div>
 <p>退出iterm2，重新登录即可。</p>
 <h3>References</h3>
@@ -185,14 +215,16 @@ ControlPath ~/.ssh/master-%r@%h:%p
                             data-toggle="tooltip" title="我的减肥经验">Next &rarr;</a></li>
     </ul>
 </div><!-- 多说评论框 start -->
-<div class="ds-thread" data-thread-key="iterm2-clone-session" data-title="iterm2 clone session" data-url="/posts/2015/05/20/iterm2-clone-session.html"></div>
+<div class="ds-thread" data-thread-key="iterm2-clone-session" data-title="iterm2 clone session"
+     data-url="/posts/2015/05/20/iterm2-clone-session.html"></div>
 <!-- 多说评论框 end -->
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
-    var duoshuoQuery = {short_name:"synckey"};
-    (function() {
+    var duoshuoQuery = {short_name: "synckey"};
+    (function () {
         var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
+        ds.type = 'text/javascript';
+        ds.async = true;
         ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
         ds.charset = 'UTF-8';
         (document.getElementsByTagName('head')[0]
@@ -226,27 +258,28 @@ ControlPath ~/.ssh/master-%r@%h:%p
     </div>
 </footer>
 
-    <!-- Google Analytics -->
-    <script type="text/javascript">
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-55913313-1']);
-        _gaq.push(['_trackPageview']);
+<!-- Google Analytics -->
+<script type="text/javascript">
 
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-    <!-- End Google Analytics Code -->
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55913313-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<!-- End Google Analytics Code -->
 <!-- Baidu Analytics -->
 <script type="text/javascript">
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
         var hm = document.createElement("script");
         hm.src = "//hm.baidu.com/hm.js?1531ed173910c4c262dffb947842fe33";
         var s = document.getElementsByTagName("script")[0];
@@ -254,14 +287,16 @@ ControlPath ~/.ssh/master-%r@%h:%p
     })();
 </script>
 <script>
-(function(){
-    var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+    (function () {
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
 </script>
 <!-- End Google Analytics Code -->
+
+
 
 </body>
 </html>

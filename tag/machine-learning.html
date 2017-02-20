@@ -11,12 +11,13 @@
     <!-- Thumbnail for wechat, when share links in wechat,it will use this piture for thumbnail.This can be specific for
          every sigle page. -->
 
-    <div id='wx_pic' style='margin:0 auto;display:none;'><img src='/static/images/wechat_logo_300x300.jpg'/></div>
+    <div id='wx_pic' style='margin:0 auto;display:none;'><img
+            src='/static/images/wechat_logo_300x300.jpg'/></div>
 
     <!--
     -->
-    <meta name="author" content="andy" />
-    <meta name="keywords" content="machine learning" />
+<meta name="author" content="andy"/>
+<meta name="keywords" content="machine learning"/>
 
     <!-- Open Graph tags -->
     <meta property="og:site_name" content="Andy's Blog"/>
@@ -41,27 +42,54 @@
     <!--
     <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-            -->
 
-    <!--
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-            -->
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+
+
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            tex2jax: {inlineMath: [['$', '$']]},
+            tex2jax: {inlineMath: [['$', '$']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']},
             processEscapes: true,
         });
+       MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += 'has-jax';
+        }
+      });
 
     </script>
+            -->
+    <!--
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    -->
+    <script type="text/javascript"
+            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script>
+        MathJax.Hub.Config({
+            tex2jax: {
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                inlineMath: [['$', '$'], ["\\(", "\\)"]],
+                processEscapes: true
+            },
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            "HTML-CSS": {availableFonts: ["TeX"]}
+
+        });
+    </script>
+
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/theme/css/style.css"/>
+    <!--
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
-
+    -->
     <link href="/theme/css/pygments/github.css"
           rel="stylesheet">
 
@@ -112,9 +140,9 @@ Andy's Blog            </a>
 <div class="container">
     <div class="row">
             <div class="col-lg-8 col-md-offset-2">
-            <article>
-                <h2><a href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">Summary Concepts of Deep Learning</a></h2>
-                <div class="summary"><h2>机器学习</h2>
+<article>
+    <h2><a href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">Summary Concepts of Deep Learning</a></h2>
+    <div class="summary"><h2>机器学习</h2>
 <p>input-&gt;feature representation-&gt;learning algorithm</p>
 <h3>监督学习</h3>
 <p>标注过的训练数据.</p>
@@ -139,13 +167,13 @@ Andy's Blog            </a>
 <img alt="SingleNeuron" class="img-responsive" src="/static/images/SingleNeuron.png" width="40%"/>
 </p></p>
 <p>神经网络的基本组成单元,叫神经元(neuron),途中的神经元是一个以$x_1,x_x,x_3$(和一个$+1$截距项(intercept term))为输入,以$h_{W,b}(x)=f(W^Tx)=f ...</p>
-                    <a class="btn btn-default btn-xs" href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">Plot Sigmoid in Matlab</a></h2>
-                <div class="summary"><div class="github"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
+        <a class="btn btn-default btn-xs" href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">more ...</a>
+    </div>
+</article>
+<hr/>
+<article>
+    <h2><a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">Plot Sigmoid in Matlab</a></h2>
+    <div class="summary"><div class="github"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
 <span class="n">x</span><span class="p">=</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
 <span class="n">y</span><span class="p">=</span><span class="mf">1.</span><span class="o">/</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">.*</span><span class="n">x</span><span class="p">)];</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s">'b'</span><span class="p">);</span>
@@ -154,13 +182,13 @@ Andy's Blog            </a>
 <p><p align="center">
 <img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="50%"/>
 </p></p>
-                    <a class="btn btn-default btn-xs" href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/posts/2015/12/24/where-does-sigmoid-come-from.html">Where does sigmoid come from</a></h2>
-                <div class="summary"><blockquote>
+        <a class="btn btn-default btn-xs" href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">more ...</a>
+    </div>
+</article>
+<hr/>
+<article>
+    <h2><a href="/posts/2015/12/24/where-does-sigmoid-come-from.html">Where does sigmoid come from</a></h2>
+    <div class="summary"><blockquote>
 <p>主要根据Andrew Ng的教学讲义整理。</p>
 </blockquote>
 <p>逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
@@ -172,13 +200,13 @@ Andy's Blog            </a>
 <p>首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然
 就想到使用 $Bernoulli$ 对 $y$ 的条件分布进行建模。$Bernoulli$
 分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli ...</p>
-                    <a class="btn btn-default btn-xs" href="/posts/2015/12/24/where-does-sigmoid-come-from.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/posts/2015/06/09/run-vw-on-hadoop.html">Run Vowpal Wabbit on Hadoop</a></h2>
-                <div class="summary"><h3>Prerequisites</h3>
+        <a class="btn btn-default btn-xs" href="/posts/2015/12/24/where-does-sigmoid-come-from.html">more ...</a>
+    </div>
+</article>
+<hr/>
+<article>
+    <h2><a href="/posts/2015/06/09/run-vw-on-hadoop.html">Run Vowpal Wabbit on Hadoop</a></h2>
+    <div class="summary"><h3>Prerequisites</h3>
 <ul>
 <li>hadoop 2.2.0</li>
 <li>Centos 6.4</li>
@@ -191,10 +219,10 @@ sudo ./bootstrap.sh
 sudo ./bjam --layout<span class="o">=</span>tagged install 
 <span class="nb">cd</span> /etc/yum.repos.d
 wget http://people.centos.org ...</pre></div>
-                    <a class="btn btn-default btn-xs" href="/posts/2015/06/09/run-vw-on-hadoop.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
+        <a class="btn btn-default btn-xs" href="/posts/2015/06/09/run-vw-on-hadoop.html">more ...</a>
+    </div>
+</article>
+<hr/>
 
             </div>
         </div>
@@ -219,27 +247,28 @@ wget http://people.centos.org ...</pre></div>
     </div>
 </footer>
 
-    <!-- Google Analytics -->
-    <script type="text/javascript">
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-55913313-1']);
-        _gaq.push(['_trackPageview']);
+<!-- Google Analytics -->
+<script type="text/javascript">
 
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-    <!-- End Google Analytics Code -->
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-55913313-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<!-- End Google Analytics Code -->
 <!-- Baidu Analytics -->
 <script type="text/javascript">
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
         var hm = document.createElement("script");
         hm.src = "//hm.baidu.com/hm.js?1531ed173910c4c262dffb947842fe33";
         var s = document.getElementsByTagName("script")[0];
@@ -247,14 +276,16 @@ wget http://people.centos.org ...</pre></div>
     })();
 </script>
 <script>
-(function(){
-    var bp = document.createElement('script');
-    bp.src = '//push.zhanzhang.baidu.com/push.js';
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
+    (function () {
+        var bp = document.createElement('script');
+        bp.src = '//push.zhanzhang.baidu.com/push.js';
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
 </script>
 <!-- End Google Analytics Code -->
+
+
 
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>tools - Andy's Blog</title>
+    <title>《概率论》回顾 - Andy's Blog</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -15,16 +15,23 @@
             src='/static/images/wechat_logo_300x300.jpg'/></div>
 
     <!--
+<link rel="canonical" href="/drafts/review-of-probability.html">
     -->
-<meta name="author" content="andy"/>
-<meta name="keywords" content="tools"/>
+<meta name="author" content="Andy"/>
+<meta name="keywords" content="machine learning,deep learning,probability"/>
+<meta name="description" content="1. 随机事件和概率 1.1全概率公式 设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&gt;0(i=1,2,\cdots,n)$，且$\sum_{i=1}^{n}{A_i}=\Omega$， 则对任一事件$B$，有 $$ P(B)=\sum_{i=1}^{n}{P(A_i)\cdot P{(B|A_i)}}. $$ 满足公式中的$A_1,A_2,\cdots,A_n$ 叫完备事件组。 1.2贝叶斯公式 设事件 ..."/>
 
-    <!-- Open Graph tags -->
-    <meta property="og:site_name" content="Andy's Blog"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Andy's Blog"/>
-    <meta property="og:url" content=""/>
-    <meta property="og:description" content="Andy's Blog"/>
+<meta property="og:site_name" content="Andy's Blog"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="《概率论》回顾"/>
+<meta property="og:url" content="/drafts/review-of-probability.html"/>
+<meta property="og:description" content="1. 随机事件和概率 1.1全概率公式 设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&gt;0(i=1,2,\cdots,n)$，且$\sum_{i=1}^{n}{A_i}=\Omega$， 则对任一事件$B$，有 $$ P(B)=\sum_{i=1}^{n}{P(A_i)\cdot P{(B|A_i)}}. $$ 满足公式中的$A_1,A_2,\cdots,A_n$ 叫完备事件组。 1.2贝叶斯公式 设事件 ..."/>
+<meta property="article:published_time" content=" 2017-02-20" />
+<meta property="article:section" content="posts"/>
+<meta property="article:tag" content="machine learning"/>
+<meta property="article:tag" content="deep learning"/>
+<meta property="article:tag" content="probability"/>
+<meta property="article:author" content="Andy"/>
 
 
 
@@ -99,6 +106,9 @@
 
 
 
+    <link href="/feeds/posts.atom.xml" type="application/atom+xml"
+          rel="alternate"
+          title="Andy's Blog posts ATOM Feed"/>
 
 </head>
 <body>
@@ -140,45 +150,106 @@ Andy's Blog            </a>
 <div class="container">
     <div class="row">
             <div class="col-lg-8 col-md-offset-2">
-<article>
-    <h2><a href="/posts/2016/10/11/my-bashrc-backup.html">My Bashrc Backup</a></h2>
-    <div class="summary"><div class="github"><pre><span></span><span class="c1"># .bashrc</span>
-<span class="c1"># Source global definitions</span>
-<span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    . /etc/bashrc
-<span class="k">fi</span>
-<span class="c1"># User specific aliases and functions</span>
+<section id="content">
+    <article>
+        <header class="page-header">
+            <h2>
+                <a href="/drafts/review-of-probability.html"
+                   rel="bookmark"
+                   title="Permalink to 《概率论》回顾">
+                    《概率论》回顾
+                </a>
+            </h2>
+        </header>
+        <div class="entry-content"><!--
+            <div class="panel">
+                <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2017-02-20T00:00:00+08:00"> 2017.02.20</time>
+    </span>
 
-<span class="nb">export</span> <span class="nv">LS_OPTIONS</span><span class="o">=</span><span class="s1">'--color=auto'</span> <span class="c1"># 如果没有指定，则自动选择颜色</span>
-<span class="nb">export</span> <span class="nv">CLICOLOR</span><span class="o">=</span><span class="s1">'Yes'</span> <span class="c1">#是否输出颜色</span>
-<span class="nb">export</span> <span class="nv">LSCOLORS</span><span class="o">=</span><span class="s1">'Exfxcxdxbxegedabagacad'</span> <span class="c1">#指定颜色</span>
-<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">'ls -l'</span>
-<span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">"\[\e[0;31m\][\u@\H \w]\\</span>$<span class="s2"> \[\e[m\]"</span>
-<span class="c1"># vim:ts=4:sw=4 ...</span></pre></div>
-        <a class="btn btn-default btn-xs" href="/posts/2016/10/11/my-bashrc-backup.html">more ...</a>
-    </div>
-</article>
-<hr/>
-<article>
-    <h2><a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">让VIM记录文件上次编辑的位置</a></h2>
-    <div class="summary"><p>在<code>~/.vimrc</code>中加入如下配置:</p>
-<div class="github"><pre><span></span>autocmd BufReadPost *
-<span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
-<span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
-<span class="se">\ </span>endif
-autocmd BufReadPost *
-<span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
-<span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
-<span class="se">\ </span>endif
-syntax <span class="nb">enable</span>
-<span class="nb">set</span> nu
-</pre></div>
-<h3>参考</h3>
-<p><a href="http://www.2cto.com/os/201311/255061.html">让VIM记录文件上次编辑的位置</a></p>
-        <a class="btn btn-default btn-xs" href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">more ...</a>
-    </div>
-</article>
-<hr/>
+
+
+
+
+<span class="label label-default">Tags</span>
+<a href="/tag/machine-learning.html">machine learning</a>
+/
+<a href="/tag/deep-learning.html">deep learning</a>
+/
+<a href="/tag/probability.html">probability</a>
+    
+</footer>                </div>
+            </div>
+            -->
+            <h3>1. 随机事件和概率</h3>
+<h4>1.1全概率公式</h4>
+<p>设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&gt;0(i=1,2,\cdots,n)$，且$\sum_{i=1}^{n}{A_i}=\Omega$，
+则对任一事件$B$，有
+$$
+P(B)=\sum_{i=1}^{n}{P(A_i)\cdot P{(B|A_i)}}.
+$$
+满足公式中的$A_1,A_2,\cdots,A_n$  叫<strong>完备事件组</strong>。</p>
+<h4>1.2贝叶斯公式</h4>
+<p>设事件 $A_1,A_2,\cdots,A_n$ 构成完备事件组，则对任一事件 $B(P(B)&gt;0)$，有
+$$
+  P(A_k|B)=\frac{P(A_k)P(B|A_k)}{\sum_{i=1}^{n}{P(A_i)P(B|A_i)}}   {   (k=1,2,\cdots,n)}.
+$$</p>
+<h4>1.3伯努利概型</h4>
+<p>若实验$E$ 只有两种可能的结果：$A$ 及$\overline{A}$，记$P(A)=p,P(\overline{A}=1-p=q$，这种实验称为<strong>伯努利(Bernoulli)实验</strong>。 若将实验$E$ 重复$n$ 次，且每次实验结果互不影响（相互独立），则称为 <strong>n重伯努利实验</strong>。</p>
+<p>设每次实验中，事件$A$发生的概率为$p(0&lt;p&lt;1)$，则在 $n$ 次 重复独立实验中，$A$ 发生$k$次的概率为:
+$$
+P_n(k)=C_n^kp^k(1-p)^{n-k},k=0,1,2,\cdots,n.
+$$</p>
+<h3>2.随机变量及其分布</h3>
+<p>设实验$E$的样本空间为$\Omega$，如果对每一个样本点$\omega\in\Omega$，都有唯一实数 $X(\omega)$与之对应，称$X=X(\omega)$为样本空间$\Omega$上的<strong>随机变量</strong>。
+对于随机变量，一般分两类进行讨论，如果随机变量的取值只有有限个活无限可列个数值，则称这种随机变量为<strong>离散型随机变量</strong>。其余的统称为非离散型随机变量，在非离散型随机变量中，最重要的是<strong>连续型随机变量</strong>。</p>
+<h4>2.1离散型随机变量及其分布</h4>
+<h5>超几何分布</h5>
+<p>一般来说，在总共$N$ 件产品中，其中有$M$件次品，先从中任取$n$件（不放回地抽取），则这$n$件中所含的次品数$X$是一个离散随机变量，其概率分布为：
+$$
+P(X=k)=\frac{C_M^kC_{N-M}^{n-k}}{C_N^n},k=0,1,2,\cdots,l
+$$
+其中$l=min(M,n)$。通常称这个概率分布为<strong>超几何分布</strong>。</p>
+<h4>References</h4>
+<p><a href="https://www.amazon.cn/%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E6%95%99%E7%A8%8B-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/dp/B005EV51AO/ref=sr_1_1?ie=UTF8&amp;qid=1487571721&amp;sr=8-1&amp;keywords=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1+%E5%88%98%E5%BB%BA%E4%BA%9A">《概率论与数理统计》</a></p>
+        </div>
+        <!-- /.entry-content -->
+        <div>
+            <time datetime="2017-02-20T00:00:00+08:00">2017-02-20
+            </time>
+        </div>
+        <div>
+            <time datetime="2017-02-20T00:00:00+08:00">Beijing</time>
+        </div>
+
+<div class="pager">
+    <ul style="padding-left: 0px;">
+        <li class="previous disabled"><a>&larr; Previous</a></li>
+        <li class="next disabled"><a>Next &rarr;</a></li>
+    </ul>
+</div><!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="review-of-probability" data-title="《概率论》回顾"
+     data-url="/drafts/review-of-probability.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    var duoshuoQuery = {short_name: "synckey"};
+    (function () {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';
+        ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+    </article>
+</section>
 
             </div>
         </div>
