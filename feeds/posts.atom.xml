@@ -55,13 +55,19 @@ $$
 &lt;h5&gt;泊松定理&lt;/h5&gt;
 &lt;p&gt;设随即变量$X_n(n=1,2,\cdots,n)$服从参数$n,p_n的$二项分布，若$\mathop{lim}\limits_{n\to\infty}np_n=\lambda$，则有
 $$
-P(X_n=k)=\frac{\lambda ^ k}{k!}e^{-\lambda}
+\lim_{n\to\infty}P(X_n=k)=\frac{\lambda ^ k}{k!}e^{-\lambda}
 $$
 根据泊松定理，当$n$较大而$p$较小是，有如下近似公式成立:
 $$
 C_n^kp^k(1-p)^{n-k}\approx\frac{\lambda ^ k}{k!}e^{-\lambda},\lambda=np.
 $$&lt;/p&gt;
 &lt;p&gt;在实际应用中，当$n&amp;gt;10,p&amp;lt;0.1$时，可以用上式近似计算二项分布的概率。&lt;/p&gt;
+&lt;h5&gt;泊松分布&lt;/h5&gt;
+&lt;p&gt;如果随即变量X的概率分布为
+$$
+P(X_n=k)=\frac{\lambda ^ k}{k!}e^{-\lambda},k=0,1,2,\cdots .
+$$
+式中$\lambda&amp;gt;0$是常数，则称$X$服从以$\lambda$为参数的泊松分布，记作$X\sim P(\lambda)$。&lt;/p&gt;
 &lt;h4&gt;References&lt;/h4&gt;
 &lt;p&gt;&lt;a href="https://www.amazon.cn/%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E6%95%99%E7%A8%8B-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/dp/B005EV51AO/ref=sr_1_1?ie=UTF8&amp;amp;qid=1487571721&amp;amp;sr=8-1&amp;amp;keywords=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1+%E5%88%98%E5%BB%BA%E4%BA%9A"&gt;《概率论与数理统计》&lt;/a&gt;&lt;/p&gt;</content><category term="machine learning"></category><category term="deep learning"></category><category term="probability"></category></entry><entry><title>Notes for Leetcode</title><link href="/posts/2016/10/20/notes-for-leetcode.md.html" rel="alternate"></link><published>2016-10-20T00:00:00+08:00</published><updated>2016-10-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-10-20:/posts/2016/10/20/notes-for-leetcode.md.html</id><summary type="html">&lt;h2&gt;1.Binary Number Representation&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mb"&gt;0b1111&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// which is equals to `x = 15`; and is useful when use the number for masking.&lt;/span&gt;
