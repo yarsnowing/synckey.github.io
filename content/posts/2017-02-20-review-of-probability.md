@@ -59,7 +59,7 @@ $$
 #####泊松定理
 设随即变量$X_n(n=1,2,\cdots,n)$服从参数$n,p_n的$二项分布，若$\mathop{lim}\limits_{n\to\infty}np_n=\lambda$，则有
 $$
-P(X_n=k)=\frac{\lambda ^ k}{k!}e^{-\lambda}
+\lim_{n\to\infty}P(X_n=k)=\frac{\lambda ^ k}{k!}e^{-\lambda}
 $$
 根据泊松定理，当$n$较大而$p$较小是，有如下近似公式成立:
 $$
@@ -67,6 +67,11 @@ C_n^kp^k(1-p)^{n-k}\approx\frac{\lambda ^ k}{k!}e^{-\lambda},\lambda=np.
 $$
 
 在实际应用中，当$n>10,p<0.1$时，可以用上式近似计算二项分布的概率。
-
+#####泊松分布
+如果随即变量X的概率分布为
+$$
+P(X_n=k)=\frac{\lambda ^ k}{k!}e^{-\lambda},k=0,1,2,\cdots .
+$$
+式中$\lambda>0$是常数，则称$X$服从以$\lambda$为参数的泊松分布，记作$X\sim P(\lambda)$。
 ####References
 [《概率论与数理统计》](https://www.amazon.cn/%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E6%95%99%E7%A8%8B-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/dp/B005EV51AO/ref=sr_1_1?ie=UTF8&qid=1487571721&sr=8-1&keywords=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1+%E5%88%98%E5%BB%BA%E4%BA%9A)
