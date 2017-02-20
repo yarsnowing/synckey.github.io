@@ -29,7 +29,8 @@
     <!-- Thumbnail for wechat, when share links in wechat,it will use this piture for thumbnail.This can be specific for
          every sigle page. -->
 
-    <div id='wx_pic' style='margin:0 auto;display:none;'><img src='/static/images/{% block wechat_pic %}{{DEFAULT_WECHAT_PIC}}{% endblock %}'/></div>
+    <div id='wx_pic' style='margin:0 auto;display:none;'><img
+            src='/static/images/{% block wechat_pic %}{{DEFAULT_WECHAT_PIC}}{% endblock %}'/></div>
 
     <!--
         {% block canonical_rel %}{% endblock %}
@@ -75,22 +76,48 @@
     <!--
     <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-            -->
 
-    <!--
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-            -->
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+
+
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            tex2jax: {inlineMath: [['$', '$']]},
+            tex2jax: {inlineMath: [['$', '$']],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']},
             processEscapes: true,
         });
+       MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += 'has-jax';
+        }
+      });
 
     </script>
+            -->
+    <!--
+    <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    -->
+    <script type="text/javascript"
+            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script>
+        MathJax.Hub.Config({
+            tex2jax: {
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                inlineMath: [['$', '$'], ["\\(", "\\)"]],
+                processEscapes: true
+            },
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            "HTML-CSS": {availableFonts: ["TeX"]}
+
+        });
+    </script>
+
+
     <!-- Bootstrap -->
     {% if BOOTSTRAP_THEME %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.{{ BOOTSTRAP_THEME }}.min.css"
@@ -99,8 +126,9 @@
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css"/>
     {% endif %}
+    <!--
     <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/font-awesome.min.css" rel="stylesheet">
-
+    -->
     <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css"
           rel="stylesheet">
     {% if 'tipue_search' in PLUGINS %}
@@ -243,11 +271,14 @@
     {% if BANNER %}
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
     {% endif %}
+
     {% include 'includes/github-js.html' %}
     {% include 'includes/piwik.html' %}
     {% include 'includes/ga.html' %}
     {% include 'includes/ba.html' %}
 
     {% block scripts %}{% endblock %}
+
+
 </body>
 </html>

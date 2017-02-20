@@ -23,7 +23,7 @@ def init_default_config(pelican):
     }
 
     set_default_config(DEFAULT_CONFIG, bootstrapify_default)
-    if(pelican):
+    if (pelican):
         set_default_config(pelican.settings, bootstrapify_default)
 
 

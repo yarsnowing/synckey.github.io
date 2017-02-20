@@ -18,7 +18,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-MD_EXTENSIONS = (['codehilite(css_class=github)','markdown.extensions.tables'])
+MD_EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables'])
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -34,7 +34,7 @@ DEFAULT_PAGINATION = 30
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
-#DISQUS_SITENAME = u"synckey"
+# DISQUS_SITENAME = u"synckey"
 DUOSHUO_SITENAME = u"synckey"
 THEME = "pelican-bootstrap3"
 HIDE_SIDEBAR = True
@@ -43,10 +43,10 @@ HIDE_SIDEBAR = True
 PYGMENTS_STYLE = "github"
 
 STATIC_PATHS = ['static', 'static/images/favicon.ico']
-#ARTICLE_PATHS = ['posts']
+# ARTICLE_PATHS = ['posts']
 EXTRA_PATH_METADATA = {
     "static/images/favicon.ico": {"path": "favicon.ico"},
- #   "static/baidu_verify_eO5agZyv5R.html": {"path": "baidu_verify_eO5agZyv5R.html"},
+    #   "static/baidu_verify_eO5agZyv5R.html": {"path": "baidu_verify_eO5agZyv5R.html"},
 }
 
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
@@ -55,6 +55,6 @@ ARTICLE_SAVE_AS = ARTICLE_URL
 DISPLAY_CATEGORIES_ON_MENU = False
 
 PLUGIN_PATHS = ["plugins"]
-PLUGINS = ["neighbors", "bootstrapify","better_tables"]
+PLUGINS = ["neighbors", "bootstrapify", "better_tables"]
 
 DEFAULT_WECHAT_PIC = "wechat_logo_300x300.jpg"

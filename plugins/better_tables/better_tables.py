@@ -46,6 +46,7 @@ Usage:
 from pelican import signals, contents
 from bs4 import BeautifulSoup
 
+
 def better_tables(content):
     if isinstance(content, contents.Static):
         return
@@ -54,7 +55,7 @@ def better_tables(content):
 
     for table in soup.findAll('table'):
         # table's "border" is so 1996
-        del(table['border'])
+        del (table['border'])
 
         # col widths. not only /infuriating/ it's also not in HTML5
         for tag in table.findAll('colgroup'):
@@ -62,10 +63,11 @@ def better_tables(content):
 
         # tbody and thead's valign
         for tag in table.findAll(['tbody', 'thead']):
-            del(tag['valign'])
+            del (tag['valign'])
 
     soup.renderContents()
     content._content = soup.decode()
+
 
 def register():
     signals.content_object_init.connect(better_tables)

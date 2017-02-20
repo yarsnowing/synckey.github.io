@@ -7,8 +7,10 @@ from __future__ import unicode_literals
 
 import os
 import sys
+
 sys.path.append(os.curdir)
 from pelicanconf import *
+
 TIMEZONE = 'Asia/Shanghai'
 SITEURL = ''
 RELATIVE_URLS = False
@@ -20,8 +22,8 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = "synckey"
-#GOOGLE_ANALYTICS = ""
+# DISQUS_SITENAME = "synckey"
+# GOOGLE_ANALYTICS = ""
 DUOSHUO_SITENAME = u"synckey"
 GOOGLE_ANALYTICS = "UA-55913313-1"
 BAIDU_ANALYTICS = "1531ed173910c4c262dffb947842fe33"

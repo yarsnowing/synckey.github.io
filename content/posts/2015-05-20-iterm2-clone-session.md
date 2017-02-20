@@ -12,9 +12,11 @@ Place: Beijing
 贴入如下内容:
 
     :::bash
-    host *
-    ControlMaster auto
-    ControlPath ~/.ssh/master-%r@%h:%p
+    Host *
+        ServerAliveInterval 30
+        ControlMaster auto
+        ControlPath ~/.ssh/master-%r@%h:%p
+        ControlPersist yes 
     
 退出iterm2，重新登录即可。
 

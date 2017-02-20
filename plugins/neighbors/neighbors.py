@@ -8,6 +8,7 @@ variables to the article's context
 """
 from pelican import signals
 
+
 def iter3(seq):
     it = iter(seq)
     nxt = None
@@ -17,6 +18,7 @@ def iter3(seq):
         nxt, cur = cur, prv
     yield nxt, cur, None
 
+
 def get_translation(article, prefered_language):
     if not article:
         return None
@@ -25,22 +27,24 @@ def get_translation(article, prefered_language):
             return translation
     return article
 
+
 def set_neighbors(articles, next_name, prev_name):
     for nxt, cur, prv in iter3(articles):
-        exec("cur.{} = nxt".format(next_name))
-        exec("cur.{} = prv".format(prev_name))
+        exec ("cur.{} = nxt".format(next_name))
+        exec ("cur.{} = prv".format(prev_name))
 
         for translation in cur.translations:
-            exec(
-            "translation.{} = get_translation(nxt, translation.lang)".format(
-                next_name))
-            exec(
-            "translation.{} = get_translation(prv, translation.lang)".format(
-                prev_name))
-      
+            exec (
+                "translation.{} = get_translation(nxt, translation.lang)".format(
+                    next_name))
+            exec (
+                "translation.{} = get_translation(prv, translation.lang)".format(
+                    prev_name))
+
+
 def neighbors(generator):
     set_neighbors(generator.articles, 'next_article', 'prev_article')
-    
+
     for category, articles in generator.categories:
         articles.sort(key=(lambda x: x.date), reverse=(True))
         set_neighbors(
@@ -53,6 +57,7 @@ def neighbors(generator):
             next_name = 'next_article_in_subcategory{}'.format(index)
             prev_name = 'prev_article_in_subcategory{}'.format(index)
             set_neighbors(articles, next_name, prev_name)
+
 
 def register():
     signals.article_generator_finalized.connect(neighbors)

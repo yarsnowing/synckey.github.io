@@ -19,9 +19,11 @@ import logging
 logger = logging.getLogger(__name__)
 
 import xhtml2pdf.util
+
 if 'pyPdf' not in dir(xhtml2pdf.util):
     try:
         from xhtml2pdf.util import PyPDF2
+
         xhtml2pdf.util.pyPdf = PyPDF2
     except ImportError:
         logger.error('Failed to monkeypatch xhtml2pdf. ' +
@@ -92,7 +94,7 @@ class PdfGenerator(Generator):
             return
 
         logger.info(' [ok] writing %s' % output_pdf)
-        self.pdfcreator.createPdf(text=(header+text),
+        self.pdfcreator.createPdf(text=(header + text),
                                   output=output_pdf)
 
     def generate_context(self):

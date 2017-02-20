@@ -45,4 +45,4 @@ class TestPdfGeneration(unittest.TestCase):
                                            'this-is-a-super-article.pdf'))
         if MarkdownReader.enabled:
             assert os.path.exists(os.path.join(self.temp_path, 'pdf',
-                                  'a-markdown-powered-article.pdf'))
+                                               'a-markdown-powered-article.pdf'))
