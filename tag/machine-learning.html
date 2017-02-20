@@ -81,6 +81,12 @@
             "HTML-CSS": {availableFonts: ["TeX"]}
 
         });
+        MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
     </script>
 
 
@@ -140,6 +146,22 @@ Andy's Blog            </a>
 <div class="container">
     <div class="row">
             <div class="col-lg-8 col-md-offset-2">
+<article>
+    <h2><a href="/posts/2017/02/20/review-of-probability.html">《概率论》回顾</a></h2>
+    <div class="summary"><h3>1. 随机事件和概率</h3>
+<h4>1.1全概率公式</h4>
+<p>设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&gt;0(i=1,2,\cdots,n)$，且$\sum_{i=1}^{n}{A_i}=\Omega$，
+则对任一事件$B$，有
+$$
+P(B)=\sum_{i=1}^{n}{P(A_i)\cdot P{(B|A_i)}}.
+$$
+满足公式中的$A_1,A_2,\cdots,A_n$  叫<strong>完备事件组</strong>。</p>
+<h4>1.2贝叶斯公式</h4>
+<p>设事件 ...</p>
+        <a class="btn btn-default btn-xs" href="/posts/2017/02/20/review-of-probability.html">more ...</a>
+    </div>
+</article>
+<hr/>
 <article>
     <h2><a href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">Summary Concepts of Deep Learning</a></h2>
     <div class="summary"><h2>机器学习</h2>
@@ -235,7 +257,7 @@ wget http://people.centos.org ...</pre></div>
             </div>
             <div class="col-lg-8 col-md-offset-2">
                 <center>
-                    &copy; 2016 andy
+                    &copy; 2017 andy
                     &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
                     <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
                     <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--

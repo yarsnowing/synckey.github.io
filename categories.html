@@ -80,6 +80,12 @@
             "HTML-CSS": {availableFonts: ["TeX"]}
 
         });
+        MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
     </script>
 
 
@@ -162,11 +168,13 @@ Andy's Blog            </a>
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse-posts">posts
-                        <span class="badge pull-right">21</span></a>
+                        <span class="badge pull-right">22</span></a>
                 </h4>
             </div>
             <div id="collapse-posts" class="panel-collapse collapse">
                 <div class="panel-body">
+                    <p><span class="categories-timestamp"><time datetime="2017-02-20T00:00:00+08:00">2017.02.20</time></span>
+                        <a href="/posts/2017/02/20/review-of-probability.html">《概率论》回顾</a></p>
                     <p><span class="categories-timestamp"><time datetime="2016-10-20T00:00:00+08:00">2016.10.20</time></span>
                         <a href="/posts/2016/10/20/notes-for-leetcode.md.html">Notes for Leetcode</a></p>
                     <p><span class="categories-timestamp"><time datetime="2016-10-11T00:00:00+08:00">2016.10.11</time></span>
@@ -244,7 +252,7 @@ Andy's Blog            </a>
             </div>
             <div class="col-lg-8 col-md-offset-2">
                 <center>
-                    &copy; 2016 andy
+                    &copy; 2017 andy
                     &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
                     <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
                     <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--
