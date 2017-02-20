@@ -1,4 +1,4 @@
-Title: 《概率论》回顾
+Title: 《概率论》复习笔记
 Date: 2017-02-20
 Category: posts
 Tags: machine learning, deep learning, probability
@@ -8,7 +8,7 @@ Place: Beijing
 
 ###1. 随机事件和概率
 ####1.1全概率公式
-设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)>0(i=1,2,\cdots,n)$，且$\sum_{i=1}^{n}{A_i}=\Omega$，
+设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)>0(i=1,2,\cdots,n)$，且$\sum\limits_{i=1}^{n}{A_i}=\Omega$，
 则对任一事件$B$，有
 $$
 P(B)=\sum_{i=1}^{n}{P(A_i)\cdot P{(B|A_i)}}.
@@ -56,5 +56,17 @@ $$
 P(X=k)=C_n^kp^kq^{n-k},k=0,1,2,\cdots,n.
 $$
 式中$0<p<1,q=1-p$。称$X$服从参数为$n，p$的二项分布，记作$X\sim B(n,p)$。$(n+1)p$称为二项分布$B(n,p)$ 的**最可能出现次数**。
+#####泊松定理
+设随即变量$X_n(n=1,2,\cdots,n)$服从参数$n,p_n的$二项分布，若$\mathop{lim}\limits_{n\to\infty}np_n=\lambda$，则有
+$$
+P(X_n=k)=\frac{\lambda ^ k}{k!}e^{-\lambda}
+$$
+根据泊松定理，当$n$较大而$p$较小是，有如下近似公式成立:
+$$
+C_n^kp^k(1-p)^{n-k}\approx\frac{\lambda ^ k}{k!}e^{-\lambda},\lambda=np.
+$$
+
+在实际应用中，当$n>10,p<0.1$时，可以用上式近似计算二项分布的概率。
+
 ####References
 [《概率论与数理统计》](https://www.amazon.cn/%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E6%95%99%E7%A8%8B-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/dp/B005EV51AO/ref=sr_1_1?ie=UTF8&qid=1487571721&sr=8-1&keywords=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1+%E5%88%98%E5%BB%BA%E4%BA%9A)
