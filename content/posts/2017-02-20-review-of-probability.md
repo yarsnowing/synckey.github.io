@@ -5,7 +5,6 @@ Tags: machine learning, deep learning, probability
 Slug: review-of-probability
 Author: Andy
 Place: Beijing
-Status: draft
 
 ###1. 随机事件和概率
 ####1.1全概率公式
@@ -23,7 +22,7 @@ $$
 $$
 
 ####1.3伯努利概型
-若实验$E$ 只有两种可能的结果：$A$ 及$\overline{A}$，记$P(A)=p,P(\overline{A}=1-p=q$，这种实验称为**伯努利(Bernoulli)实验**。 若将实验$E$ 重复$n$ 次，且每次实验结果互不影响（相互独立），则称为 **n重伯努利实验**。
+若实验$E$ 只有两种可能的结果：$A$ 及$\overline{A}$，记$P(A)=p,P(\overline{A})=1-p=q$，这种实验称为**伯努利(Bernoulli)实验**。 若将实验$E$ 重复$n$ 次，且每次实验结果互不影响（相互独立），则称为 **n重伯努利实验**。
 
 设每次实验中，事件$A$发生的概率为$p(0<p<1)$，则在 $n$ 次 重复独立实验中，$A$ 发生$k$次的概率为:
 $$
@@ -40,6 +39,22 @@ $$
 P(X=k)=\frac{C_M^kC_{N-M}^{n-k}}{C_N^n},k=0,1,2,\cdots,l
 $$
 其中$l=min(M,n)$。通常称这个概率分布为**超几何分布**。
+#####两点分布
+在**一次**伯努利实验中， 只有两个可能的结果，$A$或者$\overline{A}$，并且$P(A)=p,P(\overline(A))=q=1-p$，若以$X$记事件$A$出现的次数，则$X$的分布列为:
+$$
+\begin{array}{c|cc}
+X & 0 & 1   \\\\
+\hline
+P & q & p   \\\\
+\end{array}
+$$
+即，$P(X=k)=p^kq^{1-k},k=0,1$，称$X$服从**两点分布**。
 
+#####二项分布
+在$n$重伯努利实验中，若事件$A$出现的次数记为$X$，则随机变量$X$可能的取值是$0,1,2,\cdots,n$,相应概率分布为
+$$
+P(X=k)=C_n^kp^kq^{n-k},k=0,1,2,\cdots,n.
+$$
+式中$0<p<1,q=1-p$。称$X$服从参数为$n，p$的二项分布，记作$X\sim B(n,p)$。$(n+1)p$称为二项分布$B(n,p)$ 的**最可能出现次数**。
 ####References
 [《概率论与数理统计》](https://www.amazon.cn/%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E6%95%99%E7%A8%8B-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/dp/B005EV51AO/ref=sr_1_1?ie=UTF8&qid=1487571721&sr=8-1&keywords=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1+%E5%88%98%E5%BB%BA%E4%BA%9A)
