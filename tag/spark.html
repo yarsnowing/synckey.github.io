@@ -61,14 +61,14 @@
 
     </script>
             -->
-    <!--
     <script type="text/javascript"
             src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
-    -->
+    <!--
     <script type="text/javascript"
             src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
+    -->
     <script>
         MathJax.Hub.Config({
             tex2jax: {
@@ -149,7 +149,7 @@ Andy's Blog            </a>
 <article>
     <h2><a href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html">A Misuse of Spark Broadcast</a></h2>
     <div class="summary"><p>在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：</p>
-<div class="github"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="kd">implements</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;</span> <span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="kd">implements</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;</span> <span class="o">{</span>
 
     <span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lookupTable</span><span class="o">=</span><span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
 
@@ -157,7 +157,7 @@ Andy's Blog            </a>
         <span class="k">this</span><span class="o">.</span><span class="na">lookupTable</span><span class="o">=</span><span class="n">broadcast</span><span class="o">.</span><span class="na">value</span><span class="o">();</span>
     <span class="o">}</span>
     <span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">call</span><span class="o">(</span><span class="n">String</span> <span class="n">line</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">lookupTable</span><span class="o">.</span><span class="na">containsKey ...</span></pre></div>
+        <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">lookupTable</span><span class="o">.</span><span class="na">containsKey …</span></pre></div>
         <a class="btn btn-default btn-xs" href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html">more ...</a>
     </div>
 </article>
