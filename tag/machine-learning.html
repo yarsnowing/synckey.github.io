@@ -60,15 +60,13 @@
       });
 
     </script>
-            -->
     <script type="text/javascript"
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
-    <!--
+            -->
     <script type="text/javascript"
             src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-    -->
     <script>
         MathJax.Hub.Config({
             tex2jax: {
@@ -81,9 +79,9 @@
             "HTML-CSS": {availableFonts: ["TeX"]}
 
         });
-        MathJax.Hub.Queue(function() {
+        MathJax.Hub.Queue(function () {
             var all = MathJax.Hub.getAllJax(), i;
-            for(i=0; i < all.length; i += 1) {
+            for (i = 0; i < all.length; i += 1) {
                 all[i].SourceElement().parentNode.className += ' has-jax';
             }
         });
@@ -148,15 +146,15 @@ Andy's Blog            </a>
             <div class="col-lg-8 col-md-offset-2">
 <article>
     <h2><a href="/posts/2017/02/20/review-of-probability.html">《概率论》复习笔记</a></h2>
-    <div class="summary"><h3>1. 随机事件和概率</h3>
-<h4>1.1全概率公式</h4>
+    <div class="summary"><h4>1. 随机事件和概率</h4>
+<h5>1.1全概率公式</h5>
 <p>设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&gt;0(i=1,2,\cdots,n)$，且$\sum\limits_{i=1}^{n}{A_i}=\Omega$，
 则对任一事件$B$，有
 $$
 P(B)=\sum_{i=1}^{n}{P(A_i)\cdot P{(B|A_i)}}.
 $$
 满足公式中的$A_1,A_2,\cdots,A_n$  叫<strong>完备事件组</strong>。</p>
-<h4>1.2贝叶斯公式 …</h4>
+<h5>1.2贝叶斯公式 ...</h5>
         <a class="btn btn-default btn-xs" href="/posts/2017/02/20/review-of-probability.html">more ...</a>
     </div>
 </article>
@@ -187,14 +185,14 @@ $$
 <p><p align="center">
 <img alt="SingleNeuron" class="img-responsive" src="/static/images/SingleNeuron.png" width="40%"/>
 </p></p>
-<p>神经网络的基本组成单元,叫神经元(neuron),途中的神经元是一个以$x_1,x_x,x_3$(和一个$+1$截距项(intercept term))为输入,以$h_{W,b}(x)=f(W^Tx)=f …</p>
+<p>神经网络的基本组成单元,叫神经元(neuron),途中的神经元是一个以$x_1,x_x,x_3$(和一个$+1$截距项(intercept term))为输入,以$h_{W,b}(x)=f(W^Tx)=f ...</p>
         <a class="btn btn-default btn-xs" href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">more ...</a>
     </div>
 </article>
 <hr/>
 <article>
     <h2><a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">Plot Sigmoid in Matlab</a></h2>
-    <div class="summary"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
+    <div class="summary"><div class="github"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
 <span class="n">x</span><span class="p">=</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
 <span class="n">y</span><span class="p">=</span><span class="mf">1.</span><span class="o">/</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">.*</span><span class="n">x</span><span class="p">)];</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s">'b'</span><span class="p">);</span>
@@ -220,7 +218,7 @@ $$
 <h3>1.逻辑回归的建模</h3>
 <p>首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然
 就想到使用 $Bernoulli$ 对 $y$ 的条件分布进行建模。$Bernoulli$
-分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli …</p>
+分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli ...</p>
         <a class="btn btn-default btn-xs" href="/posts/2015/12/24/where-does-sigmoid-come-from.html">more ...</a>
     </div>
 </article>
@@ -233,13 +231,13 @@ $$
 <li>Centos 6.4</li>
 </ul>
 <h3>Install boost</h3>
-<div class="highlight"><pre><span></span>wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
+<div class="github"><pre><span></span>wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
 tar xzf boost_1_58_0.tar.gz
 <span class="nb">cd</span> boost_1_58_0
 sudo ./bootstrap.sh
 sudo ./bjam --layout<span class="o">=</span>tagged install 
 <span class="nb">cd</span> /etc/yum.repos.d
-wget http://people.centos.org …</pre></div>
+wget http://people.centos.org ...</pre></div>
         <a class="btn btn-default btn-xs" href="/posts/2015/06/09/run-vw-on-hadoop.html">more ...</a>
     </div>
 </article>
