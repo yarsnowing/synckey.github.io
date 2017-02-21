@@ -164,8 +164,22 @@ $(function () {
  - 2016.04.17 北京国际长跑节半程马拉松，耗时: 01:47:35，平均配速04:55/km。
 
 ###有图有真相
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="/static/images/2014_2016_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block"/>
+    </div>
+  <div class="col-sm-4">
+        <img src="/static/images/2014_2015_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block"/>
+  </div>
+  <div class="col-sm-4">
+        <img src="/static/images/2015_tnf_and_half_marathon.jpg" alt="tnf"  class="carousel-inner  img-rounded img-responsive center-block"/>
+  </div>
+</div>
+<!--
 <container>
 <img src="/static/images/2014_2016_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block" style='width: 60%;'/>
 <img src="/static/images/2014_2015_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block" style='width: 60%;'/>
 <img src="/static/images/2015_tnf_and_half_marathon.jpg" alt="tnf"  class="carousel-inner  img-rounded img-responsive center-block" style='width: 60%;'/>
 </container>
+-->
