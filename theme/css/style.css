@@ -4,6 +4,9 @@ body {
     font-size: 16px;
     color: #111;
     font-family: "Helvetica Neue", " Helvetica", "-apple-system", "Microsoft YaHei UI", "Microsoft YaHei", "Arial", "sans-serif";
+    /*
+    font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    */
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     font-weight: 300;
@@ -246,6 +249,22 @@ figure.floatcenter, .align-center {
         font-size: 16px;
     }
 }
+.container blockquote{
+    border-left: None;
+}
+.container blockquote p {
+    font-family: Lora, Georgia, 'Times New Roman', '楷体', 'STKaiti', serif;
+    font-style: italic;
+    font-size: 100%;
+}
+.container blockquote small {
+    display: block;
+    color: #888;
+}
+.container blockquote small::before {
+    content: '\2014 \00A0';
+}
+
 
 
 
