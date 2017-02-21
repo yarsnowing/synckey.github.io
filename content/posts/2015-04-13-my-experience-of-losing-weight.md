@@ -46,12 +46,12 @@ $(function () {
 </script>
 
 
->声明:本文是个人减肥经验,不适合每一个人,请勿盲目采取本文的方法,作者不对任何不良后果负责(当然如果减肥成功,请把功劳分我一份).
+>声明:本文是个人减肥经验，不适合每一个人，请勿盲目采取本文的方法，作者不对任何不良后果负责。
 
 
 ##心理准备
 
-###1.动机---为什么要减肥?
+###1.动机——为什么要减肥?
 
 想要减肥的理由有很多，为了更漂亮，身材更好，更健康blabla。就我个人而言，一方面是因为当时实在太胖(2014.10.01有将近90kg)，行动缓慢，上个三楼气喘吁吁，
 而且看起来做任何动作都像是慢半拍；另一方面,也是最重要的，是看了李笑来老师的一本书 [《把时间当朋友》](http://www.amazon.cn/%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E4%BD%9C%E6%9C%8B%E5%8F%8B-%E6%9D%8E%E7%AC%91%E6%9D%A5/dp/B00FU3CRZI/ref=sr_1_1?ie=UTF8&qid=1428981468&sr=8-1&keywords=%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E6%9C%8B%E5%8F%8B)，书里面的话，使我下了跑步的决心。
@@ -167,13 +167,20 @@ $(function () {
 
 <div class="row">
     <div class="col-sm-4">
+    <figure>
         <img src="/static/images/2014_2016_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block"/>
+        <div class="caption">2014 vs 2015</div>
+    </figure>
     </div>
   <div class="col-sm-4">
+    <figure>
         <img src="/static/images/2014_2015_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block"/>
+        <div class="caption" >2014 vs 2015</div>
+    </figure>
   </div>
   <div class="col-sm-4">
         <img src="/static/images/2015_tnf_and_half_marathon.jpg" alt="tnf"  class="carousel-inner  img-rounded img-responsive center-block"/>
+        <div class="caption">北京半马 vs tnf 100</div>
   </div>
 </div>
 <!--
