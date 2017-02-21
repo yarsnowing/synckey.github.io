@@ -18,7 +18,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-MD_EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables'])
+EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables'])
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),

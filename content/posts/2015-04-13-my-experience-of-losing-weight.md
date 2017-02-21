@@ -183,6 +183,8 @@ $(function () {
         <div class="caption">北京半马 vs tnf 100</div>
   </div>
 </div>
+
+😂
 <!--
 <container>
 <img src="/static/images/2014_2016_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block" style='width: 60%;'/>
