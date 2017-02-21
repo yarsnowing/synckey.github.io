@@ -1062,13 +1062,20 @@ $(function () {
 &lt;h3&gt;有图有真相&lt;/h3&gt;
 &lt;div class="row"&gt;
 &lt;div class="col-sm-4"&gt;
+&lt;figure&gt;
 &lt;img alt="compare" class="img-responsive carousel-inner img-rounded center-block" src="/static/images/2014_2016_compare.jpg"/&gt;
+&lt;div class="caption"&gt;2014 vs 2015&lt;/div&gt;
+&lt;/figure&gt;
 &lt;/div&gt;
 &lt;div class="col-sm-4"&gt;
+&lt;figure&gt;
 &lt;img alt="compare" class="img-responsive carousel-inner img-rounded center-block" src="/static/images/2014_2015_compare.jpg"/&gt;
+&lt;div class="caption"&gt;2014 vs 2015&lt;/div&gt;
+&lt;/figure&gt;
 &lt;/div&gt;
 &lt;div class="col-sm-4"&gt;
 &lt;img alt="tnf" class="img-responsive carousel-inner img-rounded center-block" src="/static/images/2015_tnf_and_half_marathon.jpg"/&gt;
+&lt;div class="caption"&gt;tnf 100 vs 北京半马&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;!--

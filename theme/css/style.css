@@ -264,6 +264,15 @@ figure.floatcenter, .align-center {
 .container blockquote small::before {
     content: '\2014 \00A0';
 }
+.container .caption {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    font-size: 80%;
+    color: #777;
+}
 
 
 
