@@ -62,7 +62,7 @@ $$
 式中$\lambda&amp;gt;0$是常数，则称$X$服从以$\lambda$为参数的泊松分布，记作$X\sim P(\lambda)$。&lt;/p&gt;
 &lt;h5&gt;References&lt;/h5&gt;
 &lt;p&gt;&lt;a href="https://www.amazon.cn/%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E6%95%99%E7%A8%8B-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/dp/B005EV51AO/ref=sr_1_1?ie=UTF8&amp;amp;qid=1487571721&amp;amp;sr=8-1&amp;amp;keywords=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1+%E5%88%98%E5%BB%BA%E4%BA%9A"&gt;《概率论与数理统计》&lt;/a&gt;&lt;/p&gt;</summary><category term="machine learning"></category><category term="deep learning"></category><category term="probability"></category></entry><entry><title>Notes for Leetcode</title><link href="/posts/2016/10/20/notes-for-leetcode.md.html" rel="alternate"></link><published>2016-10-20T00:00:00+08:00</published><updated>2016-10-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-10-20:posts/2016/10/20/notes-for-leetcode.md.html</id><summary type="html">&lt;h2&gt;1.Binary Number Representation&lt;/h2&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mb"&gt;0b1111&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// which is equals to `x = 15`; and is useful when use the number for masking.&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mb"&gt;0b1111&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// which is equals to `x = 15`; and is useful when use the number for masking.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;2.Rotate Function&lt;/h2&gt;
 &lt;h3&gt;Original Question&lt;/h3&gt;
@@ -74,7 +74,7 @@ F(k) = 0 * B_k[0] + 1 * B_k[1] + \cdots + (n-1) * B_k[n-1].
 $$
 Calculate the maximum value of $F(0), F(1), \cdots, F(n-1)$.
 Example:&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;A = [4, 3, 2, 6]
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;A = [4, 3, 2, 6]
 F(0) = (0 * 4) + (1 * 3) + (2 * 2) + (3 * 6) = 0 + 3 + 4 + 18 = 25
 F(1) = (0 * 6) + (1 * 4) + (2 * 3) + (3 * 2) = 0 + 4 + 6 + 6 = 16
 F(2) = (0 * 2) + (1 * 6) + (2 * 4) + (3 * 3) = 0 + 6 + 8 + 9 = 23
@@ -87,7 +87,7 @@ $$
    D(n) = D(n-1) - A.length*A[n];
 $$
 即可得解：&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;maxRotateFunction&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;maxRotateFunction&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;length&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
@@ -122,7 +122,7 @@ $$
 &lt;h3&gt;组合计算&lt;/h3&gt;
 &lt;p&gt;$C_{n}^{m}=\frac{A_{n}^{m}}{n!}=\frac{n(n-1)(n-2)\cdots(n-m+1)}{m!}$&lt;/p&gt;
 &lt;p&gt;上述公式在计算的时候已经避免直接计算$n!$,防止溢出，最终得到的解如下(参考&lt;a href="https://discuss.leetcode.com/topic/62617/java-combination-number"&gt;JAVA combination number&lt;/a&gt;)：&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;combine&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;combine&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="kt"&gt;long&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;++)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;res&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -139,13 +139,13 @@ $$
 &lt;span class="o"&gt;}}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Convert Char to Numeric&lt;/h2&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Character&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getNumericValue&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="sc"&gt;'5'&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Character&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getNumericValue&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="sc"&gt;'5'&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sc"&gt;'5'&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="sc"&gt;'0'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions"&gt;Solution to Convert a Number to Hexadecimal&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://leetcode.com/problems/rotate-function/"&gt;Rotate Function&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8"&gt;Java Solution O(n) with non mathametical explaination&lt;/a&gt;&lt;/p&gt;</summary><category term="algorithm"></category></entry><entry><title>My Bashrc Backup</title><link href="/posts/2016/10/11/my-bashrc-backup.html" rel="alternate"></link><published>2016-10-11T00:00:00+08:00</published><updated>2016-10-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-10-11:posts/2016/10/11/my-bashrc-backup.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .bashrc&lt;/span&gt;
+&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8"&gt;Java Solution O(n) with non mathametical explaination&lt;/a&gt;&lt;/p&gt;</summary><category term="algorithm"></category></entry><entry><title>My Bashrc Backup</title><link href="/posts/2016/10/11/my-bashrc-backup.html" rel="alternate"></link><published>2016-10-11T00:00:00+08:00</published><updated>2016-10-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-10-11:posts/2016/10/11/my-bashrc-backup.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .bashrc&lt;/span&gt;
 &lt;span class="c1"&gt;# Source global definitions&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f /etc/bashrc &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
     . /etc/bashrc
@@ -160,19 +160,19 @@ $$
 &lt;span class="c1"&gt;# vim:ts=4:sw=4&lt;/span&gt;
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;:/usr/local/bin/
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="tools"></category><category term="vim"></category><category term="linux"></category><category term="config"></category><category term="macos"></category></entry><entry><title>JVM Monitor Tool---jvisualvm</title><link href="/posts/2016/07/26/jvm-monitor-tool-jvisualvm.html" rel="alternate"></link><published>2016-07-26T00:00:00+08:00</published><updated>2016-07-26T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-07-26:posts/2016/07/26/jvm-monitor-tool-jvisualvm.html</id><summary type="html">&lt;h2&gt;通过 jvisualvm 查看 jvm 内部详细信息&lt;/h2&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jvisualvm -Dcom.sun.management.jmxremote.port&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8999&lt;/span&gt; -Dcom.sun.management.jmxremote.ssl&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jvisualvm -Dcom.sun.management.jmxremote.port&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8999&lt;/span&gt; -Dcom.sun.management.jmxremote.ssl&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
  -Dcom.sun.management.jmxremote.authenticate&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; -Djava.rmi.server.hostname&lt;span class="o"&gt;=&lt;/span&gt;10.86.46.252
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;查看哪个线程使用 cpu 最多&lt;/h2&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ps -mp &lt;span class="m"&gt;2633&lt;/span&gt; -o THREAD,tid,time &lt;span class="p"&gt;|&lt;/span&gt; sort -rn
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ps -mp &lt;span class="m"&gt;2633&lt;/span&gt; -o THREAD,tid,time &lt;span class="p"&gt;|&lt;/span&gt; sort -rn
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;找到占用 cpu 时间最多的线程。然后将线程 id 转换成16进制格式:&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; :::bash
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; :::bash
  printf "%x\n" 3626
  e18
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;最后用 jstack 查看线程的运行 stack:&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jstack &lt;span class="m"&gt;2633&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;grep e18 -A 30
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jstack &lt;span class="m"&gt;2633&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;grep e18 -A 30
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://blog.chinaunix.net/uid-10449864-id-3463151.html"&gt;生产环境下JAVA进程高CPU占用故障排查&lt;/a&gt;&lt;/p&gt;</summary><category term="java"></category><category term="posts"></category><category term="jvm"></category><category term="profile"></category><category term="trouble shooting"></category></entry><entry><title>上品饺子</title><link href="/posts/2016/04/20/shang-pin-jiao-zi.html" rel="alternate"></link><published>2016-04-20T00:00:00+08:00</published><updated>2016-04-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-04-20:posts/2016/04/20/shang-pin-jiao-zi.html</id><summary type="html">&lt;p&gt;在住的楼下，有一家不起眼的水饺店，叫上品饺子。饺子店房子很矮，门口挺破。从门口路过很多次，可是从来没有进去过——那样的外观让人一点食欲也没有。可是有一天突然很想吃水饺，就推门走了进去。里面并不大，就4,5张桌子，每个桌子能坐4个人。叫了一碗韭菜鸡蛋的水饺，汤饺。大概10分钟，饺子端上来了，碗很大，汤色是暗红色的，加了醋和酱油，汤上还漂浮着几根香菜梗，闻起来很香。水饺很大，很饱满，尝了一口，很鲜。饺子吃起来是浓浓的韭菜香，是纯手工包的。本来已经做好了吃速冻睡觉的准备，但这满满的一大碗人工包的饺子，的确让人欣喜。&lt;/p&gt;
@@ -320,7 +320,7 @@ $$
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary><category term="英语"></category><category term="语法"></category></entry><entry><title>让VIM记录文件上次编辑的位置</title><link href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html" rel="alternate"></link><published>2016-03-11T00:00:00+08:00</published><updated>2016-03-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-03-11:posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html</id><summary type="html">&lt;p&gt;在&lt;code&gt;~/.vimrc&lt;/code&gt;中加入如下配置:&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd BufReadPost *
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd BufReadPost *
 &lt;span class="se"&gt;\ &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;gt;0&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;lt;&lt;span class="o"&gt;=&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;$&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="se"&gt;\ &lt;/span&gt;exe &lt;span class="s2"&gt;"normal g'\""&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="se"&gt;\ &lt;/span&gt;endif
@@ -565,7 +565,7 @@ $$
 &lt;li&gt;Ctrl+y 粘贴&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://www.xiaozhou.net/got_hhkb_pro_2-2013-06-03.html"&gt;码农神器HHKB Pro2入手与开箱&lt;/a&gt;&lt;/p&gt;</summary><category term="hhkb"></category><category term="keyboad"></category></entry><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><published>2015-12-24T00:00:00+08:00</published><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;p&gt;&lt;a href="http://www.xiaozhou.net/got_hhkb_pro_2-2013-06-03.html"&gt;码农神器HHKB Pro2入手与开箱&lt;/a&gt;&lt;/p&gt;</summary><category term="hhkb"></category><category term="keyboad"></category></entry><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><published>2015-12-24T00:00:00+08:00</published><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)];&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -660,7 +660,7 @@ $$&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://open.163.com/special/opencourse/machinelearning.html"&gt;Andrew Ng Machine Learning &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.cs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf"&gt;Michael I. Jordan The exponential family: Basics&lt;/a&gt;&lt;/p&gt;</summary><category term="machine learning"></category><category term="technology"></category><category term="logistic regression"></category></entry><entry><title>A Misuse of Spark Broadcast</title><link href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html" rel="alternate"></link><published>2015-11-03T00:00:00+08:00</published><updated>2015-11-03T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-11-03:posts/2015/11/03/a-misuse-of-spark-broadcast.html</id><summary type="html">&lt;p&gt;在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HashMap&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;();&lt;/span&gt;
 
@@ -677,7 +677,7 @@ $$&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;结果发现task的序列化时间还是很长。事实上，这个类实在Driver上被实例化的，Test的成员变量&lt;code&gt;lookupTable&lt;/code&gt;是要被序列化并奋发到worker的。改成如下
 的代码，才能正确的使用spark的broadcast广播数据。&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Broadcast&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;bLookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;Test&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Broadcast&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
         &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;bLookupTable&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -698,7 +698,7 @@ $$&lt;/p&gt;
 &lt;li&gt;Centos 6.4&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Install boost&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
 tar xzf boost_1_58_0.tar.gz
 &lt;span class="nb"&gt;cd&lt;/span&gt; boost_1_58_0
 sudo ./bootstrap.sh
@@ -724,7 +724,7 @@ bash
 sudo yum install devtoolset-2-binutils-devel.x86_64 devtoolset-2-binutils.x86_64 -y
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Install vw&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
 tar xzf vowpal_wabbit.tar.gz
 &lt;span class="nb"&gt;cd&lt;/span&gt; vowpal_wabbit-7.10
 sudo ./autogen.sh
@@ -749,15 +749,15 @@ and mapscript-yarn.sh
 -file ./libs
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Run test job&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
 sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.com:54310/user/xxx/test_data/
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Refrences:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/"&gt;vowpal wabbit on hadoop&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</summary><category term="hadoop"></category><category term="machine learning"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><published>2015-05-20T00:00:00+08:00</published><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-05-20:posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
+&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</summary><category term="hadoop"></category><category term="machine learning"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><published>2015-05-20T00:00:00+08:00</published><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-05-20:posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;贴入如下内容:&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Host *
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Host *
     ServerAliveInterval 30
     ControlMaster auto
     ControlPath ~/.ssh/master-%r@%h:%p
@@ -808,10 +808,7 @@ $(function () {
 &lt;/blockquote&gt;
 &lt;h2&gt;心理准备&lt;/h2&gt;
 &lt;h3&gt;1.动机——为什么要减肥?&lt;/h3&gt;
-&lt;p&gt;想要减肥的理由有很多，为了更漂亮，身材更好，更健康blabla。就我个人而言，一方面是因为当时实在太胖(2014.10.01有将近90kg)，行动缓慢，上个三楼气喘吁吁，
-而且看起来做任何动作都像是慢半拍；另一方面,也是最重要的，是看了李笑来老师的一本书 &lt;a href="http://www.amazon.cn/%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E4%BD%9C%E6%9C%8B%E5%8F%8B-%E6%9D%8E%E7%AC%91%E6%9D%A5/dp/B00FU3CRZI/ref=sr_1_1?ie=UTF8&amp;amp;qid=1428981468&amp;amp;sr=8-1&amp;amp;keywords=%E6%8A%8A%E6%97%B6%E9%97%B4%E5%BD%93%E6%9C%8B%E5%8F%8B"&gt;《把时间当朋友》&lt;/a&gt;，书里面的话，使我下了跑步的决心。
- 那段话的大意是&lt;code&gt;如果一个男人在24岁的时候不管通过什么途径知道，如果每周坚持3-4次的长跑，那到他他50多岁别人已经不行了的时候，他还能享受性生活&lt;/code&gt;。
- 嗯，就为这个，要跑步,要减肥。&lt;/p&gt;
+&lt;p&gt;首先，要想清楚为什么要减肥？为了更漂亮，身材更好，为了不当人见人厌的死胖子？&lt;/p&gt;
 &lt;h3&gt;2.目标和计划&lt;/h3&gt;
 &lt;p&gt;有了动机以后就可以制定目标了，很多人一开始就把目标定在减20斤减30斤，这个目标是很具体的，看起来也是可达成的，但是很难坚持下去，
 因为可能折腾了一个月，体重还是没有任何变化，就丧失信心，中途放弃了。对我个人而言，我的目标其实就是完成计划，不是减多少斤，而是坚持了多久，做了多少天运动。
@@ -914,13 +911,14 @@ $(function () {
 &lt;div class="caption"&gt;北京半马 vs tnf 100&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;p&gt;😂
 &lt;!--
 &lt;container&gt;
 &lt;img src="/static/images/2014_2016_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block" style='width: 60%;'/&gt;
 &lt;img src="/static/images/2014_2015_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block" style='width: 60%;'/&gt;
 &lt;img src="/static/images/2015_tnf_and_half_marathon.jpg" alt="tnf"  class="carousel-inner  img-rounded img-responsive center-block" style='width: 60%;'/&gt;
 &lt;/container&gt;
---&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Improve Safety On The Road</title><link href="/posts/2014/12/30/improve-safety-on-the-road.html" rel="alternate"></link><published>2014-12-30T00:00:00+08:00</published><updated>2014-12-30T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2014-12-30:posts/2014/12/30/improve-safety-on-the-road.html</id><summary type="html">&lt;blockquote&gt;
+--&gt;&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Improve Safety On The Road</title><link href="/posts/2014/12/30/improve-safety-on-the-road.html" rel="alternate"></link><published>2014-12-30T00:00:00+08:00</published><updated>2014-12-30T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2014-12-30:posts/2014/12/30/improve-safety-on-the-road.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;The only way to improve safety on the road is to severely punish driving offenders. To what extent do you agree or disagree?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;

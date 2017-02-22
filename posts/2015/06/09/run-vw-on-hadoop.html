@@ -191,7 +191,7 @@ Andy's Blog            </a>
 <li>Centos 6.4</li>
 </ul>
 <h3>Install boost</h3>
-<div class="github"><pre><span></span>wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
+<div class="highlight"><pre><span></span>wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
 tar xzf boost_1_58_0.tar.gz
 <span class="nb">cd</span> boost_1_58_0
 sudo ./bootstrap.sh
@@ -217,7 +217,7 @@ bash
 sudo yum install devtoolset-2-binutils-devel.x86_64 devtoolset-2-binutils.x86_64 -y
 </pre></div>
 <h3>Install vw</h3>
-<div class="github"><pre><span></span>wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
+<div class="highlight"><pre><span></span>wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
 tar xzf vowpal_wabbit.tar.gz
 <span class="nb">cd</span> vowpal_wabbit-7.10
 sudo ./autogen.sh
@@ -242,7 +242,7 @@ and mapscript-yarn.sh
 -file ./libs
 </pre></div>
 <h3>Run test job</h3>
-<div class="github"><pre><span></span>hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
+<div class="highlight"><pre><span></span>hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
 sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.com:54310/user/xxx/test_data/
 </pre></div>
 <p>Refrences:</p>

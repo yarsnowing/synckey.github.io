@@ -214,7 +214,7 @@ $$
 <article>
     <h2><a href="/posts/2016/10/20/notes-for-leetcode.md.html">Notes for Leetcode</a></h2>
     <div class="summary"><h2>1.Binary Number Representation</h2>
-<div class="github"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mb">0b1111</span><span class="o">;</span> <span class="c1">// which is equals to `x = 15`; and is useful when use the number for masking.</span>
+<div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mb">0b1111</span><span class="o">;</span> <span class="c1">// which is equals to `x = 15`; and is useful when use the number for masking.</span>
 </pre></div>
 <h2>2.Rotate Function</h2>
 <h3>Original Question</h3>
@@ -227,7 +227,7 @@ $$
 <hr/>
 <article>
     <h2><a href="/posts/2016/10/11/my-bashrc-backup.html">My Bashrc Backup</a></h2>
-    <div class="summary"><div class="github"><pre><span></span><span class="c1"># .bashrc</span>
+    <div class="summary"><div class="highlight"><pre><span></span><span class="c1"># .bashrc</span>
 <span class="c1"># Source global definitions</span>
 <span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
     . /etc/bashrc
@@ -258,11 +258,11 @@ $$
 <article>
     <h2><a href="/posts/2016/07/26/jvm-monitor-tool-jvisualvm.html">JVM Monitor Tool---jvisualvm</a></h2>
     <div class="summary"><h2>通过 jvisualvm 查看 jvm 内部详细信息</h2>
-<div class="github"><pre><span></span>jvisualvm -Dcom.sun.management.jmxremote.port<span class="o">=</span><span class="m">8999</span> -Dcom.sun.management.jmxremote.ssl<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+<div class="highlight"><pre><span></span>jvisualvm -Dcom.sun.management.jmxremote.port<span class="o">=</span><span class="m">8999</span> -Dcom.sun.management.jmxremote.ssl<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
  -Dcom.sun.management.jmxremote.authenticate<span class="o">=</span><span class="nb">false</span> -Djava.rmi.server.hostname<span class="o">=</span>10.86.46.252
 </pre></div>
 <h2>查看哪个线程使用 cpu 最多</h2>
-<div class="github"><pre><span></span>ps -mp <span class="m">2633</span> -o THREAD,tid,time <span class="p">|</span> sort -rn
+<div class="highlight"><pre><span></span>ps -mp <span class="m">2633</span> -o THREAD,tid,time <span class="p">|</span> sort -rn
 </pre></div>
 <p>找到占用 cpu 时间最多的线程。然后将线程 id 转换成16进制格式 ...</p>
         <a class="btn btn-default btn-xs" href="/posts/2016/07/26/jvm-monitor-tool-jvisualvm.html">more ...</a>
@@ -299,7 +299,7 @@ $$
 <article>
     <h2><a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">让VIM记录文件上次编辑的位置</a></h2>
     <div class="summary"><p>在<code>~/.vimrc</code>中加入如下配置:</p>
-<div class="github"><pre><span></span>autocmd BufReadPost *
+<div class="highlight"><pre><span></span>autocmd BufReadPost *
 <span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
 <span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
 <span class="se">\ </span>endif
@@ -361,7 +361,7 @@ syntax <span class="nb">enable</span>
 <hr/>
 <article>
     <h2><a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">Plot Sigmoid in Matlab</a></h2>
-    <div class="summary"><div class="github"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
+    <div class="summary"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
 <span class="n">x</span><span class="p">=</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
 <span class="n">y</span><span class="p">=</span><span class="mf">1.</span><span class="o">/</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">.*</span><span class="n">x</span><span class="p">)];</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s">'b'</span><span class="p">);</span>
@@ -395,7 +395,7 @@ syntax <span class="nb">enable</span>
 <article>
     <h2><a href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html">A Misuse of Spark Broadcast</a></h2>
     <div class="summary"><p>在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：</p>
-<div class="github"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="kd">implements</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;</span> <span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="kd">implements</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;</span> <span class="o">{</span>
 
     <span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lookupTable</span><span class="o">=</span><span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
 
@@ -416,7 +416,7 @@ syntax <span class="nb">enable</span>
 <li>Centos 6.4</li>
 </ul>
 <h3>Install boost</h3>
-<div class="github"><pre><span></span>wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
+<div class="highlight"><pre><span></span>wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
 tar xzf boost_1_58_0.tar.gz
 <span class="nb">cd</span> boost_1_58_0
 sudo ./bootstrap.sh
@@ -429,10 +429,10 @@ wget http://people.centos.org ...</pre></div>
 <hr/>
 <article>
     <h2><a href="/posts/2015/05/20/iterm2-clone-session.html">iterm2 clone session</a></h2>
-    <div class="summary"><div class="github"><pre><span></span>vim ~/.ssh/config
+    <div class="summary"><div class="highlight"><pre><span></span>vim ~/.ssh/config
 </pre></div>
 <p>贴入如下内容:</p>
-<div class="github"><pre><span></span>Host *
+<div class="highlight"><pre><span></span>Host *
     ServerAliveInterval 30
     ControlMaster auto
     ControlPath ~/.ssh/master-%r@%h:%p

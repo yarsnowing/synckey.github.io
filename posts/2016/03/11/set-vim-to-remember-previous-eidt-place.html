@@ -192,7 +192,7 @@ Andy's Blog            </a>
             </div>
             -->
             <p>在<code>~/.vimrc</code>中加入如下配置:</p>
-<div class="github"><pre><span></span>autocmd BufReadPost *
+<div class="highlight"><pre><span></span>autocmd BufReadPost *
 <span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
 <span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
 <span class="se">\ </span>endif

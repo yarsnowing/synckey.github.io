@@ -146,7 +146,7 @@ Andy's Blog            </a>
             <div class="col-lg-8 col-md-offset-2">
 <article>
     <h2><a href="/posts/2016/10/11/my-bashrc-backup.html">My Bashrc Backup</a></h2>
-    <div class="summary"><div class="github"><pre><span></span><span class="c1"># .bashrc</span>
+    <div class="summary"><div class="highlight"><pre><span></span><span class="c1"># .bashrc</span>
 <span class="c1"># Source global definitions</span>
 <span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
     . /etc/bashrc
@@ -166,7 +166,7 @@ Andy's Blog            </a>
 <article>
     <h2><a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">让VIM记录文件上次编辑的位置</a></h2>
     <div class="summary"><p>在<code>~/.vimrc</code>中加入如下配置:</p>
-<div class="github"><pre><span></span>autocmd BufReadPost *
+<div class="highlight"><pre><span></span>autocmd BufReadPost *
 <span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
 <span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
 <span class="se">\ </span>endif
