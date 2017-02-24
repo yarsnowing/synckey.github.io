@@ -98,11 +98,13 @@ $C_{n}^{m}=\frac{A_{n}^{m}}{n!}=\frac{n(n-1)(n-2)\cdots(n-m+1)}{m!}$
     }}
     
     
-##Convert Char to Numeric
+### 4.Convert Char to Numeric
 
     :::java
     Character.getNumericValue('5');
      int number = '5' - '0';
+
+### 5.将一个数字二进制表示的第一个1后面的所有位都置为1，例如input 是`5`，二进制表示是`101`，希望得到`111`。
 
 ###References
 [Solution to Convert a Number to Hexadecimal](https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions)
