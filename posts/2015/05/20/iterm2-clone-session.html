@@ -68,7 +68,7 @@
 
     </script>
     <script type="text/javascript"
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
             -->
     <script type="text/javascript"
@@ -192,7 +192,7 @@ Andy's Blog            </a>
 </pre></div>
 <p>贴入如下内容:</p>
 <div class="highlight"><pre><span></span>Host *
-    ServerAliveInterval 30
+    ServerAliveInterval <span class="m">30</span>
     ControlMaster auto
     ControlPath ~/.ssh/master-%r@%h:%p
     ControlPersist yes
