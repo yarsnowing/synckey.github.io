@@ -119,6 +119,19 @@
                 all[i].SourceElement().parentNode.className += ' has-jax';
             }
         });
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
 
@@ -175,114 +188,121 @@
 
 </head>
 <body>
-
-<div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top"
+<div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %}"
      role="navigation">
-    <div class="col-lg-8 col-md-offset-2">
-        <!--
+    <!--
+<div class="col-lg-8 col-md-offset-2">
+-->
     <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
-    -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
             <a href="{{ SITEURL }}/" class="navbar-brand">
                 {% if SITELOGO %}<img src="{{ SITEURL }}/{{ SITELOGO }}" width="{{ SITELOGO_SIZE }}"/> {% endif %}
                 {% if not HIDE_SITENAME %}{{ SITENAME }}{% endif %}
             </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i
-                        class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-                {% for title, link in MENUITEMS %}
-                <li><a href="{{ link }}">{{ title }}</a></li>
-                {% endfor %}
-                {% if DISPLAY_PAGES_ON_MENU %}
-                {% for p in PAGES %}
-                <li
-                        {% if p== page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
-                    {{ p.menulabel|default(p.title) }}
-                </a></li>
-                {% endfor %}
-                {% endif %}
-                {% if DISPLAY_CATEGORIES_ON_MENU %}
-                {% for cat, null in categories %}
-                <li {% if cat== category %}class="active" {% endif %}>
-                    <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
-                </li>
-                {% endfor %}
-                {% endif %}
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                {% if 'tipue_search' in PLUGINS %}
-                <li><span>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i
+                                class="fa fa-th-list"></i><span class="icon-label">Archives</span></a>
+                        {% for title, link in MENUITEMS %}
+                    </li>
+                    <li><a href="{{ link }}">{{ title }}</a></li>
+                    {% endfor %}
+                    {% if DISPLAY_PAGES_ON_MENU %}
+                    {% for p in PAGES %}
+                    <li
+                            {% if p== page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
+                        {{ p.menulabel|default(p.title) }}
+                    </a></li>
+                    {% endfor %}
+                    {% endif %}
+                    {% if DISPLAY_CATEGORIES_ON_MENU %}
+                    {% for cat, null in categories %}
+                    <li {% if cat== category %}class="active" {% endif %}>
+                        <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+                </ul>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="baidu.com"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a>
+                        </li>
+                        <li><a href="/dd"><i class="fa fa-th-list"></i><span class="icon-label">DD</span></a></li>
+                        {% if 'tipue_search' in PLUGINS %}
+                        <li><span>
                 <form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
                     <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"
                            required>
                 </form></span>
-                </li>
-                {% endif %}
-                <!--
-                <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i
-                        class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-                        -->
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-</div> <!-- /.navbar -->
-<!-- Banner -->
-{% if BANNER and BANNER_ALL_PAGES %}
-{% include 'includes/banner.html' %}
-{% elif BANNER and not BANNER_ALL_PAGES %}
-{% block banner %}{% endblock %}
-{% endif %}
-<!-- End Banner -->
-<div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
-    <div class="row">
-        {% if not HIDE_SIDEBAR or ABOUT_ME %}
-        <div class="col-sm-8">
-            {% else %}
-            <div class="col-lg-8 col-md-offset-2">
-                {% endif %}
-                {% block breadcrumbs %}
-                {% endblock %}
-                {% block content %}
-                {% endblock %}
-            </div>
-            {% if not HIDE_SIDEBAR or ABOUT_ME %}
-            <div class="col-sm-3" id="sidebar">
-                <aside>
-                    {% if ABOUT_ME %}
-                    {% include 'includes/aboutme.html' %}
-                    {% endif %}
-                    {% if not HIDE_SIDEBAR %}
-                    {% include 'includes/sidebar.html' %}
-                    {% endif %}
-                </aside>
-            </div>
-            {% endif %}
-        </div>
-    </div>
-    {% include 'includes/footer.html' %}
+                        </li>
+                        {% endif %}
+                        <!--
+                        <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i
+                                class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+                                -->
+                    </ul>
+                    <!-- /.navbar-collapse -->
+                </div>
 
+            </div>
 
-    {% if BANNER %}
-    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
+        </div>
+    </div> <!-- /.navbar -->
+    <!-- Banner -->
+    {% if BANNER and BANNER_ALL_PAGES %}
+    {% include 'includes/banner.html' %}
+    {% elif BANNER and not BANNER_ALL_PAGES %}
+    {% block banner %}{% endblock %}
     {% endif %}
+    <!-- End Banner -->
+    <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
+        <div class="row">
+            {% if not HIDE_SIDEBAR or ABOUT_ME %}
+            <div class="col-sm-8">
+                {% else %}
+                <div class="col-lg-8 col-md-offset-2">
+                    {% endif %}
+                    {% block breadcrumbs %}
+                    {% endblock %}
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                {% if not HIDE_SIDEBAR or ABOUT_ME %}
+                <div class="col-sm-3" id="sidebar">
+                    <aside>
+                        {% if ABOUT_ME %}
+                        {% include 'includes/aboutme.html' %}
+                        {% endif %}
+                        {% if not HIDE_SIDEBAR %}
+                        {% include 'includes/sidebar.html' %}
+                        {% endif %}
+                    </aside>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% include 'includes/footer.html' %}
 
-    {% include 'includes/github-js.html' %}
-    {% include 'includes/piwik.html' %}
-    {% include 'includes/ga.html' %}
-    {% include 'includes/ba.html' %}
 
-    {% block scripts %}{% endblock %}
+        {% if BANNER %}
+        <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
+        {% endif %}
 
+        {% include 'includes/github-js.html' %}
+        {% include 'includes/piwik.html' %}
+        {% include 'includes/ga.html' %}
+        {% include 'includes/ba.html' %}
 
+        {% block scripts %}{% endblock %}
+
+    </div>
 </body>
 </html>

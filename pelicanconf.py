@@ -38,7 +38,7 @@ DEFAULT_PAGINATION = 30
 DUOSHUO_SITENAME = u"synckey"
 THEME = "pelican-bootstrap3"
 HIDE_SIDEBAR = True
-# BOOTSTRAP_FLUID =  True
+BOOTSTRAP_FLUID = False
 # PDF_PROCESSOR = True
 PYGMENTS_STYLE = "github"
 
