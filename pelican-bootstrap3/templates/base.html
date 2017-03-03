@@ -132,6 +132,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
 
@@ -196,7 +209,7 @@
     <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target=".navbar-ex1-collapse">
+                    data-target=".navbar-top-collapse" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -206,55 +219,31 @@
                 {% if SITELOGO %}<img src="{{ SITEURL }}/{{ SITELOGO }}" width="{{ SITELOGO_SIZE }}"/> {% endif %}
                 {% if not HIDE_SITENAME %}{{ SITENAME }}{% endif %}
             </a>
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i
-                                class="fa fa-th-list"></i><span class="icon-label">Archives</span></a>
-                        {% for title, link in MENUITEMS %}
-                    </li>
-                    <li><a href="{{ link }}">{{ title }}</a></li>
-                    {% endfor %}
-                    {% if DISPLAY_PAGES_ON_MENU %}
-                    {% for p in PAGES %}
-                    <li
-                            {% if p== page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ p.url }}">
-                        {{ p.menulabel|default(p.title) }}
-                    </a></li>
-                    {% endfor %}
-                    {% endif %}
-                    {% if DISPLAY_CATEGORIES_ON_MENU %}
-                    {% for cat, null in categories %}
-                    <li {% if cat== category %}class="active" {% endif %}>
-                        <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat | capitalize }}</a>
-                    </li>
-                    {% endfor %}
-                    {% endif %}
-                </ul>
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="baidu.com"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a>
-                        </li>
-                        <li><a href="/dd"><i class="fa fa-th-list"></i><span class="icon-label">DD</span></a></li>
-                        {% if 'tipue_search' in PLUGINS %}
-                        <li><span>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}">Posts<span
+                            class="sr-only"></span></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-top-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a>
+                </li>
+                <li><a href="#"><i class="fa fa-th-list"></i><span class="icon-label">DD</span></a></li>
+                {% if 'tipue_search' in PLUGINS %}
+                <li><span>
                 <form class="navbar-search" action="{{ SEARCH_URL | default('/search.html') }}">
                     <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"
                            required>
                 </form></span>
-                        </li>
-                        {% endif %}
-                        <!--
-                        <li><a href="{{ SITEURL }}/{{ ARCHIVES_URL | default('archives.html') }}"><i
-                                class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-                                -->
-                    </ul>
-                    <!-- /.navbar-collapse -->
-                </div>
-
-            </div>
+                </li>
+                {% endif %}
+            </ul>
 
         </div>
+
     </div> <!-- /.navbar -->
     <!-- Banner -->
     {% if BANNER and BANNER_ALL_PAGES %}
