@@ -97,6 +97,8 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="/theme/css/normalize.css"/>
+    <link rel="stylesheet" href="/theme/css/skeleton.css"/>
     <link rel="stylesheet" href="/theme/css/style.css"/>
     <!--
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
@@ -115,12 +117,11 @@
           title="Andy's Blog posts ATOM Feed"/>
 
 </head>
+
 <body>
+<!--
 <div class="navbar navbar-default "
      role="navigation">
-    <!--
-<div class="col-lg-8 col-md-offset-2">
--->
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -144,7 +145,22 @@ Andy's Blog            </a>
             </ul>
         </div>
 
-    </div> <!-- /.navbar -->
+    </div>
+</div>
+-->
+<div class="page-header container">
+    <ul class="nav-left">
+        <li class="home"><a href="/">Andy's Blog</a></li>
+        <li class="desktop-only"><a href="/">Posts</a></li>
+        <li><a href="/feeds/all.atom.xml"></a>
+    </ul>
+
+    <ul class="nav-right">
+        <li><a href="/about">About</a></li>
+        <li><a href="/rss.xml">RSS</a></li>
+    </ul>
+
+</div>
     <!-- Banner -->
     <!-- End Banner -->
 <div class="post-container">
