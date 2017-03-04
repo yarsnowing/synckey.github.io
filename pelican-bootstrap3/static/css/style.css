@@ -1,7 +1,6 @@
-
 body {
     font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    background: url(/assets/images/bg-2.jpg) no-repeat right top;
+    background: url(/static/images/bg.jpg) no-repeat right top;
     background-size: 100%;
     background-color: #f5f7f9;
     background-attachment: fixed;
@@ -10,9 +9,10 @@ body {
 a {
     text-decoration: none;
 }
-
-.page-header {
+.page-header{
+    margin-top: 20px;
     height: 60px;
+    margin-left:130px;
 }
 .page-header .tagline {
     position: absolute;
@@ -112,7 +112,7 @@ a {
     margin-right: 10px;
     list-style-position: outside;
 }
-.post-container ul{
+.pager ul{
     padding:0;
 }
 .container li p, .post-container li p {
@@ -156,10 +156,10 @@ a {
     border: none;
 }
 .post-container .highlight pre {
-    font-size: 75%;
-    margin-bottom: 5px;
+    font-size: 80%;
+    margin-bottom: 0px;
     font-family: Menlo, Monaco, Consolas, monospace;
-    padding-bottom: 4px;
+    /*padding-bottom: 0px;*/
 }
 .post-container .highlight ol {
     margin: 0 0 0 35px;
@@ -337,11 +337,11 @@ a {
         margin-left: 95px;
         margin-right: 60px;
     }
-*/
     .post-container .highlight pre {
         margin-left: 60px;
         margin-right: 60px;
     }
+*/
 
     .comment-container {
         padding-left: 20px;
@@ -394,12 +394,12 @@ a {
         max-width: 100%;
         width: 350px;
     }
-
+/*
     .post-container .highlight pre {
         margin-left: 130px;
         margin-right: 130px;
     }
-
+*/
     .comment-container {
         padding-left: 50px;
         padding-right: 50px;

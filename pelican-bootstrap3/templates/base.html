@@ -130,6 +130,8 @@
           type="text/css"/>
     {% else %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/normalize.css"/>
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/skeleton.css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css"/>
     {% endif %}
     <!--
@@ -176,12 +178,11 @@
     {% endif %}
 
 </head>
+
 <body>
+<!--
 <div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} "
      role="navigation">
-    <!--
-<div class="col-lg-8 col-md-offset-2">
--->
     <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -207,7 +208,22 @@
             </ul>
         </div>
 
-    </div> <!-- /.navbar -->
+    </div>
+</div>
+-->
+<div class="page-header container">
+    <ul class="nav-left">
+        <li class="home"><a href="/">Andy's Blog</a></li>
+        <li class="desktop-only"><a href="/">Posts</a></li>
+        <li><a href="/feeds/all.atom.xml"></a>
+    </ul>
+
+    <ul class="nav-right">
+        <li><a href="/about">About</a></li>
+        <li><a href="/rss.xml">RSS</a></li>
+    </ul>
+
+</div>
     <!-- Banner -->
     {% if BANNER and BANNER_ALL_PAGES %}
     {% include 'includes/banner.html' %}
