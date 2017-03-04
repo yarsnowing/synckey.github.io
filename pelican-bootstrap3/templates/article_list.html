@@ -2,6 +2,7 @@
 {% block content %}
 {% if articles %}
 {% for article in (articles_page.object_list if articles_page else articles) %}
+<div class="separator"></div>
 <div class="post-container">
     <div class="post-header">
         <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
@@ -22,6 +23,9 @@
 <div class="separator"></div>
 {% endfor %}
 {% endif %}
-
-{% include 'includes/pagination.html' %}
+<div class="post-container">
+    {% include 'includes/pagination.html' %}
+</div>
 {% endblock content %}
+
+

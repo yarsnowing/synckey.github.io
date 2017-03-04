@@ -12,8 +12,12 @@
 {% endblock %}
 
 {% block content %}
+<div class="container">
+    <div class="separator"></div>
 <h1>Authors on {{ SITENAME }}</h1>
 {% for author, articles in authors|sort %}
 <li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
+
 {% endfor %}
+</div>
 {% endblock %}
