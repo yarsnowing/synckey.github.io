@@ -5,7 +5,13 @@ body {
     background-color: #f5f7f9;
     background-attachment: fixed;
 }
-
+.navbar{
+    background:rgba(0,0,0,0);
+}
+.navbar-default{
+    background:rgba(0,0,0,0);
+    border-width: 0px;;
+}
 a {
     text-decoration: none;
 }
@@ -13,6 +19,7 @@ a {
     margin-top: 20px;
     height: 60px;
     margin-left:130px;
+    margin-right:190px;
 }
 .page-header .tagline {
     position: absolute;
