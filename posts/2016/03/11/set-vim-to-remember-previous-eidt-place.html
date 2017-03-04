@@ -95,34 +95,6 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
 
@@ -147,7 +119,7 @@
 
 </head>
 <body>
-<div class="navbar navbar-default"
+<div class="navbar navbar-default "
      role="navigation">
     <!--
 <div class="col-lg-8 col-md-offset-2">
@@ -170,28 +142,31 @@ Andy's Blog            </a>
         <div class="collapse navbar-collapse" id="navbar-top-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a></li>
-                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a></li>
+                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a>
+                </li>
             </ul>
         </div>
 
     </div> <!-- /.navbar -->
     <!-- Banner -->
     <!-- End Banner -->
-    <div class="container">
-        <div class="row">
-                <div class="col-lg-8 col-md-offset-2">
-<section id="content">
-    <article>
-        <header class="page-header">
-            <h2>
-                <a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html"
-                   rel="bookmark"
-                   title="Permalink to 让VIM记录文件上次编辑的位置">
-                    让VIM记录文件上次编辑的位置
-                </a>
-            </h2>
-        </header>
-        <div class="entry-content"><!--
+<div class="post-container">
+<div class="post-header">
+    <h2>
+        <a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html"
+           rel="bookmark"
+           title="Permalink to 让VIM记录文件上次编辑的位置">
+            让VIM记录文件上次编辑的位置
+        </a>
+    </h2>
+    <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2016-03-11</span>
+        <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+
+    </div>
+</div>
+<div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
 <footer class="post-info">
@@ -216,7 +191,7 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-            <p>在<code>~/.vimrc</code>中加入如下配置:</p>
+    <p>在<code>~/.vimrc</code>中加入如下配置:</p>
 <div class="highlight"><pre><span></span>autocmd BufReadPost *
 <span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
 <span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
@@ -230,18 +205,8 @@ syntax <span class="nb">enable</span>
 </pre></div>
 <h3>参考</h3>
 <p><a href="http://www.2cto.com/os/201311/255061.html">让VIM记录文件上次编辑的位置</a></p>
-        </div>
-        <!-- /.entry-content -->
-        <div>
-            <time datetime="2016-03-11T00:00:00+08:00">2016.03.11
-            </time>
-        </div>
-        <div>
-            <time datetime="2016-03-11T00:00:00+08:00">Beijing</time>
-        </div>
-
 <div class="pager">
-    <ul style="padding-left: 0px;">
+    <ul>
         <li class="previous"><a href="/posts/2016/03/26/notes-of-grammar-in-use.html" data-toggle="tooltip"
                                 title="Grammar in Use 笔记">&larr; Previous</a></li>
         <li class="next"><a href="/posts/2016/03/01/summary-concepts-of-deep-learning.html"
@@ -265,12 +230,13 @@ syntax <span class="nb">enable</span>
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-    </article>
+</div>
+</div>
+<!-- /.entry-content -->
+
+</article>
 </section>
 
-                </div>
-            </div>
-        </div>
 <footer>
     <div class="container ">
         <div class="row">
@@ -290,7 +256,6 @@ syntax <span class="nb">enable</span>
         </div>
     </div>
 </footer>
-
 
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -329,7 +294,6 @@ syntax <span class="nb">enable</span>
 </script>
 <!-- End Google Analytics Code -->
 
-
-    </div>
+</div>
 </body>
 </html>

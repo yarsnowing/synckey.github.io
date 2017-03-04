@@ -87,34 +87,6 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
 
@@ -136,7 +108,7 @@
 
 </head>
 <body>
-<div class="navbar navbar-default"
+<div class="navbar navbar-default "
      role="navigation">
     <!--
 <div class="col-lg-8 col-md-offset-2">
@@ -159,19 +131,20 @@ Andy's Blog            </a>
         <div class="collapse navbar-collapse" id="navbar-top-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a></li>
-                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a></li>
+                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a>
+                </li>
             </ul>
         </div>
 
     </div> <!-- /.navbar -->
     <!-- Banner -->
     <!-- End Banner -->
-    <div class="container">
-        <div class="row">
-                <div class="col-lg-8 col-md-offset-2">
-<article>
-    <h2><a href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html">A Misuse of Spark Broadcast</a></h2>
-    <div class="summary"><p>在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：</p>
+<div class="post-container">
+    <div class="post-header">
+        <h2><a href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html">A Misuse of Spark Broadcast</a></h2>
+    </div>
+
+    <div class="post-content"><p>在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：</p>
 <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="kd">implements</span> <span class="n">Function</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">Boolean</span><span class="o">&gt;</span> <span class="o">{</span>
 
     <span class="kd">private</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lookupTable</span><span class="o">=</span><span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
@@ -180,15 +153,14 @@ Andy's Blog            </a>
         <span class="k">this</span><span class="o">.</span><span class="na">lookupTable</span><span class="o">=</span><span class="n">broadcast</span><span class="o">.</span><span class="na">value</span><span class="o">();</span>
     <span class="o">}</span>
     <span class="kd">public</span> <span class="n">Boolean</span> <span class="nf">call</span><span class="o">(</span><span class="n">String</span> <span class="n">line</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
-        <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">lookupTable</span><span class="o">.</span><span class="na">containsKey ...</span></pre></div>
-        <a class="btn btn-default btn-xs" href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html">more ...</a>
-    </div>
-</article>
-<hr/>
-
-                </div>
-            </div>
+        <span class="k">if</span> <span class="o">(</span><span class="k">this</span><span class="o">.</span><span class="na">lookupTable</span><span class="o">.</span><span class="na">containsKey …</span></pre></div>
+        <div class="read-more">
+            <a class="btn" href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html">--READ MORE--</a>
         </div>
+    </div>
+</div>
+<div class="separator"></div>
+
 <footer>
     <div class="container ">
         <div class="row">
@@ -208,7 +180,6 @@ Andy's Blog            </a>
         </div>
     </div>
 </footer>
-
 
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -247,7 +218,6 @@ Andy's Blog            </a>
 </script>
 <!-- End Google Analytics Code -->
 
-
-    </div>
+</div>
 </body>
 </html>

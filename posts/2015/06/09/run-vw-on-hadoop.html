@@ -19,13 +19,13 @@
     -->
 <meta name="author" content="Andy"/>
 <meta name="keywords" content="hadoop,machine learning"/>
-<meta name="description" content="Prerequisites hadoop 2.2.0 Centos 6.4 Install boost wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz tar xzf boost_1_58_0.tar.gz cd boost_1_58_0 sudo ./bootstrap.sh sudo ./bjam --layout=tagged install cd /etc/yum.repos.d wget http://people.centos.org ..."/>
+<meta name="description" content="Prerequisites hadoop 2.2.0 Centos 6.4 Install boost wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz tar xzf boost_1_58_0.tar.gz cd boost_1_58_0 sudo ./bootstrap.sh sudo ./bjam --layout=tagged install cd /etc/yum.repos.d wget http://people.centos.org …"/>
 
 <meta property="og:site_name" content="Andy's Blog"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="Run Vowpal Wabbit on Hadoop"/>
 <meta property="og:url" content="/posts/2015/06/09/run-vw-on-hadoop.html"/>
-<meta property="og:description" content="Prerequisites hadoop 2.2.0 Centos 6.4 Install boost wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz tar xzf boost_1_58_0.tar.gz cd boost_1_58_0 sudo ./bootstrap.sh sudo ./bjam --layout=tagged install cd /etc/yum.repos.d wget http://people.centos.org ..."/>
+<meta property="og:description" content="Prerequisites hadoop 2.2.0 Centos 6.4 Install boost wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz tar xzf boost_1_58_0.tar.gz cd boost_1_58_0 sudo ./bootstrap.sh sudo ./bjam --layout=tagged install cd /etc/yum.repos.d wget http://people.centos.org …"/>
 <meta property="article:published_time" content=" 2015-06-09" />
 <meta property="article:section" content="posts"/>
 <meta property="article:tag" content="hadoop"/>
@@ -93,34 +93,6 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
 
@@ -145,7 +117,7 @@
 
 </head>
 <body>
-<div class="navbar navbar-default"
+<div class="navbar navbar-default "
      role="navigation">
     <!--
 <div class="col-lg-8 col-md-offset-2">
@@ -168,28 +140,31 @@ Andy's Blog            </a>
         <div class="collapse navbar-collapse" id="navbar-top-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a></li>
-                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a></li>
+                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a>
+                </li>
             </ul>
         </div>
 
     </div> <!-- /.navbar -->
     <!-- Banner -->
     <!-- End Banner -->
-    <div class="container">
-        <div class="row">
-                <div class="col-lg-8 col-md-offset-2">
-<section id="content">
-    <article>
-        <header class="page-header">
-            <h2>
-                <a href="/posts/2015/06/09/run-vw-on-hadoop.html"
-                   rel="bookmark"
-                   title="Permalink to Run Vowpal Wabbit on Hadoop">
-                    Run Vowpal Wabbit on Hadoop
-                </a>
-            </h2>
-        </header>
-        <div class="entry-content"><!--
+<div class="post-container">
+<div class="post-header">
+    <h2>
+        <a href="/posts/2015/06/09/run-vw-on-hadoop.html"
+           rel="bookmark"
+           title="Permalink to Run Vowpal Wabbit on Hadoop">
+            Run Vowpal Wabbit on Hadoop
+        </a>
+    </h2>
+    <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2015-06-09</span>
+        <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+
+    </div>
+</div>
+<div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
 <footer class="post-info">
@@ -210,7 +185,7 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-            <h3>Prerequisites</h3>
+    <h3>Prerequisites</h3>
 <ul>
 <li>hadoop 2.2.0</li>
 <li>Centos 6.4</li>
@@ -229,7 +204,7 @@ sudo vim /etc/yum.repos.d/DevToolset.repo
 <span class="o">[</span>DevToolset-2<span class="o">]</span>
 <span class="nv">name</span><span class="o">=</span>RedHat DevToolset v2 <span class="nv">$releasever</span> - <span class="nv">$basearch</span>
 <span class="nv">baseurl</span><span class="o">=</span>http://puias.princeton.edu/data/puias/DevToolset/<span class="nv">$releasever</span>/<span class="nv">$basearch</span>/
-<span class="nv">enabled</span><span class="o">=</span>1
+<span class="nv">enabled</span><span class="o">=</span><span class="m">1</span>
 <span class="nv">gpgcheck</span><span class="o">=</span><span class="m">0</span> 
 sudo yum install devtoolset-2-gcc-4.8.1 devtoolset-2-gcc-c++-4.8.1
 
@@ -273,18 +248,8 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
 <p>Refrences:</p>
 <p><a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/">vowpal wabbit on hadoop</a></p>
 <p><a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial">Vowpal Tutorial</a></p>
-        </div>
-        <!-- /.entry-content -->
-        <div>
-            <time datetime="2015-06-09T00:00:00+08:00">2015.06.09
-            </time>
-        </div>
-        <div>
-            <time datetime="2015-06-09T00:00:00+08:00">Beijing</time>
-        </div>
-
 <div class="pager">
-    <ul style="padding-left: 0px;">
+    <ul>
         <li class="previous"><a href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html" data-toggle="tooltip"
                                 title="A Misuse of Spark Broadcast">&larr; Previous</a></li>
         <li class="next"><a href="/posts/2015/05/20/iterm2-clone-session.html"
@@ -308,12 +273,13 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-    </article>
+</div>
+</div>
+<!-- /.entry-content -->
+
+</article>
 </section>
 
-                </div>
-            </div>
-        </div>
 <footer>
     <div class="container ">
         <div class="row">
@@ -333,7 +299,6 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
         </div>
     </div>
 </footer>
-
 
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -372,7 +337,6 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
 </script>
 <!-- End Google Analytics Code -->
 
-
-    </div>
+</div>
 </body>
 </html>

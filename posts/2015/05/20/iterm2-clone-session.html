@@ -94,34 +94,6 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
 
@@ -146,7 +118,7 @@
 
 </head>
 <body>
-<div class="navbar navbar-default"
+<div class="navbar navbar-default "
      role="navigation">
     <!--
 <div class="col-lg-8 col-md-offset-2">
@@ -169,28 +141,31 @@ Andy's Blog            </a>
         <div class="collapse navbar-collapse" id="navbar-top-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a></li>
-                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a></li>
+                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a>
+                </li>
             </ul>
         </div>
 
     </div> <!-- /.navbar -->
     <!-- Banner -->
     <!-- End Banner -->
-    <div class="container">
-        <div class="row">
-                <div class="col-lg-8 col-md-offset-2">
-<section id="content">
-    <article>
-        <header class="page-header">
-            <h2>
-                <a href="/posts/2015/05/20/iterm2-clone-session.html"
-                   rel="bookmark"
-                   title="Permalink to iterm2 clone session">
-                    iterm2 clone session
-                </a>
-            </h2>
-        </header>
-        <div class="entry-content"><!--
+<div class="post-container">
+<div class="post-header">
+    <h2>
+        <a href="/posts/2015/05/20/iterm2-clone-session.html"
+           rel="bookmark"
+           title="Permalink to iterm2 clone session">
+            iterm2 clone session
+        </a>
+    </h2>
+    <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2015-05-20</span>
+        <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+
+    </div>
+</div>
+<div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
 <footer class="post-info">
@@ -213,11 +188,11 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-            <div class="highlight"><pre><span></span>vim ~/.ssh/config
+    <div class="highlight"><pre><span></span>vim ~/.ssh/config
 </pre></div>
 <p>贴入如下内容:</p>
 <div class="highlight"><pre><span></span>Host *
-    ServerAliveInterval 30
+    ServerAliveInterval <span class="m">30</span>
     ControlMaster auto
     ControlPath ~/.ssh/master-%r@%h:%p
     ControlPersist yes
@@ -226,18 +201,8 @@ Andy's Blog            </a>
 <h3>References</h3>
 <p><a href="http://www.dbathink.com/2012/10/iterm2-auto-automatic-login-log-on-script/">Iterm2 auto login 自动登录脚本</a></p>
 <p><a href="http://laughingchs.iteye.com/blog/1317703">linux clone session</a></p>
-        </div>
-        <!-- /.entry-content -->
-        <div>
-            <time datetime="2015-05-20T00:00:00+08:00">2015.05.20
-            </time>
-        </div>
-        <div>
-            <time datetime="2015-05-20T00:00:00+08:00">Beijing</time>
-        </div>
-
 <div class="pager">
-    <ul style="padding-left: 0px;">
+    <ul>
         <li class="previous"><a href="/posts/2015/06/09/run-vw-on-hadoop.html" data-toggle="tooltip"
                                 title="Run Vowpal Wabbit on Hadoop">&larr; Previous</a></li>
         <li class="next"><a href="/posts/2015/04/13/my-experience-of-losing-weight.html"
@@ -261,12 +226,13 @@ Andy's Blog            </a>
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-    </article>
+</div>
+</div>
+<!-- /.entry-content -->
+
+</article>
 </section>
 
-                </div>
-            </div>
-        </div>
 <footer>
     <div class="container ">
         <div class="row">
@@ -286,7 +252,6 @@ Andy's Blog            </a>
         </div>
     </div>
 </footer>
-
 
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -325,7 +290,6 @@ Andy's Blog            </a>
 </script>
 <!-- End Google Analytics Code -->
 
-
-    </div>
+</div>
 </body>
 </html>

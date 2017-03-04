@@ -87,34 +87,6 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
 
@@ -136,7 +108,7 @@
 
 </head>
 <body>
-<div class="navbar navbar-default"
+<div class="navbar navbar-default "
      role="navigation">
     <!--
 <div class="col-lg-8 col-md-offset-2">
@@ -159,19 +131,20 @@ Andy's Blog            </a>
         <div class="collapse navbar-collapse" id="navbar-top-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a></li>
-                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a></li>
+                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a>
+                </li>
             </ul>
         </div>
 
     </div> <!-- /.navbar -->
     <!-- Banner -->
     <!-- End Banner -->
-    <div class="container">
-        <div class="row">
-                <div class="col-lg-8 col-md-offset-2">
-<article>
-    <h2><a href="/posts/2015/06/09/run-vw-on-hadoop.html">Run Vowpal Wabbit on Hadoop</a></h2>
-    <div class="summary"><h3>Prerequisites</h3>
+<div class="post-container">
+    <div class="post-header">
+        <h2><a href="/posts/2015/06/09/run-vw-on-hadoop.html">Run Vowpal Wabbit on Hadoop</a></h2>
+    </div>
+
+    <div class="post-content"><h3>Prerequisites</h3>
 <ul>
 <li>hadoop 2.2.0</li>
 <li>Centos 6.4</li>
@@ -183,15 +156,14 @@ tar xzf boost_1_58_0.tar.gz
 sudo ./bootstrap.sh
 sudo ./bjam --layout<span class="o">=</span>tagged install 
 <span class="nb">cd</span> /etc/yum.repos.d
-wget http://people.centos.org ...</pre></div>
-        <a class="btn btn-default btn-xs" href="/posts/2015/06/09/run-vw-on-hadoop.html">more ...</a>
-    </div>
-</article>
-<hr/>
-
-                </div>
-            </div>
+wget http://people.centos.org …</pre></div>
+        <div class="read-more">
+            <a class="btn" href="/posts/2015/06/09/run-vw-on-hadoop.html">--READ MORE--</a>
         </div>
+    </div>
+</div>
+<div class="separator"></div>
+
 <footer>
     <div class="container ">
         <div class="row">
@@ -211,7 +183,6 @@ wget http://people.centos.org ...</pre></div>
         </div>
     </div>
 </footer>
-
 
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -250,7 +221,6 @@ wget http://people.centos.org ...</pre></div>
 </script>
 <!-- End Google Analytics Code -->
 
-
-    </div>
+</div>
 </body>
 </html>

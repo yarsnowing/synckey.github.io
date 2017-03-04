@@ -94,34 +94,6 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
 
@@ -146,7 +118,7 @@
 
 </head>
 <body>
-<div class="navbar navbar-default"
+<div class="navbar navbar-default "
      role="navigation">
     <!--
 <div class="col-lg-8 col-md-offset-2">
@@ -169,28 +141,31 @@ Andy's Blog            </a>
         <div class="collapse navbar-collapse" id="navbar-top-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a></li>
-                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a></li>
+                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a>
+                </li>
             </ul>
         </div>
 
     </div> <!-- /.navbar -->
     <!-- Banner -->
     <!-- End Banner -->
-    <div class="container">
-        <div class="row">
-                <div class="col-lg-8 col-md-offset-2">
-<section id="content">
-    <article>
-        <header class="page-header">
-            <h2>
-                <a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html"
-                   rel="bookmark"
-                   title="Permalink to Plot Sigmoid in Matlab">
-                    Plot Sigmoid in Matlab
-                </a>
-            </h2>
-        </header>
-        <div class="entry-content"><!--
+<div class="post-container">
+<div class="post-header">
+    <h2>
+        <a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html"
+           rel="bookmark"
+           title="Permalink to Plot Sigmoid in Matlab">
+            Plot Sigmoid in Matlab
+        </a>
+    </h2>
+    <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2015-12-24</span>
+        <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+
+    </div>
+</div>
+<div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
 <footer class="post-info">
@@ -213,7 +188,7 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-            <div class="highlight"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
+    <div class="highlight"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
 <span class="n">x</span><span class="p">=</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
 <span class="n">y</span><span class="p">=</span><span class="mf">1.</span><span class="o">/</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">.*</span><span class="n">x</span><span class="p">)];</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s">'b'</span><span class="p">);</span>
@@ -222,18 +197,8 @@ Andy's Blog            </a>
 <p><p align="center">
 <img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="50%"/>
 </p></p>
-        </div>
-        <!-- /.entry-content -->
-        <div>
-            <time datetime="2015-12-24T00:00:00+08:00">2015.12.24
-            </time>
-        </div>
-        <div>
-            <time datetime="2015-12-24T00:00:00+08:00">Beijing</time>
-        </div>
-
 <div class="pager">
-    <ul style="padding-left: 0px;">
+    <ul>
         <li class="previous"><a href="/posts/2016/02/26/hhkb-settings-and-shortcut-keys.html" data-toggle="tooltip"
                                 title="HHKB 设置与快捷键">&larr; Previous</a></li>
         <li class="next"><a href="/posts/2015/12/24/where-does-sigmoid-come-from.html"
@@ -257,12 +222,13 @@ Andy's Blog            </a>
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-    </article>
+</div>
+</div>
+<!-- /.entry-content -->
+
+</article>
 </section>
 
-                </div>
-            </div>
-        </div>
 <footer>
     <div class="container ">
         <div class="row">
@@ -282,7 +248,6 @@ Andy's Blog            </a>
         </div>
     </div>
 </footer>
-
 
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -321,7 +286,6 @@ Andy's Blog            </a>
 </script>
 <!-- End Google Analytics Code -->
 
-
-    </div>
+</div>
 </body>
 </html>

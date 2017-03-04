@@ -87,34 +87,6 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
 
@@ -136,7 +108,7 @@
 
 </head>
 <body>
-<div class="navbar navbar-default"
+<div class="navbar navbar-default "
      role="navigation">
     <!--
 <div class="col-lg-8 col-md-offset-2">
@@ -159,19 +131,20 @@ Andy's Blog            </a>
         <div class="collapse navbar-collapse" id="navbar-top-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/"><i class="fa fa-th-list"></i><span class="icon-label">About</span></a></li>
-                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a></li>
+                <li><a href="/feeds/all.atom.xml"><i class="fa fa-th-list"></i><span class="icon-label">RSS</span></a>
+                </li>
             </ul>
         </div>
 
     </div> <!-- /.navbar -->
     <!-- Banner -->
     <!-- End Banner -->
-    <div class="container">
-        <div class="row">
-                <div class="col-lg-8 col-md-offset-2">
-<article>
-    <h2><a href="/posts/2017/02/20/review-of-probability.html">《概率论》复习笔记</a></h2>
-    <div class="summary"><h4>1. 随机事件和概率</h4>
+<div class="post-container">
+    <div class="post-header">
+        <h2><a href="/posts/2017/02/20/review-of-probability.html">《概率论》复习笔记</a></h2>
+    </div>
+
+    <div class="post-content"><h4>1. 随机事件和概率</h4>
 <h5>1.1全概率公式</h5>
 <p>设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&gt;0(i=1,2,\cdots,n)$，且$\sum\limits_{i=1}^{n}{A_i}=\Omega$，
 则对任一事件$B$，有
@@ -179,14 +152,19 @@ $$
 P(B)=\sum_{i=1}^{n}{P(A_i)\cdot P{(B|A_i)}}.
 $$
 满足公式中的$A_1,A_2,\cdots,A_n$  叫<strong>完备事件组</strong>。</p>
-<h5>1.2贝叶斯公式 ...</h5>
-        <a class="btn btn-default btn-xs" href="/posts/2017/02/20/review-of-probability.html">more ...</a>
+<h5>1.2贝叶斯公式 …</h5>
+        <div class="read-more">
+            <a class="btn" href="/posts/2017/02/20/review-of-probability.html">--READ MORE--</a>
+        </div>
     </div>
-</article>
-<hr/>
-<article>
-    <h2><a href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">Summary Concepts of Deep Learning</a></h2>
-    <div class="summary"><h2>机器学习</h2>
+</div>
+<div class="separator"></div>
+<div class="post-container">
+    <div class="post-header">
+        <h2><a href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">Summary Concepts of Deep Learning</a></h2>
+    </div>
+
+    <div class="post-content"><h2>机器学习</h2>
 <p>input-&gt;feature representation-&gt;learning algorithm</p>
 <h3>监督学习</h3>
 <p>标注过的训练数据.</p>
@@ -210,14 +188,19 @@ $$
 <p><p align="center">
 <img alt="SingleNeuron" class="img-responsive" src="/static/images/SingleNeuron.png" width="40%"/>
 </p></p>
-<p>神经网络的基本组成单元,叫神经元(neuron),途中的神经元是一个以$x_1,x_x,x_3$(和一个$+1$截距项(intercept term))为输入,以$h_{W,b}(x)=f(W^Tx)=f ...</p>
-        <a class="btn btn-default btn-xs" href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">more ...</a>
+<p>神经网络的基本组成单元,叫神经元(neuron),途中的神经元是一个以$x_1,x_x,x_3$(和一个$+1$截距项(intercept term))为输入,以$h_{W,b}(x)=f(W^Tx)=f …</p>
+        <div class="read-more">
+            <a class="btn" href="/posts/2016/03/01/summary-concepts-of-deep-learning.html">--READ MORE--</a>
+        </div>
     </div>
-</article>
-<hr/>
-<article>
-    <h2><a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">Plot Sigmoid in Matlab</a></h2>
-    <div class="summary"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
+</div>
+<div class="separator"></div>
+<div class="post-container">
+    <div class="post-header">
+        <h2><a href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">Plot Sigmoid in Matlab</a></h2>
+    </div>
+
+    <div class="post-content"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">=</span><span class="mi">2</span><span class="p">;</span>
 <span class="n">x</span><span class="p">=</span><span class="o">-</span><span class="mi">10</span><span class="p">:</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">10</span><span class="p">;</span>
 <span class="n">y</span><span class="p">=</span><span class="mf">1.</span><span class="o">/</span><span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="nb">exp</span><span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="o">.*</span><span class="n">x</span><span class="p">)];</span>
 <span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s">'b'</span><span class="p">);</span>
@@ -226,13 +209,18 @@ $$
 <p><p align="center">
 <img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="50%"/>
 </p></p>
-        <a class="btn btn-default btn-xs" href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">more ...</a>
+        <div class="read-more">
+            <a class="btn" href="/posts/2015/12/24/plot-sigmoid-in-matlab.html">--READ MORE--</a>
+        </div>
     </div>
-</article>
-<hr/>
-<article>
-    <h2><a href="/posts/2015/12/24/where-does-sigmoid-come-from.html">Where does sigmoid come from</a></h2>
-    <div class="summary"><blockquote>
+</div>
+<div class="separator"></div>
+<div class="post-container">
+    <div class="post-header">
+        <h2><a href="/posts/2015/12/24/where-does-sigmoid-come-from.html">Where does sigmoid come from</a></h2>
+    </div>
+
+    <div class="post-content"><blockquote>
 <p>主要根据Andrew Ng的教学讲义整理。</p>
 </blockquote>
 <p>逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
@@ -243,14 +231,19 @@ $$
 <h3>1.逻辑回归的建模</h3>
 <p>首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然
 就想到使用 $Bernoulli$ 对 $y$ 的条件分布进行建模。$Bernoulli$
-分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli ...</p>
-        <a class="btn btn-default btn-xs" href="/posts/2015/12/24/where-does-sigmoid-come-from.html">more ...</a>
+分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli …</p>
+        <div class="read-more">
+            <a class="btn" href="/posts/2015/12/24/where-does-sigmoid-come-from.html">--READ MORE--</a>
+        </div>
     </div>
-</article>
-<hr/>
-<article>
-    <h2><a href="/posts/2015/06/09/run-vw-on-hadoop.html">Run Vowpal Wabbit on Hadoop</a></h2>
-    <div class="summary"><h3>Prerequisites</h3>
+</div>
+<div class="separator"></div>
+<div class="post-container">
+    <div class="post-header">
+        <h2><a href="/posts/2015/06/09/run-vw-on-hadoop.html">Run Vowpal Wabbit on Hadoop</a></h2>
+    </div>
+
+    <div class="post-content"><h3>Prerequisites</h3>
 <ul>
 <li>hadoop 2.2.0</li>
 <li>Centos 6.4</li>
@@ -262,15 +255,14 @@ tar xzf boost_1_58_0.tar.gz
 sudo ./bootstrap.sh
 sudo ./bjam --layout<span class="o">=</span>tagged install 
 <span class="nb">cd</span> /etc/yum.repos.d
-wget http://people.centos.org ...</pre></div>
-        <a class="btn btn-default btn-xs" href="/posts/2015/06/09/run-vw-on-hadoop.html">more ...</a>
-    </div>
-</article>
-<hr/>
-
-                </div>
-            </div>
+wget http://people.centos.org …</pre></div>
+        <div class="read-more">
+            <a class="btn" href="/posts/2015/06/09/run-vw-on-hadoop.html">--READ MORE--</a>
         </div>
+    </div>
+</div>
+<div class="separator"></div>
+
 <footer>
     <div class="container ">
         <div class="row">
@@ -290,7 +282,6 @@ wget http://people.centos.org ...</pre></div>
         </div>
     </div>
 </footer>
-
 
 <!-- Google Analytics -->
 <script type="text/javascript">
@@ -329,7 +320,6 @@ wget http://people.centos.org ...</pre></div>
 </script>
 <!-- End Google Analytics Code -->
 
-
-    </div>
+</div>
 </body>
 </html>
