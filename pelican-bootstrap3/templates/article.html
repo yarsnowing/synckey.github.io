@@ -69,46 +69,41 @@
 {% endblock %}
 
 {% block content %}
-<section id="content">
-    <article>
-        <header class="page-header">
-            <h2>
-                <a href="{{ SITEURL }}/{{ article.url }}"
-                   rel="bookmark"
-                   title="Permalink to {{ article.title|striptags }}">
-                    {{ article.title }}
-                </a>
-            </h2>
-        </header>
-        <div class="entry-content"><!--
+<div class="post-container">
+<div class="post-header">
+    <h2>
+        <a href="{{ SITEURL }}/{{ article.url }}"
+           rel="bookmark"
+           title="Permalink to {{ article.title|striptags }}">
+            {{ article.title }}
+        </a>
+    </h2>
+    <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">{{ article.date|strftime('%Y-%m-%d') }}</span>
+        <span class="glyphicon glyphicon-home footnote ">{{article.place}}</span>
+
+    </div>
+</div>
+<div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
                     {% include "includes/article_info.html" %}
                 </div>
             </div>
             -->
-            {{ article.content }}
-        </div>
-        <!-- /.entry-content -->
-        <div>
-            <time datetime="{{ article.date.isoformat() }}">{{ article.date|strftime('%Y-%m-%d') }}
-            </time>
-        </div>
-        {% block place %}
-        {% if article.place %}
-        <div>
-            <time datetime="{{ article.date.isoformat() }}">{{ article.place }}</time>
-        </div>
-        {% endif %}
-        {% endblock %}
+    {{ article.content }}
+    {% include 'includes/neighbors.html' %}
+    {% include 'includes/comments.html' %}
+</div>
+</div>
+<!-- /.entry-content -->
 
-        {% include 'includes/neighbors.html' %}
-        {% include 'includes/related-posts.html' %}
-        {% include 'includes/series.html' %}
-        {% include 'includes/addthis.html' %}
-        {% include 'includes/shariff.html' %}
-        {% include 'includes/comments.html' %}
-    </article>
+{% include 'includes/related-posts.html' %}
+{% include 'includes/series.html' %}
+{% include 'includes/addthis.html' %}
+{% include 'includes/shariff.html' %}
+</article>
 </section>
 
 {% endblock %}
