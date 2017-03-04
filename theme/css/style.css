@@ -6,9 +6,11 @@ body {
     background-attachment: fixed;
 }
 .navbar{
+    margin-top: 20px;
     background:rgba(0,0,0,0);
 }
 .navbar-default{
+    margin-top: 20px;
     background:rgba(0,0,0,0);
     border-width: 0px;;
 }
