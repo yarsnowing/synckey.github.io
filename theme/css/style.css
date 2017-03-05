@@ -12,7 +12,10 @@ body {
     border-width: 0px;;
     margin-bottom: 30px;
 }
-
+.navbar-brand{
+    padding-left:10px;
+    font-size:15px;
+}
 a {
     text-decoration: none;
 }
