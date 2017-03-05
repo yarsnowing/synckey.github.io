@@ -5,7 +5,12 @@ Tags: ielts,writing
 Slug: my-experience-of-losing-weight
 Author: Andy
 Place: Beijing
+<div class="figure">
+<img class='u-full-width' src='/static/images/2015_04_13_weights.svg' style='width: 100%;'>
+        <div class="caption">体重变化</div>
+</div>
 
+<!--
 <div id="weight_container" style=" margin: 0 auto"></div>
 
 <script>
@@ -44,7 +49,7 @@ $(function () {
     });
 });
 </script>
-
+-->
 
 >声明:本文是个人减肥经验，不适合每一个人，请勿盲目采取本文的方法，作者不对任何不良后果负责。
 
