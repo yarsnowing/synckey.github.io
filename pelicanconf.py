@@ -55,6 +55,8 @@ ARTICLE_SAVE_AS = ARTICLE_URL
 DISPLAY_CATEGORIES_ON_MENU = False
 
 PLUGIN_PATHS = ["plugins"]
+
+#PLUGINS = ["neighbors", "bootstrapify", "better_tables","render_math"]
 PLUGINS = ["neighbors", "bootstrapify", "better_tables"]
 
 DEFAULT_WECHAT_PIC = "wechat_logo_300x300.jpg"

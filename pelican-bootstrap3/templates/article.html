@@ -70,32 +70,32 @@
 
 {% block content %}
 <div class="post-container">
-<div class="post-header">
-    <h2>
-        <a href="{{ SITEURL }}/{{ article.url }}"
-           rel="bookmark"
-           title="Permalink to {{ article.title|striptags }}">
-            {{ article.title }}
-        </a>
-    </h2>
-    <div class="post-meta">
+    <div class="post-header">
+        <h2>
+            <a href="{{ SITEURL }}/{{ article.url }}"
+               rel="bookmark"
+               title="Permalink to {{ article.title|striptags }}">
+                {{ article.title }}
+            </a>
+        </h2>
+        <div class="post-meta">
         <span class="glyphicon glyphicon-calendar footnote"
               aria-hidden="true">{{ article.date|strftime('%Y-%m-%d') }}</span>
-        <span class="glyphicon glyphicon-home footnote ">{{article.place}}</span>
+            <span class="glyphicon glyphicon-home footnote ">{{article.place}}</span>
 
+        </div>
     </div>
-</div>
-<div class="post-content"><!--
+    <div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
                     {% include "includes/article_info.html" %}
                 </div>
             </div>
             -->
-    {{ article.content }}
-    {% include 'includes/neighbors.html' %}
-    {% include 'includes/comments.html' %}
-</div>
+        {{ article.content }}
+        {% include 'includes/neighbors.html' %}
+        {% include 'includes/comments.html' %}
+    </div>
 </div>
 <!-- /.entry-content -->
 

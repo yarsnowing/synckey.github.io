@@ -97,10 +97,6 @@
     <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-    <!--
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>-->
     <script>
         MathJax.Hub.Config({
             tex2jax: {
@@ -131,7 +127,8 @@
     {% else %}
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/normalize.css"/>
-    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/skeleton.css"/>
+    <!--
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/skeleton.css"/>-->
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/style.css"/>
     {% endif %}
     <!--
@@ -180,9 +177,9 @@
 </head>
 
 <body>
-<div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} "
+<div class="{% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} "
      role="navigation">
-    <div class="container{% if BOOTSTRAP_FLUID %}-fluid{% endif %}">
+    <div class="post-container" style="background: rgba(0,0,0,0); border: 0px;border-radius: 0px;box-shadow: none">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-top-collapse">
@@ -224,26 +221,26 @@
 
 </div>
 -->
-    <!-- Banner -->
-    {% if BANNER and BANNER_ALL_PAGES %}
-    {% include 'includes/banner.html' %}
-    {% elif BANNER and not BANNER_ALL_PAGES %}
-    {% block banner %}{% endblock %}
-    {% endif %}
-    <!-- End Banner -->
-        {% block content %}
-        {% endblock %}
-    {% include 'includes/footer.html' %}
+<!-- Banner -->
+{% if BANNER and BANNER_ALL_PAGES %}
+{% include 'includes/banner.html' %}
+{% elif BANNER and not BANNER_ALL_PAGES %}
+{% block banner %}{% endblock %}
+{% endif %}
+<!-- End Banner -->
+{% block content %}
+{% endblock %}
+{% include 'includes/footer.html' %}
 
-    {% if BANNER %}
-    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
-    {% endif %}
+{% if BANNER %}
+<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bodypadding.js"></script>
+{% endif %}
 
-    {% include 'includes/github-js.html' %}
-    {% include 'includes/piwik.html' %}
-    {% include 'includes/ga.html' %}
-    {% include 'includes/ba.html' %}
-    {% block scripts %}{% endblock %}
+{% include 'includes/github-js.html' %}
+{% include 'includes/piwik.html' %}
+{% include 'includes/ga.html' %}
+{% include 'includes/ba.html' %}
+{% block scripts %}{% endblock %}
 
 </div>
 </body>
