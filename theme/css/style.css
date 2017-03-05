@@ -1,6 +1,6 @@
 body {
     font-family:"Fira Sans","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    background: url(/static/images/bg.jpg) no-repeat right top;
+    background: url(/static/images/bg.jpg)  right top;
     background-size: 100%;
     background-color: #f5f7f9;
     background-attachment: fixed;
