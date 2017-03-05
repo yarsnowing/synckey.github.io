@@ -68,10 +68,6 @@
     <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-    <!--
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>-->
     <script>
         MathJax.Hub.Config({
             tex2jax: {
@@ -98,7 +94,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/theme/css/normalize.css"/>
-    <link rel="stylesheet" href="/theme/css/skeleton.css"/>
+    <!--
+    <link rel="stylesheet" href="/theme/css/skeleton.css"/>-->
     <link rel="stylesheet" href="/theme/css/style.css"/>
     <!--
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
@@ -119,9 +116,9 @@
 </head>
 
 <body>
-<div class="navbar navbar-default "
+<div class="navbar-default "
      role="navigation">
-    <div class="container">
+    <div class="post-container" style="background: rgba(0,0,0,0); border: 0px;border-radius: 0px;box-shadow: none">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-top-collapse">
@@ -161,25 +158,25 @@ Andy's Blog            </a>
 
 </div>
 -->
-    <!-- Banner -->
-    <!-- End Banner -->
+<!-- Banner -->
+<!-- End Banner -->
 <div class="post-container">
-<div class="post-header">
-    <h2>
-        <a href="/posts/2014/10/31/the-catcher-in-the-rye.html"
-           rel="bookmark"
-           title="Permalink to The Catcher in the Rye">
-            The Catcher in the Rye
-        </a>
-    </h2>
-    <div class="post-meta">
+    <div class="post-header">
+        <h2>
+            <a href="/posts/2014/10/31/the-catcher-in-the-rye.html"
+               rel="bookmark"
+               title="Permalink to The Catcher in the Rye">
+                The Catcher in the Rye
+            </a>
+        </h2>
+        <div class="post-meta">
         <span class="glyphicon glyphicon-calendar footnote"
               aria-hidden="true">2014-10-31</span>
-        <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
 
+        </div>
     </div>
-</div>
-<div class="post-content"><!--
+    <div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
 <footer class="post-info">
@@ -198,7 +195,7 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-    <p>Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。</p>
+        <p>Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。</p>
 <p>在离开学校之前他与他的室友打了一家，因为室友和他最喜欢的女生约会，他心里非常不舒服。一个十六岁的男孩，面对自己的梦中小情人，
 宁愿远远的看着她，也不希望她跟别的男孩子约会。更何况她的约会对象在Holden看来根本配不上她。Holden心里当然不高兴。打完架他决定早点离开学校了。</p>
 <p>对于一个青春期的孩子来说，也许最大的恐惧就是不合群，希望和同龄人做一样的事情，上课，考试，放假。可是Hoden却不得不提前开始寒假，又不能回家，
@@ -244,13 +241,25 @@ cliff. What I have to do, I have to catch everybody if they start to go over the
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-</div>
+<div class="separator"></div>
+<div class="separator"></div>
+<div class="separator"></div>
+    </div>
 </div>
 <!-- /.entry-content -->
 
 </article>
 </section>
 
+
+<div class="copyright">
+    &copy; 2017 andy
+    &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+    <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+    <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+</div>
+
+<!--
 <footer>
     <div class="container ">
         <div class="row">
@@ -264,12 +273,12 @@ cliff. What I have to do, I have to catch everybody if they start to go over the
                     <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
                     <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--
                     <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
-                    -->
                 </center>
             </div>
         </div>
     </div>
 </footer>
+                    -->
 
 <!-- Google Analytics -->
 <script type="text/javascript">

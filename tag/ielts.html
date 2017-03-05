@@ -63,10 +63,6 @@
     <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-    <!--
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>-->
     <script>
         MathJax.Hub.Config({
             tex2jax: {
@@ -93,7 +89,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/theme/css/normalize.css"/>
-    <link rel="stylesheet" href="/theme/css/skeleton.css"/>
+    <!--
+    <link rel="stylesheet" href="/theme/css/skeleton.css"/>-->
     <link rel="stylesheet" href="/theme/css/style.css"/>
     <!--
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
@@ -111,9 +108,9 @@
 </head>
 
 <body>
-<div class="navbar navbar-default "
+<div class="navbar-default "
      role="navigation">
-    <div class="container">
+    <div class="post-container" style="background: rgba(0,0,0,0); border: 0px;border-radius: 0px;box-shadow: none">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-top-collapse">
@@ -153,13 +150,19 @@ Andy's Blog            </a>
 
 </div>
 -->
-    <!-- Banner -->
-    <!-- End Banner -->
+<!-- Banner -->
+<!-- End Banner -->
 <div class="separator"></div>
 <div class="post-container">
     <div class="post-header">
         <h2><a href="/posts/2015/04/13/my-experience-of-losing-weight.html">我是怎么减掉了30斤</a></h2>
+        <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2015-04-13</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+        </div>
     </div>
+
 
     <div class="post-content"><div id="weight_container" style=" margin: 0 auto"></div>
 <script>
@@ -187,7 +190,13 @@ $(function () {
 <div class="post-container">
     <div class="post-header">
         <h2><a href="/posts/2014/12/30/improve-safety-on-the-road.html">Improve Safety On The Road</a></h2>
+        <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2014-12-30</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+        </div>
     </div>
+
 
     <div class="post-content"><blockquote>
 <p>The only way to improve safety on the road is to severely punish driving offenders. To what extent do you agree or disagree?</p>
@@ -204,7 +213,13 @@ $(function () {
 <div class="post-container">
     <div class="post-header">
         <h2><a href="/posts/2014/12/22/use-animals-for-humans.html">Use Animals For Humans</a></h2>
+        <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2014-12-22</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+        </div>
     </div>
+
 
     <div class="post-content"><blockquote>
 <p>Some people think that it is acceptable to use animals for the benefit of humans. Others, however, think that it is wrong to exploit animals for human purposes. Discuss both these views and give your own opinion.</p>
@@ -220,7 +235,13 @@ $(function () {
 <div class="post-container">
     <div class="post-header">
         <h2><a href="/posts/2014/12/16/gender-balance.html">Forcing the Employers to Hire the Same Number of Men and Women</a></h2>
+        <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2014-12-16</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+        </div>
     </div>
+
 
     <div class="post-content"><blockquote>
 <p>Some people think that employers should be required to employ equal numbers of men and women. To what extent do you agree or disagree?</p>
@@ -237,7 +258,13 @@ $(function () {
 <div class="post-container">
     <div class="post-header">
         <h2><a href="/posts/2014/11/24/distance-learning-vs-school-learning.html">Distance Learning vs School Learing</a></h2>
+        <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2014-11-24</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+        </div>
     </div>
+
 
     <div class="post-content"><blockquote>
 <p>many people use distance-learning programmes(study material post, TV, Internet, etc.) to study at home,
@@ -255,7 +282,13 @@ To what extent do you agree or disagree.</p>
 <div class="post-container">
     <div class="post-header">
         <h2><a href="/posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html">What Should Be the Main Function Of A University</a></h2>
+        <div class="post-meta">
+        <span class="glyphicon glyphicon-calendar footnote"
+              aria-hidden="true">2014-11-12</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+        </div>
     </div>
+
 
     <div class="post-content"><blockquote>
 <p>Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. 
@@ -270,6 +303,15 @@ regardless of whether the course is useful to an employer.</p>
 <div class="separator"></div>
 <div class="post-container">
 </div>
+
+<div class="copyright">
+    &copy; 2015 andy
+    &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+    <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+    <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+</div>
+
+<!--
 <footer>
     <div class="container ">
         <div class="row">
@@ -283,12 +325,12 @@ regardless of whether the course is useful to an employer.</p>
                     <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
                     <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--
                     <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
-                    -->
                 </center>
             </div>
         </div>
     </div>
 </footer>
+                    -->
 
 <!-- Google Analytics -->
 <script type="text/javascript">

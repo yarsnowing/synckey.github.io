@@ -68,10 +68,6 @@
     <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-    <!--
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>-->
     <script>
         MathJax.Hub.Config({
             tex2jax: {
@@ -98,7 +94,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/theme/css/normalize.css"/>
-    <link rel="stylesheet" href="/theme/css/skeleton.css"/>
+    <!--
+    <link rel="stylesheet" href="/theme/css/skeleton.css"/>-->
     <link rel="stylesheet" href="/theme/css/style.css"/>
     <!--
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
@@ -119,9 +116,9 @@
 </head>
 
 <body>
-<div class="navbar navbar-default "
+<div class="navbar-default "
      role="navigation">
-    <div class="container">
+    <div class="post-container" style="background: rgba(0,0,0,0); border: 0px;border-radius: 0px;box-shadow: none">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-top-collapse">
@@ -161,25 +158,25 @@ Andy's Blog            </a>
 
 </div>
 -->
-    <!-- Banner -->
-    <!-- End Banner -->
+<!-- Banner -->
+<!-- End Banner -->
 <div class="post-container">
-<div class="post-header">
-    <h2>
-        <a href="/posts/2016/10/20/notes-for-leetcode.md.html"
-           rel="bookmark"
-           title="Permalink to Notes for Leetcode">
-            Notes for Leetcode
-        </a>
-    </h2>
-    <div class="post-meta">
+    <div class="post-header">
+        <h2>
+            <a href="/posts/2016/10/20/notes-for-leetcode.md.html"
+               rel="bookmark"
+               title="Permalink to Notes for Leetcode">
+                Notes for Leetcode
+            </a>
+        </h2>
+        <div class="post-meta">
         <span class="glyphicon glyphicon-calendar footnote"
               aria-hidden="true">2016-10-20</span>
-        <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
 
+        </div>
     </div>
-</div>
-<div class="post-content"><!--
+    <div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
 <footer class="post-info">
@@ -198,7 +195,7 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-    <h2>1.Binary Number Representation</h2>
+        <h2>1.Binary Number Representation</h2>
 <div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mb">0b1111</span><span class="o">;</span> <span class="c1">// which is equals to `x = 15`; and is useful when use the number for masking.</span>
 </pre></div>
 <h2>2.Rotate Function</h2>
@@ -309,13 +306,25 @@ $$
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-</div>
+<div class="separator"></div>
+<div class="separator"></div>
+<div class="separator"></div>
+    </div>
 </div>
 <!-- /.entry-content -->
 
 </article>
 </section>
 
+
+<div class="copyright">
+    &copy; 2017 andy
+    &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+    <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+    <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+</div>
+
+<!--
 <footer>
     <div class="container ">
         <div class="row">
@@ -329,12 +338,12 @@ $$
                     <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
                     <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--
                     <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
-                    -->
                 </center>
             </div>
         </div>
     </div>
 </footer>
+                    -->
 
 <!-- Google Analytics -->
 <script type="text/javascript">

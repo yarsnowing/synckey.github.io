@@ -70,10 +70,6 @@
     <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-    <!--
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>-->
     <script>
         MathJax.Hub.Config({
             tex2jax: {
@@ -100,7 +96,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/theme/css/normalize.css"/>
-    <link rel="stylesheet" href="/theme/css/skeleton.css"/>
+    <!--
+    <link rel="stylesheet" href="/theme/css/skeleton.css"/>-->
     <link rel="stylesheet" href="/theme/css/style.css"/>
     <!--
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
@@ -121,9 +118,9 @@
 </head>
 
 <body>
-<div class="navbar navbar-default "
+<div class="navbar-default "
      role="navigation">
-    <div class="container">
+    <div class="post-container" style="background: rgba(0,0,0,0); border: 0px;border-radius: 0px;box-shadow: none">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-top-collapse">
@@ -163,25 +160,25 @@ Andy's Blog            </a>
 
 </div>
 -->
-    <!-- Banner -->
-    <!-- End Banner -->
+<!-- Banner -->
+<!-- End Banner -->
 <div class="post-container">
-<div class="post-header">
-    <h2>
-        <a href="/posts/2016/10/31/100-days-together.html"
-           rel="bookmark"
-           title="Permalink to 100天">
-            100天
-        </a>
-    </h2>
-    <div class="post-meta">
+    <div class="post-header">
+        <h2>
+            <a href="/posts/2016/10/31/100-days-together.html"
+               rel="bookmark"
+               title="Permalink to 100天">
+                100天
+            </a>
+        </h2>
+        <div class="post-meta">
         <span class="glyphicon glyphicon-calendar footnote"
               aria-hidden="true">2016-10-31</span>
-        <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
 
+        </div>
     </div>
-</div>
-<div class="post-content"><!--
+    <div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
 <footer class="post-info">
@@ -204,7 +201,7 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-    <p>亲爱的 mm：</p>
+        <p>亲爱的 mm：</p>
 <p>好像已经对你说了全世界的情话，又好像说什么都不够。不知不觉，从那天(2016.07.23)在苏州的街上第一次拉你的手开始，地球已经照常转了100次，我的生命却好像幸福了几个世纪。从日复一日的单调，到日复一日的甜蜜，每天既期待开始，又期待结束。</p>
 <p>2015年08月28号，我们第一次见面，已经不记得你穿的什么衣服，只记得你还没成熟的“装扮”，一看就能看出来，你打扮过，可是当时你还不那么会打扮，我特别喜欢。那一次被你的善解人意所吸引，当然，更吸引我的，还有你的美丽。</p>
 <p>为什么喜欢你的善解人意？因为那样撒娇才可爱。你蛮横，你卖萌，你撅嘴，你并没有无理取闹。每当你肆无忌惮的跟我卖萌，睁着大眼睛，嘟着嘴，微微显露嘴角的小酒窝，那是我最幸福的时分。</p>
@@ -275,13 +272,25 @@ Andy's Blog            </a>
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-</div>
+<div class="separator"></div>
+<div class="separator"></div>
+<div class="separator"></div>
+    </div>
 </div>
 <!-- /.entry-content -->
 
 </article>
 </section>
 
+
+<div class="copyright">
+    &copy; 2017 andy
+    &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+    <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+    <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+</div>
+
+<!--
 <footer>
     <div class="container ">
         <div class="row">
@@ -295,12 +304,12 @@ Andy's Blog            </a>
                     <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
                     <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--
                     <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
-                    -->
                 </center>
             </div>
         </div>
     </div>
 </footer>
+                    -->
 
 <!-- Google Analytics -->
 <script type="text/javascript">

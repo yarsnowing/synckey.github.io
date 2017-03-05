@@ -69,10 +69,6 @@
     <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-    <!--
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>-->
     <script>
         MathJax.Hub.Config({
             tex2jax: {
@@ -99,7 +95,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/theme/css/normalize.css"/>
-    <link rel="stylesheet" href="/theme/css/skeleton.css"/>
+    <!--
+    <link rel="stylesheet" href="/theme/css/skeleton.css"/>-->
     <link rel="stylesheet" href="/theme/css/style.css"/>
     <!--
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
@@ -120,9 +117,9 @@
 </head>
 
 <body>
-<div class="navbar navbar-default "
+<div class="navbar-default "
      role="navigation">
-    <div class="container">
+    <div class="post-container" style="background: rgba(0,0,0,0); border: 0px;border-radius: 0px;box-shadow: none">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-top-collapse">
@@ -162,25 +159,25 @@ Andy's Blog            </a>
 
 </div>
 -->
-    <!-- Banner -->
-    <!-- End Banner -->
+<!-- Banner -->
+<!-- End Banner -->
 <div class="post-container">
-<div class="post-header">
-    <h2>
-        <a href="/posts/2015/06/09/run-vw-on-hadoop.html"
-           rel="bookmark"
-           title="Permalink to Run Vowpal Wabbit on Hadoop">
-            Run Vowpal Wabbit on Hadoop
-        </a>
-    </h2>
-    <div class="post-meta">
+    <div class="post-header">
+        <h2>
+            <a href="/posts/2015/06/09/run-vw-on-hadoop.html"
+               rel="bookmark"
+               title="Permalink to Run Vowpal Wabbit on Hadoop">
+                Run Vowpal Wabbit on Hadoop
+            </a>
+        </h2>
+        <div class="post-meta">
         <span class="glyphicon glyphicon-calendar footnote"
               aria-hidden="true">2015-06-09</span>
-        <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
 
+        </div>
     </div>
-</div>
-<div class="post-content"><!--
+    <div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
 <footer class="post-info">
@@ -201,7 +198,7 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-    <h3>Prerequisites</h3>
+        <h3>Prerequisites</h3>
 <ul>
 <li>hadoop 2.2.0</li>
 <li>Centos 6.4</li>
@@ -289,13 +286,25 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-</div>
+<div class="separator"></div>
+<div class="separator"></div>
+<div class="separator"></div>
+    </div>
 </div>
 <!-- /.entry-content -->
 
 </article>
 </section>
 
+
+<div class="copyright">
+    &copy; 2017 andy
+    &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+    <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+    <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+</div>
+
+<!--
 <footer>
     <div class="container ">
         <div class="row">
@@ -309,12 +318,12 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
                     <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
                     <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--
                     <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
-                    -->
                 </center>
             </div>
         </div>
     </div>
 </footer>
+                    -->
 
 <!-- Google Analytics -->
 <script type="text/javascript">

@@ -69,10 +69,6 @@
     <script type="text/javascript"
             src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
-    <!--
-    <script type="text/javascript"
-            src="/static/mathjax/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>-->
     <script>
         MathJax.Hub.Config({
             tex2jax: {
@@ -99,7 +95,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/theme/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/theme/css/normalize.css"/>
-    <link rel="stylesheet" href="/theme/css/skeleton.css"/>
+    <!--
+    <link rel="stylesheet" href="/theme/css/skeleton.css"/>-->
     <link rel="stylesheet" href="/theme/css/style.css"/>
     <!--
     <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
@@ -120,9 +117,9 @@
 </head>
 
 <body>
-<div class="navbar navbar-default "
+<div class="navbar-default "
      role="navigation">
-    <div class="container">
+    <div class="post-container" style="background: rgba(0,0,0,0); border: 0px;border-radius: 0px;box-shadow: none">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#navbar-top-collapse">
@@ -162,25 +159,25 @@ Andy's Blog            </a>
 
 </div>
 -->
-    <!-- Banner -->
-    <!-- End Banner -->
+<!-- Banner -->
+<!-- End Banner -->
 <div class="post-container">
-<div class="post-header">
-    <h2>
-        <a href="/posts/2016/07/26/chang-ting-song-bie.html"
-           rel="bookmark"
-           title="Permalink to 长亭送别">
-            长亭送别
-        </a>
-    </h2>
-    <div class="post-meta">
+    <div class="post-header">
+        <h2>
+            <a href="/posts/2016/07/26/chang-ting-song-bie.html"
+               rel="bookmark"
+               title="Permalink to 长亭送别">
+                长亭送别
+            </a>
+        </h2>
+        <div class="post-meta">
         <span class="glyphicon glyphicon-calendar footnote"
               aria-hidden="true">2016-07-26</span>
-        <span class="glyphicon glyphicon-home footnote ">Beijing</span>
+            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
 
+        </div>
     </div>
-</div>
-<div class="post-content"><!--
+    <div class="post-content"><!--
             <div class="panel">
                 <div class="panel-body">
 <footer class="post-info">
@@ -201,7 +198,7 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-    <p>2015年8月28日，是我们一次见面，在朝阳大悦城，在星巴克和 MUJI 门口看到你。</p>
+        <p>2015年8月28日，是我们一次见面，在朝阳大悦城，在星巴克和 MUJI 门口看到你。</p>
 <p>你先带我去买了一杯奶茶，奶茶很好喝。一开始你说想吃烤鱼，我当时不知道为什么脑子抽，说我不能吃辣。听说我不能吃辣以后，你就不要再吃烤鱼，非要吃一个普通的番茄味的鱼火锅。那一天你一定吃的不开心，可是我真的发现自己好喜欢。</p>
 <p>在那次见面以后脑子里就常常会浮现你的样子——你吃东西头仰起来的调皮的样子，怕烫用手在嘴巴旁边扇风的样子。小组去青岛旅游也会傻傻的想到给你带鱼干。鱼干在家里放了很久，后来才终于约了你出来，一起吃了一个晚饭，看了一场电影（碟中谍5），把鱼干给你。这是我们第二次见面，当时是9月份，你刚上大四，后来你就回到苏州实习，我们中间有微信联系过，有聊过心事，有嘘寒问暖，却再也没有见过。</p>
 <p>大概是4月份的时候，你回学校，说要请我去你们学校吃饭，我很开心的去了。中午你，姝涵和我一起在你们学校的一个餐厅吃了一个午饭，你说那里的水煮鱼很好吃。下午我们在你们学校的咖啡厅坐了两个多小时，看到了你的另外一个室友，肖兰。在你们校园走的时候，你会很开心的给我介绍这里那里，如数家珍。</p>
@@ -241,13 +238,25 @@ Andy's Blog            </a>
     })();
 </script>
 <!-- 多说公共JS代码 end -->
-</div>
+<div class="separator"></div>
+<div class="separator"></div>
+<div class="separator"></div>
+    </div>
 </div>
 <!-- /.entry-content -->
 
 </article>
 </section>
 
+
+<div class="copyright">
+    &copy; 2017 andy
+    &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+    <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+    <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+</div>
+
+<!--
 <footer>
     <div class="container ">
         <div class="row">
@@ -261,12 +270,12 @@ Andy's Blog            </a>
                     <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
                     <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>                    <!--
                     <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
-                    -->
                 </center>
             </div>
         </div>
     </div>
 </footer>
+                    -->
 
 <!-- Google Analytics -->
 <script type="text/javascript">
