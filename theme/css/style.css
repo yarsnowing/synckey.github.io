@@ -102,8 +102,6 @@ a {
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
-    border-radius: 10px;
-    box-shadow:2px 2px 5px #333333;
 }
 
 
@@ -351,6 +349,9 @@ a {
     .post-content ul, .post-container ol {
         margin-left: 10px;
     }
+    .pager ul{
+        margin-left:0px;
+    }
 /*
     .post-container .highlight pre {
         margin-left: 60px;
@@ -395,6 +396,8 @@ a {
 
     .post-container {
 
+        border-radius: 10px;
+        box-shadow:2px 2px 5px #333333;
         border: 1px solid #eaecee;
         margin-left:130px ;
         margin-right:130px ;
