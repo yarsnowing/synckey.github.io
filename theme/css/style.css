@@ -217,7 +217,7 @@ a {
     margin-top: 20px;
     margin-bottom: 35px;
     max-width: 80%;
-    margin-left: auto;
+    margin: auto;
 }
 
 .post-container .figure.narrow {
