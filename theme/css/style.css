@@ -381,7 +381,8 @@ a {
     }
 
     .post-content ul, .post-container ol {
-        margin-left: 15px;
+        margin-left: 10px;
+        padding-left: 10px;
     }
 
     .pager ul {
