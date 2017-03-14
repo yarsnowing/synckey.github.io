@@ -192,7 +192,7 @@ a:hover {
 }
 
 .scroller {
-	padding: 10px 5% 10px 5%;
+	padding: 0;
 }
 
 .js .content:before,
