@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog - posts</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2017-02-20T00:00:00+08:00</updated><entry><title>《概率论》复习笔记</title><link href="/posts/2017/02/20/review-of-probability.html" rel="alternate"></link><published>2017-02-20T00:00:00+08:00</published><updated>2017-02-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-02-20:/posts/2017/02/20/review-of-probability.html</id><summary type="html">&lt;h4&gt;1. 随机事件和概率&lt;/h4&gt;
-&lt;h5&gt;1.1全概率公式&lt;/h5&gt;
-&lt;p&gt;设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&amp;gt;0(i=1,2,\cdots,n)$，且$\sum\limits_{i=1}^{n}{A_i}=\Omega$，
-则对任一事件$B$，有
-$$
-P(B)=\sum_{i=1}^{n}{P(A_i)\cdot P{(B|A_i)}}.
-$$
-满足公式中的$A_1,A_2,\cdots,A_n$  叫&lt;strong&gt;完备事件组&lt;/strong&gt;。&lt;/p&gt;
-&lt;h5&gt;1.2贝叶斯公式 …&lt;/h5&gt;</summary><content type="html">&lt;h4&gt;1. 随机事件和概率&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2017-02-20T00:00:00+08:00</updated><entry><title>《概率论》复习笔记</title><link href="/posts/2017/02/20/review-of-probability.html" rel="alternate"></link><published>2017-02-20T00:00:00+08:00</published><updated>2017-02-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2017-02-20:posts/2017/02/20/review-of-probability.html</id><summary type="html">&lt;h4&gt;1. 随机事件和概率&lt;/h4&gt;
 &lt;h5&gt;1.1全概率公式&lt;/h5&gt;
 &lt;p&gt;设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&amp;gt;0(i=1,2,\cdots,n)$，且$\sum\limits_{i=1}^{n}{A_i}=\Omega$，
 则对任一事件$B$，有
@@ -69,14 +61,7 @@ P(X_n=k)=\frac{\lambda ^ k}{k!}e^{-\lambda},k=0,1,2,\cdots .
 $$
 式中$\lambda&amp;gt;0$是常数，则称$X$服从以$\lambda$为参数的泊松分布，记作$X\sim P(\lambda)$。&lt;/p&gt;
 &lt;h5&gt;References&lt;/h5&gt;
-&lt;p&gt;&lt;a href="https://www.amazon.cn/%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E6%95%99%E7%A8%8B-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/dp/B005EV51AO/ref=sr_1_1?ie=UTF8&amp;amp;qid=1487571721&amp;amp;sr=8-1&amp;amp;keywords=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1+%E5%88%98%E5%BB%BA%E4%BA%9A"&gt;《概率论与数理统计》&lt;/a&gt;&lt;/p&gt;</content><category term="machine learning"></category><category term="deep learning"></category><category term="probability"></category></entry><entry><title>Notes for Leetcode</title><link href="/posts/2016/10/20/notes-for-leetcode.md.html" rel="alternate"></link><published>2016-10-20T00:00:00+08:00</published><updated>2016-10-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-10-20:/posts/2016/10/20/notes-for-leetcode.md.html</id><summary type="html">&lt;h2&gt;1.Binary Number Representation&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mb"&gt;0b1111&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// which is equals to `x = 15`; and is useful when use the number for masking.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;2.Rotate Function&lt;/h2&gt;
-&lt;h3&gt;Original Question&lt;/h3&gt;
-&lt;p&gt;原始问题链接：&lt;a href="https://leetcode.com/problems/rotate-function/"&gt;Rotate Function&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Given an array of integers $A$ and let $n$ to be its length.&lt;/p&gt;
-&lt;p&gt;Assume $B_k$ to be an array obtained by …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;1.Binary Number Representation&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.amazon.cn/%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E6%95%99%E7%A8%8B-%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/dp/B005EV51AO/ref=sr_1_1?ie=UTF8&amp;amp;qid=1487571721&amp;amp;sr=8-1&amp;amp;keywords=%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1+%E5%88%98%E5%BB%BA%E4%BA%9A"&gt;《概率论与数理统计》&lt;/a&gt;&lt;/p&gt;</summary><category term="machine learning"></category><category term="deep learning"></category><category term="probability"></category></entry><entry><title>Notes for Leetcode</title><link href="/posts/2016/10/20/notes-for-leetcode.md.html" rel="alternate"></link><published>2016-10-20T00:00:00+08:00</published><updated>2016-10-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-10-20:posts/2016/10/20/notes-for-leetcode.md.html</id><summary type="html">&lt;h2&gt;1.Binary Number Representation&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mb"&gt;0b1111&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// which is equals to `x = 15`; and is useful when use the number for masking.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;2.Rotate Function&lt;/h2&gt;
@@ -161,19 +146,7 @@ $$
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions"&gt;Solution to Convert a Number to Hexadecimal&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://leetcode.com/problems/rotate-function/"&gt;Rotate Function&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8"&gt;Java Solution O(n) with non mathametical explaination&lt;/a&gt;&lt;/p&gt;</content><category term="algorithm"></category></entry><entry><title>My Bashrc Backup</title><link href="/posts/2016/10/11/my-bashrc-backup.html" rel="alternate"></link><published>2016-10-11T00:00:00+08:00</published><updated>2016-10-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-10-11:/posts/2016/10/11/my-bashrc-backup.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .bashrc&lt;/span&gt;
-&lt;span class="c1"&gt;# Source global definitions&lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f /etc/bashrc &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
-    . /etc/bashrc
-&lt;span class="k"&gt;fi&lt;/span&gt;
-&lt;span class="c1"&gt;# User specific aliases and functions&lt;/span&gt;
-
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LS_OPTIONS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'--color=auto'&lt;/span&gt; &lt;span class="c1"&gt;# 如果没有指定，则自动选择颜色&lt;/span&gt;
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;CLICOLOR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'Yes'&lt;/span&gt; &lt;span class="c1"&gt;#是否输出颜色&lt;/span&gt;
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LSCOLORS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'Exfxcxdxbxegedabagacad'&lt;/span&gt; &lt;span class="c1"&gt;#指定颜色&lt;/span&gt;
-&lt;span class="nb"&gt;alias&lt;/span&gt; &lt;span class="nv"&gt;ll&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'ls -l'&lt;/span&gt;
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PS1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"\[\e[0;31m\][\u@\H \w]\\&lt;/span&gt;$&lt;span class="s2"&gt; \[\e[m\]"&lt;/span&gt;
-&lt;span class="c1"&gt;# vim:ts=4:sw=4 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .bashrc&lt;/span&gt;
+&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8"&gt;Java Solution O(n) with non mathametical explaination&lt;/a&gt;&lt;/p&gt;</summary><category term="algorithm"></category></entry><entry><title>My Bashrc Backup</title><link href="/posts/2016/10/11/my-bashrc-backup.html" rel="alternate"></link><published>2016-10-11T00:00:00+08:00</published><updated>2016-10-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-10-11:posts/2016/10/11/my-bashrc-backup.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .bashrc&lt;/span&gt;
 &lt;span class="c1"&gt;# Source global definitions&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f /etc/bashrc &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
     . /etc/bashrc
@@ -187,16 +160,9 @@ $$
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PS1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"\[\e[0;31m\][\u@\H \w]\\&lt;/span&gt;$&lt;span class="s2"&gt; \[\e[m\]"&lt;/span&gt;
 &lt;span class="c1"&gt;# vim:ts=4:sw=4&lt;/span&gt;
 &lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$PATH&lt;/span&gt;:/usr/local/bin/
-&lt;/pre&gt;&lt;/div&gt;</content><category term="tools"></category><category term="vim"></category><category term="linux"></category><category term="config"></category><category term="macos"></category></entry><entry><title>JVM Monitor Tool---jvisualvm</title><link href="/posts/2016/07/26/jvm-monitor-tool-jvisualvm.html" rel="alternate"></link><published>2016-07-26T00:00:00+08:00</published><updated>2016-07-26T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-07-26:/posts/2016/07/26/jvm-monitor-tool-jvisualvm.html</id><summary type="html">&lt;h2&gt;通过 jvisualvm 查看 jvm 内部详细信息&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="tools"></category><category term="vim"></category><category term="linux"></category><category term="config"></category><category term="macos"></category></entry><entry><title>JVM Monitor Tool---jvisualvm</title><link href="/posts/2016/07/26/jvm-monitor-tool-jvisualvm.html" rel="alternate"></link><published>2016-07-26T00:00:00+08:00</published><updated>2016-07-26T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-07-26:posts/2016/07/26/jvm-monitor-tool-jvisualvm.html</id><summary type="html">&lt;h2&gt;通过 jvisualvm 查看 jvm 内部详细信息&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jvisualvm -Dcom.sun.management.jmxremote.port&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8999&lt;/span&gt; -Dcom.sun.management.jmxremote.ssl&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
- -Dcom.sun.management.jmxremote.authenticate&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; -Djava.rmi.server.hostname&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.86.46.252
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;查看哪个线程使用 cpu 最多&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ps -mp &lt;span class="m"&gt;2633&lt;/span&gt; -o THREAD,tid,time &lt;span class="p"&gt;|&lt;/span&gt; sort -rn
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;找到占用 cpu 时间最多的线程。然后将线程 id 转换成16进制格式 …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;通过 jvisualvm 查看 jvm 内部详细信息&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jvisualvm -Dcom.sun.management.jmxremote.port&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8999&lt;/span&gt; -Dcom.sun.management.jmxremote.ssl&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
- -Dcom.sun.management.jmxremote.authenticate&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; -Djava.rmi.server.hostname&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;10&lt;/span&gt;.86.46.252
+ -Dcom.sun.management.jmxremote.authenticate&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;false&lt;/span&gt; -Djava.rmi.server.hostname&lt;span class="o"&gt;=&lt;/span&gt;10.86.46.252
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;查看哪个线程使用 cpu 最多&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ps -mp &lt;span class="m"&gt;2633&lt;/span&gt; -o THREAD,tid,time &lt;span class="p"&gt;|&lt;/span&gt; sort -rn
@@ -207,11 +173,10 @@ $$
  e18
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;最后用 jstack 查看线程的运行 stack:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jstack &lt;span class="m"&gt;2633&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;grep e18 -A &lt;span class="m"&gt;30&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;jstack &lt;span class="m"&gt;2633&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;grep e18 -A 30
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://blog.chinaunix.net/uid-10449864-id-3463151.html"&gt;生产环境下JAVA进程高CPU占用故障排查&lt;/a&gt;&lt;/p&gt;</content><category term="java"></category><category term="posts"></category><category term="jvm"></category><category term="profile"></category><category term="trouble shooting"></category></entry><entry><title>上品饺子</title><link href="/posts/2016/04/20/shang-pin-jiao-zi.html" rel="alternate"></link><published>2016-04-20T00:00:00+08:00</published><updated>2016-04-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-04-20:/posts/2016/04/20/shang-pin-jiao-zi.html</id><summary type="html">&lt;p&gt;在住的楼下，有一家不起眼的水饺店，叫上品饺子。饺子店房子很矮，门口挺破。从门口路过很多次，可是从来没有进去过——那样的外观让人一点食欲也没有。可是有一天突然很想吃水饺，就推门走了进去。里面并不大，就4,5张桌子，每个桌子能坐4个人。叫了一碗韭菜鸡蛋的水饺，汤饺。大概10分钟，饺子端上来了，碗很大，汤色是暗红色的，加了醋和酱油，汤上还漂浮着几根香菜梗，闻起来很香。水饺很大，很饱满，尝了一口，很鲜。饺子吃起来是浓浓的韭菜香，是纯手工包的。本来已经做好了吃速冻睡觉的准备，但这满满的一大碗人工包的饺子，的确让人欣喜。&lt;/p&gt;
-&lt;p&gt;从此，就爱上了他们家的饺子，破了减肥不吃晚饭的戒。每次下班经过他们家门口，就走不动了，要做一番心里斗争。结果往往是要进去吃一大碗韭菜猪肉的水饺，加一个荷包蛋才会满足。也常常跟同事推荐，“有空一定要带你们一起去尝一尝水饺——都是手工的，他们家也有面条，面条上的猪肝，肉丝，木耳，香菇，都是现炒的，热腾腾的 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;在住的楼下，有一家不起眼的水饺店，叫上品饺子。饺子店房子很矮，门口挺破。从门口路过很多次，可是从来没有进去过——那样的外观让人一点食欲也没有。可是有一天突然很想吃水饺，就推门走了进去。里面并不大，就4,5张桌子，每个桌子能坐4个人。叫了一碗韭菜鸡蛋的水饺，汤饺。大概10分钟，饺子端上来了，碗很大，汤色是暗红色的，加了醋和酱油，汤上还漂浮着几根香菜梗，闻起来很香。水饺很大，很饱满，尝了一口，很鲜。饺子吃起来是浓浓的韭菜香，是纯手工包的。本来已经做好了吃速冻睡觉的准备，但这满满的一大碗人工包的饺子，的确让人欣喜。&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://blog.chinaunix.net/uid-10449864-id-3463151.html"&gt;生产环境下JAVA进程高CPU占用故障排查&lt;/a&gt;&lt;/p&gt;</summary><category term="java"></category><category term="posts"></category><category term="jvm"></category><category term="profile"></category><category term="trouble shooting"></category></entry><entry><title>上品饺子</title><link href="/posts/2016/04/20/shang-pin-jiao-zi.html" rel="alternate"></link><published>2016-04-20T00:00:00+08:00</published><updated>2016-04-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-04-20:posts/2016/04/20/shang-pin-jiao-zi.html</id><summary type="html">&lt;p&gt;在住的楼下，有一家不起眼的水饺店，叫上品饺子。饺子店房子很矮，门口挺破。从门口路过很多次，可是从来没有进去过——那样的外观让人一点食欲也没有。可是有一天突然很想吃水饺，就推门走了进去。里面并不大，就4,5张桌子，每个桌子能坐4个人。叫了一碗韭菜鸡蛋的水饺，汤饺。大概10分钟，饺子端上来了，碗很大，汤色是暗红色的，加了醋和酱油，汤上还漂浮着几根香菜梗，闻起来很香。水饺很大，很饱满，尝了一口，很鲜。饺子吃起来是浓浓的韭菜香，是纯手工包的。本来已经做好了吃速冻睡觉的准备，但这满满的一大碗人工包的饺子，的确让人欣喜。&lt;/p&gt;
 &lt;p&gt;从此，就爱上了他们家的饺子，破了减肥不吃晚饭的戒。每次下班经过他们家门口，就走不动了，要做一番心里斗争。结果往往是要进去吃一大碗韭菜猪肉的水饺，加一个荷包蛋才会满足。也常常跟同事推荐，“有空一定要带你们一起去尝一尝水饺——都是手工的，他们家也有面条，面条上的猪肝，肉丝，木耳，香菇，都是现炒的，热腾腾的”。&lt;/p&gt;
 &lt;p&gt;小店的主人是一位大爷，大概50多岁，大爷的一家都在经营折这家饺子馆——大爷负责送外卖，大娘掌勺，女儿叫晶晶，负责端盘子和收钱，儿子负责包饺子，做凉菜。他们家的第五个成员，一直小黄，叫喵喵。喵喵总是在不停的叫，大爷有时候不去送外卖，就会把喵喵抱在腿上，笑眯眯的看着客人在吃饺子。&lt;/p&gt;
 &lt;p&gt;小店的生意也没有那么好，很少见到有坐满的时候，外卖也没有见到很多。有一次听到晶晶跟他爸爸吵，“要是我在这，这一单人家就不会取消了呀！”。小店的客人大多是附近的居民，有小情侣，妈妈带着孩子。也有一些附近工地上的工人，他们都是5，6个人一起来，有时候要把两张桌子拼起来才能坐得开。他们来了小店就会热闹许多，有烟有酒有欢笑。大多时候，我八点左右才到这里，那时候基本只有我一个人，在角落默默的吃完。走的时候，大爷或晶晶总是会说上一声慢走，有时候也会帮我把门打开。有一次快9点了才到，小妹妹说不买了，关门了。小哥哥想了一下，好像不忍心让我就这么饿着回去，于是就让我吃完他们才打烊。&lt;/p&gt;
@@ -224,19 +189,7 @@ $$
 &lt;p&gt;失落的退了出来，真的不开了么？&lt;/p&gt;
 &lt;p&gt;上周六中午，从小店门口路过，看到大爷大妈也在里面，于是又进了小店，想吃一碗饺子，然而大爷大妈只是在这里帮新主人吸引老客户而已，他们真的不开了。他们不开店了将会何去何从？想问却也没问的出口。今晚再次看到大爷在小店里，就走进去要了一份盖饭，大爷叫了我一声小王，像有什么事，没说什么就走了。吃饭的时候，新老板娘说大娘生病了，要回老家养病，才把这家店转让了。不知道大娘得的什么病，也不知道他们看病花了多少钱，有没有医保可以报销。记得大爷以前说他们住在一个地下室，他说他们租不起一套好一点的房子---也许是舍不得租。&lt;/p&gt;
 &lt;p&gt;一场突如其来的病，让一个本充满希望的家庭，又回到了原点。离开北京对他们来说福兮？祸兮？无从知晓。&lt;/p&gt;
-&lt;p&gt;只希望曾经多吃了几碗饺子。&lt;/p&gt;</content><category term="life"></category></entry><entry><title>Grammar in Use 笔记</title><link href="/posts/2016/03/26/notes-of-grammar-in-use.html" rel="alternate"></link><published>2016-03-26T00:00:00+08:00</published><updated>2016-03-26T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-03-26:/posts/2016/03/26/notes-of-grammar-in-use.html</id><summary type="html">&lt;h3&gt;主要的时态&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;past(I did)&lt;/li&gt;
-&lt;li&gt;present continuous(I am doing)&lt;/li&gt;
-&lt;li&gt;present simple(I do)&lt;/li&gt;
-&lt;li&gt;past simple(I did)&lt;/li&gt;
-&lt;li&gt;past continuous(I was doing)&lt;/li&gt;
-&lt;li&gt;present perfect(I have done)&lt;/li&gt;
-&lt;li&gt;present perfect continuous(I have been doing),强调从过去到现在的一个过程.&lt;/li&gt;
-&lt;li&gt;present perfect simple &lt;/li&gt;
-&lt;li&gt;past perfect(I had done)&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;past perfect continuous(I had been doing …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h3&gt;主要的时态&lt;/h3&gt;
+&lt;p&gt;只希望曾经多吃了几碗饺子。&lt;/p&gt;</summary><category term="life"></category></entry><entry><title>Grammar in Use 笔记</title><link href="/posts/2016/03/26/notes-of-grammar-in-use.html" rel="alternate"></link><published>2016-03-26T00:00:00+08:00</published><updated>2016-03-26T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-03-26:posts/2016/03/26/notes-of-grammar-in-use.html</id><summary type="html">&lt;h3&gt;主要的时态&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;past(I did)&lt;/li&gt;
 &lt;li&gt;present continuous(I am doing)&lt;/li&gt;
@@ -367,7 +320,7 @@ $$
 &lt;li&gt;begin-&amp;gt;began-&amp;gt;begun&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content><category term="英语"></category><category term="语法"></category></entry><entry><title>让VIM记录文件上次编辑的位置</title><link href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html" rel="alternate"></link><published>2016-03-11T00:00:00+08:00</published><updated>2016-03-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-03-11:/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html</id><summary type="html">&lt;p&gt;在&lt;code&gt;~/.vimrc&lt;/code&gt;中加入如下配置:&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="英语"></category><category term="语法"></category></entry><entry><title>让VIM记录文件上次编辑的位置</title><link href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html" rel="alternate"></link><published>2016-03-11T00:00:00+08:00</published><updated>2016-03-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-03-11:posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html</id><summary type="html">&lt;p&gt;在&lt;code&gt;~/.vimrc&lt;/code&gt;中加入如下配置:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd BufReadPost *
 &lt;span class="se"&gt;\ &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;gt;0&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;lt;&lt;span class="o"&gt;=&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;$&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="se"&gt;\ &lt;/span&gt;exe &lt;span class="s2"&gt;"normal g'\""&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
@@ -380,44 +333,7 @@ syntax &lt;span class="nb"&gt;enable&lt;/span&gt;
 &lt;span class="nb"&gt;set&lt;/span&gt; nu
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;参考&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://www.2cto.com/os/201311/255061.html"&gt;让VIM记录文件上次编辑的位置&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;在&lt;code&gt;~/.vimrc&lt;/code&gt;中加入如下配置:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd BufReadPost *
-&lt;span class="se"&gt;\ &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;gt;0&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;lt;&lt;span class="o"&gt;=&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;$&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="se"&gt;\ &lt;/span&gt;exe &lt;span class="s2"&gt;"normal g'\""&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="se"&gt;\ &lt;/span&gt;endif
-autocmd BufReadPost *
-&lt;span class="se"&gt;\ &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;gt;0&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;lt;&lt;span class="o"&gt;=&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;$&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="se"&gt;\ &lt;/span&gt;exe &lt;span class="s2"&gt;"normal g'\""&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
-&lt;span class="se"&gt;\ &lt;/span&gt;endif
-syntax &lt;span class="nb"&gt;enable&lt;/span&gt;
-&lt;span class="nb"&gt;set&lt;/span&gt; nu
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;参考&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://www.2cto.com/os/201311/255061.html"&gt;让VIM记录文件上次编辑的位置&lt;/a&gt;&lt;/p&gt;</content><category term="tools"></category><category term="vim"></category><category term="linux"></category><category term="config"></category></entry><entry><title>Summary Concepts of Deep Learning</title><link href="/posts/2016/03/01/summary-concepts-of-deep-learning.html" rel="alternate"></link><published>2016-03-01T00:00:00+08:00</published><updated>2016-03-01T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-03-01:/posts/2016/03/01/summary-concepts-of-deep-learning.html</id><summary type="html">&lt;h2&gt;机器学习&lt;/h2&gt;
-&lt;p&gt;input-&amp;gt;feature representation-&amp;gt;learning algorithm&lt;/p&gt;
-&lt;h3&gt;监督学习&lt;/h3&gt;
-&lt;p&gt;标注过的训练数据.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;标注成本高&lt;/li&gt;
-&lt;li&gt;数据稀疏&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;非监督学习&lt;/h3&gt;
-&lt;p&gt;未标注的数据,让算法自己决定学到什么.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;数据量大&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;features&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;特征的表示对机器学习性能有巨大的影响.&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;人工特征筛选,处理,需要非常精细的调整和专业知识.&lt;/li&gt;
-&lt;li&gt;在很多任务中,很难知道哪些特征需要被抽取出来.例如,想要识别图像中的汽车,我们知道骑车都有轮子,所以我们可能会将轮子当做一个特征,但是实际上很难精确的描述什么是轮子.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;神经网络&lt;/h2&gt;
-&lt;h3&gt;Neurons&lt;/h3&gt;
-&lt;p&gt;&lt;p align="center"&gt;
-&lt;img alt="SingleNeuron" class="img-responsive" src="/static/images/SingleNeuron.png" width="40%"/&gt;
-&lt;/p&gt;&lt;/p&gt;
-&lt;p&gt;神经网络的基本组成单元,叫神经元(neuron),途中的神经元是一个以$x_1,x_x,x_3$(和一个$+1$截距项(intercept term))为输入,以$h_{W,b}(x)=f(W^Tx)=f …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;机器学习&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.2cto.com/os/201311/255061.html"&gt;让VIM记录文件上次编辑的位置&lt;/a&gt;&lt;/p&gt;</summary><category term="tools"></category><category term="vim"></category><category term="linux"></category><category term="config"></category></entry><entry><title>Summary Concepts of Deep Learning</title><link href="/posts/2016/03/01/summary-concepts-of-deep-learning.html" rel="alternate"></link><published>2016-03-01T00:00:00+08:00</published><updated>2016-03-01T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-03-01:posts/2016/03/01/summary-concepts-of-deep-learning.html</id><summary type="html">&lt;h2&gt;机器学习&lt;/h2&gt;
 &lt;p&gt;input-&amp;gt;feature representation-&amp;gt;learning algorithm&lt;/p&gt;
 &lt;h3&gt;监督学习&lt;/h3&gt;
 &lt;p&gt;标注过的训练数据.&lt;/p&gt;
@@ -495,7 +411,7 @@ $$
 &lt;p&gt;假设我们有一个固定样本集 ${ (x^{(1)}, y^{(1)}), \ldots, (x^{(m)}, y^{(m)}) }$，它包含$m$ 个样例。我们可以用批量梯度下降法来求解神经网络。具体来讲，对于单个样例 $(x,y)$，其代价函数为：
 $$
 \begin{align}
-J(W,b; x,y) = \frac{1}{2} \left| h_{W,b}(x) - y \right|^2.
+J(W,b; x,y) = \frac{1}{2} \left\| h_{W,b}(x) - y \right\|^2.
 \end{align}
 $$
 这是一个（二分之一的）方差代价函数。给定一个包含  $m$ 个样例的数据集，我们可以定义整体代价函数为：&lt;/p&gt;
@@ -504,7 +420,7 @@ $$
 J(W,b)
 &amp;amp;= \left[ \frac{1}{m} \sum_{i=1}^m J(W,b;x^{(i)},y^{(i)}) \right]
                        + \frac{\lambda}{2} \sum_{l=1}^{n_l-1} \; \sum_{i=1}^{s_l} \; \sum_{j=1}^{s_{l+1}} \left( W^{(l)}_{ji} \right)^2 \\
-&amp;amp;= \left[ \frac{1}{m} \sum_{i=1}^m \left( \frac{1}{2} \left| h_{W,b}(x^{(i)}) - y^{(i)} \right|^2 \right) \right]
+&amp;amp;= \left[ \frac{1}{m} \sum_{i=1}^m \left( \frac{1}{2} \left\| h_{W,b}(x^{(i)}) - y^{(i)} \right\|^2 \right) \right]
                        + \frac{\lambda}{2} \sum_{l=1}^{n_l-1} \; \sum_{i=1}^{s_l} \; \sum_{j=1}^{s_{l+1}} \left( W^{(l)}_{ji} \right)^2
 \end{align}
 $$&lt;/p&gt;
@@ -527,7 +443,7 @@ $$
 \begin{align}
 \delta^{(n_l)}_i
 = \frac{\partial}{\partial z^{(n_l)}_i} \;\;
-        \frac{1}{2} \left|y - h_{W,b}(x)\right|^2 = - (y_i - a^{(n_l)}_i) \cdot f'(z^{(n_l)}_i)
+        \frac{1}{2} \left\|y - h_{W,b}(x)\right\|^2 = - (y_i - a^{(n_l)}_i) \cdot f'(z^{(n_l)}_i)
 \end{align}
 $$&lt;/p&gt;
 &lt;/li&gt;
@@ -626,12 +542,7 @@ $$
 &lt;p&gt;&lt;a href="http://blog.csdn.net/zouxy09/article/details/8775518"&gt;Deep Learning（深度学习）学习笔记整理系列&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.deeplearningbook.org/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://ufldl.stanford.edu/tutorial/"&gt;Deep Learning Tutorial&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B"&gt;http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B&lt;/a&gt;&lt;/p&gt;</content><category term="machine learning"></category><category term="deep learning"></category></entry><entry><title>HHKB 设置与快捷键</title><link href="/posts/2016/02/26/hhkb-settings-and-shortcut-keys.html" rel="alternate"></link><published>2016-02-26T00:00:00+08:00</published><updated>2016-02-26T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-02-26:/posts/2016/02/26/hhkb-settings-and-shortcut-keys.html</id><summary type="html">&lt;p&gt;入了hhkb的坑,买了一个hhkb types pro2,折腾了一阵子.个人感觉hhkb的手感并不比cherry青轴手感好,但是有一点比青轴好太多,就是按键很灵敏.以前我的cherry不知道是我自己人品不好买到瑕疵品了还是怎么回事,F1按的太多以后就总是有点不灵,而且Cherry的按键总是给人一种按下去粘粘的弹不起来的感觉(按键感觉,不是键帽材质)不是很清爽.比Cherry好的第二优点是使用寿命,机械键盘的开关说是有2000w次的寿命,理论上可以用5-8年,而hhkb属于静电电容键盘,按键的触发是根据电容的变化来判断的,每次敲击是没有物理接触的,所以经典电容理的开关理论上是不会坏的,可以作为程序猿传家宝传给儿子.虽然hhkb的手感并没有让人很惊艳,但是用一阵子之后再换回mac book自带的键盘就感觉差太多了,再加上熟悉了hhkb键盘布局以后用回mac的键盘老是误按,所以现在算是离不开hhkb了.&lt;/p&gt;
-&lt;p&gt;我用hhkb的开关是&lt;code&gt;011001&lt;/code&gt;,主要是使用macintosh的键盘布局并且将delete键设置为'BS'.另外,也安装了&lt;a href="https://pqrs.org/osx/karabiner/index.html.en"&gt;Karabiner&lt;/a&gt;这款神器,它一方面可以设置系统自动识别是否插入了外接键盘,如果插入了外接键盘,可以将mac的键盘disable掉,另一方面它具有强大的改键功能.硬件方面,买了一个miniusb右弯的接头,这样把hhkb放在mac键盘上的时候,线就不会弯曲到挡着屏幕了.&lt;/p&gt;
-&lt;p align="center"&gt;
-&lt;img alt="miniusb" class="img-responsive img-rounded" src="/static/images/miniusb.jpg" title="An awesome picture caption!" width="50%"/&gt;
-&lt;/p&gt;
-&lt;p&gt;hhkb的键盘布局最大的特点就把Control键移到了Caps键的位置,所以小拇指很容易就能按到它,所以hhkb的键盘布局对emacs非常友好.而mac os操作系统对emacs风格的快捷键原生就有支持,在界面中可以通过&lt;code&gt;CTRL+B …&lt;/code&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;入了hhkb的坑,买了一个hhkb types pro2,折腾了一阵子.个人感觉hhkb的手感并不比cherry青轴手感好,但是有一点比青轴好太多,就是按键很灵敏.以前我的cherry不知道是我自己人品不好买到瑕疵品了还是怎么回事,F1按的太多以后就总是有点不灵,而且Cherry的按键总是给人一种按下去粘粘的弹不起来的感觉(按键感觉,不是键帽材质)不是很清爽.比Cherry好的第二优点是使用寿命,机械键盘的开关说是有2000w次的寿命,理论上可以用5-8年,而hhkb属于静电电容键盘,按键的触发是根据电容的变化来判断的,每次敲击是没有物理接触的,所以经典电容理的开关理论上是不会坏的,可以作为程序猿传家宝传给儿子.虽然hhkb的手感并没有让人很惊艳,但是用一阵子之后再换回mac book自带的键盘就感觉差太多了,再加上熟悉了hhkb键盘布局以后用回mac的键盘老是误按,所以现在算是离不开hhkb了.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B"&gt;http://ufldl.stanford.edu/wiki/index.php/UFLDL%E6%95%99%E7%A8%8B&lt;/a&gt;&lt;/p&gt;</summary><category term="machine learning"></category><category term="deep learning"></category></entry><entry><title>HHKB 设置与快捷键</title><link href="/posts/2016/02/26/hhkb-settings-and-shortcut-keys.html" rel="alternate"></link><published>2016-02-26T00:00:00+08:00</published><updated>2016-02-26T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2016-02-26:posts/2016/02/26/hhkb-settings-and-shortcut-keys.html</id><summary type="html">&lt;p&gt;入了hhkb的坑,买了一个hhkb types pro2,折腾了一阵子.个人感觉hhkb的手感并不比cherry青轴手感好,但是有一点比青轴好太多,就是按键很灵敏.以前我的cherry不知道是我自己人品不好买到瑕疵品了还是怎么回事,F1按的太多以后就总是有点不灵,而且Cherry的按键总是给人一种按下去粘粘的弹不起来的感觉(按键感觉,不是键帽材质)不是很清爽.比Cherry好的第二优点是使用寿命,机械键盘的开关说是有2000w次的寿命,理论上可以用5-8年,而hhkb属于静电电容键盘,按键的触发是根据电容的变化来判断的,每次敲击是没有物理接触的,所以经典电容理的开关理论上是不会坏的,可以作为程序猿传家宝传给儿子.虽然hhkb的手感并没有让人很惊艳,但是用一阵子之后再换回mac book自带的键盘就感觉差太多了,再加上熟悉了hhkb键盘布局以后用回mac的键盘老是误按,所以现在算是离不开hhkb了.&lt;/p&gt;
 &lt;p&gt;我用hhkb的开关是&lt;code&gt;011001&lt;/code&gt;,主要是使用macintosh的键盘布局并且将delete键设置为'BS'.另外,也安装了&lt;a href="https://pqrs.org/osx/karabiner/index.html.en"&gt;Karabiner&lt;/a&gt;这款神器,它一方面可以设置系统自动识别是否插入了外接键盘,如果插入了外接键盘,可以将mac的键盘disable掉,另一方面它具有强大的改键功能.硬件方面,买了一个miniusb右弯的接头,这样把hhkb放在mac键盘上的时候,线就不会弯曲到挡着屏幕了.&lt;/p&gt;
 &lt;p align="center"&gt;
 &lt;img alt="miniusb" class="img-responsive img-rounded" src="/static/images/miniusb.jpg" title="An awesome picture caption!" width="50%"/&gt;
@@ -655,7 +566,7 @@ $$
 &lt;li&gt;Ctrl+y 粘贴&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://www.xiaozhou.net/got_hhkb_pro_2-2013-06-03.html"&gt;码农神器HHKB Pro2入手与开箱&lt;/a&gt;&lt;/p&gt;</content><category term="hhkb"></category><category term="keyboad"></category></entry><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><published>2015-12-24T00:00:00+08:00</published><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-12-24:/posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;p&gt;&lt;a href="http://www.xiaozhou.net/got_hhkb_pro_2-2013-06-03.html"&gt;码农神器HHKB Pro2入手与开箱&lt;/a&gt;&lt;/p&gt;</summary><category term="hhkb"></category><category term="keyboad"></category></entry><entry><title>Plot Sigmoid in Matlab</title><link href="/posts/2015/12/24/plot-sigmoid-in-matlab.html" rel="alternate"></link><published>2015-12-24T00:00:00+08:00</published><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-12-24:posts/2015/12/24/plot-sigmoid-in-matlab.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)];&lt;/span&gt;
 &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
@@ -663,26 +574,7 @@ $$
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;p align="center"&gt;
 &lt;img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="50%"/&gt;
-&lt;/p&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="nb"&gt;exp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)];&lt;/span&gt;
-&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="n"&gt;grid&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;p align="center"&gt;
-&lt;img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="50%"/&gt;
-&lt;/p&gt;&lt;/p&gt;</content><category term="machine learning"></category><category term="technology"></category><category term="logistic regression"></category></entry><entry><title>Where does sigmoid come from</title><link href="/posts/2015/12/24/where-does-sigmoid-come-from.html" rel="alternate"></link><published>2015-12-24T00:00:00+08:00</published><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-12-24:/posts/2015/12/24/where-does-sigmoid-come-from.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;主要根据Andrew Ng的教学讲义整理。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
-&lt;p align="center"&gt;
-&lt;img alt="sigmoid" class="img-responsive" src="/static/images/sigmoid.svg" width="60%"/&gt;
-&lt;/p&gt;
-书里面都说它的输出可以认为是预测的概率，但是，为什么是$sigmoid$，它是从哪来的呢？为什么可以它做二分类?书里面好像都没有说呢。&lt;/p&gt;
-&lt;h3&gt;1.逻辑回归的建模&lt;/h3&gt;
-&lt;p&gt;首先从逻辑回归($Logistic$ $Regression$)的基本假设说起。在二分类中，我们假设 $y \in \lbrace0,1\rbrace$,在给定 $x$ 的情况下，很自然
-就想到使用 $Bernoulli$ 对 $y$ 的条件分布进行建模。$Bernoulli$
-分布可以认为是二项分布一个特例($n=1$)，其结果只能取$0$或1。假设实验成功的概率为$p$,则$Bernoulli …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;/p&gt;&lt;/p&gt;</summary><category term="machine learning"></category><category term="technology"></category><category term="logistic regression"></category></entry><entry><title>Where does sigmoid come from</title><link href="/posts/2015/12/24/where-does-sigmoid-come-from.html" rel="alternate"></link><published>2015-12-24T00:00:00+08:00</published><updated>2015-12-24T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-12-24:posts/2015/12/24/where-does-sigmoid-come-from.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;主要根据Andrew Ng的教学讲义整理。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;逻辑回归(Logistic Regression)是机器学习中用的最广泛的算法之一，其中 $sigmoid$ 函数是逻辑回归用到的核心函数，它的输出形状如下:
@@ -768,16 +660,7 @@ $$&lt;/p&gt;
 分布的定义，就自然而然的给出了逻辑回归函数。&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://open.163.com/special/opencourse/machinelearning.html"&gt;Andrew Ng Machine Learning &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.cs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf"&gt;Michael I. Jordan The exponential family: Basics&lt;/a&gt;&lt;/p&gt;</content><category term="machine learning"></category><category term="technology"></category><category term="logistic regression"></category></entry><entry><title>A Misuse of Spark Broadcast</title><link href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html" rel="alternate"></link><published>2015-11-03T00:00:00+08:00</published><updated>2015-11-03T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-11-03:/posts/2015/11/03/a-misuse-of-spark-broadcast.html</id><summary type="html">&lt;p&gt;在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-
-    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HashMap&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;();&lt;/span&gt;
-
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;Test&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Broadcast&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;){&lt;/span&gt;
-        &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;broadcast&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;value&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-    &lt;span class="o"&gt;}&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt; &lt;span class="nf"&gt;call&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;throws&lt;/span&gt; &lt;span class="n"&gt;Exception&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;containsKey …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.cs.berkeley.edu/~jordan/courses/260-spring10/other-readings/chapter8.pdf"&gt;Michael I. Jordan The exponential family: Basics&lt;/a&gt;&lt;/p&gt;</summary><category term="machine learning"></category><category term="technology"></category><category term="logistic regression"></category></entry><entry><title>A Misuse of Spark Broadcast</title><link href="/posts/2015/11/03/a-misuse-of-spark-broadcast.html" rel="alternate"></link><published>2015-11-03T00:00:00+08:00</published><updated>2015-11-03T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-11-03:posts/2015/11/03/a-misuse-of-spark-broadcast.html</id><summary type="html">&lt;p&gt;在写Spark的作业时，如果用到大的lookup table，可以将这个Map直接作为Function的成员变量，这种方案最简单，但是会导致Task的Deserialization时间边的很长，严重影响作业运行时间。Spark可以将一个变量广播并缓存到所有节点上，作为task运行的一个本地查找表。由于之前对Spark api不是很了解，所以就用以下的方式使用了查找表：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="kd"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Function&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Boolean&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
 
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Map&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;lookupTable&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HashMap&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;();&lt;/span&gt;
@@ -810,19 +693,7 @@ $$&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="spark"></category></entry><entry><title>Run Vowpal Wabbit on Hadoop</title><link href="/posts/2015/06/09/run-vw-on-hadoop.html" rel="alternate"></link><published>2015-06-09T00:00:00+08:00</published><updated>2015-06-09T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-06-09:/posts/2015/06/09/run-vw-on-hadoop.html</id><summary type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;hadoop 2.2.0&lt;/li&gt;
-&lt;li&gt;Centos 6.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Install boost&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
-tar xzf boost_1_58_0.tar.gz
-&lt;span class="nb"&gt;cd&lt;/span&gt; boost_1_58_0
-sudo ./bootstrap.sh
-sudo ./bjam --layout&lt;span class="o"&gt;=&lt;/span&gt;tagged install 
-&lt;span class="nb"&gt;cd&lt;/span&gt; /etc/yum.repos.d
-wget http://people.centos.org …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="spark"></category></entry><entry><title>Run Vowpal Wabbit on Hadoop</title><link href="/posts/2015/06/09/run-vw-on-hadoop.html" rel="alternate"></link><published>2015-06-09T00:00:00+08:00</published><updated>2015-06-09T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-06-09:posts/2015/06/09/run-vw-on-hadoop.html</id><summary type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;hadoop 2.2.0&lt;/li&gt;
 &lt;li&gt;Centos 6.4&lt;/li&gt;
@@ -841,7 +712,7 @@ sudo vim /etc/yum.repos.d/DevToolset.repo
 &lt;span class="o"&gt;[&lt;/span&gt;DevToolset-2&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;RedHat DevToolset v2 &lt;span class="nv"&gt;$releasever&lt;/span&gt; - &lt;span class="nv"&gt;$basearch&lt;/span&gt;
 &lt;span class="nv"&gt;baseurl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://puias.princeton.edu/data/puias/DevToolset/&lt;span class="nv"&gt;$releasever&lt;/span&gt;/&lt;span class="nv"&gt;$basearch&lt;/span&gt;/
-&lt;span class="nv"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="nv"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
 &lt;span class="nv"&gt;gpgcheck&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; 
 sudo yum install devtoolset-2-gcc-4.8.1 devtoolset-2-gcc-c++-4.8.1
 
@@ -884,11 +755,11 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Refrences:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/"&gt;vowpal wabbit on hadoop&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</content><category term="hadoop"></category><category term="machine learning"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><published>2015-05-20T00:00:00+08:00</published><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-05-20:/posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
+&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</summary><category term="hadoop"></category><category term="machine learning"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><published>2015-05-20T00:00:00+08:00</published><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-05-20:posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;贴入如下内容:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Host *
-    ServerAliveInterval &lt;span class="m"&gt;30&lt;/span&gt;
+    ServerAliveInterval 30
     ControlMaster auto
     ControlPath ~/.ssh/master-%r@%h:%p
     ControlPersist yes
@@ -896,37 +767,7 @@ sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.
 &lt;p&gt;退出iterm2，重新登录即可。&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="http://www.dbathink.com/2012/10/iterm2-auto-automatic-login-log-on-script/"&gt;Iterm2 auto login 自动登录脚本&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://laughingchs.iteye.com/blog/1317703"&gt;linux clone session&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;贴入如下内容:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Host *
-    ServerAliveInterval &lt;span class="m"&gt;30&lt;/span&gt;
-    ControlMaster auto
-    ControlPath ~/.ssh/master-%r@%h:%p
-    ControlPersist yes
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;退出iterm2，重新登录即可。&lt;/p&gt;
-&lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://www.dbathink.com/2012/10/iterm2-auto-automatic-login-log-on-script/"&gt;Iterm2 auto login 自动登录脚本&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://laughingchs.iteye.com/blog/1317703"&gt;linux clone session&lt;/a&gt;&lt;/p&gt;</content><category term="iterm2"></category><category term="mac"></category><category term="sesssion"></category></entry><entry><title>我是怎么减掉了30斤</title><link href="/posts/2015/04/13/my-experience-of-losing-weight.html" rel="alternate"></link><published>2015-04-13T00:00:00+08:00</published><updated>2015-04-13T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-04-13:/posts/2015/04/13/my-experience-of-losing-weight.html</id><summary type="html">&lt;!--
-&lt;div class="figure"&gt;
-&lt;img class='u-full-width' src='/static/images/2015_04_13_weights.svg' style='width: 100%;'&gt;
-        &lt;div class="caption"&gt;体重变化&lt;/div&gt;
-&lt;/div&gt;
---&gt;
-&lt;div id="weight_container" style=" margin: 0 auto"&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;声明:本文是个人减肥经验，不适合每一个人，请勿盲目采取本文的方法，作者不对任何不良后果负责。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;心理准备&lt;/h2&gt;
-&lt;h3&gt;1.动机——为什么要减肥?&lt;/h3&gt;
-&lt;p&gt;首先，要想清楚为什么要减肥？为了更漂亮，身材更好，为了不当人见人厌的死胖子？&lt;/p&gt;
-&lt;h3&gt;2.目标和计划&lt;/h3&gt;
-&lt;p&gt;有了动机以后就可以制定目标了，很多人一开始就把目标定在减20斤减30斤，这个目标是很具体的，看起来也是可达成的，但是很难坚持下去，
-因为可能折腾了一个月，体重还是没有任何变化，就丧失信心，中途放弃了。对我个人而言，我的目标其实就是完成计划，不是减多少斤，而是坚持了多久，做了多少天运动。
-制定减肥计划最重要的两条就是：a.不能对我的日常生活产生干扰，b.可持续。 所以我每天的运动时间限制在1个小时以内（一开始要更短），这样一来，不需要
-匀出其他时间，就可以实施计划。可持续其实包含两层含义：a.计划不需要太吃力就能完成（&lt;strong&gt;extremely important&lt;/strong&gt;）,如果计划目标定的太高，比如每天跑10公里，
-肯定没人坚持的下去。b …&lt;/p&gt;</summary><content type="html">&lt;!--
+&lt;p&gt;&lt;a href="http://laughingchs.iteye.com/blog/1317703"&gt;linux clone session&lt;/a&gt;&lt;/p&gt;</summary><category term="iterm2"></category><category term="mac"></category><category term="sesssion"></category></entry><entry><title>我是怎么减掉了30斤</title><link href="/posts/2015/04/13/my-experience-of-losing-weight.html" rel="alternate"></link><published>2015-04-13T00:00:00+08:00</published><updated>2015-04-13T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2015-04-13:posts/2015/04/13/my-experience-of-losing-weight.html</id><summary type="html">&lt;!--
 &lt;div class="figure"&gt;
 &lt;img class='u-full-width' src='/static/images/2015_04_13_weights.svg' style='width: 100%;'&gt;
         &lt;div class="caption"&gt;体重变化&lt;/div&gt;
@@ -1083,11 +924,7 @@ $(function () {
         }]
     });
 });
-&lt;/script&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>Improve Safety On The Road</title><link href="/posts/2014/12/30/improve-safety-on-the-road.html" rel="alternate"></link><published>2014-12-30T00:00:00+08:00</published><updated>2014-12-30T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-12-30:/posts/2014/12/30/improve-safety-on-the-road.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;The only way to improve safety on the road is to severely punish driving offenders. To what extent do you agree or disagree?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
-&lt;p&gt;The number …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;/script&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Improve Safety On The Road</title><link href="/posts/2014/12/30/improve-safety-on-the-road.html" rel="alternate"></link><published>2014-12-30T00:00:00+08:00</published><updated>2014-12-30T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2014-12-30:posts/2014/12/30/improve-safety-on-the-road.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;The only way to improve safety on the road is to severely punish driving offenders. To what extent do you agree or disagree?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
@@ -1105,10 +942,7 @@ seriously break a certain law,such as drunk driving,he may lose the right to dri
 the improvement of road safety.&lt;/p&gt;
 &lt;p&gt;In conclusion,we can help people to improve the traffic safety by teaching them the importance of safe driving.Although punishment
 is also a good way to do so,but it is not the best way and only way.Pedestrians and drivers should all  obey traffic regulations and
-laws to keep safe.&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>Use Animals For Humans</title><link href="/posts/2014/12/22/use-animals-for-humans.html" rel="alternate"></link><published>2014-12-22T00:00:00+08:00</published><updated>2014-12-22T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-12-22:/posts/2014/12/22/use-animals-for-humans.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Some people think that it is acceptable to use animals for the benefit of humans. Others, however, think that it is wrong to exploit animals for human purposes. Discuss both these views and give your own opinion.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+laws to keep safe.&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Use Animals For Humans</title><link href="/posts/2014/12/22/use-animals-for-humans.html" rel="alternate"></link><published>2014-12-22T00:00:00+08:00</published><updated>2014-12-22T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2014-12-22:posts/2014/12/22/use-animals-for-humans.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Some people think that it is acceptable to use animals for the benefit of humans. Others, however, think that it is wrong to exploit animals for human purposes. Discuss both these views and give your own opinion.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
@@ -1126,11 +960,7 @@ We should focus on how to minimize the sufferings that animals experienced when 
 &lt;p&gt;In sum,animal is an extremely important source of food for human beings which can contribute to the science as well.We can surely use
 animals to live on,but we should use them scientifically and ethically.&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>Forcing the Employers to Hire the Same Number of Men and Women</title><link href="/posts/2014/12/16/gender-balance.html" rel="alternate"></link><published>2014-12-16T00:00:00+08:00</published><updated>2014-12-16T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-12-16:/posts/2014/12/16/gender-balance.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Some people think that employers should be required to employ equal numbers of men and women. To what extent do you agree or disagree?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
-&lt;p&gt;It …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Forcing the Employers to Hire the Same Number of Men and Women</title><link href="/posts/2014/12/16/gender-balance.html" rel="alternate"></link><published>2014-12-16T00:00:00+08:00</published><updated>2014-12-16T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2014-12-16:posts/2014/12/16/gender-balance.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Some people think that employers should be required to employ equal numbers of men and women. To what extent do you agree or disagree?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
@@ -1150,12 +980,7 @@ number of men and women seems to be the best choice for them.&lt;/p&gt;
 &lt;p&gt;In conclusion, making the most of the gender advantages is benificial for both companies and society.That is why I don't
 agree with the view that forcing the employers to hire the same number of men and women.&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>Distance Learning vs School Learing</title><link href="/posts/2014/11/24/distance-learning-vs-school-learning.html" rel="alternate"></link><published>2014-11-24T00:00:00+08:00</published><updated>2014-11-24T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-11-24:/posts/2014/11/24/distance-learning-vs-school-learning.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;many people use distance-learning programmes(study material post, TV, Internet, etc.) to study at home,
-but some people think that it cannot bring the same benefits of attending college or university.
-To what extent do you agree or disagree.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>Distance Learning vs School Learing</title><link href="/posts/2014/11/24/distance-learning-vs-school-learning.html" rel="alternate"></link><published>2014-11-24T00:00:00+08:00</published><updated>2014-11-24T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2014-11-24:posts/2014/11/24/distance-learning-vs-school-learning.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;many people use distance-learning programmes(study material post, TV, Internet, etc.) to study at home,
 but some people think that it cannot bring the same benefits of attending college or university.
 To what extent do you agree or disagree.&lt;/p&gt;
@@ -1176,11 +1001,7 @@ learning.&lt;/p&gt;
 on the class,he can download some courses from Internet to make up for it.An adult can also turn to classes for help
 when he encounter some problems which he can not tackle all by himself.&lt;/p&gt;
 &lt;p&gt;So, while we are taking advantage of technology,we should not neglect the importance of traditional learning.We should
-chose our learning methods according to our circumstances.&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>What Should Be the Main Function Of A University</title><link href="/posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html" rel="alternate"></link><published>2014-11-12T00:00:00+08:00</published><updated>2014-11-12T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-11-12:/posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. 
-Others think that the true function of a university should be to give access to knowledge for its own sake,
-regardless of whether the course is useful to an employer.&lt;/p&gt;
-&lt;p&gt;What, in your …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;blockquote&gt;
+chose our learning methods according to our circumstances.&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>What Should Be the Main Function Of A University</title><link href="/posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html" rel="alternate"></link><published>2014-11-12T00:00:00+08:00</published><updated>2014-11-12T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2014-11-12:posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. 
 Others think that the true function of a university should be to give access to knowledge for its own sake,
 regardless of whether the course is useful to an employer.&lt;/p&gt;
@@ -1206,15 +1027,7 @@ ignore the requirements of the job market,alternatively,they can invite some com
 kind of skill they want.&lt;/p&gt;
 &lt;p&gt;In summary,although the main goal of going to universities of many students is finding a ideal job after graduating,universities
 should help their students to build a good knowledge system and help them to be quick learners and problem solvers instead of
-just teaching them job-related skills.&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>The Catcher in the Rye</title><link href="/posts/2014/10/31/the-catcher-in-the-rye.html" rel="alternate"></link><published>2014-10-31T00:00:00+08:00</published><updated>2014-10-31T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-10-31:/posts/2014/10/31/the-catcher-in-the-rye.html</id><summary type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
-&lt;p&gt;在离开学校之前他与他的室友打了一家，因为室友和他最喜欢的女生约会，他心里非常不舒服。一个十六岁的男孩，面对自己的梦中小情人，
-宁愿远远的看着她，也不希望她跟别的男孩子约会。更何况她的约会对象在Holden看来根本配不上她。Holden心里当然不高兴。打完架他决定早点离开学校了。&lt;/p&gt;
-&lt;p&gt;对于一个青春期的孩子来说，也许最大的恐惧就是不合群，希望和同龄人做一样的事情，上课，考试，放假。可是Hoden却不得不提前开始寒假，又不能回家，
-因为他告诉他妈妈他周三到家，他只能去住酒店。孤身一人落寞的站在房间里，此时此刻只有香烟陪伴他，而他根本睡不着，百无聊赖。只能去酒吧。他回来时与
-开电梯的小伙说好叫一个妓女，妓女来了，还很漂亮，可是他却开始退缩了，尽管他还是处男，他不想就这样跟这个妓女做爱。只希望她陪他说话，此刻对他
-来说，精神上才是最寂寞的。&lt;/p&gt;
-&lt;p&gt;在这个世界上，他最爱的人就是他的妹妹，Phoebe。他去街上买了她一直想要的唱片，给她一个惊喜，人在脆弱的时候总是想到自己最爱的人，就算他并不安慰你，
-你也希望看到她 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
+just teaching them job-related skills.&lt;/p&gt;</summary><category term="ielts"></category><category term="writing"></category></entry><entry><title>The Catcher in the Rye</title><link href="/posts/2014/10/31/the-catcher-in-the-rye.html" rel="alternate"></link><published>2014-10-31T00:00:00+08:00</published><updated>2014-10-31T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2014-10-31:posts/2014/10/31/the-catcher-in-the-rye.html</id><summary type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
 &lt;p&gt;在离开学校之前他与他的室友打了一家，因为室友和他最喜欢的女生约会，他心里非常不舒服。一个十六岁的男孩，面对自己的梦中小情人，
 宁愿远远的看着她，也不希望她跟别的男孩子约会。更何况她的约会对象在Holden看来根本配不上她。Holden心里当然不高兴。打完架他决定早点离开学校了。&lt;/p&gt;
 &lt;p&gt;对于一个青春期的孩子来说，也许最大的恐惧就是不合群，希望和同龄人做一样的事情，上课，考试，放假。可是Hoden却不得不提前开始寒假，又不能回家，
@@ -1234,9 +1047,7 @@ cliff. What I have to do, I have to catch everybody if they start to go over the
 &lt;p&gt;走的时候，他跟他妹妹借钱，因为他没钱了。Phoebe把她圣诞节的所有的钱都给了他，他其实也不想全部都要，但是她坚持要给他。他花的非常节省，因为这是他妹妹的钱。&lt;/p&gt;
 &lt;p&gt;他打电话给他的以前的一个老师去他家借宿，夜里醒来发现老师在抚摸他的脸，他吓坏了，怀疑老师是gay,于是他连夜逃了出来，他产生了一个念头，离家出走，决定去西部，装作一个又聋又哑的人。走前还想跟Phoebe道别，于是给妹妹留了纸条，中午在博物馆门口等她。在学校和博物馆里，他都看到有人在墙上写着&lt;code&gt;Fuck you&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;他等来了妹妹，妹妹却拖着行李箱要和他一起走，他慌了，不希望妹妹和她一起走，因为她是他最爱的人，没有人想要最爱的人跟自己一起做愚蠢的事情。他们一起走到了游乐场，他看着妹妹开心的坐着旋转木马，填空下着大雨，他看着妹妹不停的旋转，心里开心极了，于是决定不走了。&lt;/p&gt;
-&lt;p&gt;也许每个人的内心都和Holden一样，看别人都觉得虚伪做作，总觉得自己才是最对的，最好的。即使这样也有值得牵挂的和珍爱的人，如果幸运，自己珍爱的人也能珍爱你。心中保有的那奔跑在绿色麦田和跳跃在蓝天白云上的小小幻想，跟他们在一起才会想起吧。&lt;/p&gt;</content><category term="notes"></category></entry><entry><title>Big Sarcosaurus</title><link href="/posts/2014/10/22/big-sarcosaurus.html" rel="alternate"></link><published>2014-10-22T00:00:00+08:00</published><updated>2014-10-22T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-10-22:/posts/2014/10/22/big-sarcosaurus.html</id><summary type="html">&lt;p&gt;Wen asked me how I was those days  in the morning via wechat ,which was kind of a surprise for me.She said that she 
-would take an exam today and she would have some time after then. I invited her to come to see me and have lunch 
-together …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Wen asked me how I was those days  in the morning via wechat ,which was kind of a surprise for me.She said that she 
+&lt;p&gt;也许每个人的内心都和Holden一样，看别人都觉得虚伪做作，总觉得自己才是最对的，最好的。即使这样也有值得牵挂的和珍爱的人，如果幸运，自己珍爱的人也能珍爱你。心中保有的那奔跑在绿色麦田和跳跃在蓝天白云上的小小幻想，跟他们在一起才会想起吧。&lt;/p&gt;</summary><category term="notes"></category></entry><entry><title>Big Sarcosaurus</title><link href="/posts/2014/10/22/big-sarcosaurus.html" rel="alternate"></link><published>2014-10-22T00:00:00+08:00</published><updated>2014-10-22T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:,2014-10-22:posts/2014/10/22/big-sarcosaurus.html</id><summary type="html">&lt;p&gt;Wen asked me how I was those days  in the morning via wechat ,which was kind of a surprise for me.She said that she 
 would take an exam today and she would have some time after then. I invited her to come to see me and have lunch 
 together. She said that she had bought some Big Sarcosaurus(&lt;code&gt;大懒龙&lt;/code&gt; in Chinese).I  don't know what
 it is and incorrectly, I thought it was a restaurant.I searched it on the baidu map,and the website told me  that it
@@ -1247,4 +1058,4 @@ work interesting and challenging. I know She can make it and grow up to a good b
 &lt;p&gt;It is not good recently,but I really appreciate the time talking with Wen and the Big Sacrosaurus she brought for me .
 &lt;div align="center"&gt;
 &lt;img alt="Big Sarcosaurus" class="img-responsive carousel-inner img-rounded" src="/static/images/bigsarcosaurus.jpg" style="width:40%;height:40%;"/&gt;
-&lt;/div&gt;&lt;/p&gt;</content><category term="personal"></category></entry></feed>
+&lt;/div&gt;&lt;/p&gt;</summary><category term="personal"></category></entry></feed>
