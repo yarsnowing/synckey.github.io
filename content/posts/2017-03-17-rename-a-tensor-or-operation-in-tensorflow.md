@@ -13,7 +13,7 @@ Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no
         z = x + y
         z = tf.identity(z, name="z")
 
-The tf.identity function returns a tensor with the same shape and contents as the input tensor or value.
+The tf.identity function returns a Tensor with the same shape and contents as the input Tensor or value.
 
 The recommended way to structure your name scope is to assign the name of the scope itself to the "output" from the scope (if there is a single output op):
     
