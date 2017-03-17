@@ -208,6 +208,7 @@ a {
     border-bottom: 1px solid #eaecee;
     /*margin-left: -1px;
     padding-right: 2px;*/
+    border: 0;
     width: 100%;
     box-sizing: content-box;
     margin-bottom: 25px;
