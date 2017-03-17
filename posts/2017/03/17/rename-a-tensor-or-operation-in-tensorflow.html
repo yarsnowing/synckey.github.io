@@ -203,7 +203,7 @@ Andy's Blog            </a>
     <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"z"</span><span class="p">)</span>
 </pre></div>
-<p>The tf.identity function returns a tensor with the same shape and contents as the input tensor or value.</p>
+<p>The tf.identity function returns a Tensor with the same shape and contents as the input Tensor or value.</p>
 <p>The recommended way to structure your name scope is to assign the name of the scope itself to the "output" from the scope (if there is a single output op):</p>
 <div class="highlight"><pre><span></span>with tf.name_scope("abc") as scope:
     # z will get the name "abc". x and y will have names in "abc/..." if they
