@@ -27,7 +27,7 @@ Then,you can use the following code to generate the table below.
 |Content Cell  | Content Cell|
 |Content Cell  | Content Cell|
 
-By default,if you use bootstrap, the table will not have borders,you can use the jquery trick to add the borders to your table.
+By default,if you use bootstrap, the table will not have borders, you can tackle this problem by adding the following codes  to the end of your html file.
 
     :::javascript
     <script>
@@ -38,4 +38,5 @@ By default,if you use bootstrap, the table will not have borders,you can use the
 ###References
 
 [Markdown extensions](https://pythonhosted.org/Markdown/extensions/tables.html)
+[Pelican Document](http://docs.getpelican.com/en/stable/)
 
