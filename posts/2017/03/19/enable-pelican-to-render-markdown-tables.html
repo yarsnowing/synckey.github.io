@@ -229,6 +229,12 @@ Andy's Blog            </a>
 </tr>
 </tbody>
 </table>
+<p>By default,if you use bootstrap, the table will not have borders, you can tackle this problem by adding the following codes  to the end of your html file.</p>
+<div class="github"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s2">"table"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"class"</span><span class="p">,</span><span class="s2">"table table-condensed table-bordered"</span><span class="p">);</span>
+  <span class="p">});</span>
+</pre></div>
 <h3>References</h3>
 <p><a href="https://pythonhosted.org/Markdown/extensions/tables.html">Markdown extensions</a></p>
 <div class="pager">
