@@ -27,6 +27,13 @@ Then,you can use the following code to generate the table below.
 |Content Cell  | Content Cell|
 |Content Cell  | Content Cell|
 
+By default,if you use bootstrap, the table will not have borders,you can use the jquery trick to add the borders to your table.
+
+    :::javascript
+    <script>
+      $(document).ready(function () {
+        $("table").attr("class","table table-condensed table-bordered");
+      });
 
 ###References
 
