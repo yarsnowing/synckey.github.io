@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>tools - Andy's Blog</title>
+    <title>blog - Andy's Blog</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -17,7 +17,7 @@
     <!--
     -->
 <meta name="author" content="andy"/>
-<meta name="keywords" content="tools"/>
+<meta name="keywords" content="blog"/>
 
     <!-- Open Graph tags -->
     <meta property="og:site_name" content="Andy's Blog"/>
@@ -175,88 +175,6 @@ Andy's Blog            </a>
 <div class="github"><pre><span></span>|First Header  | Second Header …</pre></div>
         <div class="read-more">
             <a class="btn" href="/posts/2017/03/19/enable-pelican-to-render-markdown-tables.html">--READ MORE--</a>
-        </div>
-    </div>
-</div>
-<div class="separator"></div>
-<div class="separator"></div>
-<div class="post-container">
-    <div class="post-header">
-        <h3><a href="/posts/2017/03/17/rename-a-tensor-or-operation-in-tensorflow.html">Rename a Tensor or Operation in Tensorflow</a></h3>
-        <div class="post-meta">
-        <span class="glyphicon glyphicon-calendar footnote"
-              aria-hidden="true">2017-03-17</span>
-            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
-        </div>
-    </div>
-
-
-    <div class="post-content"><p>Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost …</p>
-        <div class="read-more">
-            <a class="btn" href="/posts/2017/03/17/rename-a-tensor-or-operation-in-tensorflow.html">--READ MORE--</a>
-        </div>
-    </div>
-</div>
-<div class="separator"></div>
-<div class="separator"></div>
-<div class="post-container">
-    <div class="post-header">
-        <h3><a href="/posts/2016/10/11/my-bashrc-backup.html">My Bashrc Backup</a></h3>
-        <div class="post-meta">
-        <span class="glyphicon glyphicon-calendar footnote"
-              aria-hidden="true">2016-10-11</span>
-            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
-        </div>
-    </div>
-
-
-    <div class="post-content"><div class="github"><pre><span></span><span class="c1"># .bashrc</span>
-<span class="c1"># Source global definitions</span>
-<span class="k">if</span> <span class="o">[</span> -f /etc/bashrc <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    . /etc/bashrc
-<span class="k">fi</span>
-<span class="c1"># User specific aliases and functions</span>
-
-<span class="nb">export</span> <span class="nv">LS_OPTIONS</span><span class="o">=</span><span class="s1">'--color=auto'</span> <span class="c1"># 如果没有指定，则自动选择颜色</span>
-<span class="nb">export</span> <span class="nv">CLICOLOR</span><span class="o">=</span><span class="s1">'Yes'</span> <span class="c1">#是否输出颜色</span>
-<span class="nb">export</span> <span class="nv">LSCOLORS</span><span class="o">=</span><span class="s1">'Exfxcxdxbxegedabagacad'</span> <span class="c1">#指定颜色</span>
-<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">'ls -l'</span>
-<span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">"\[\e[0;31m\][\u@\H \w]\\</span>$<span class="s2"> \[\e[m\]"</span>
-<span class="c1"># vim:ts=4:sw=4 …</span></pre></div>
-        <div class="read-more">
-            <a class="btn" href="/posts/2016/10/11/my-bashrc-backup.html">--READ MORE--</a>
-        </div>
-    </div>
-</div>
-<div class="separator"></div>
-<div class="separator"></div>
-<div class="post-container">
-    <div class="post-header">
-        <h3><a href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">让VIM记录文件上次编辑的位置</a></h3>
-        <div class="post-meta">
-        <span class="glyphicon glyphicon-calendar footnote"
-              aria-hidden="true">2016-03-11</span>
-            <span class="glyphicon glyphicon-home footnote ">Beijing</span>
-        </div>
-    </div>
-
-
-    <div class="post-content"><p>在<code>~/.vimrc</code>中加入如下配置:</p>
-<div class="github"><pre><span></span>autocmd BufReadPost *
-<span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
-<span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
-<span class="se">\ </span>endif
-autocmd BufReadPost *
-<span class="se">\ </span><span class="k">if</span> line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&gt;0<span class="o">&amp;&amp;</span>line<span class="o">(</span><span class="s2">"'\""</span><span class="o">)</span>&lt;<span class="o">=</span>line<span class="o">(</span><span class="s2">"</span>$<span class="s2">"</span><span class="o">)</span> <span class="p">|</span>
-<span class="se">\ </span>exe <span class="s2">"normal g'\""</span> <span class="p">|</span>
-<span class="se">\ </span>endif
-syntax <span class="nb">enable</span>
-<span class="nb">set</span> nu
-</pre></div>
-<h3>参考</h3>
-<p><a href="http://www.2cto.com/os/201311/255061.html">让VIM记录文件上次编辑的位置</a></p>
-        <div class="read-more">
-            <a class="btn" href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html">--READ MORE--</a>
         </div>
     </div>
 </div>
