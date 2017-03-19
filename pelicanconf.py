@@ -17,6 +17,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+USE_FOLDER_AS_CATEGORY = True
 
 #EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables'])
 

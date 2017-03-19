@@ -23,6 +23,7 @@ a {
     text-decoration: none;
 }
 
+
 .page-header {
     margin: 0px;
     margin-top: 40px;
@@ -493,7 +494,7 @@ a {
 }
 
 .copyright {
-    border-top: 1px solid #eaecee;
+    /*border-top: 1px solid #eaecee;*/
     text-align: center;
     font-size: 80%;
     color: #B5BFC5;
