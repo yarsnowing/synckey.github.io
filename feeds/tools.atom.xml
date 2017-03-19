@@ -45,4 +45,5 @@
   &lt;span class="p"&gt;});&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://pythonhosted.org/Markdown/extensions/tables.html"&gt;Markdown extensions&lt;/a&gt;&lt;/p&gt;</content><category term="tools"></category><category term="pelican"></category><category term="blog"></category></entry></feed>
+&lt;p&gt;&lt;a href="https://pythonhosted.org/Markdown/extensions/tables.html"&gt;Markdown extensions&lt;/a&gt;
+&lt;a href="http://docs.getpelican.com/en/stable/"&gt;Pelican Document&lt;/a&gt;&lt;/p&gt;</content><category term="tools"></category><category term="pelican"></category><category term="blog"></category></entry></feed>
