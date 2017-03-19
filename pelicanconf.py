@@ -18,8 +18,16 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables'])
+#EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables'])
 
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'github'},
+        'markdown.extensions.tables':{},
+    },
+}
+
+#MD_EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables','extra'])
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
