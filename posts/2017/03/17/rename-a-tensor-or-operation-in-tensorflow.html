@@ -19,13 +19,13 @@
     -->
 <meta name="author" content="Andy"/>
 <meta name="keywords" content="machine learning,deep learning,tools."/>
-<meta name="description" content="Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost ..."/>
+<meta name="description" content="Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost …"/>
 
 <meta property="og:site_name" content="Andy's Blog"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="Rename a Tensor or Operation in Tensorflow"/>
 <meta property="og:url" content="/posts/2017/03/17/rename-a-tensor-or-operation-in-tensorflow.html"/>
-<meta property="og:description" content="Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost ..."/>
+<meta property="og:description" content="Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost …"/>
 <meta property="article:published_time" content=" 2017-03-17" />
 <meta property="article:section" content="posts"/>
 <meta property="article:tag" content="machine learning"/>
@@ -199,13 +199,13 @@ Andy's Blog            </a>
             </div>
             -->
         <p>Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost no runtime cost:</p>
-<div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">):</span>
+<div class="github"><pre><span></span><span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s2">"abc"</span><span class="p">):</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
     <span class="n">z</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">"z"</span><span class="p">)</span>
 </pre></div>
 <p>The tf.identity function returns a Tensor with the same shape and contents as the input Tensor or value.</p>
 <p>The recommended way to structure your name scope is to assign the name of the scope itself to the "output" from the scope (if there is a single output op):</p>
-<div class="highlight"><pre><span></span>with tf.name_scope("abc") as scope:
+<div class="github"><pre><span></span>with tf.name_scope("abc") as scope:
     # z will get the name "abc". x and y will have names in "abc/..." if they
     # are converted to tensors.
     z = tf.add(x, y, name=scope)
