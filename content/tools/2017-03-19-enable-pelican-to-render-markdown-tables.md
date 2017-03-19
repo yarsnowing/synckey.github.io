@@ -6,7 +6,7 @@ Slug: enable-pelican-to-render-markdown-tables
 Author: Andy
 Place: Beijing
 
-Pelican will not process markdown style table in default. However, if you want to use this kind of tables. You can add the follow config to the pelicanconf.py
+Pelican will not process markdown style table in default. However, if you want to use this kind of tables, you can add the follow config to pelicanconf.py:
 
     :::python
     MARKDOWN = {
@@ -14,7 +14,7 @@ Pelican will not process markdown style table in default. However, if you want t
             'markdown.extensions.tables':{},
         }
     }
-Then,you can use the following code to generate the table below.
+Then,you can use the following code to generate the table below:
 
     |First Header  | Second Header|
     |------------- | -------------|
