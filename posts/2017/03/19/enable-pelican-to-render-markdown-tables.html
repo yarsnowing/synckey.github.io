@@ -19,13 +19,13 @@
     -->
 <meta name="author" content="Andy"/>
 <meta name="keywords" content="tools,pelican,blog"/>
-<meta name="description" content="Pelican will not process markdown style table in default. However, if you want to use this kind of tables. You can add the follow config to the pelicanconf.py MARKDOWN = { &#39;extension_configs&#39;: { &#39;markdown.extensions.tables&#39;:{}, } } Then,you can use the following code to generate the table below. |First Header | Second Header …"/>
+<meta name="description" content="Pelican will not process markdown style table in default. However, if you want to use this kind of tables, you can add the follow config to pelicanconf.py: MARKDOWN = { &#39;extension_configs&#39;: { &#39;markdown.extensions.tables&#39;:{}, } } Then,you can use the following code to generate the table below: |First Header | Second Header| |------------- | -------------| |Content …"/>
 
 <meta property="og:site_name" content="Andy's Blog"/>
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="Enable Pelican to Render Markdown Tables"/>
 <meta property="og:url" content="/posts/2017/03/19/enable-pelican-to-render-markdown-tables.html"/>
-<meta property="og:description" content="Pelican will not process markdown style table in default. However, if you want to use this kind of tables. You can add the follow config to the pelicanconf.py MARKDOWN = { &#39;extension_configs&#39;: { &#39;markdown.extensions.tables&#39;:{}, } } Then,you can use the following code to generate the table below. |First Header | Second Header …"/>
+<meta property="og:description" content="Pelican will not process markdown style table in default. However, if you want to use this kind of tables, you can add the follow config to pelicanconf.py: MARKDOWN = { &#39;extension_configs&#39;: { &#39;markdown.extensions.tables&#39;:{}, } } Then,you can use the following code to generate the table below: |First Header | Second Header| |------------- | -------------| |Content …"/>
 <meta property="article:published_time" content=" 2017-03-19" />
 <meta property="article:section" content="tools"/>
 <meta property="article:tag" content="tools"/>
@@ -198,14 +198,14 @@ Andy's Blog            </a>
 </footer>                </div>
             </div>
             -->
-        <p>Pelican will not process markdown style table in default. However, if you want to use this kind of tables. You can add the follow config to the pelicanconf.py</p>
+        <p>Pelican will not process markdown style table in default. However, if you want to use this kind of tables, you can add the follow config to pelicanconf.py:</p>
 <div class="github"><pre><span></span><span class="n">MARKDOWN</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'extension_configs'</span><span class="p">:</span> <span class="p">{</span>
         <span class="s1">'markdown.extensions.tables'</span><span class="p">:{},</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-<p>Then,you can use the following code to generate the table below.</p>
+<p>Then,you can use the following code to generate the table below:</p>
 <div class="github"><pre><span></span>|First Header  | Second Header|
 |------------- | -------------|
 |Content Cell  | Content Cell|
@@ -236,8 +236,8 @@ Andy's Blog            </a>
   <span class="p">});</span>
 </pre></div>
 <h3>References</h3>
-<p><a href="https://pythonhosted.org/Markdown/extensions/tables.html">Markdown extensions</a>
-<a href="http://docs.getpelican.com/en/stable/">Pelican Document</a></p>
+<p><a href="https://pythonhosted.org/Markdown/extensions/tables.html">Markdown extensions</a></p>
+<p><a href="http://docs.getpelican.com/en/stable/">Pelican Document</a></p>
 <div class="pager">
     <ul>
         <li class="previous disabled"><a>&larr; Previous</a></li>

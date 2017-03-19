@@ -167,15 +167,17 @@ Andy's Blog            </a>
     </div>
 
 
-    <div class="post-content"><p>Pelican will not process markdown style table in default. However, if you want to use this kind of tables. You can add the follow config to the pelicanconf.py</p>
+    <div class="post-content"><p>Pelican will not process markdown style table in default. However, if you want to use this kind of tables, you can add the follow config to pelicanconf.py:</p>
 <div class="github"><pre><span></span><span class="n">MARKDOWN</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">'extension_configs'</span><span class="p">:</span> <span class="p">{</span>
         <span class="s1">'markdown.extensions.tables'</span><span class="p">:{},</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-<p>Then,you can use the following code to generate the table below.</p>
-<div class="github"><pre><span></span>|First Header  | Second Header …</pre></div>
+<p>Then,you can use the following code to generate the table below:</p>
+<div class="github"><pre><span></span>|First Header  | Second Header|
+|------------- | -------------|
+|Content …</pre></div>
         <div class="read-more">
             <a class="btn" href="/posts/2017/03/19/enable-pelican-to-render-markdown-tables.html">--READ MORE--</a>
         </div>
