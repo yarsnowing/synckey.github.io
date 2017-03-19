@@ -1,6 +1,5 @@
 Title: Use Animals For Humans
 Date: 2014-12-22
-Category: posts
 Tags: ielts,writing
 Slug: use-animals-for-humans
 Author: Andy

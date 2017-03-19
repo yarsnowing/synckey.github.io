@@ -1,6 +1,5 @@
 Title: Forcing the Employers to Hire the Same Number of Men and Women
 Date: 2014-12-16
-Category: posts
 Tags: ielts,writing
 Slug: gender-balance
 Author: Andy

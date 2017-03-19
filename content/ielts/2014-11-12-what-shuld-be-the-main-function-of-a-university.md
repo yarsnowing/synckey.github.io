@@ -1,6 +1,5 @@
 Title: What Should Be the Main Function Of A University
 Date: 2014-11-12
-Category: posts
 Tags: ielts,writing
 Slug: what-shuld-be-the-main-function-of-a-university
 Author: Andy

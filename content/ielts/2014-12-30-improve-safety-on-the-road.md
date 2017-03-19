@@ -1,6 +1,5 @@
 Title: Improve Safety On The Road
 Date: 2014-12-30
-Category: posts
 Tags: ielts,writing
 Slug: improve-safety-on-the-road
 Author: Andy

@@ -1,6 +1,5 @@
 Title: Distance Learning vs School Learing
 Date: 2014-11-24
-Category: posts
 Tags: ielts,writing
 Slug: distance-learning-vs-school-learning
 Author: Andy

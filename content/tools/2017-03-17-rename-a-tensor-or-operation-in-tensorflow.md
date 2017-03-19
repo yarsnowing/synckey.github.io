@@ -1,6 +1,6 @@
 Title:Rename a Tensor or Operation in Tensorflow
 Date: 2017.03.17
-Category: posts
+Category: tools
 Tags: machine learning, deep learning, tools.
 Slug: rename-a-tensor-or-operation-in-tensorflow
 Author: Andy
