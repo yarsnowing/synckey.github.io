@@ -380,10 +380,9 @@ a {
     }
 
     .post-content {
-        margin: 0 auto;
         padding: 0;
         width: 90%;
-        text-align: center;
+        margin: 10px auto 0;
     }
 
     .post-content ul, .post-container ol {
