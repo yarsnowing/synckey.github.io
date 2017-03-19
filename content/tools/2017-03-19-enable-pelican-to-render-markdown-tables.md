@@ -38,5 +38,6 @@ By default,if you use bootstrap, the table will not have borders, you can tackle
 ###References
 
 [Markdown extensions](https://pythonhosted.org/Markdown/extensions/tables.html)
+
 [Pelican Document](http://docs.getpelican.com/en/stable/)
 
