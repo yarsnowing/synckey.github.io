@@ -46,7 +46,22 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://pythonhosted.org/Markdown/extensions/tables.html"&gt;Markdown extensions&lt;/a&gt;
-&lt;a href="http://docs.getpelican.com/en/stable/"&gt;Pelican Document&lt;/a&gt;&lt;/p&gt;</content><category term="tools"></category><category term="pelican"></category><category term="blog"></category></entry><entry><title>Rename a Tensor or Operation in Tensorflow</title><link href="/posts/2017/03/17/rename-a-tensor-or-operation-in-tensorflow.html" rel="alternate"></link><published>2017-03-17T00:00:00+08:00</published><updated>2017-03-17T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-03-17:/posts/2017/03/17/rename-a-tensor-or-operation-in-tensorflow.html</id><summary type="html">&lt;p&gt;Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost no runtime cost:&lt;/p&gt;
+&lt;a href="http://docs.getpelican.com/en/stable/"&gt;Pelican Document&lt;/a&gt;&lt;/p&gt;</content><category term="tools"></category><category term="pelican"></category><category term="blog"></category></entry><entry><title>今朝一别，或是流水十年</title><link href="/posts/2017/03/19/see-you-ten-years-later.html" rel="alternate"></link><published>2017-03-19T00:00:00+08:00</published><updated>2017-03-19T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-03-19:/posts/2017/03/19/see-you-ten-years-later.html</id><summary type="html">&lt;p&gt;周五jw发微信过来，约周末吃个饭道别。他四月就要去法国读博，用他的话来说，此次见后，可能要十年八年都见不到了。&lt;/p&gt;
+&lt;p&gt;跟jw是大学室友，他的床，就在我的隔壁，每天晚上他爬上床，我都能听到。进大学的第一天，我刚到宿舍，就看到他坐在那里，当时对他的第一印象，头很大，可能头大就是他聪明的原因吧。jw和我一样，来自农村的家庭，家里也不富裕，所以共同语言有不少。当时我们常常一起上课，一起出去买东西，没想到后来还一起来了北京，一起去百度实习。虽然他去百度正式工作的时候，我已经不在百度了。&lt;/p&gt;
+&lt;p&gt;2011年夏天，也就是大三快到大四的下学期，我拿了百度的实习offer，学院跟百度有合作，搞了一个&lt;a href="https://github.com/gmsh/dnscache"&gt;项目实训&lt;/a&gt;，jw，我，还有gms分一组，那时候我们每天都顶着夏日，来到机房，敲代码，调试代码。 后来因为他在项目里面表现优异，百度也给了他面试机会。最终，他也拿到了百度的实习offer，百度运维部实习。跟我不是同一批，如果我没记错，他是在我后面入职的。在百度实习的时候，我们并没有很多交集 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;周五jw发微信过来，约周末吃个饭道别。他四月就要去法国读博，用他的话来说，此次见后，可能要十年八年都见不到了。&lt;/p&gt;
+&lt;p&gt;跟jw是大学室友，他的床，就在我的隔壁，每天晚上他爬上床，我都能听到。进大学的第一天，我刚到宿舍，就看到他坐在那里，当时对他的第一印象，头很大，可能头大就是他聪明的原因吧。jw和我一样，来自农村的家庭，家里也不富裕，所以共同语言有不少。当时我们常常一起上课，一起出去买东西，没想到后来还一起来了北京，一起去百度实习。虽然他去百度正式工作的时候，我已经不在百度了。&lt;/p&gt;
+&lt;p&gt;2011年夏天，也就是大三快到大四的下学期，我拿了百度的实习offer，学院跟百度有合作，搞了一个&lt;a href="https://github.com/gmsh/dnscache"&gt;项目实训&lt;/a&gt;，jw，我，还有gms分一组，那时候我们每天都顶着夏日，来到机房，敲代码，调试代码。 后来因为他在项目里面表现优异，百度也给了他面试机会。最终，他也拿到了百度的实习offer，百度运维部实习。跟我不是同一批，如果我没记错，他是在我后面入职的。在百度实习的时候，我们并没有很多交集，神奇的是他当时的直属经理后来变成了我的上级。我还记得的，就只剩两件事。&lt;/p&gt;
+&lt;p&gt;有一天，好像是周末，jw跟wr一起住的沙河两居室房东，突然要把他们赶出来了，记得当时他们还挺狼狈。我跟xh当时住在沙盒高教园，离沙河只一站地铁。所以他和wr，要到我们这里来借宿。我们当时去帮他们搬东西，乱七八糟的搬了一堆，都搬到我们这里来了，他跟wr就在我们的三居室的客厅寄居了几天。当时似乎并没有太多交流，可能百度的工作也的确是很忙。这件事当时大家好像都没有觉得怎么样，现在回想起来，似乎很辛酸。&lt;/p&gt;
+&lt;p&gt;在百度实习期间，我们的另外一个交集应该是他实习完了回学校之前，我们在辉煌国际下面的麻辣香锅一起吃了一顿饭。那顿饭应该是jw请的，吃了一百多，对当时的我们来说，还挺多。&lt;/p&gt;
+&lt;p&gt;本科毕业jw保研在学校继续读研，而我，则从实习生转正，继续干同样的活。后来他去了卢森堡交流，后来听说跟同去卢森堡的团支书ll在一起了。此间，我们似乎没有怎么联系过。&lt;/p&gt;
+&lt;p&gt;时间很快就来到了2015年，jw已经回国，他去了北京一家小的创业公司实习，好像拿的薪水挺多。此时的我，已经在去哪儿网工作。我们在品质伊犁吃饭，那应该是我们三年多以后的第一次见面。后来他要回学校，放了一个大箱子在我小南庄的房间里，取箱子的时候ll也来了，当时我们三个人坐在我连双人床都放不下的小房间里，房间里有小虫子在飞。jw送了我一个在欧洲买的nike的斜跨包，我很喜欢，后来就一直带着去人大上自习。&lt;/p&gt;
+&lt;p&gt;wd结婚的时候，在济南请班里的同学吃饭，那是我毕业以后第一次回济南。晚上是跟jw一起住在后面半山腰上新建的宿舍楼里过夜，那晚只有我和jw。宿舍的味道还是和以前的一样，人却就只有我和jw了，我们在一起总是有话聊，即使只有我们两个人也不尴尬。那一晚我睡在yrp的床上，他的被子晒的很香。&lt;/p&gt;
+&lt;p&gt;后来jw研究生也毕业了，我还介绍他来我们组面试，可惜当时没有hc，他就去了百度。我们在2016年秋天的时候又聚过一次，在嘉美影城的楼上吃的麻辣诱惑。北京城那么大，好像我们虽是同学，聚的也真不多，熙熙攘攘。过年之前很想请jw吃一次饭，他说要等我妹子来了一起，后来一拖直到今天。&lt;/p&gt;
+&lt;p&gt;从安河桥北到中关村，只有20分钟的地铁，我们约在了离他更近的中关村吃站点pizza。他们可以叫做夫妻了吧（去年领了证），jw稍微有点变胖了，头似乎更大了，ll却比以前更瘦了。jw说，想喝酒，下一次一起喝可能要再过十年八年了。他下去买酒，买了好几罐啤酒，说是把楼下的小超市的啤酒都买光了。我们一人一半，都喝完了，头很晕。ll说了不少他们公司的趣事，也说了很多要去法国租房，工作，担心安全问题，当然我们都很担心的，就是经济问题。作为还有三个月也要只身去异国他乡的我来说，他们的心情，也是我的心情。&lt;/p&gt;
+&lt;p&gt;老同学见老同学，总有说不完的话，此刻不是秋天，内心却很凄凉。6年前，我们在宿舍憧憬着去百度工作，满是期待，彼时正是初夏，万物勃发。6年时间一晃就过去了，我们又要开启各自的新生活，眼神里除了期待，似乎还有一些别的。如果时间能再过一年，我们就要认识十年了，那时候的我们，会是在哪里？ 新西兰与法国，要横跨大半个地球。吃完饭喝完咖啡，我们一起去南京银行办银行卡，办完了我就赶着去办浦发的信用卡。&lt;/p&gt;
+&lt;p&gt;--“你们飞的时候，叫我送你们啊？”&lt;/p&gt;
+&lt;p&gt;--“我们是夜里飞。”&lt;/p&gt;
+&lt;p&gt;--“哦，那算了，有机会再约哈~”&lt;/p&gt;</content><category term="life"></category></entry><entry><title>Rename a Tensor or Operation in Tensorflow</title><link href="/posts/2017/03/17/rename-a-tensor-or-operation-in-tensorflow.html" rel="alternate"></link><published>2017-03-17T00:00:00+08:00</published><updated>2017-03-17T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-03-17:/posts/2017/03/17/rename-a-tensor-or-operation-in-tensorflow.html</id><summary type="html">&lt;p&gt;Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost no runtime cost:&lt;/p&gt;
 &lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name_scope&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"abc"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
     &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;identity&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"z"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
@@ -136,8 +151,12 @@
 &lt;p&gt;十月，老子他们一行十来个人过来帮助我庆贺，这是wjy提议的，老子他们对这个房子挺满意，这使我最感欣慰。带着他们去了故宫，鸟巢，长城。带他们玩的时候，我的表现很不好，没有耐心。不能拿对自己的要求，对待父母，他们年级大了，让他们生气是我不想，他们给了我最好的，我也该把我最好的给他们。这是我要反思的。&lt;/p&gt;
 &lt;p&gt;从2014年开始，有了移民的想法，后来似乎没有那么想出去了。今年谈恋爱以后，又有了想法，所以开始刷leetcode，刷了100题。11月份的时候，幸运再一次摸了摸我的头，在2016年的最后一天，收到了签证。要出去真的是艰难的决定，害怕未知却也十分渴望未知。&lt;/p&gt;
 &lt;p&gt;4月份职称升了一级。从今年开始接触深度学习，用tensorflow跑出了一些demo，对深度学习算是入了门，但是真正深入学习的东西几乎没有。反观自己，我觉得两个原因让自己在专业方面停步不前：1.对技术的热情减少了很多；2.畏难，机器学习跟语言或者其他系统比，要难很多，所以很多东西都是浅尝辄止，深入不下去。在这么浮躁的社会，希望不要忘了立身之本，更不要忘了初心。&lt;/p&gt;
-&lt;p&gt;这一年外甥女忽然一下子长大了，开始问我问题，使我惊喜。看着她如此可爱，时常想，怎么让她保留童真，怎么给最好的给她？外甥也让我感觉特别懂事，看上去很小的孩子，其实已经很有自己的想法，能和人进行很深入的交谈。&lt;/p&gt;
-&lt;p&gt;2016年总共读了这些书：&lt;/p&gt;
+&lt;p&gt;这一年外甥女忽然一下子长大了，开始问我问题，使我惊喜。看着她如此可爱，时常想，怎么让她保留童真，怎么给最好的给她？外甥也让我感觉特别懂事，看上去很小的孩子，其实已经很有自己的想法，能和人进行很深入的交谈。
+&lt;div class="figure narrow"&gt;
+&lt;img alt="babies" class="img-responsive carousel-inner img-rounded center-block" src="/static/images/2016.06.09_babies.jpg"/&gt;
+&lt;div class="caption"&gt;2016.06.09 babies&lt;/div&gt;
+&lt;/div&gt;
+2016年总共读了这些书：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;《易经杂说》&lt;/li&gt;
 &lt;li&gt;《智能时代》&lt;/li&gt;
@@ -146,17 +165,14 @@
 &lt;li&gt;《百年孤独》&lt;/li&gt;
 &lt;li&gt;《腾讯传》&lt;/li&gt;
 &lt;li&gt;《圣女的救济》&lt;/li&gt;
+&lt;li&gt;《Lean in》&lt;/li&gt;
 &lt;li&gt;...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;从《我是歌手》开始关注徐佳莹，7月份在西直门看了她的演唱会，被她的活泼所惊艳。
 8月跟跟mm在苏州看了一场奶茶的演唱会，喜欢她的不少歌。&lt;/p&gt;
 &lt;p&gt;从今年来开始关注窦文涛的《锵锵三人行》，每集都看，他在优酷做的圆桌派第一季也看完了。
-其他每集都看的节目《有今晚八零后》和《暴走大事件》。&lt;/p&gt;
-&lt;div class="figure narrow"&gt;
-&lt;img alt="babies" class="img-responsive carousel-inner img-rounded center-block" src="/static/images/2016.06.09_babies.jpg"/&gt;
-&lt;div class="caption"&gt;2016.06.09 babies&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;2016，full of seredipities！&lt;/p&gt;</content><category term="life"></category><category term="posts"></category><category term="mm"></category><category term="summery"></category></entry><entry><title>《概率论》复习笔记</title><link href="/posts/2017/02/20/review-of-probability.html" rel="alternate"></link><published>2017-02-20T00:00:00+08:00</published><updated>2017-02-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-02-20:/posts/2017/02/20/review-of-probability.html</id><summary type="html">&lt;h4&gt;1. 随机事件和概率&lt;/h4&gt;
+其他每集都看的节目《有今晚八零后》和《暴走大事件》。以上就是本年的全部精神生活。&lt;/p&gt;
+&lt;p&gt;2016，full of serendipities！&lt;/p&gt;</content><category term="life"></category><category term="posts"></category><category term="mm"></category><category term="summery"></category></entry><entry><title>《概率论》复习笔记</title><link href="/posts/2017/02/20/review-of-probability.html" rel="alternate"></link><published>2017-02-20T00:00:00+08:00</published><updated>2017-02-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-02-20:/posts/2017/02/20/review-of-probability.html</id><summary type="html">&lt;h4&gt;1. 随机事件和概率&lt;/h4&gt;
 &lt;h5&gt;1.1全概率公式&lt;/h5&gt;
 &lt;p&gt;设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&amp;gt;0(i=1,2,\cdots,n)$，且$\sum\limits_{i=1}^{n}{A_i}=\Omega$，
 则对任一事件$B$，有
@@ -1160,81 +1176,7 @@ $$&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="spark"></category></entry><entry><title>Run Vowpal Wabbit on Hadoop</title><link href="/posts/2015/06/09/run-vw-on-hadoop.html" rel="alternate"></link><published>2015-06-09T00:00:00+08:00</published><updated>2015-06-09T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-06-09:/posts/2015/06/09/run-vw-on-hadoop.html</id><summary type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;hadoop 2.2.0&lt;/li&gt;
-&lt;li&gt;Centos 6.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Install boost&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
-tar xzf boost_1_58_0.tar.gz
-&lt;span class="nb"&gt;cd&lt;/span&gt; boost_1_58_0
-sudo ./bootstrap.sh
-sudo ./bjam --layout&lt;span class="o"&gt;=&lt;/span&gt;tagged install 
-&lt;span class="nb"&gt;cd&lt;/span&gt; /etc/yum.repos.d
-wget http://people.centos.org …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;hadoop 2.2.0&lt;/li&gt;
-&lt;li&gt;Centos 6.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Install boost&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
-tar xzf boost_1_58_0.tar.gz
-&lt;span class="nb"&gt;cd&lt;/span&gt; boost_1_58_0
-sudo ./bootstrap.sh
-sudo ./bjam --layout&lt;span class="o"&gt;=&lt;/span&gt;tagged install 
-&lt;span class="nb"&gt;cd&lt;/span&gt; /etc/yum.repos.d
-wget http://people.centos.org/tru/devtools/devtools.repo
-sudo vim /etc/yum.repos.d/DevToolset.repo
-
-&lt;span class="c1"&gt;#add the following contents:&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt;DevToolset-2&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;RedHat DevToolset v2 &lt;span class="nv"&gt;$releasever&lt;/span&gt; - &lt;span class="nv"&gt;$basearch&lt;/span&gt;
-&lt;span class="nv"&gt;baseurl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://puias.princeton.edu/data/puias/DevToolset/&lt;span class="nv"&gt;$releasever&lt;/span&gt;/&lt;span class="nv"&gt;$basearch&lt;/span&gt;/
-&lt;span class="nv"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
-&lt;span class="nv"&gt;gpgcheck&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; 
-sudo yum install devtoolset-2-gcc-4.8.1 devtoolset-2-gcc-c++-4.8.1
-
-vim ~/.bashrc
-&lt;span class="c1"&gt;#add the following line to the bottom of the file&lt;/span&gt;
-&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin:/opt/rh/devtoolset-2/root/usr/bin/:&lt;span class="nv"&gt;$PATH&lt;/span&gt;
-&lt;span class="c1"&gt;#then run bash to activate the modification&lt;/span&gt;
-bash
-
-sudo yum install devtoolset-2-binutils-devel.x86_64 devtoolset-2-binutils.x86_64 -y
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Install vw&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
-tar xzf vowpal_wabbit.tar.gz
-&lt;span class="nb"&gt;cd&lt;/span&gt; vowpal_wabbit-7.10
-sudo ./autogen.sh
-sudo ./configure
-sudo make
-sudo make install
-&lt;span class="c1"&gt;#add the path of .so files to /etc/ld.so.conf&lt;/span&gt;
-sudo vim /etc/ld.so.conf
-&lt;span class="c1"&gt;#add this dir /usr/local/lib&lt;/span&gt;
-sudo /sbin/ldconfig
-&lt;span class="nb"&gt;cd&lt;/span&gt; vowpal_wabbit-7.10/cluster 
-cp /usr/local/bin/vw . 
-mkdir ./libs 
-cp  ../vowpalwabbit/.libs/* ./libs/ 
-cp /usr/local/lib/libboost_program_options-mt.so.1.58.0 ./libs/ 
-&lt;span class="c1"&gt;#modify the content of runvw-yarn.sh,add the following two lines to the top to make the libs available for the mappers&lt;/span&gt;
-&lt;span class="nv"&gt;pwd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;dirname &lt;span class="nv"&gt;$0&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$LD_LIBRARY_PATH&lt;/span&gt;:&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;pwd&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;/libs/
-and mapscript-yarn.sh 
-&lt;span class="c1"&gt;#modify the mapscript-yarn.sh accord to your own environment.Mainly the path of the streaming jar,and file the libs dir&lt;/span&gt;
--Dmapred.job.queue.name&lt;span class="o"&gt;=&lt;/span&gt;xxxx
--file ./libs
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Run test job&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
-sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.com:54310/user/xxx/test_data/
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Refrences:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/"&gt;vowpal wabbit on hadoop&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</content><category term="hadoop"></category><category term="machine learning"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><published>2015-05-20T00:00:00+08:00</published><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-05-20:/posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
+&lt;/pre&gt;&lt;/div&gt;</content><category term="spark"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><published>2015-05-20T00:00:00+08:00</published><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-05-20:/posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;贴入如下内容:&lt;/p&gt;
 &lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Host *

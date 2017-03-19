@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog - posts</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2017-03-17T00:00:00+08:00</updated><entry><title>Rename a Tensor or Operation in Tensorflow</title><link href="/posts/2017/03/17/rename-a-tensor-or-operation-in-tensorflow.html" rel="alternate"></link><published>2017-03-17T00:00:00+08:00</published><updated>2017-03-17T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-03-17:/posts/2017/03/17/rename-a-tensor-or-operation-in-tensorflow.html</id><summary type="html">&lt;p&gt;Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Sometimes we want to rename a Tensor(or an Operation) in Tensorflow, there is no way to do that directly, because a tf.Operation (or tf.Tensor) is immutable once it has been created. The typical way to rename an op is therefore to use tf.identity(), which has almost no runtime cost:&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name_scope&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"abc"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;
-    &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;tf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;identity&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"z"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The tf.identity function returns a Tensor with the same shape and contents as the input Tensor or value.&lt;/p&gt;
-&lt;p&gt;The recommended way to structure your name scope is to assign the name of the scope itself to the "output" from the scope (if there is a single output op):&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;with tf.name_scope("abc") as scope:
-    # z will get the name "abc". x and y will have names in "abc/..." if they
-    # are converted to tensors.
-    z = tf.add(x, y, name=scope)
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is how the TensorFlow libraries are structured, and it tends to give the best visualization in TensorBoard.&lt;/p&gt;
-&lt;h4&gt;References&lt;/h4&gt;
-&lt;p&gt;&lt;a href="https://stackoverflow.com/questions/34399588/how-to-rename-a-variable-which-respects-the-name-scope/34399966#34399966"&gt;How to rename a variable which respects the name scope?&lt;/a&gt;&lt;/p&gt;</content><category term="machine learning"></category><category term="deep learning"></category><category term="tools."></category></entry><entry><title>《概率论》复习笔记</title><link href="/posts/2017/02/20/review-of-probability.html" rel="alternate"></link><published>2017-02-20T00:00:00+08:00</published><updated>2017-02-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-02-20:/posts/2017/02/20/review-of-probability.html</id><summary type="html">&lt;h4&gt;1. 随机事件和概率&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog - posts</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2017-03-19T00:00:00+08:00</updated><entry><title>今朝一别，或是流水十年</title><link href="/posts/2017/03/19/see-you-ten-years-later.html" rel="alternate"></link><published>2017-03-19T00:00:00+08:00</published><updated>2017-03-19T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-03-19:/posts/2017/03/19/see-you-ten-years-later.html</id><summary type="html">&lt;p&gt;周五jw发微信过来，约周末吃个饭道别。他四月就要去法国读博，用他的话来说，此次见后，可能要十年八年都见不到了。&lt;/p&gt;
+&lt;p&gt;跟jw是大学室友，他的床，就在我的隔壁，每天晚上他爬上床，我都能听到。进大学的第一天，我刚到宿舍，就看到他坐在那里，当时对他的第一印象，头很大，可能头大就是他聪明的原因吧。jw和我一样，来自农村的家庭，家里也不富裕，所以共同语言有不少。当时我们常常一起上课，一起出去买东西，没想到后来还一起来了北京，一起去百度实习。虽然他去百度正式工作的时候，我已经不在百度了。&lt;/p&gt;
+&lt;p&gt;2011年夏天，也就是大三快到大四的下学期，我拿了百度的实习offer，学院跟百度有合作，搞了一个&lt;a href="https://github.com/gmsh/dnscache"&gt;项目实训&lt;/a&gt;，jw，我，还有gms分一组，那时候我们每天都顶着夏日，来到机房，敲代码，调试代码。 后来因为他在项目里面表现优异，百度也给了他面试机会。最终，他也拿到了百度的实习offer，百度运维部实习。跟我不是同一批，如果我没记错，他是在我后面入职的。在百度实习的时候，我们并没有很多交集 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;周五jw发微信过来，约周末吃个饭道别。他四月就要去法国读博，用他的话来说，此次见后，可能要十年八年都见不到了。&lt;/p&gt;
+&lt;p&gt;跟jw是大学室友，他的床，就在我的隔壁，每天晚上他爬上床，我都能听到。进大学的第一天，我刚到宿舍，就看到他坐在那里，当时对他的第一印象，头很大，可能头大就是他聪明的原因吧。jw和我一样，来自农村的家庭，家里也不富裕，所以共同语言有不少。当时我们常常一起上课，一起出去买东西，没想到后来还一起来了北京，一起去百度实习。虽然他去百度正式工作的时候，我已经不在百度了。&lt;/p&gt;
+&lt;p&gt;2011年夏天，也就是大三快到大四的下学期，我拿了百度的实习offer，学院跟百度有合作，搞了一个&lt;a href="https://github.com/gmsh/dnscache"&gt;项目实训&lt;/a&gt;，jw，我，还有gms分一组，那时候我们每天都顶着夏日，来到机房，敲代码，调试代码。 后来因为他在项目里面表现优异，百度也给了他面试机会。最终，他也拿到了百度的实习offer，百度运维部实习。跟我不是同一批，如果我没记错，他是在我后面入职的。在百度实习的时候，我们并没有很多交集，神奇的是他当时的直属经理后来变成了我的上级。我还记得的，就只剩两件事。&lt;/p&gt;
+&lt;p&gt;有一天，好像是周末，jw跟wr一起住的沙河两居室房东，突然要把他们赶出来了，记得当时他们还挺狼狈。我跟xh当时住在沙盒高教园，离沙河只一站地铁。所以他和wr，要到我们这里来借宿。我们当时去帮他们搬东西，乱七八糟的搬了一堆，都搬到我们这里来了，他跟wr就在我们的三居室的客厅寄居了几天。当时似乎并没有太多交流，可能百度的工作也的确是很忙。这件事当时大家好像都没有觉得怎么样，现在回想起来，似乎很辛酸。&lt;/p&gt;
+&lt;p&gt;在百度实习期间，我们的另外一个交集应该是他实习完了回学校之前，我们在辉煌国际下面的麻辣香锅一起吃了一顿饭。那顿饭应该是jw请的，吃了一百多，对当时的我们来说，还挺多。&lt;/p&gt;
+&lt;p&gt;本科毕业jw保研在学校继续读研，而我，则从实习生转正，继续干同样的活。后来他去了卢森堡交流，后来听说跟同去卢森堡的团支书ll在一起了。此间，我们似乎没有怎么联系过。&lt;/p&gt;
+&lt;p&gt;时间很快就来到了2015年，jw已经回国，他去了北京一家小的创业公司实习，好像拿的薪水挺多。此时的我，已经在去哪儿网工作。我们在品质伊犁吃饭，那应该是我们三年多以后的第一次见面。后来他要回学校，放了一个大箱子在我小南庄的房间里，取箱子的时候ll也来了，当时我们三个人坐在我连双人床都放不下的小房间里，房间里有小虫子在飞。jw送了我一个在欧洲买的nike的斜跨包，我很喜欢，后来就一直带着去人大上自习。&lt;/p&gt;
+&lt;p&gt;wd结婚的时候，在济南请班里的同学吃饭，那是我毕业以后第一次回济南。晚上是跟jw一起住在后面半山腰上新建的宿舍楼里过夜，那晚只有我和jw。宿舍的味道还是和以前的一样，人却就只有我和jw了，我们在一起总是有话聊，即使只有我们两个人也不尴尬。那一晚我睡在yrp的床上，他的被子晒的很香。&lt;/p&gt;
+&lt;p&gt;后来jw研究生也毕业了，我还介绍他来我们组面试，可惜当时没有hc，他就去了百度。我们在2016年秋天的时候又聚过一次，在嘉美影城的楼上吃的麻辣诱惑。北京城那么大，好像我们虽是同学，聚的也真不多，熙熙攘攘。过年之前很想请jw吃一次饭，他说要等我妹子来了一起，后来一拖直到今天。&lt;/p&gt;
+&lt;p&gt;从安河桥北到中关村，只有20分钟的地铁，我们约在了离他更近的中关村吃站点pizza。他们可以叫做夫妻了吧（去年领了证），jw稍微有点变胖了，头似乎更大了，ll却比以前更瘦了。jw说，想喝酒，下一次一起喝可能要再过十年八年了。他下去买酒，买了好几罐啤酒，说是把楼下的小超市的啤酒都买光了。我们一人一半，都喝完了，头很晕。ll说了不少他们公司的趣事，也说了很多要去法国租房，工作，担心安全问题，当然我们都很担心的，就是经济问题。作为还有三个月也要只身去异国他乡的我来说，他们的心情，也是我的心情。&lt;/p&gt;
+&lt;p&gt;老同学见老同学，总有说不完的话，此刻不是秋天，内心却很凄凉。6年前，我们在宿舍憧憬着去百度工作，满是期待，彼时正是初夏，万物勃发。6年时间一晃就过去了，我们又要开启各自的新生活，眼神里除了期待，似乎还有一些别的。如果时间能再过一年，我们就要认识十年了，那时候的我们，会是在哪里？ 新西兰与法国，要横跨大半个地球。吃完饭喝完咖啡，我们一起去南京银行办银行卡，办完了我就赶着去办浦发的信用卡。&lt;/p&gt;
+&lt;p&gt;--“你们飞的时候，叫我送你们啊？”&lt;/p&gt;
+&lt;p&gt;--“我们是夜里飞。”&lt;/p&gt;
+&lt;p&gt;--“哦，那算了，有机会再约哈~”&lt;/p&gt;</content><category term="life"></category></entry><entry><title>《概率论》复习笔记</title><link href="/posts/2017/02/20/review-of-probability.html" rel="alternate"></link><published>2017-02-20T00:00:00+08:00</published><updated>2017-02-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-02-20:/posts/2017/02/20/review-of-probability.html</id><summary type="html">&lt;h4&gt;1. 随机事件和概率&lt;/h4&gt;
 &lt;h5&gt;1.1全概率公式&lt;/h5&gt;
 &lt;p&gt;设事件 $A_1,A_2,\cdots,A_n$ 两两互不相容，$P(A_i)&amp;gt;0(i=1,2,\cdots,n)$，且$\sum\limits_{i=1}^{n}{A_i}=\Omega$，
 则对任一事件$B$，有
@@ -238,150 +239,7 @@ $$
 &lt;p&gt;失落的退了出来，真的不开了么？&lt;/p&gt;
 &lt;p&gt;上周六中午，从小店门口路过，看到大爷大妈也在里面，于是又进了小店，想吃一碗饺子，然而大爷大妈只是在这里帮新主人吸引老客户而已，他们真的不开了。他们不开店了将会何去何从？想问却也没问的出口。今晚再次看到大爷在小店里，就走进去要了一份盖饭，大爷叫了我一声小王，像有什么事，没说什么就走了。吃饭的时候，新老板娘说大娘生病了，要回老家养病，才把这家店转让了。不知道大娘得的什么病，也不知道他们看病花了多少钱，有没有医保可以报销。记得大爷以前说他们住在一个地下室，他说他们租不起一套好一点的房子---也许是舍不得租。&lt;/p&gt;
 &lt;p&gt;一场突如其来的病，让一个本充满希望的家庭，又回到了原点。离开北京对他们来说福兮？祸兮？无从知晓。&lt;/p&gt;
-&lt;p&gt;只希望曾经多吃了几碗饺子。&lt;/p&gt;</content><category term="life"></category></entry><entry><title>Grammar in Use 笔记</title><link href="/posts/2016/03/26/notes-of-grammar-in-use.html" rel="alternate"></link><published>2016-03-26T00:00:00+08:00</published><updated>2016-03-26T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-03-26:/posts/2016/03/26/notes-of-grammar-in-use.html</id><summary type="html">&lt;h3&gt;主要的时态&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;past(I did)&lt;/li&gt;
-&lt;li&gt;present continuous(I am doing)&lt;/li&gt;
-&lt;li&gt;present simple(I do)&lt;/li&gt;
-&lt;li&gt;past simple(I did)&lt;/li&gt;
-&lt;li&gt;past continuous(I was doing)&lt;/li&gt;
-&lt;li&gt;present perfect(I have done)&lt;/li&gt;
-&lt;li&gt;present perfect continuous(I have been doing),强调从过去到现在的一个过程.&lt;/li&gt;
-&lt;li&gt;present perfect simple &lt;/li&gt;
-&lt;li&gt;past perfect(I had done)&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;past perfect continuous(I had been doing …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h3&gt;主要的时态&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;past(I did)&lt;/li&gt;
-&lt;li&gt;present continuous(I am doing)&lt;/li&gt;
-&lt;li&gt;present simple(I do)&lt;/li&gt;
-&lt;li&gt;past simple(I did)&lt;/li&gt;
-&lt;li&gt;past continuous(I was doing)&lt;/li&gt;
-&lt;li&gt;present perfect(I have done)&lt;/li&gt;
-&lt;li&gt;present perfect continuous(I have been doing),强调从过去到现在的一个过程.&lt;/li&gt;
-&lt;li&gt;present perfect simple &lt;/li&gt;
-&lt;li&gt;past perfect(I had done)&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;past perfect continuous(I had been doing)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;anybody&lt;/code&gt; 要用单数形式修饰:Is anybody listening to the radio or can I turn it off?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Is anybody sitting here?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;The train is never late,it always leaves on time.&lt;/li&gt;
-&lt;li&gt;be always doing sth.
-    一般情况下,用I always do sth.表示自己一直做什么事,be always doing sth.表示并不每次发生,但是发生的次数比正常的要多.&lt;ul&gt;
-&lt;li&gt;You're always watching television.You should do something more active.&lt;/li&gt;
-&lt;li&gt;I've lost my key again.I'm always losing things.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;This room &lt;code&gt;smells&lt;/code&gt;.Let's open a window.&lt;/li&gt;
-&lt;li&gt;It(this) is the first time somebody has done sth.&lt;ul&gt;
-&lt;li&gt;It's the first time he has driven a car.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;How long have you (been)...&lt;ul&gt;
-&lt;li&gt;How long have they been married?&lt;/li&gt;
-&lt;li&gt;But we use &lt;code&gt;simple&lt;/code&gt; with always: John has always lived in London.&lt;/li&gt;
-&lt;li&gt;We use &lt;code&gt;present perfect simple&lt;/code&gt; in negative sentences:&lt;ul&gt;
-&lt;li&gt;I haven't seen Tom since Monday.&lt;/li&gt;
-&lt;li&gt;Jane hasn't phoned me for two weeks.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Have you had had a holiday recently?&lt;/li&gt;
-&lt;li&gt;想问别人时间的时候可以说:&lt;ol&gt;
-&lt;li&gt;Do you have the time?&lt;/li&gt;
-&lt;li&gt;Have you got the time?&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;have 和 have got 都可以用来表示有,但是在过去式中,用had(不用had got).&lt;/li&gt;
-&lt;li&gt;used to&lt;ol&gt;
-&lt;li&gt;"Something used to happen" = something happened regularly in the past but no longer happens.&lt;ul&gt;
-&lt;li&gt;I used to play tennis a lot but I don't play often now.&lt;/li&gt;
-&lt;li&gt;Diane used to travel a lot.These days she doesn't go away so often.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;We also use &lt;strong&gt;used to ...&lt;/strong&gt; for somethins was true .&lt;ul&gt;
-&lt;li&gt;I've started drinking coffee recently.I never used to like it before.&lt;/li&gt;
-&lt;li&gt;Janet used to have very long hair when she was a child.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;used to 的疑问形式为did (you) use to ...&lt;ul&gt;
-&lt;li&gt;Did you use to eat a lot of sweets when you were a child?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;be used to doing sth.习惯于某事&lt;/li&gt;
-&lt;li&gt;I am used to living alone.&lt;/li&gt;
-&lt;li&gt;I am doing sth.可以用于表示未来已经安排好的事情.&lt;ul&gt;
-&lt;li&gt;Alex is getting married next month.(不要用 will get)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Present simple(I do) with a future meaning:we use the present simple when we talk about timetables,programmes etc.(for example,for public transport,cinemas etc):&lt;ul&gt;
-&lt;li&gt;The train &lt;code&gt;leaves&lt;/code&gt; Plymouth at 11.30 and &lt;code&gt;arrives&lt;/code&gt; in London at 14.45.&lt;/li&gt;
-&lt;li&gt;What time does the film begin?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果一个人的计划订的像时间表,也可以用一般现在时:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;I start my new job on Monday.&lt;/li&gt;
-&lt;li&gt;What time do you finish work tomorrow?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;但是描述个人安排时,进行时更常见:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;What time are you meeting Ann tomorrow?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;be doing 和 be going to do表示未来的差别&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;We normally use I am doing(present continuous) when we say what we have arranged to do.&lt;ul&gt;
-&lt;li&gt;I'm leaving tomorrow.I've got my plane ticket.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;'I am going to do ' = I've decided to do it(but perhaps not arranged to do it);&lt;ul&gt;
-&lt;li&gt;'The windows are dirty.' 'Yes, I know.I'am going to clean them later.'(=I've decided to clean them but I haven't arranged to clean them).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;was going to (do something)= I intended to do it but didn't do it.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Do not use will to talk about what you have already decided or arranged to do.We often use will in those situations:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Offering to do sth.&lt;ul&gt;
-&lt;li&gt;That bag looks very heavy.I will help with it.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Agreeing to dong something.&lt;ul&gt;
-&lt;li&gt;A:You know that book I lent you.Can I have it back if you've finished with it? B:Of course.I'll give it to you this after noon.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Promising to do sth.&lt;ul&gt;
-&lt;li&gt;I won't tell anyone what happend.I promise.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Asking somebody to do sth.(Will you ...?)&lt;ul&gt;
-&lt;li&gt;Will you please be quiet?I'm trying to concentrate.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;不规则动词们:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;fall-&amp;gt;fell-&amp;gt;fallen&lt;/li&gt;
-&lt;li&gt;fly-&amp;gt;flew-&amp;gt;flown&lt;/li&gt;
-&lt;li&gt;begin-&amp;gt;began-&amp;gt;begun&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content><category term="英语"></category><category term="语法"></category></entry><entry><title>让VIM记录文件上次编辑的位置</title><link href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html" rel="alternate"></link><published>2016-03-11T00:00:00+08:00</published><updated>2016-03-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-03-11:/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html</id><summary type="html">&lt;p&gt;在&lt;code&gt;~/.vimrc&lt;/code&gt;中加入如下配置:&lt;/p&gt;
+&lt;p&gt;只希望曾经多吃了几碗饺子。&lt;/p&gt;</content><category term="life"></category></entry><entry><title>让VIM记录文件上次编辑的位置</title><link href="/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html" rel="alternate"></link><published>2016-03-11T00:00:00+08:00</published><updated>2016-03-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-03-11:/posts/2016/03/11/set-vim-to-remember-previous-eidt-place.html</id><summary type="html">&lt;p&gt;在&lt;code&gt;~/.vimrc&lt;/code&gt;中加入如下配置:&lt;/p&gt;
 &lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd BufReadPost *
 &lt;span class="se"&gt;\ &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;gt;0&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"'\""&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&amp;lt;&lt;span class="o"&gt;=&lt;/span&gt;line&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;$&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
 &lt;span class="se"&gt;\ &lt;/span&gt;exe &lt;span class="s2"&gt;"normal g'\""&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
@@ -824,81 +682,7 @@ $$&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="spark"></category></entry><entry><title>Run Vowpal Wabbit on Hadoop</title><link href="/posts/2015/06/09/run-vw-on-hadoop.html" rel="alternate"></link><published>2015-06-09T00:00:00+08:00</published><updated>2015-06-09T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-06-09:/posts/2015/06/09/run-vw-on-hadoop.html</id><summary type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;hadoop 2.2.0&lt;/li&gt;
-&lt;li&gt;Centos 6.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Install boost&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
-tar xzf boost_1_58_0.tar.gz
-&lt;span class="nb"&gt;cd&lt;/span&gt; boost_1_58_0
-sudo ./bootstrap.sh
-sudo ./bjam --layout&lt;span class="o"&gt;=&lt;/span&gt;tagged install 
-&lt;span class="nb"&gt;cd&lt;/span&gt; /etc/yum.repos.d
-wget http://people.centos.org …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;hadoop 2.2.0&lt;/li&gt;
-&lt;li&gt;Centos 6.4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Install boost&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget http://jaist.dl.sourceforge.net/project/boost/boost/1.58.0/boost_1_58_0.tar.gz 
-tar xzf boost_1_58_0.tar.gz
-&lt;span class="nb"&gt;cd&lt;/span&gt; boost_1_58_0
-sudo ./bootstrap.sh
-sudo ./bjam --layout&lt;span class="o"&gt;=&lt;/span&gt;tagged install 
-&lt;span class="nb"&gt;cd&lt;/span&gt; /etc/yum.repos.d
-wget http://people.centos.org/tru/devtools/devtools.repo
-sudo vim /etc/yum.repos.d/DevToolset.repo
-
-&lt;span class="c1"&gt;#add the following contents:&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt;DevToolset-2&lt;span class="o"&gt;]&lt;/span&gt;
-&lt;span class="nv"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;RedHat DevToolset v2 &lt;span class="nv"&gt;$releasever&lt;/span&gt; - &lt;span class="nv"&gt;$basearch&lt;/span&gt;
-&lt;span class="nv"&gt;baseurl&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://puias.princeton.edu/data/puias/DevToolset/&lt;span class="nv"&gt;$releasever&lt;/span&gt;/&lt;span class="nv"&gt;$basearch&lt;/span&gt;/
-&lt;span class="nv"&gt;enabled&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1
-&lt;span class="nv"&gt;gpgcheck&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt; 
-sudo yum install devtoolset-2-gcc-4.8.1 devtoolset-2-gcc-c++-4.8.1
-
-vim ~/.bashrc
-&lt;span class="c1"&gt;#add the following line to the bottom of the file&lt;/span&gt;
-&lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/bin:/opt/rh/devtoolset-2/root/usr/bin/:&lt;span class="nv"&gt;$PATH&lt;/span&gt;
-&lt;span class="c1"&gt;#then run bash to activate the modification&lt;/span&gt;
-bash
-
-sudo yum install devtoolset-2-binutils-devel.x86_64 devtoolset-2-binutils.x86_64 -y
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Install vw&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget -O vowpal_wabbit.tar.gz   https://codeload.github.com/JohnLangford/vowpal_wabbit/tar.gz/7.10
-tar xzf vowpal_wabbit.tar.gz
-&lt;span class="nb"&gt;cd&lt;/span&gt; vowpal_wabbit-7.10
-sudo ./autogen.sh
-sudo ./configure
-sudo make
-sudo make install
-&lt;span class="c1"&gt;#add the path of .so files to /etc/ld.so.conf&lt;/span&gt;
-sudo vim /etc/ld.so.conf
-&lt;span class="c1"&gt;#add this dir /usr/local/lib&lt;/span&gt;
-sudo /sbin/ldconfig
-&lt;span class="nb"&gt;cd&lt;/span&gt; vowpal_wabbit-7.10/cluster 
-cp /usr/local/bin/vw . 
-mkdir ./libs 
-cp  ../vowpalwabbit/.libs/* ./libs/ 
-cp /usr/local/lib/libboost_program_options-mt.so.1.58.0 ./libs/ 
-&lt;span class="c1"&gt;#modify the content of runvw-yarn.sh,add the following two lines to the top to make the libs available for the mappers&lt;/span&gt;
-&lt;span class="nv"&gt;pwd&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;dirname &lt;span class="nv"&gt;$0&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$LD_LIBRARY_PATH&lt;/span&gt;:&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;pwd&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;/libs/
-and mapscript-yarn.sh 
-&lt;span class="c1"&gt;#modify the mapscript-yarn.sh accord to your own environment.Mainly the path of the streaming jar,and file the libs dir&lt;/span&gt;
--Dmapred.job.queue.name&lt;span class="o"&gt;=&lt;/span&gt;xxxx
--file ./libs
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Run test job&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;hadoop fs -put ../java/src/test/resources/house.vw hdfs://xxxx.com:54310/user/xxx/test_data/
-sh -x mapscript-yarn.sh hdfs://xxxx.com:54310/user/xxx/test_result/ hdfs://xxxx.com:54310/user/xxx/test_data/
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Refrences:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://scalableml.wordpress.com/2013/09/09/vowpal-wabbit-on-hadoop/"&gt;vowpal wabbit on hadoop&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/JohnLangford/vowpal_wabbit/wiki/Tutorial"&gt;Vowpal Tutorial&lt;/a&gt;&lt;/p&gt;</content><category term="hadoop"></category><category term="machine learning"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><published>2015-05-20T00:00:00+08:00</published><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-05-20:/posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
+&lt;/pre&gt;&lt;/div&gt;</content><category term="spark"></category></entry><entry><title>iterm2 clone session</title><link href="/posts/2015/05/20/iterm2-clone-session.html" rel="alternate"></link><published>2015-05-20T00:00:00+08:00</published><updated>2015-05-20T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2015-05-20:/posts/2015/05/20/iterm2-clone-session.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vim ~/.ssh/config
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;贴入如下内容:&lt;/p&gt;
 &lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Host *
@@ -1097,130 +881,7 @@ $(function () {
         }]
     });
 });
-&lt;/script&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>Improve Safety On The Road</title><link href="/posts/2014/12/30/improve-safety-on-the-road.html" rel="alternate"></link><published>2014-12-30T00:00:00+08:00</published><updated>2014-12-30T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-12-30:/posts/2014/12/30/improve-safety-on-the-road.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;The only way to improve safety on the road is to severely punish driving offenders. To what extent do you agree or disagree?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
-&lt;p&gt;The number …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
-&lt;p&gt;The only way to improve safety on the road is to severely punish driving offenders. To what extent do you agree or disagree?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
-&lt;p&gt;The number of traffic accidents is increasingly large recently which leads to a various of social problems.Some people
-think that the best and only way to improve traffic  safety is by imposing severe punishments on those who have violated the traffic
-laws.Personally, I totally disagree with this view. It can be improved by educating people about the serious results that accidents
-may bring to the drivers and their families as well as punishing the violators.&lt;/p&gt;
-&lt;p&gt;Informing people of the consequences of an accident seems to be a better approach  to reduce the accidents on the road.
-For instance,we can teach both the drivers and pedestrians about what an accident would bring to their family members,they will
-lose their breadwinners and will face financial problems.This means that their families will encounter disability or even
-death if they do not follow the laws.Keeping this in mind,they will think twice before  breaking the law.&lt;/p&gt;
-&lt;p&gt;On the other hand,deterrent from punishing still remains to be a significant way to gain road safety. For example, if an offender
-is punished strictly, he and his friends will be deterred and are less possible to offend again.In some countries,if a person
-seriously break a certain law,such as drunk driving,he may lose the right to drive again. So, severe punishment surely contributes to
-the improvement of road safety.&lt;/p&gt;
-&lt;p&gt;In conclusion,we can help people to improve the traffic safety by teaching them the importance of safe driving.Although punishment
-is also a good way to do so,but it is not the best way and only way.Pedestrians and drivers should all  obey traffic regulations and
-laws to keep safe.&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>Use Animals For Humans</title><link href="/posts/2014/12/22/use-animals-for-humans.html" rel="alternate"></link><published>2014-12-22T00:00:00+08:00</published><updated>2014-12-22T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-12-22:/posts/2014/12/22/use-animals-for-humans.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Some people think that it is acceptable to use animals for the benefit of humans. Others, however, think that it is wrong to exploit animals for human purposes. Discuss both these views and give your own opinion.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
-&lt;p&gt;Some people think that it is acceptable to use animals for the benefit of humans. Others, however, think that it is wrong to exploit animals for human purposes. Discuss both these views and give your own opinion.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
-&lt;p&gt;It is undoubtedly the case that the number of animals used for human being's benefit  is increasingly large.Some people think
-this is unethical and unfair to benefit from animals ,but others hold the opposite view. Personally, my opinion is that we should
-use animals correctly and ethically.&lt;/p&gt;
-&lt;p&gt;Firstly,we are at the top of the food chain, it is completely  natural to kill animals for food.There are thousands of animal farms all over the world which provide chicken,beef and so on,
-Without them,many people will encounter starving,because meat is main food that provide protein and nutrition for human beings.In order to live on, we have to raise and kill animals for food.&lt;/p&gt;
-&lt;p&gt;Meanwhile,animals play a significant role in scientific research.They have been used in many fields,ranging from medical tests to space exploring.For instance,
-in medical industry, before a new drug is put into production,animal testing is a necessary to see if the drug is safe or have some unpredictable side effects.
-We have to depend on animals in those areas,because we do not have alternatives,scientists can not do experiments on a human being instead of a rat.&lt;/p&gt;
-&lt;p&gt;However, other people argue that we do not have the right to take the animals' lives for our own benefits,lives should be
-respected. What is more ,the benefits of researches can not justify the suffering caused. But,this is unrealistic .
-We should focus on how to minimize the sufferings that animals experienced when used by people.&lt;/p&gt;
-&lt;p&gt;In sum,animal is an extremely important source of food for human beings which can contribute to the science as well.We can surely use
-animals to live on,but we should use them scientifically and ethically.&lt;/p&gt;
-&lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>Forcing the Employers to Hire the Same Number of Men and Women</title><link href="/posts/2014/12/16/gender-balance.html" rel="alternate"></link><published>2014-12-16T00:00:00+08:00</published><updated>2014-12-16T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-12-16:/posts/2014/12/16/gender-balance.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Some people think that employers should be required to employ equal numbers of men and women. To what extent do you agree or disagree?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
-&lt;p&gt;It …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
-&lt;p&gt;Some people think that employers should be required to employ equal numbers of men and women. To what extent do you agree or disagree?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
-&lt;p&gt;It is undoubtedly that men and women are playing different roles in our society. There are opinions that suggest companies
-to employ the same number of females and males. Personally,I don't think this is a good suggestion.&lt;/p&gt;
-&lt;p&gt;Generally,women have their advantages in many areas.They are tender and have better communication skills so that they
-have the ability to make people feel comfortable. This means they are suitable for  many positions,for instance,
-consultants,teachers,nursers,in which they can easily reach higher achievements than men.&lt;/p&gt;
-&lt;p&gt;However,males are usually physically stronger and more sensible than females.Industries that are labor-intensive may surely
-employ  more men than women. Meanwhile, men are better at emotion control which helps them to improve their leadership and
-make calm decisions.That is why we can see that there are more male presidents than females, despite the fact that women are
-play increasingly significant roles in our society.&lt;/p&gt;
-&lt;p&gt;So,it is obvious that man and woman both have their own advantages in different professions.Asking the employers to employ the same
-number of females and males is unfair and unrealistic.But a company can surely benifit from a balanced number of males and females,
-as it can help to promote the productivity.If the productivity of  a company is not bounded to the gender,employing equal
-number of men and women seems to be the best choice for them.&lt;/p&gt;
-&lt;p&gt;In conclusion, making the most of the gender advantages is benificial for both companies and society.That is why I don't
-agree with the view that forcing the employers to hire the same number of men and women.&lt;/p&gt;
-&lt;h3&gt;References&lt;/h3&gt;
-&lt;p&gt;&lt;a href="http://ielts-simon.com/ielts-help-and-english-pr/2011/06/ielts-writing-task-2-gender-and-university-essay.html"&gt;IELTS globalisation essay&lt;/a&gt;&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>Distance Learning vs School Learing</title><link href="/posts/2014/11/24/distance-learning-vs-school-learning.html" rel="alternate"></link><published>2014-11-24T00:00:00+08:00</published><updated>2014-11-24T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-11-24:/posts/2014/11/24/distance-learning-vs-school-learning.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;many people use distance-learning programmes(study material post, TV, Internet, etc.) to study at home,
-but some people think that it cannot bring the same benefits of attending college or university.
-To what extent do you agree or disagree.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst …&lt;/p&gt;</summary><content type="html">&lt;blockquote&gt;
-&lt;p&gt;many people use distance-learning programmes(study material post, TV, Internet, etc.) to study at home,
-but some people think that it cannot bring the same benefits of attending college or university.
-To what extent do you agree or disagree.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
-&lt;p&gt;Distance learning is a relatively recent phenomenon and if it is as  good as traditional classroom-based learning still
-remains to be controversial.Many people believe that the online courses are better than those provided at school,but
-others hold the totally opposite view.Personally,I think that we can benefit from both approaches,they can make up for
-each other.&lt;/p&gt;
-&lt;p&gt;In terms of distance learning,it is convenient for adults,especially people who are busy with their works.Studying at
-home enables them to receive further education, which is significantly important for us in a tech-driven society.Meanwhile,
-the courses on the Internet or TV are usually well prepared and given by renowned experts,which helps to ensure the quality.&lt;/p&gt;
-&lt;p&gt;But school education is surely one of the most import sources of information and knowledge.They can provide structured courses
-as well as better schedules.The teachers in the school can not only help us to learn,but also provide specific guidances
-and life experience.And discussing with classmates from the school contributes to better understanding of what we are
-learning.&lt;/p&gt;
-&lt;p&gt;So,we can make the most of both distance learning and classroom-based learning. If a student did not catch waht he had learned
-on the class,he can download some courses from Internet to make up for it.An adult can also turn to classes for help
-when he encounter some problems which he can not tackle all by himself.&lt;/p&gt;
-&lt;p&gt;So, while we are taking advantage of technology,we should not neglect the importance of traditional learning.We should
-chose our learning methods according to our circumstances.&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>What Should Be the Main Function Of A University</title><link href="/posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html" rel="alternate"></link><published>2014-11-12T00:00:00+08:00</published><updated>2014-11-12T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-11-12:/posts/2014/11/12/what-shuld-be-the-main-function-of-a-university.html</id><summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. 
-Others think that the true function of a university should be to give access to knowledge for its own sake,
-regardless of whether the course is useful to an employer.&lt;/p&gt;
-&lt;p&gt;What, in your …&lt;/p&gt;&lt;/blockquote&gt;</summary><content type="html">&lt;blockquote&gt;
-&lt;p&gt;Some people think that universities should provide graduates with the knowledge and skills needed in the workplace. 
-Others think that the true function of a university should be to give access to knowledge for its own sake,
-regardless of whether the course is useful to an employer.&lt;/p&gt;
-&lt;p&gt;What, in your opinion, should be the main function of a university?&lt;/p&gt;
-&lt;p&gt;Give reasons for your answer and include any relevant examples from your own knowledge or experience.
-Write at least 250 words.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Notice:&lt;/strong&gt; this is my practice writing  which may be the worst approach.I am glad to receive any kind of advises(grammar or misuse,etc).&lt;/p&gt;
-&lt;p&gt;Recently,what kind of knowledge should a university provide its graduates with has been increasingly popular.Some of us
-hold the view that universities should teach their students job-related skills.But others do not agree,they
-think that universities should mainly focus on theoretical knowledge.Personally,I agree with the later view.&lt;/p&gt;
-&lt;p&gt;The basic knowledge,many of which have developed for hundred of years and have been refined by countless of experts,is 
-significantly important to a university student.Without it, they can not form their systematic knowledge of their 
-professions which will lead to serious results,for instance,they may be unable to do further or complex jobs.That is why 
-many people think that the universities should put more attention on teaching basic knowledge.&lt;/p&gt;
-&lt;p&gt;What is more,companies concern about the ability of solving problems and the ability to learn fast more than job skills.
-Many renowned companies,such as google and facebook,ask a lot of basic questions in their job interviews.They believe 
-that,if you are able to learn the basic lessons well at school, you can soon become a skilled employee after professional
-trainings.So, if a university teaches basic knowledge better,it can anticipate more competitive graduates.&lt;/p&gt;
-&lt;p&gt;As to the job-related skills, the technology used in industry is developing extraordinarily fast that the universities can 
-not keep pace with it.It is hard for them to decide what is the best skill for their students.However,they should not totally
-ignore the requirements of the job market,alternatively,they can invite some companies to their campus to introduce what 
-kind of skill they want.&lt;/p&gt;
-&lt;p&gt;In summary,although the main goal of going to universities of many students is finding a ideal job after graduating,universities
-should help their students to build a good knowledge system and help them to be quick learners and problem solvers instead of
-just teaching them job-related skills.&lt;/p&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>The Catcher in the Rye</title><link href="/posts/2014/10/31/the-catcher-in-the-rye.html" rel="alternate"></link><published>2014-10-31T00:00:00+08:00</published><updated>2014-10-31T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-10-31:/posts/2014/10/31/the-catcher-in-the-rye.html</id><summary type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
+&lt;/script&gt;</content><category term="ielts"></category><category term="writing"></category></entry><entry><title>The Catcher in the Rye</title><link href="/posts/2014/10/31/the-catcher-in-the-rye.html" rel="alternate"></link><published>2014-10-31T00:00:00+08:00</published><updated>2014-10-31T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2014-10-31:/posts/2014/10/31/the-catcher-in-the-rye.html</id><summary type="html">&lt;p&gt;Holden Caulfied 是一个16岁的男孩，他因为课程不及格被学校开除，在他的眼里，周围的人要有奇怪的习惯和毛病。&lt;/p&gt;
 &lt;p&gt;在离开学校之前他与他的室友打了一家，因为室友和他最喜欢的女生约会，他心里非常不舒服。一个十六岁的男孩，面对自己的梦中小情人，
 宁愿远远的看着她，也不希望她跟别的男孩子约会。更何况她的约会对象在Holden看来根本配不上她。Holden心里当然不高兴。打完架他决定早点离开学校了。&lt;/p&gt;
 &lt;p&gt;对于一个青春期的孩子来说，也许最大的恐惧就是不合群，希望和同龄人做一样的事情，上课，考试，放假。可是Hoden却不得不提前开始寒假，又不能回家，
