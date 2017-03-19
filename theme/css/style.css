@@ -369,8 +369,10 @@ a {
     }
 
     .post-header {
-        padding-left: 20px;
-        padding-right: 20px;
+        margin: 0 auto;
+        padding: 0;
+        width: 90%;
+        text-align: center;
     }
 
     .post-meta span {
@@ -378,8 +380,10 @@ a {
     }
 
     .post-content {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 0 auto;
+        padding: 0;
+        width: 90%;
+        text-align: center;
     }
 
     .post-content ul, .post-container ol {
