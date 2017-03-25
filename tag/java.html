@@ -166,7 +166,7 @@ Andy's Blog            </a>
 
     <div class="post-content"><h2>通过 jvisualvm 查看 jvm 内部详细信息</h2>
 <div class="github"><pre><span></span>jvisualvm -Dcom.sun.management.jmxremote.port<span class="o">=</span><span class="m">8999</span> -Dcom.sun.management.jmxremote.ssl<span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
- -Dcom.sun.management.jmxremote.authenticate<span class="o">=</span><span class="nb">false</span> -Djava.rmi.server.hostname<span class="o">=</span>10.86.46.252
+ -Dcom.sun.management.jmxremote.authenticate<span class="o">=</span><span class="nb">false</span> -Djava.rmi.server.hostname<span class="o">=</span><span class="m">10</span>.86.46.252
 </pre></div>
 <h2>查看哪个线程使用 cpu 最多</h2>
 <div class="github"><pre><span></span>ps -mp <span class="m">2633</span> -o THREAD,tid,time <span class="p">|</span> sort -rn
