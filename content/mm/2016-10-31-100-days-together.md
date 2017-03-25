@@ -6,6 +6,7 @@ Slug: 100-days-together
 Author: Andy
 Wechat_logo: xiang_jian_yi_wu_shi_300x300.jpg
 Place: Beijing
+Status:draft
 
 亲爱的 mm：
 

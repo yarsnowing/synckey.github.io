@@ -1,4 +1,4 @@
-Title: iterm2 clone session
+Title: Iterm2 Clone Session
 Date: 2015-05-20
 Category: posts
 Slug: iterm2-clone-session
