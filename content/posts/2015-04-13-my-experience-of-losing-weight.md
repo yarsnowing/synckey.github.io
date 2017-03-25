@@ -69,17 +69,10 @@ Place: Beijing
 - 凤凰fm 运动的时候很无聊，找点好玩的东西听，我主要挺逻辑思维，听的有点想吐了。其他同类产品有蜻蜓fm，podcast。另外podcast上的《real deal English》
 和《潘吉Jenny告诉你》实在太赞，一边运动一边练口语。
 
-<div class="row">
-  <div class="col-sm-4">
-    <img src="/static/images/runtastics.PNG" alt="Runtastics" class="carousel-inner  img-rounded center-block"/>
-  </div>
-  <div class="col-sm-4">
-    <img src="/static/images/runtastic.PNG" alt="runtasktic" class="carousel-inner  img-rounded center-block"/>
-  </div>
-  <div class="col-sm-4">
-    <img src="/static/images/myfitnesspal.PNG" alt="runtasktic" class="carousel-inner  img-rounded center-block"/>
-  </div>
-</div>
+<div class="figure">
+    <img src="/static/images/2015_04_13_softwares.jpg" alt="suzhou" class="img-responsive carousel-inner img-rounded"/>
+    <div class="caption">Useful apps</div>
+ </div>
 
 
 
@@ -129,24 +122,9 @@ Place: Beijing
 
 ###有图有真相
 
-<div class="row">
-    <div class="col-sm-4">
-    <figure>
-        <img src="/static/images/2014_2016_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block"/>
-        <div class="caption">2014 vs 2015</div>
-    </figure>
-    </div>
-  <div class="col-sm-4">
-    <figure>
-        <img src="/static/images/2014_2015_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block"/>
-        <div class="caption" >2014 vs 2015</div>
-    </figure>
-  </div>
-  <div class="col-sm-4">
-        <img src="/static/images/2015_tnf_and_half_marathon.jpg" alt="tnf"  class="carousel-inner  img-rounded img-responsive center-block"/>
-        <div class="caption">北京半马 vs tnf 100</div>
-  </div>
-</div>
+<div class="figure">
+    <img src="/static/images/2015_04_13_comparasion.jpg" alt="suzhou" class="img-responsive carousel-inner img-rounded"/>
+ </div>
 <!--
 <container>
 <img src="/static/images/2014_2016_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block" style='width: 60%;'/>
