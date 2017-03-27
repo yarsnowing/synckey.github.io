@@ -1,6 +1,5 @@
 Title: A Misuse of Spark Broadcast 
 Date: 2015-11-03
-Category: posts
 Tags: spark
 Author: Andy
 Place: Beijing

@@ -1,6 +1,5 @@
 Title: Enable Pelican to Render Markdown Tables
 Date: 2017.03.19
-Category: tools
 Tags: tools,pelican,blog
 Slug: enable-pelican-to-render-markdown-tables
 Author: Andy

@@ -1,6 +1,5 @@
 Title: Plot Sigmoid in Matlab
 Date: 2015-12-24
-Category: posts
 Tags: machine learning,technology,logistic regression
 Slug: plot-sigmoid-in-matlab
 Author: Andy

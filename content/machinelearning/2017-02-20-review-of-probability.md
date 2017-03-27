@@ -1,6 +1,5 @@
-Title: 《概率论》复习笔记
+Title:《概率论》复习笔记
 Date: 2017-02-20
-Category: posts
 Tags: machine learning, deep learning, probability
 Slug: review-of-probability
 Author: Andy

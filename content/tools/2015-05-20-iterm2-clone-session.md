@@ -1,6 +1,5 @@
 Title: Iterm2 Clone Session
 Date: 2015-05-20
-Category: posts
 Slug: iterm2-clone-session
 Tags: iterm2,mac,sesssion
 Author: Andy

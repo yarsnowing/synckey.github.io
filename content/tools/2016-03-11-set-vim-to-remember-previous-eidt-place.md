@@ -1,6 +1,5 @@
 Title: 让VIM记录文件上次编辑的位置
 Date: 2016-03-11
-Category: posts
 Tags: tools,vim,linux,config
 Slug: set-vim-to-remember-previous-eidt-place
 Author: Andy

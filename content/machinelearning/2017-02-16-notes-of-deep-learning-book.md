@@ -1,6 +1,5 @@
-Title: 《深度学习》学习笔记
+Title:《深度学习》学习笔记
 Date: 2017-02-16
-Category: posts
 Tags: machine learning, deep learning
 Slug: notes-of-deep-learning-book
 Author: Andy

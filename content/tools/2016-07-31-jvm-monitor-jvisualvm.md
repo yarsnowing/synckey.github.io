@@ -1,6 +1,5 @@
 Title: JVM Monitor Tool---jvisualvm
 Date: 2016-07-26
-Category: posts
 Tags: java,posts,jvm,profile,trouble shooting
 Slug: jvm-monitor-tool-jvisualvm
 Author: Andy
