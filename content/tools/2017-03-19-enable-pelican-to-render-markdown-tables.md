@@ -33,6 +33,7 @@ By default,if you use bootstrap, the table will not have borders, you can tackle
       $(document).ready(function () {
         $("table").attr("class","table table-condensed table-bordered");
       });
+    </script>
 
 ###References
 
