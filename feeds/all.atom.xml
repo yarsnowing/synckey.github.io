@@ -57,6 +57,7 @@
   &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;ready&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"table"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"class"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"table table-condensed table-bordered"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
   &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://pythonhosted.org/Markdown/extensions/tables.html"&gt;Markdown extensions&lt;/a&gt;&lt;/p&gt;
@@ -184,15 +185,22 @@
 &lt;/div&gt;
 2016年总共读了这些书：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;《易经杂说》&lt;/li&gt;
-&lt;li&gt;《智能时代》&lt;/li&gt;
 &lt;li&gt;《文明时代》&lt;/li&gt;
-&lt;li&gt;《人类简史》&lt;/li&gt;
 &lt;li&gt;《百年孤独》&lt;/li&gt;
 &lt;li&gt;《腾讯传》&lt;/li&gt;
 &lt;li&gt;《圣女的救济》&lt;/li&gt;
 &lt;li&gt;《Lean in》&lt;/li&gt;
-&lt;li&gt;...&lt;/li&gt;
+&lt;li&gt;《硅谷之谜》&lt;/li&gt;
+&lt;li&gt;《没有色彩的多崎作和他的巡礼之年初》&lt;/li&gt;
+&lt;li&gt;《春风沉醉的晚上》&lt;/li&gt;
+&lt;li&gt;《番茄工作法》&lt;/li&gt;
+&lt;li&gt;《重生》&lt;/li&gt;
+&lt;li&gt;《计算广告》&lt;/li&gt;
+&lt;li&gt;《人生的起点和终点》&lt;/li&gt;
+&lt;li&gt;《印象笔记留给你的空间》&lt;/li&gt;
+&lt;li&gt;《未来二十年》&lt;/li&gt;
+&lt;li&gt;《李敖回忆录》&lt;/li&gt;
+&lt;li&gt;《把生命浪费在美好的事物上》&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;从《我是歌手》开始关注徐佳莹，7月份在西直门看了她的演唱会，被她的活泼所惊艳。
 8月跟跟mm在苏州看了一场奶茶的演唱会，喜欢她的不少歌。&lt;/p&gt;
