@@ -106,9 +106,19 @@ $C_{n}^{m}=\frac{A_{n}^{m}}{n!}=\frac{n(n-1)(n-2)\cdots(n-m+1)}{m!}$
 
 ### 5.将一个数字二进制表示的第一个1后面的所有位都置为1，例如input 是`5`，二进制表示是`101`，希望得到`111`。
 
+### 6.素数(prime number)
+#### 素数的定义
+>质数（Prime number），又称素数，指在大于1的自然数中，除了1和该数自身外，无法被其他自然数整除的数（也可定义为只有1与该数本身两个因数的数）。
+
+
+
+
+
 ###References
 [Solution to Convert a Number to Hexadecimal](https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions)
 
 [Rotate Function](https://leetcode.com/problems/rotate-function/)
 
 [Java Solution O(n) with non mathametical explaination](https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8)
+
+[wiki](https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%95%B0)
