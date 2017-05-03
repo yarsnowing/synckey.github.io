@@ -121,4 +121,4 @@ $C_{n}^{m}=\frac{A_{n}^{m}}{n!}=\frac{n(n-1)(n-2)\cdots(n-m+1)}{m!}$
 
 [Java Solution O(n) with non mathametical explaination](https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8)
 
-[wiki](https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%95%B0)
+[素数](https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%95%B0)
