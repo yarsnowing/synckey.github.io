@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-03-30T00:00:00+08:00</updated><entry><title>Read .mat Files in Python</title><link href="/posts/2017/03/30/read-mat-files-in-python.html" rel="alternate"></link><published>2017-03-30T00:00:00+08:00</published><updated>2017-03-30T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-03-30:/posts/2017/03/30/read-mat-files-in-python.html</id><summary type="html">&lt;p&gt;Some of the open datasets come with matlab format, we can load the matlab format files with python with the following codes :&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2017-05-10T00:00:00+08:00</updated><entry><title>BFS遍历到图的指定层的一种解法</title><link href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html" rel="alternate"></link><published>2017-05-10T00:00:00+08:00</published><updated>2017-05-10T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-05-10:/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html</id><summary type="html">&lt;p&gt;&lt;a href="https://leetcode.com/problems/word-ladder/#/description"&gt;leetcode原题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Only one letter can be changed at a time.&lt;/li&gt;
+&lt;li&gt;Each transformed word must exist in the word list. Note that beginWord is not a transformed …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://leetcode.com/problems/word-ladder/#/description"&gt;leetcode原题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Only one letter can be changed at a time.&lt;/li&gt;
+&lt;li&gt;Each transformed word must exist in the word list. Note that beginWord is not a transformed word.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For example,&lt;/p&gt;
+&lt;p&gt;Given:&lt;/p&gt;
+&lt;p&gt;beginWord = &lt;code&gt;"hit"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;endWord = &lt;code&gt;"cog"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;wordList = &lt;code&gt;["hot","dot","dog","lot","log","cog"]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;As one shortest transformation is &lt;code&gt;"hit" -&amp;gt; "hot" -&amp;gt; "dot" -&amp;gt; "dog" -&amp;gt; "cog"&lt;/code&gt;,return its length &lt;code&gt;5&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Return 0 if there is no such transformation sequence.&lt;/li&gt;
+&lt;li&gt;All words have the same length.&lt;/li&gt;
+&lt;li&gt;All words contain only lowercase alphabetic characters.&lt;/li&gt;
+&lt;li&gt;You may assume no duplicates in the word list.&lt;/li&gt;
+&lt;li&gt;You may assume beginWord and endWord are non-empty and are not the same.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个题可以用图的思路来解答，把beginWord当成是图的root节点，每个词通过一次变换的词作为这个节点的子节点，从beginWord开始遍历搜索endWord，所有的路径中最小的那些就是答案。当然，遍历的过程中要注意，这是一个有环图，要记录已经遍历过的节点。因为是路径搜索，要保存路径，所以最简单的想法是使用DFS对整个图进行搜索，最后将最短路径取出来。然而，这个方法行不通，尤其是在字典比较大的时候，树特别深，会超时。如果对整个树进行BFS也会有一样的结果，都会超时。一个优化的思路就是只对graph进行遍历，一直到endWord第一次出现的那一层终止，因为要找的是最短变换，后面的遍历没有必要。传统的BFS算法使用一个队列来保存将要遍历的节点列表，但是并不能知道当前遍历节点所在的层数。所以就用一个Map&lt;string, integer=""&gt;来保存每个节点第一次出现的层数，endWord第一次出现的那一层，就是迭代要终止的那一层，假设为minLevel。在遍历完minLevel以后，就可以终止算法。&lt;/string,&gt;&lt;/p&gt;
+&lt;p&gt;最终要输出变换路径，可以一边遍历，一边构造图的结构。这个问题是有向有环图，可以使用&lt;code&gt;Map&amp;lt;String, Set&amp;lt;String&amp;gt;&amp;gt; graph&lt;/code&gt;来构造整个图。&lt;/p&gt;
+&lt;p&gt;最终，使用递归打印出构造出来的&lt;code&gt;graph&lt;/code&gt;中所有&lt;code&gt;beginWord-&amp;gt;endWord&lt;/code&gt;之间的路径。&lt;/p&gt;
+&lt;p&gt;详细代码见:&lt;a href="https://discuss.leetcode.com/topic/88859/263ms-easy-to-understand-java-solution-using-simple-BFS"&gt;263ms Easy to Understand Java Solution Using Simple BFS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这个问题还有一个简化版的问题&lt;a href="https://leetcode.com/problems/word-ladder/#/description"&gt;Word Ladder&lt;/a&gt;，只要求出&lt;code&gt;beginWord&lt;/code&gt;和&lt;code&gt;endWord&lt;/code&gt;之间最短变换的路径长度。可以用上面的解法，或者直接DFS这个图，第一次遇到&lt;code&gt;endWord&lt;/code&gt;时返回路径长度即可。&lt;/p&gt;
+&lt;h3&gt;References&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/2857/share-two-similar-java-solution-that-accpted-by-oj/2"&gt;Share two similar Java solution that Accpted by OJ.&lt;/a&gt;&lt;/p&gt;</content><category term="algorithm"></category></entry><entry><title>Read .mat Files in Python</title><link href="/posts/2017/03/30/read-mat-files-in-python.html" rel="alternate"></link><published>2017-03-30T00:00:00+08:00</published><updated>2017-03-30T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-03-30:/posts/2017/03/30/read-mat-files-in-python.html</id><summary type="html">&lt;p&gt;Some of the open datasets come with matlab format, we can load the matlab format files with python with the following codes :&lt;/p&gt;
 &lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;scipy.io&lt;/span&gt;
 &lt;span class="n"&gt;mat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;scipy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loadmat&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'file.mat'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -491,10 +521,22 @@ $$
  &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sc"&gt;'5'&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="sc"&gt;'0'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;5.将一个数字二进制表示的第一个1后面的所有位都置为1，例如input 是&lt;code&gt;5&lt;/code&gt;，二进制表示是&lt;code&gt;101&lt;/code&gt;，希望得到&lt;code&gt;111&lt;/code&gt;。&lt;/h3&gt;
+&lt;h3&gt;6.素数(prime number)&lt;/h3&gt;
+&lt;h4&gt;素数的定义&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;质数（Prime number），又称素数，指在大于1的自然数中，除了1和该数自身外，无法被其他自然数整除的数（也可定义为只有1与该数本身两个因数的数）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;7. LinkedHashSet&lt;/h3&gt;
+&lt;p&gt;Java的LinkedHashSet可以将元素按插入顺序输出(HashSet并不具有这个属性)。&lt;/p&gt;
+&lt;h3&gt;8. Word Ladder II&lt;/h3&gt;
+&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]
+[代码见这里](https://discuss.leetcode.com/topic/88859/263ms-easy-to-understand-java-solution-using-simple-bfs)
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions"&gt;Solution to Convert a Number to Hexadecimal&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://leetcode.com/problems/rotate-function/"&gt;Rotate Function&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8"&gt;Java Solution O(n) with non mathametical explaination&lt;/a&gt;&lt;/p&gt;</content><category term="algorithm"></category></entry><entry><title>My Bashrc Backup</title><link href="/posts/2016/10/11/my-bashrc-backup.html" rel="alternate"></link><published>2016-10-11T00:00:00+08:00</published><updated>2016-10-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-10-11:/posts/2016/10/11/my-bashrc-backup.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .bashrc&lt;/span&gt;
+&lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/58616/java-solution-o-n-with-non-mathametical-explaination/8"&gt;Java Solution O(n) with non mathametical explaination&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://zh.wikipedia.org/wiki/%E7%B4%A0%E6%95%B0"&gt;素数&lt;/a&gt;&lt;/p&gt;</content><category term="algorithm"></category></entry><entry><title>My Bashrc Backup</title><link href="/posts/2016/10/11/my-bashrc-backup.html" rel="alternate"></link><published>2016-10-11T00:00:00+08:00</published><updated>2016-10-11T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-10-11:/posts/2016/10/11/my-bashrc-backup.html</id><summary type="html">&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .bashrc&lt;/span&gt;
 &lt;span class="c1"&gt;# Source global definitions&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -f /etc/bashrc &lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;then&lt;/span&gt;
     . /etc/bashrc

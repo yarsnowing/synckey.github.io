@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Read .mat Files in Python</title>
+    <title>BFS遍历到图的指定层的一种解法</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -15,22 +15,20 @@
             src='/static/images/wechat_logo_300x300.jpg'/></div>
 
     <!--
-<link rel="canonical" href="/posts/2017/03/30/read-mat-files-in-python.html">
+<link rel="canonical" href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html">
     -->
 <meta name="author" content="Andy"/>
-<meta name="keywords" content="machine learning,deep learning,probability"/>
-<meta name="description" content="Some of the open datasets come with matlab format, we can load the matlab format files with python with the following codes : import scipy.io mat = scipy.io.loadmat(&#39;file.mat&#39;) Enjoy^_^ Reference read-mat-files-in-python"/>
+<meta name="keywords" content="algorithm"/>
+<meta name="description" content="leetcode原题 Given two words (beginWord and endWord), and a dictionary&#39;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: Only one letter can be changed at a time. Each transformed word must exist in the word list. Note that beginWord is not a transformed …"/>
 
 <meta property="og:site_name" content="Andy's Blog"/>
 <meta property="og:type" content="article"/>
-<meta property="og:title" content="Read .mat Files in Python"/>
-<meta property="og:url" content="/posts/2017/03/30/read-mat-files-in-python.html"/>
-<meta property="og:description" content="Some of the open datasets come with matlab format, we can load the matlab format files with python with the following codes : import scipy.io mat = scipy.io.loadmat(&#39;file.mat&#39;) Enjoy^_^ Reference read-mat-files-in-python"/>
-<meta property="article:published_time" content=" 2017-03-30" />
-<meta property="article:section" content="machinelearning"/>
-<meta property="article:tag" content="machine learning"/>
-<meta property="article:tag" content="deep learning"/>
-<meta property="article:tag" content="probability"/>
+<meta property="og:title" content="BFS遍历到图的指定层的一种解法"/>
+<meta property="og:url" content="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html"/>
+<meta property="og:description" content="leetcode原题 Given two words (beginWord and endWord), and a dictionary&#39;s word list, find the length of shortest transformation sequence from beginWord to endWord, such that: Only one letter can be changed at a time. Each transformed word must exist in the word list. Note that beginWord is not a transformed …"/>
+<meta property="article:published_time" content=" 2017-05-10" />
+<meta property="article:section" content="posts"/>
+<meta property="article:tag" content="algorithm"/>
 <meta property="article:author" content="Andy"/>
 
 
@@ -111,9 +109,9 @@
 
 
 
-    <link href="/feeds/machinelearning.atom.xml" type="application/atom+xml"
+    <link href="/feeds/posts.atom.xml" type="application/atom+xml"
           rel="alternate"
-          title="Andy's Blog machinelearning ATOM Feed"/>
+          title="Andy's Blog posts ATOM Feed"/>
 
 </head>
 
@@ -166,11 +164,11 @@ Andy's Blog            </a>
 <div class="post-container">
     <div class="post-header">
         <h3>
-            <a href="/posts/2017/03/30/read-mat-files-in-python.html">Read .mat Files in Python</a>
+            <a href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html">BFS遍历到图的指定层的一种解法</a>
         </h3>
         <div class="post-meta">
         <span class="glyphicon glyphicon-calendar footnote"
-              aria-hidden="true">2017-03-30</span>
+              aria-hidden="true">2017-05-10</span>
             <span class="glyphicon glyphicon-home footnote ">Beijing</span>
 
         </div>
@@ -181,7 +179,7 @@ Andy's Blog            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2017-03-30T00:00:00+08:00"> 2017.03.30</time>
+        <i class="fa fa-calendar"></i><time datetime="2017-05-10T00:00:00+08:00"> 2017.05.10</time>
     </span>
 
 
@@ -189,28 +187,43 @@ Andy's Blog            </a>
 
 
 <span class="label label-default">Tags</span>
-<a href="/tag/machine-learning.html">machine learning</a>
-/
-<a href="/tag/deep-learning.html">deep learning</a>
-/
-<a href="/tag/probability.html">probability</a>
+<a href="/tag/algorithm.html">algorithm</a>
     
 </footer>                </div>
             </div>
             -->
-        <p>Some of the open datasets come with matlab format, we can load the matlab format files with python with the following codes :</p>
-<div class="github"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.io</span>
-<span class="n">mat</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="s1">'file.mat'</span><span class="p">)</span>
-</pre></div>
-<p>Enjoy^_^</p>
-<h4>Reference</h4>
-<p><a href="http://stackoverflow.com/questions/874461/read-mat-files-in-python">read-mat-files-in-python</a></p>
+        <p><a href="https://leetcode.com/problems/word-ladder/#/description">leetcode原题</a></p>
+<p>Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that:</p>
+<ol>
+<li>Only one letter can be changed at a time.</li>
+<li>Each transformed word must exist in the word list. Note that beginWord is not a transformed word.</li>
+</ol>
+<p>For example,</p>
+<p>Given:</p>
+<p>beginWord = <code>"hit"</code></p>
+<p>endWord = <code>"cog"</code></p>
+<p>wordList = <code>["hot","dot","dog","lot","log","cog"]</code></p>
+<p>As one shortest transformation is <code>"hit" -&gt; "hot" -&gt; "dot" -&gt; "dog" -&gt; "cog"</code>,return its length <code>5</code>.</p>
+<p>Note:</p>
+<ul>
+<li>Return 0 if there is no such transformation sequence.</li>
+<li>All words have the same length.</li>
+<li>All words contain only lowercase alphabetic characters.</li>
+<li>You may assume no duplicates in the word list.</li>
+<li>You may assume beginWord and endWord are non-empty and are not the same.</li>
+</ul>
+<p>这个题可以用图的思路来解答，把beginWord当成是图的root节点，每个词通过一次变换的词作为这个节点的子节点，从beginWord开始遍历搜索endWord，所有的路径中最小的那些就是答案。当然，遍历的过程中要注意，这是一个有环图，要记录已经遍历过的节点。因为是路径搜索，要保存路径，所以最简单的想法是使用DFS对整个图进行搜索，最后将最短路径取出来。然而，这个方法行不通，尤其是在字典比较大的时候，树特别深，会超时。如果对整个树进行BFS也会有一样的结果，都会超时。一个优化的思路就是只对graph进行遍历，一直到endWord第一次出现的那一层终止，因为要找的是最短变换，后面的遍历没有必要。传统的BFS算法使用一个队列来保存将要遍历的节点列表，但是并不能知道当前遍历节点所在的层数。所以就用一个Map<string, integer="">来保存每个节点第一次出现的层数，endWord第一次出现的那一层，就是迭代要终止的那一层，假设为minLevel。在遍历完minLevel以后，就可以终止算法。</string,></p>
+<p>最终要输出变换路径，可以一边遍历，一边构造图的结构。这个问题是有向有环图，可以使用<code>Map&lt;String, Set&lt;String&gt;&gt; graph</code>来构造整个图。</p>
+<p>最终，使用递归打印出构造出来的<code>graph</code>中所有<code>beginWord-&gt;endWord</code>之间的路径。</p>
+<p>详细代码见:<a href="https://discuss.leetcode.com/topic/88859/263ms-easy-to-understand-java-solution-using-simple-BFS">263ms Easy to Understand Java Solution Using Simple BFS</a></p>
+<p>这个问题还有一个简化版的问题<a href="https://leetcode.com/problems/word-ladder/#/description">Word Ladder</a>，只要求出<code>beginWord</code>和<code>endWord</code>之间最短变换的路径长度。可以用上面的解法，或者直接DFS这个图，第一次遇到<code>endWord</code>时返回路径长度即可。</p>
+<h3>References</h3>
+<p><a href="https://discuss.leetcode.com/topic/2857/share-two-similar-java-solution-that-accpted-by-oj/2">Share two similar Java solution that Accpted by OJ.</a></p>
 <div class="pager">
     <ul>
-        <li class="previous"><a href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html" data-toggle="tooltip"
-                                title="BFS遍历到图的指定层的一种解法">&larr; Previous</a></li>
-        <li class="next"><a href="/posts/2017/03/19/enable-pelican-to-render-markdown-tables.html"
-                            data-toggle="tooltip" title="Enable Pelican to Render Markdown Tables">Next &rarr;</a></li>
+        <li class="previous disabled"><a>&larr; Previous</a></li>
+        <li class="next"><a href="/posts/2017/03/30/read-mat-files-in-python.html"
+                            data-toggle="tooltip" title="Read .mat Files in Python">Next &rarr;</a></li>
     </ul>
 </div><!--
 <div id="disqus_thread"></div>
@@ -238,8 +251,8 @@ Andy's Blog            </a>
 
 var disqus_config = function () {
 /*
-this.page.url = "/posts/2017/03/30/read-mat-files-in-python.html";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "read-mat-files-in-python"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url = "/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "BFS-to-the-specific-level-of-a-graph"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 */
 };
 
