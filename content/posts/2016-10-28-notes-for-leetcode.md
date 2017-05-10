@@ -109,7 +109,13 @@ $C_{n}^{m}=\frac{A_{n}^{m}}{n!}=\frac{n(n-1)(n-2)\cdots(n-m+1)}{m!}$
 ### 6.素数(prime number)
 #### 素数的定义
 >质数（Prime number），又称素数，指在大于1的自然数中，除了1和该数自身外，无法被其他自然数整除的数（也可定义为只有1与该数本身两个因数的数）。
+### 7. LinkedHashSet
+Java的LinkedHashSet可以将元素按插入顺序输出(HashSet并不具有这个属性)。
 
+### 8. Word Ladder II
+    []
+    [代码见这里](https://discuss.leetcode.com/topic/88859/263ms-easy-to-understand-java-solution-using-simple-bfs)
+    
 
 
 
