@@ -1,4 +1,4 @@
-Title: BFS遍历到图的指定层的一种解法
+Title: BFS遍历到图的指定层的一种方法
 Date: 2017-05-10
 Category: posts
 Tags: algorithm

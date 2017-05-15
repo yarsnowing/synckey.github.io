@@ -113,10 +113,18 @@ $C_{n}^{m}=\frac{A_{n}^{m}}{n!}=\frac{n(n-1)(n-2)\cdots(n-m+1)}{m!}$
 Java的LinkedHashSet可以将元素按插入顺序输出(HashSet并不具有这个属性)。
 
 ### 8. Word Ladder II
-    []
-    [代码见这里](https://discuss.leetcode.com/topic/88859/263ms-easy-to-understand-java-solution-using-simple-bfs)
+太麻烦了，单独开一篇：[BFS遍历到图的指定层的一种解法。](/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html)
     
-
+### 9. LinkedHashSet
+这个集合会保持元素的插入顺序，所以，如果想要用它做`FIFO`队列，出栈的时候要从第一个元素开始删。在[LFU Cache](https://leetcode.com/problems/lfu-cache/#/description)这题中，可以用到`LinkedHashSet`，因为从中删除元素的复杂度是O(1)。
+    
+    :::java
+    LinkedHashSet<Integer> set =new LinkedHashSet();
+    set.add(1);
+    set.add(2);
+    set.add(3);
+    System.out.println(set);
+    //:~output [1, 2, 3]
 
 
 
