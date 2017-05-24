@@ -282,8 +282,15 @@ $$
 <h3>7. LinkedHashSet</h3>
 <p>Java的LinkedHashSet可以将元素按插入顺序输出(HashSet并不具有这个属性)。</p>
 <h3>8. Word Ladder II</h3>
-<div class="github"><pre><span></span>[]
-[代码见这里](https://discuss.leetcode.com/topic/88859/263ms-easy-to-understand-java-solution-using-simple-bfs)
+<p>太麻烦了，单独开一篇：<a href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html">BFS遍历到图的指定层的一种解法。</a></p>
+<h3>9. LinkedHashSet</h3>
+<p>这个集合会保持元素的插入顺序，所以，如果想要用它做<code>FIFO</code>队列，出栈的时候要从第一个元素开始删。在<a href="https://leetcode.com/problems/lfu-cache/#/description">LFU Cache</a>这题中，可以用到<code>LinkedHashSet</code>，因为从中删除元素的复杂度是O(1)。</p>
+<div class="github"><pre><span></span><span class="n">LinkedHashSet</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span><span class="k">new</span> <span class="n">LinkedHashSet</span><span class="o">();</span>
+<span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+<span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">set</span><span class="o">);</span>
+<span class="c1">//:~output [1, 2, 3]</span>
 </pre></div>
 <h3>References</h3>
 <p><a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions">Solution to Convert a Number to Hexadecimal</a></p>

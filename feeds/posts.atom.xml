@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog - posts</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2017-05-10T00:00:00+08:00</updated><entry><title>BFS遍历到图的指定层的一种解法</title><link href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html" rel="alternate"></link><published>2017-05-10T00:00:00+08:00</published><updated>2017-05-10T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-05-10:/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html</id><summary type="html">&lt;p&gt;&lt;a href="https://leetcode.com/problems/word-ladder/#/description"&gt;leetcode原题&lt;/a&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog - posts</title><link href="/" rel="alternate"></link><link href="/feeds/posts.atom.xml" rel="self"></link><id>/</id><updated>2017-05-10T00:00:00+08:00</updated><entry><title>BFS遍历到图的指定层的一种方法</title><link href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html" rel="alternate"></link><published>2017-05-10T00:00:00+08:00</published><updated>2017-05-10T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2017-05-10:/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html</id><summary type="html">&lt;p&gt;&lt;a href="https://leetcode.com/problems/word-ladder/#/description"&gt;leetcode原题&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Only one letter can be changed at a time.&lt;/li&gt;
@@ -153,8 +153,15 @@ $$
 &lt;h3&gt;7. LinkedHashSet&lt;/h3&gt;
 &lt;p&gt;Java的LinkedHashSet可以将元素按插入顺序输出(HashSet并不具有这个属性)。&lt;/p&gt;
 &lt;h3&gt;8. Word Ladder II&lt;/h3&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;[]
-[代码见这里](https://discuss.leetcode.com/topic/88859/263ms-easy-to-understand-java-solution-using-simple-bfs)
+&lt;p&gt;太麻烦了，单独开一篇：&lt;a href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html"&gt;BFS遍历到图的指定层的一种解法。&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;9. LinkedHashSet&lt;/h3&gt;
+&lt;p&gt;这个集合会保持元素的插入顺序，所以，如果想要用它做&lt;code&gt;FIFO&lt;/code&gt;队列，出栈的时候要从第一个元素开始删。在&lt;a href="https://leetcode.com/problems/lfu-cache/#/description"&gt;LFU Cache&lt;/a&gt;这题中，可以用到&lt;code&gt;LinkedHashSet&lt;/code&gt;，因为从中删除元素的复杂度是O(1)。&lt;/p&gt;
+&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;LinkedHashSet&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;set&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;LinkedHashSet&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;add&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;add&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;add&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;span class="c1"&gt;//:~output [1, 2, 3]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions"&gt;Solution to Convert a Number to Hexadecimal&lt;/a&gt;&lt;/p&gt;
