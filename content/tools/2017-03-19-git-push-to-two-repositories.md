@@ -5,7 +5,7 @@ Slug: git-push-to-two-repositories
 Author: Andy
 Place: Beijing
 
-Suppose I have 2 repositories:
+Suppose You have 2 repositories:
 
     :::
     https://github.com/synckey/synckey.github.io.git
