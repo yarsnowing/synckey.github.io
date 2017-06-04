@@ -7,8 +7,9 @@ Place: Beijing
 
 Suppose I have 2 repositories,
 
->https://github.com/synckey/synckey.github.io.git
->https://git.coding.net/synckey/synckey.git
+    :::
+    https://github.com/synckey/synckey.github.io.git
+    https://git.coding.net/synckey/synckey.git
 
 I want to push to them within one command.
 
