@@ -19,16 +19,16 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 USE_FOLDER_AS_CATEGORY = True
 
-#EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables'])
+# EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables'])
 
 MARKDOWN = {
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'github'},
-        'markdown.extensions.tables':{},
+        'markdown.extensions.tables': {},
     },
 }
 
-#MD_EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables','extra'])
+# MD_EXTENSIONS = (['codehilite(css_class=github)', 'markdown.extensions.tables','extra'])
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
@@ -44,18 +44,18 @@ DEFAULT_PAGINATION = 30
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 DISQUS_SITENAME = u"synckey"
-#DUOSHUO_SITENAME = u"synckey"
+# DUOSHUO_SITENAME = u"synckey"
 THEME = "pelican-bootstrap3"
 HIDE_SIDEBAR = True
 # BOOTSTRAP_FLUID =  True
 # PDF_PROCESSOR = True
 PYGMENTS_STYLE = "github"
 
-STATIC_PATHS = ['static', 'static/images/favicon.ico','static/CNAME']
+STATIC_PATHS = ['static', 'static/images/favicon.ico', 'static/CNAME']
 # ARTICLE_PATHS = ['posts']
 EXTRA_PATH_METADATA = {
     "static/images/favicon.ico": {"path": "favicon.ico"},
-    "static/CNAME": {"path": "CNAME"},
+    "static/CNAME": {"path": "CNAME"}
     #   "static/baidu_verify_eO5agZyv5R.html": {"path": "baidu_verify_eO5agZyv5R.html"},
 }
 
@@ -66,7 +66,7 @@ DISPLAY_CATEGORIES_ON_MENU = False
 
 PLUGIN_PATHS = ["plugins"]
 
-#PLUGINS = ["neighbors", "bootstrapify", "better_tables","render_math"]
+# PLUGINS = ["neighbors", "bootstrapify", "better_tables","render_math"]
 PLUGINS = ["neighbors", "bootstrapify", "better_tables"]
 
 DEFAULT_WECHAT_PIC = "wechat_logo_300x300.jpg"
