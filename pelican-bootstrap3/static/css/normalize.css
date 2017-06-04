@@ -228,10 +228,14 @@ pre {
 
 code,
 kbd,
-pre,
 samp {
     font-family: monospace, monospace;
     font-size: 1em;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size:80%;
 }
 
 /* Forms
