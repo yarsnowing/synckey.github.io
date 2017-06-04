@@ -24,6 +24,6 @@ Then if you want to push to both of them, just rum `git push` as normal.
 
 ###References
 
-[Markdown extensions](http://blog.csdn.net/fancivez/article/details/51544354)
+[git 添加多个远程库(remote)](http://blog.csdn.net/fancivez/article/details/51544354)
 
 
