@@ -59,6 +59,8 @@ EXTRA_PATH_METADATA = {
     #   "static/baidu_verify_eO5agZyv5R.html": {"path": "baidu_verify_eO5agZyv5R.html"},
 }
 
+
+
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_SAVE_AS = ARTICLE_URL
 
