@@ -646,7 +646,7 @@ P(X=k)=\frac{C_M^kC_{N-M}^{n-k}}{C_N^n},k=0,1,2,\cdots,l
 $$
 其中$l=min(M,n)$。通常称这个概率分布为&lt;strong&gt;超几何分布&lt;/strong&gt;。&lt;/p&gt;
 &lt;h6&gt;两点分布&lt;/h6&gt;
-&lt;p&gt;在&lt;strong&gt;一次&lt;/strong&gt;伯努利实验中， 只有两个可能的结果，$A$或者$\overline{A}$，并且$P(A)=p,P(\overline(A))=q=1-p$，若以$X$记事件$A$出现的次数，则$X$的分布列为:
+&lt;p&gt;在&lt;strong&gt;一次&lt;/strong&gt;伯努利实验中， 只有两个可能的结果，$A$或者$\overline{A}$，并且$P(A)=p,P((\overline{A}))=q=1-p$，若以$X$记事件$A$出现的次数，则$X$的分布列为:
 $$
 \begin{array}{c|cc}
 X &amp;amp; 0 &amp;amp; 1   \\
