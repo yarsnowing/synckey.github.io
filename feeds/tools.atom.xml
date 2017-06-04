@@ -4,15 +4,15 @@
 https://git.coding.net/synckey/synckey.git
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You want to push to them within one command.&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#if your project is cloned from this repository, &lt;/span&gt;
-&lt;span class="c1"&gt;#you can simply ignore this first command&lt;/span&gt;
+&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# if your project is cloned from this repository, &lt;/span&gt;
+&lt;span class="c1"&gt;# you can simply ignore this first command&lt;/span&gt;
 git remote add origin https://git …&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Suppose I have 2 repositories:&lt;/p&gt;
 &lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;https://github.com/synckey/synckey.github.io.git
 https://git.coding.net/synckey/synckey.git
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You want to push to them within one command.&lt;/p&gt;
-&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#if your project is cloned from this repository, &lt;/span&gt;
-&lt;span class="c1"&gt;#you can simply ignore this first command&lt;/span&gt;
+&lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# if your project is cloned from this repository, &lt;/span&gt;
+&lt;span class="c1"&gt;# you can simply ignore this first command&lt;/span&gt;
 git remote add origin https://git.coding.net/synckey/synckey.git
 git remote set-url --add https://git.coding.net/synckey/synckey.git
 &lt;/pre&gt;&lt;/div&gt;
