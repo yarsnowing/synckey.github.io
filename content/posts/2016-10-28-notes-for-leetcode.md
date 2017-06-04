@@ -127,6 +127,8 @@ Java的LinkedHashSet可以将元素按插入顺序输出(HashSet并不具有这�
     //:~output [1, 2, 3]
 
 
+### 10.中位数定义
+如果有一组数据(假设其个数为n)，将其排序，如果n为奇数，则中间的那个数为中位数，如果n为偶数，则中间两个数的平均值为这组数据的中位数。
 
 ###References
 [Solution to Convert a Number to Hexadecimal](https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions)
