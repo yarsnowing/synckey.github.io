@@ -6,6 +6,7 @@ http://synckey.name/
 http://synckey.name/archives.html
 http://synckey.name/tags.html
 http://synckey.name/categories.html
+http://synckey.name/posts/2017/06/04/git-push-to-two-repositories.html
 http://synckey.name/posts/2017/05/24/necessities-you-should-take-for-the-first-time-go-to-nz.html
 http://synckey.name/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html
 http://synckey.name/posts/2017/03/30/read-mat-files-in-python.html
@@ -52,6 +53,7 @@ http://synckey.name/tag/deep-learning.html
 http://synckey.name/tag/sesssion.html
 http://synckey.name/tag/linux.html
 http://synckey.name/tag/tools.html
+http://synckey.name/tag/git.html
 http://synckey.name/tag/java.html
 http://synckey.name/tag/personal.html
 http://synckey.name/tag/technology.html
