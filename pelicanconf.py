@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'andy'
 SITENAME = u"Andy's Blog"
-SITEURL = 'synckey.name'
+SITEURL = 'http://synckey.name'
 DEFAULT_DATE_FORMAT = '%Y.%m.%d'
 PATH = 'content'
 
