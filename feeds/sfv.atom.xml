@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog - sfv</title><link href="synckey.name/" rel="alternate"></link><link href="synckey.name/feeds/sfv.atom.xml" rel="self"></link><id>synckey.name/</id><updated>2017-05-24T00:00:00+08:00</updated><entry><title>第一次去NZ必备物品清单</title><link href="synckey.name/posts/2017/05/24/necessities-you-should-take-for-the-first-time-go-to-nz.html" rel="alternate"></link><published>2017-05-24T00:00:00+08:00</published><updated>2017-05-24T00:00:00+08:00</updated><author><name>Hollie</name></author><id>tag:None,2017-05-24:synckey.name/posts/2017/05/24/necessities-you-should-take-for-the-first-time-go-to-nz.html</id><summary type="html">&lt;h4&gt;1. 文件&lt;/h4&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Andy's Blog - sfv</title><link href="http://synckey.name/" rel="alternate"></link><link href="http://synckey.name/feeds/sfv.atom.xml" rel="self"></link><id>http://synckey.name/</id><updated>2017-05-24T00:00:00+08:00</updated><entry><title>第一次去NZ必备物品清单</title><link href="http://synckey.name/posts/2017/05/24/necessities-you-should-take-for-the-first-time-go-to-nz.html" rel="alternate"></link><published>2017-05-24T00:00:00+08:00</published><updated>2017-05-24T00:00:00+08:00</updated><author><name>Hollie</name></author><id>tag:synckey.name,2017-05-24:/posts/2017/05/24/necessities-you-should-take-for-the-first-time-go-to-nz.html</id><summary type="html">&lt;h4&gt;1. 文件&lt;/h4&gt;
 &lt;table class="table table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -352,7 +352,7 @@
 &lt;td align="left"&gt;蚊虫叮咬、喷剂、清凉油等，参考&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</content><category term="mm"></category><category term="life"></category><category term="sfv"></category></entry><entry><title>EOI 材料准备</title><link href="synckey.name/posts/2016/11/07/eoi-documents.html" rel="alternate"></link><published>2016-11-07T00:00:00+08:00</published><updated>2016-11-07T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-11-07:synckey.name/posts/2016/11/07/eoi-documents.html</id><summary type="html">&lt;h3&gt;EOI 地址&lt;/h3&gt;
+&lt;/table&gt;</content><category term="mm"></category><category term="life"></category><category term="sfv"></category></entry><entry><title>EOI 材料准备</title><link href="http://synckey.name/posts/2016/11/07/eoi-documents.html" rel="alternate"></link><published>2016-11-07T00:00:00+08:00</published><updated>2016-11-07T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:synckey.name,2016-11-07:/posts/2016/11/07/eoi-documents.html</id><summary type="html">&lt;h3&gt;EOI 地址&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://www.immigration.govt.nz/new-zealand-visas/apply-for-a-visa/criteria/skilled-migrant-category-resident-visa?nationality=nationality-CHN&amp;amp;country=residence-CHN&amp;amp;applying=co"&gt;eoi 打分系统&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;EOI材料准备&lt;/h3&gt;
 &lt;h3&gt;出生公正和无犯罪记录证明公正&lt;/h3&gt;
@@ -366,7 +366,7 @@
 &lt;p&gt;&lt;strong&gt;办理地点&lt;/strong&gt;：户籍所在地的派出所和公证处&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;携带材料&lt;/strong&gt;： 父母身份证，户口本，护照，本人身份证，本人近期二寸照片&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;费用&lt;/strong&gt;：500 一共&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Date&lt;/strong&gt;: 2017.06.01&lt;/p&gt;</content><category term="mm"></category><category term="life"></category><category term="sfv"></category></entry><entry><title>SFV 材料准备</title><link href="synckey.name/posts/2016/11/07/sfv-documents.html" rel="alternate"></link><published>2016-11-07T00:00:00+08:00</published><updated>2016-11-07T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-11-07:synckey.name/posts/2016/11/07/sfv-documents.html</id><summary type="html">&lt;h2&gt;需要准备的材料列表&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Date&lt;/strong&gt;: 2017.06.01&lt;/p&gt;</content><category term="mm"></category><category term="life"></category><category term="sfv"></category></entry><entry><title>SFV 材料准备</title><link href="http://synckey.name/posts/2016/11/07/sfv-documents.html" rel="alternate"></link><published>2016-11-07T00:00:00+08:00</published><updated>2016-11-07T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:synckey.name,2016-11-07:/posts/2016/11/07/sfv-documents.html</id><summary type="html">&lt;h2&gt;需要准备的材料列表&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;护照（原件）&lt;/li&gt;
 &lt;li&gt;拍证件照&lt;/li&gt;
@@ -461,7 +461,7 @@
   $(document).ready(function () {
     $("table").attr("class","table table-condensed table-bordered");
   });
-&lt;/script&gt;</content><category term="mm"></category><category term="life"></category><category term="sfv"></category></entry><entry><title>SFV Got</title><link href="synckey.name/posts/2016/11/06/succeed-to-get-sfv.html" rel="alternate"></link><published>2016-11-06T00:00:00+08:00</published><updated>2016-11-06T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:None,2016-11-06:synckey.name/posts/2016/11/06/succeed-to-get-sfv.html</id><summary type="html">&lt;h1&gt;为什么要抢SFV(Silver Fern Job Search Visa)&lt;/h1&gt;
+&lt;/script&gt;</content><category term="mm"></category><category term="life"></category><category term="sfv"></category></entry><entry><title>SFV Got</title><link href="http://synckey.name/posts/2016/11/06/succeed-to-get-sfv.html" rel="alternate"></link><published>2016-11-06T00:00:00+08:00</published><updated>2016-11-06T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:synckey.name,2016-11-06:/posts/2016/11/06/succeed-to-get-sfv.html</id><summary type="html">&lt;h1&gt;为什么要抢SFV(Silver Fern Job Search Visa)&lt;/h1&gt;
 &lt;p&gt;其实这个问题很难回答，也许是我自己没有想清楚，也许是我自己患得患失。早在2014年从前单位离职的时候，当时的直属领导就问我为什么要离职？1 2 3 4 blabla，不好可以细数一大堆。换个工作就没有这些问题了么？他问道。我无法回答，那是我第一次换工作，我无从知晓——在一个地方遇到问题，就想要逃避，不去面对，这个问题永远也解决不了。逃避，不是解决问题的办法。想要出去的想法其实和换工作一样。眼前不好，不代表换个地方就好。去新西兰是否真的就比国内好？我像三年前一样，茫然不晓。  然而，自己的内心里常常知道自己想要什么（尽管大部分想要的常常也得不到）。自己如此强烈的想要出去的原因可能如下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;污染。从2012年就开始见识了帝都的雾霾，即使戴着口罩也有那种独特的恶心的气味也逃避不掉。无数个想去奔跑的清晨，被困在房间里面做 insanity。有雾霾的日子，心情不会好。 作为一个健身爱好者和惜命如此的少年，并不想在身体蠢蠢欲动的时候被困在室内。尤其是，不想自己的伴侣 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1&gt;为什么要抢SFV(Silver Fern Job Search Visa)&lt;/h1&gt;
