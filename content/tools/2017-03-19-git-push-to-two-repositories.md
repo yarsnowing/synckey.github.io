@@ -14,8 +14,8 @@ Suppose I have 2 repositories:
 You want to push to them within one command.
 
     :::shell
-    #if your project is cloned from this repository, 
-    #you can simply ignore this first command
+    # if your project is cloned from this repository, 
+    # you can simply ignore this first command
     git remote add origin https://git.coding.net/synckey/synckey.git
     git remote set-url --add https://git.coding.net/synckey/synckey.git
 
