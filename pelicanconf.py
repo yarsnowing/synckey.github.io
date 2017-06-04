@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'andy'
 SITENAME = u"Andy's Blog"
-SITEURL = ''
+SITEURL = 'synckey.name'
 DEFAULT_DATE_FORMAT = '%Y.%m.%d'
 PATH = 'content'
 
@@ -60,7 +60,10 @@ EXTRA_PATH_METADATA = {
 }
 
 
-
+SITEMAP = {
+    'exclude': ['drafts'],
+    'format':'txt'
+}
 
 
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
@@ -71,6 +74,6 @@ DISPLAY_CATEGORIES_ON_MENU = False
 PLUGIN_PATHS = ["plugins"]
 
 # PLUGINS = ["neighbors", "bootstrapify", "better_tables","render_math"]
-PLUGINS = ["neighbors", "bootstrapify", "better_tables"]
+PLUGINS = ["neighbors", "bootstrapify", "better_tables", "sitemap"]
 
 DEFAULT_WECHAT_PIC = "wechat_logo_300x300.jpg"
