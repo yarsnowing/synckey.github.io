@@ -163,6 +163,8 @@ $$
 &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;println&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;span class="c1"&gt;//:~output [1, 2, 3]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;10.中位数定义&lt;/h3&gt;
+&lt;p&gt;如果有一组数据(假设其个数为n)，将其排序，如果n为奇数，则中间的那个数为中位数，如果n为偶数，则中间两个数的平均值为这组数据的中位数。&lt;/p&gt;
 &lt;h3&gt;References&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions"&gt;Solution to Convert a Number to Hexadecimal&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://leetcode.com/problems/rotate-function/"&gt;Rotate Function&lt;/a&gt;&lt;/p&gt;
