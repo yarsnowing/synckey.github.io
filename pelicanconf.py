@@ -61,6 +61,8 @@ EXTRA_PATH_METADATA = {
 
 
 
+
+
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_SAVE_AS = ARTICLE_URL
 
