@@ -55,16 +55,15 @@ STATIC_PATHS = ['static', 'static/images/favicon.ico', 'static/CNAME']
 # ARTICLE_PATHS = ['posts']
 EXTRA_PATH_METADATA = {
     "static/images/favicon.ico": {"path": "favicon.ico"},
-    "static/CNAME": {"path": "CNAME"}
+    "static/CNAME": {"path": "CNAME"},
+    "static/robots.txt": {"path": "robots.txt"}
     #   "static/baidu_verify_eO5agZyv5R.html": {"path": "baidu_verify_eO5agZyv5R.html"},
 }
 
-
 SITEMAP = {
     'exclude': ['drafts'],
-    'format':'txt'
+    'format': 'txt'
 }
-
 
 ARTICLE_URL = 'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 ARTICLE_SAVE_AS = ARTICLE_URL
