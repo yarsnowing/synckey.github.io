@@ -76,5 +76,6 @@ PLUGIN_PATHS = ["plugins"]
 PLUGINS = ["neighbors", "bootstrapify", "better_tables", "sitemap"]
 
 DEFAULT_WECHAT_PIC = "wechat_logo_300x300.jpg"
+## fro test
 GOOGLE_ANALYTICS = ''
 BAIDU_ANALYTICS = ''
