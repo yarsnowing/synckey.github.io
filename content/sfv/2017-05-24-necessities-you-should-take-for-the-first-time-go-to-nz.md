@@ -79,3 +79,11 @@ Place: Beijing
 |肠胃药|参考|
 |创可贴|参考|
 |其他|蚊虫叮咬、喷剂、清凉油等，参考|
+
+
+
+<script>
+  $(document).ready(function () {
+    $("table").addClass("table table-condensed table-striped");
+  });
+</script>
