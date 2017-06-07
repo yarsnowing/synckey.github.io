@@ -352,7 +352,12 @@
 &lt;td align="left"&gt;蚊虫叮咬、喷剂、清凉油等，参考&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</content><category term="mm"></category><category term="life"></category><category term="sfv"></category></entry><entry><title>EOI 材料准备</title><link href="http://synckey.name/posts/2016/11/07/eoi-documents.html" rel="alternate"></link><published>2016-11-07T00:00:00+08:00</published><updated>2016-11-07T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:synckey.name,2016-11-07:/posts/2016/11/07/eoi-documents.html</id><summary type="html">&lt;h3&gt;EOI 地址&lt;/h3&gt;
+&lt;/table&gt;
+&lt;script&gt;
+  $(document).ready(function () {
+    $("table").addClass("table table-condensed table-striped");
+  });
+&lt;/script&gt;</content><category term="mm"></category><category term="life"></category><category term="sfv"></category></entry><entry><title>EOI 材料准备</title><link href="http://synckey.name/posts/2016/11/07/eoi-documents.html" rel="alternate"></link><published>2016-11-07T00:00:00+08:00</published><updated>2016-11-07T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:synckey.name,2016-11-07:/posts/2016/11/07/eoi-documents.html</id><summary type="html">&lt;h3&gt;EOI 地址&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://www.immigration.govt.nz/new-zealand-visas/apply-for-a-visa/criteria/skilled-migrant-category-resident-visa?nationality=nationality-CHN&amp;amp;country=residence-CHN&amp;amp;applying=co"&gt;eoi 打分系统&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;EOI材料准备&lt;/h3&gt;
 &lt;h3&gt;出生公正和无犯罪记录证明公正&lt;/h3&gt;
