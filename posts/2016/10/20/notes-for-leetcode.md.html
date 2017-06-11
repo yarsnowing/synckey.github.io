@@ -275,19 +275,15 @@ $$
 </pre></div>
 <h3>4.Convert Char to Numeric</h3>
 <div class="github"><pre><span></span><span class="n">Character</span><span class="o">.</span><span class="na">getNumericValue</span><span class="o">(</span><span class="sc">'5'</span><span class="o">);</span>
- <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="sc">'5'</span> <span class="o">-</span> <span class="sc">'0'</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="sc">'5'</span> <span class="o">-</span> <span class="sc">'0'</span><span class="o">;</span>
 </pre></div>
-<h3>5.将一个数字二进制表示的第一个1后面的所有位都置为1，例如input 是<code>5</code>，二进制表示是<code>101</code>，希望得到<code>111</code>。</h3>
+<h3>5. 将一个数字二进制表示的第一个1后面的所有位都置为1，例如input 是<code>5</code>，二进制表示是<code>101</code>，希望得到<code>111</code>。</h3>
 <h3>6.素数(prime number)</h3>
 <h4>素数的定义</h4>
 <blockquote>
 <p>质数（Prime number），又称素数，指在大于1的自然数中，除了1和该数自身外，无法被其他自然数整除的数（也可定义为只有1与该数本身两个因数的数）。</p>
 </blockquote>
 <h3>7. LinkedHashSet</h3>
-<p>Java的LinkedHashSet可以将元素按插入顺序输出(HashSet并不具有这个属性)。</p>
-<h3>8. Word Ladder II</h3>
-<p>太麻烦了，单独开一篇：<a href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html">BFS遍历到图的指定层的一种解法。</a></p>
-<h3>9. LinkedHashSet</h3>
 <p>这个集合会保持元素的插入顺序，所以，如果想要用它做<code>FIFO</code>队列，出栈的时候要从第一个元素开始删。在<a href="https://leetcode.com/problems/lfu-cache/#/description">LFU Cache</a>这题中，可以用到<code>LinkedHashSet</code>，因为从中删除元素的复杂度是O(1)。</p>
 <div class="github"><pre><span></span><span class="n">LinkedHashSet</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span><span class="k">new</span> <span class="n">LinkedHashSet</span><span class="o">();</span>
 <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
@@ -296,8 +292,12 @@ $$
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">set</span><span class="o">);</span>
 <span class="c1">//:~output [1, 2, 3]</span>
 </pre></div>
-<h3>10.中位数定义</h3>
+<h3>8. Word Ladder II</h3>
+<p>太麻烦了，单独开一篇：<a href="/posts/2017/05/10/BFS-to-the-specific-level-of-a-graph.html">BFS遍历到图的指定层的一种解法。</a></p>
+<h3>9. 中位数定义</h3>
 <p>如果有一组数据(假设其个数为n)，将其排序，如果n为奇数，则中间的那个数为中位数，如果n为偶数，则中间两个数的平均值为这组数据的中位数。</p>
+<h3>10. 计算平均值防止溢出</h3>
+<p>一般情况下我们想要计算两个int:a,b的平均值时，我们会使用$(a+b)/2$的方式，如果a,b为数组的下标，这么做一般没有问题。但是如果a,b的值很大，a + b &gt; Integer.MAX_VALUE时，这样做就会导致溢出，从而返回错误的结果。所以保守起见，可以使用$a+(a-b)/2$的方式来计算a,b的平均值，不会溢出哦。</p>
 <h3>References</h3>
 <p><a href="https://discuss.leetcode.com/topic/65028/java-clean-code-with-explanations-and-running-time-2-solutions">Solution to Convert a Number to Hexadecimal</a></p>
 <p><a href="https://leetcode.com/problems/rotate-function/">Rotate Function</a></p>
