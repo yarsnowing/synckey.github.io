@@ -13,7 +13,27 @@
 &lt;p&gt;在奥克兰的第二天，跟群里的几个sfver约了在newmarket见面吃饭，小太阳，江江，旭华，吃完饭她们带我们海边看海，风很大，有时候还下小雨，远处的小海岛在烟雨里沉默不语，绿绿葱葱的树木覆盖了整个小岛，在冷风里树木并不飘摇，看不清是否对我们相顾也笑。在海边玩了会以后来到了一个在海边的咖啡馆，服务员妹子也特别热情，笑容常常挂在脸上，尝了本地的白葡萄酒，在不爱酒的人眼里，味道难以形容。&lt;/p&gt;
 &lt;p&gt;奥克兰让我感觉最冷的时候是在One Tree Hill，小雨和寒风，只穿了牛仔褂的我，根本顾不上看风景。从One Tree Hill的顶上看奥克兰，除了天空塔，基本没有什么高的建筑。晚上去了一个意大利餐厅吃意面，很难吃。吃完了去一个小咖啡馆看驻场表演，唱歌的大爷大妈估计有60-70了吧，底下的人听得很认真，很热情，感觉这是他们生活的一部分，中国人鲜有的闲情逸致在他们脸上时刻都能找到。&lt;/p&gt;
 &lt;p&gt;第三天跟小太阳一起从码头坐轮渡去Devonport，Devonport码头下来就是一个图书管，图书馆不大，但是环境非常好，有老年人在里面读报，也有年轻人在里面学习。从图书馆的桌子就可以直接看到大海，听到海浪一波一波涌来，发出沙沙的声音。图书馆旁边的绿地很多父母带着小孩子在大树下绿草上奔跑，她们的父母在一旁闲聊。中午和小太阳在图书馆对面的餐厅吃了一份牛排，虽然没吃到惠灵顿牛排，但是吃到的已经超级好吃。下午小太阳回去，在Queen St上逛了逛，买了很多东西，Queen St上很多中国人开的店，很多中国人。晚上去CountDown，回来被淋了湿透。&lt;/p&gt;
-&lt;p&gt;第四天约了一个以前百度同组已经pr的同事，下午3点喝咖啡，在第一天吃的那家台湾牛排吃完午饭以后，坐公交去了奥克兰大学，从奥克兰大学逛到Auckland Domain,Auckland Domain非常大，爬到山顶，太阳正好出来，草地上是绿油油的一片，天空是纯洁的白云和蓝色，来奥克兰这么几天，第一次见到如此晴朗的阳光，第一次感觉不是来的假奥克兰。下午从Auckland Domain一直步行到Spark大厦，途中路过天空塔，塔下面的流浪汉有点吓人。跟朋友在Spark的楼下喝了一杯咖啡，与他聊天让我获益良多。&lt;/p&gt;</content><category term="sfv"></category></entry><entry><title>Git Push to Two Repositories at the Same Time</title><link href="http://synckey.name/posts/2017/06/04/git-push-to-two-repositories.html" rel="alternate"></link><published>2017-06-04T00:00:00+08:00</published><updated>2017-06-04T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:synckey.name,2017-06-04:/posts/2017/06/04/git-push-to-two-repositories.html</id><summary type="html">&lt;p&gt;Suppose You have 2 repositories:&lt;/p&gt;
+&lt;p&gt;第四天约了一个以前百度同组已经pr的同事，下午3点喝咖啡，在第一天吃的那家台湾牛排吃完午饭以后，坐公交去了奥克兰大学，从奥克兰大学逛到Auckland Domain,Auckland Domain非常大，爬到山顶，太阳正好出来，草地上是绿油油的一片，天空是纯洁的白云和蓝色，来奥克兰这么几天，第一次见到如此晴朗的阳光，第一次感觉不是来的假奥克兰。下午从Auckland Domain一直步行到Spark大厦，途中路过天空塔，塔下面的流浪汉有点吓人。跟朋友在Spark的楼下喝了一杯咖啡，与他聊天让我获益良多。&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="auk_domain_1" class="img-responsive carousel-inner img-rounded" src="/static/images/aukland_domain_1.jpg"/&gt;
+&lt;div class="caption"&gt;Auckland Domain&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="auk_domain_2" class="img-responsive carousel-inner img-rounded" src="/static/images/aukland_domain_2.jpg"/&gt;
+&lt;div class="caption"&gt;Auckland Domain&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="ont_tree_hill" class="img-responsive carousel-inner img-rounded" src="/static/images/one_tree_hill.jpg"/&gt;
+&lt;div class="caption"&gt;One Tree Hill&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="steak_and_fries" class="img-responsive carousel-inner img-rounded" src="/static/images/steak_and_fries.jpg"/&gt;
+&lt;div class="caption"&gt;Steak&amp;amp;Fries&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="albert_park" class="img-responsive carousel-inner img-rounded" src="/static/images/albert_park.jpg"/&gt;
+&lt;div class="caption"&gt;Albert Park&lt;/div&gt;
+&lt;/div&gt;</content><category term="sfv"></category></entry><entry><title>Git Push to Two Repositories at the Same Time</title><link href="http://synckey.name/posts/2017/06/04/git-push-to-two-repositories.html" rel="alternate"></link><published>2017-06-04T00:00:00+08:00</published><updated>2017-06-04T00:00:00+08:00</updated><author><name>Andy</name></author><id>tag:synckey.name,2017-06-04:/posts/2017/06/04/git-push-to-two-repositories.html</id><summary type="html">&lt;p&gt;Suppose You have 2 repositories:&lt;/p&gt;
 &lt;div class="github"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;https://github.com/synckey/synckey.github.io.git
 https://git.coding.net/synckey/synckey.git
 &lt;/pre&gt;&lt;/div&gt;
@@ -1692,12 +1712,13 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;div class="figure"&gt;
 &lt;img alt="suzhou" class="img-responsive carousel-inner img-rounded" src="/static/images/2015_04_13_softwares.jpg"/&gt;
-&lt;div class="caption"&gt;Useful apps&lt;/div&gt;
+&lt;div class="caption"&gt;Useful Apps&lt;/div&gt;
 &lt;/div&gt;
 &lt;h2&gt;进行中&lt;/h2&gt;
 &lt;h3&gt;睡眠&lt;/h3&gt;
 &lt;p&gt;好的睡眠肯定是很重要的啦，我自己是每天23：00左右睡，每天6：00起床。一开始6：00起不来，没关系，闹钟响了什么都不要想，
-先站起来再说（忘了那本书里面说的了）。减肥本来就是很辛苦，所以一定要休息好。&lt;/p&gt;
+先站起来再说（忘了那本书里面说的了）。减肥本来就是很辛苦，所以一定要休息好。
+a&lt;/p&gt;
 &lt;h3&gt;饮食&lt;/h3&gt;
 &lt;p&gt;都说减肥要&lt;code&gt;管住嘴，迈开腿&lt;/code&gt;，饮食其实在减肥里面是最重要的，不过一定要保证均衡的营养摄入，吃大量的蔬菜，水果，膳食纤维，蛋白质。&lt;/p&gt;
 &lt;ul&gt;
