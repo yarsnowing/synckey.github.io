@@ -71,8 +71,8 @@ Place: Beijing
 
 <div class="figure">
     <img src="/static/images/2015_04_13_softwares.jpg" alt="suzhou" class="img-responsive carousel-inner img-rounded"/>
-    <div class="caption">Useful apps</div>
- </div>
+    <div class="caption">Useful Apps</div>
+</div>
 
 
 
@@ -83,6 +83,7 @@ Place: Beijing
 
 好的睡眠肯定是很重要的啦，我自己是每天23：00左右睡，每天6：00起床。一开始6：00起不来，没关系，闹钟响了什么都不要想，
 先站起来再说（忘了那本书里面说的了）。减肥本来就是很辛苦，所以一定要休息好。
+a
 
 ###饮食
 
@@ -124,7 +125,7 @@ Place: Beijing
 
 <div class="figure">
     <img src="/static/images/2015_04_13_comparasion.jpg" alt="suzhou" class="img-responsive carousel-inner img-rounded"/>
- </div>
+</div>
 <!--
 <container>
 <img src="/static/images/2014_2016_compare.jpg" alt="compare" class="carousel-inner  img-rounded img-responsive center-block" style='width: 60%;'/>
